@@ -534,7 +534,7 @@
         "name": "receiver ",
         "topic": "#",
         "qos": "0",
-        "datatype": "utf8",
+        "datatype": "json",
         "broker": "c58f8d4b7c13412d",
         "nl": false,
         "rap": true,
