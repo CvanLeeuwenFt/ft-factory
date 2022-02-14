@@ -1,0 +1,12 @@
+{
+    "name": "ft-factory",
+    "description": "Project for Saxion fiachertechnik factory",
+    "version": "0.0.1",
+    "dependencies": {},
+    "node-red": {
+        "settings": {
+            "flowFile": "flow(ft-factory).json",
+            "credentialsFile": "flow(ft-factory)_cred.json"
+        }
+    }
+}
