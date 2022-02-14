@@ -1,1 +1,1320 @@
-[]
+[
+    {
+        "id": "4e9eeca57a653287",
+        "type": "tab",
+        "label": "Flow 1",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "7d83e28252f57d08",
+        "type": "tab",
+        "label": "Flow 1",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "41050a5ac647be74",
+        "type": "tab",
+        "label": "MQTT_Test",
+        "disabled": false,
+        "info": "",
+        "env": [
+            {
+                "name": "mqqtControl",
+                "value": "control/txt9VCt",
+                "type": "str"
+            }
+        ]
+    },
+    {
+        "id": "c58f8d4b7c13412d",
+        "type": "mqtt-broker",
+        "name": "laptop(localhost)",
+        "broker": "localhost",
+        "port": "1883",
+        "clientid": "",
+        "autoConnect": true,
+        "usetls": false,
+        "protocolVersion": "4",
+        "keepalive": "60",
+        "cleansession": true,
+        "birthTopic": "laptop/status",
+        "birthQos": "0",
+        "birthRetain": "false",
+        "birthPayload": "connected",
+        "birthMsg": {},
+        "closeTopic": "laptop/status",
+        "closeQos": "2",
+        "closeRetain": "true",
+        "closePayload": "closing",
+        "closeMsg": {},
+        "willTopic": "laptop/status",
+        "willQos": "2",
+        "willRetain": "true",
+        "willPayload": "Killed",
+        "willMsg": {},
+        "sessionExpiry": ""
+    },
+    {
+        "id": "70f9a5a2aadcbae3",
+        "type": "ui_tab",
+        "name": "Tab1",
+        "icon": "dashboard",
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "f5c9be56d5dd31e9",
+        "type": "ui_base",
+        "theme": {
+            "name": "theme-light",
+            "lightTheme": {
+                "default": "#0094CE",
+                "baseColor": "#0094CE",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": true,
+                "reset": false
+            },
+            "darkTheme": {
+                "default": "#097479",
+                "baseColor": "#097479",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": false
+            },
+            "customTheme": {
+                "name": "Untitled Theme 1",
+                "default": "#4B7930",
+                "baseColor": "#4B7930",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+            },
+            "themeState": {
+                "base-color": {
+                    "default": "#0094CE",
+                    "value": "#0094CE",
+                    "edited": false
+                },
+                "page-titlebar-backgroundColor": {
+                    "value": "#0094CE",
+                    "edited": false
+                },
+                "page-backgroundColor": {
+                    "value": "#fafafa",
+                    "edited": false
+                },
+                "page-sidebar-backgroundColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "group-textColor": {
+                    "value": "#1bbfff",
+                    "edited": false
+                },
+                "group-borderColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "group-backgroundColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "widget-textColor": {
+                    "value": "#111111",
+                    "edited": false
+                },
+                "widget-backgroundColor": {
+                    "value": "#0094ce",
+                    "edited": false
+                },
+                "widget-borderColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "base-font": {
+                    "value": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+                }
+            },
+            "angularTheme": {
+                "primary": "blue-grey",
+                "accents": "blue",
+                "warn": "red",
+                "background": "grey",
+                "palette": "dark"
+            }
+        },
+        "site": {
+            "name": "My first dashboard",
+            "hideToolbar": "false",
+            "allowSwipe": "mouse",
+            "lockMenu": "true",
+            "allowTempTheme": "none",
+            "dateFormat": "YYYY/MM/DD",
+            "sizes": {
+                "sx": 48,
+                "sy": 48,
+                "gx": 6,
+                "gy": 6,
+                "cx": 6,
+                "cy": 6,
+                "px": 0,
+                "py": 0
+            }
+        }
+    },
+    {
+        "id": "aa9feae58ac4eadd",
+        "type": "ui_group",
+        "name": "Group1",
+        "tab": "70f9a5a2aadcbae3",
+        "order": 1,
+        "disp": true,
+        "width": "13",
+        "collapse": false
+    },
+    {
+        "id": "bd582865ce0a4c65",
+        "type": "mqtt-broker",
+        "name": "TxtUsb",
+        "broker": "192.168.7.2",
+        "port": "1883",
+        "clientid": "",
+        "autoConnect": true,
+        "usetls": false,
+        "protocolVersion": "4",
+        "keepalive": "60",
+        "cleansession": true,
+        "birthTopic": "TxtUsb/status",
+        "birthQos": "2",
+        "birthRetain": "true",
+        "birthPayload": "connected",
+        "birthMsg": {},
+        "closeTopic": "TxtUsb/status",
+        "closeQos": "2",
+        "closeRetain": "true",
+        "closePayload": "disconnected",
+        "closeMsg": {},
+        "willTopic": "TxtUsb/status",
+        "willQos": "2",
+        "willRetain": "true",
+        "willPayload": "killed",
+        "willMsg": {},
+        "sessionExpiry": ""
+    },
+    {
+        "id": "3a918d14429930a5",
+        "type": "mqtt-broker",
+        "name": "Txt175",
+        "broker": "192.168.20.175",
+        "port": "1883",
+        "clientid": "",
+        "autoConnect": true,
+        "usetls": false,
+        "protocolVersion": "4",
+        "keepalive": "60",
+        "cleansession": true,
+        "birthTopic": "Txt175/status",
+        "birthQos": "2",
+        "birthRetain": "true",
+        "birthPayload": "connected",
+        "birthMsg": {},
+        "closeTopic": "Txt175/status",
+        "closeQos": "2",
+        "closeRetain": "true",
+        "closePayload": "disconnected",
+        "closeMsg": {},
+        "willTopic": "Txt175/status",
+        "willQos": "2",
+        "willRetain": "true",
+        "willPayload": "killed",
+        "willMsg": {},
+        "sessionExpiry": ""
+    },
+    {
+        "id": "85f06380b4bc6391",
+        "type": "ui_tab",
+        "name": "Tab2",
+        "icon": "dashboard",
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "2c9faac5d0d18804",
+        "type": "ui_tab",
+        "name": "Tab 3",
+        "icon": "dashboard",
+        "order": 3
+    },
+    {
+        "id": "30840b3c631a61fb",
+        "type": "ui_group",
+        "name": "Group 2",
+        "tab": "70f9a5a2aadcbae3",
+        "order": 2,
+        "disp": true,
+        "width": 8,
+        "collapse": false
+    },
+    {
+        "id": "ccf5f67a2e5a062e",
+        "type": "ui_group",
+        "name": "Group 3",
+        "tab": "70f9a5a2aadcbae3",
+        "order": 3,
+        "disp": true,
+        "width": 7,
+        "collapse": false
+    },
+    {
+        "id": "6cd2996bac88af08",
+        "type": "ui_spacer",
+        "z": "41050a5ac647be74",
+        "name": "spacer",
+        "group": "aa9feae58ac4eadd",
+        "order": 2,
+        "width": 2,
+        "height": 1
+    },
+    {
+        "id": "b311d7da101c0314",
+        "type": "ui_spacer",
+        "z": "41050a5ac647be74",
+        "name": "spacer",
+        "group": "aa9feae58ac4eadd",
+        "order": 4,
+        "width": 1,
+        "height": 1
+    },
+    {
+        "id": "474b90a69421e65e",
+        "type": "ui_spacer",
+        "z": "41050a5ac647be74",
+        "name": "spacer",
+        "group": "aa9feae58ac4eadd",
+        "order": 6,
+        "width": 10,
+        "height": 1
+    },
+    {
+        "id": "f11493d5c254edef",
+        "type": "ui_spacer",
+        "z": "41050a5ac647be74",
+        "name": "spacer",
+        "group": "aa9feae58ac4eadd",
+        "order": 8,
+        "width": 10,
+        "height": 1
+    },
+    {
+        "id": "4715cfa477dff7ec",
+        "type": "ui_spacer",
+        "z": "41050a5ac647be74",
+        "name": "spacer",
+        "group": "aa9feae58ac4eadd",
+        "order": 9,
+        "width": 13,
+        "height": 1
+    },
+    {
+        "id": "eb167b6d2f620dac",
+        "type": "ui_spacer",
+        "z": "41050a5ac647be74",
+        "name": "spacer",
+        "group": "aa9feae58ac4eadd",
+        "order": 11,
+        "width": 8,
+        "height": 1
+    },
+    {
+        "id": "693af108c80698b0",
+        "type": "ui_spacer",
+        "z": "41050a5ac647be74",
+        "name": "spacer",
+        "group": "aa9feae58ac4eadd",
+        "order": 12,
+        "width": 8,
+        "height": 1
+    },
+    {
+        "id": "2d82b5898d8c2244",
+        "type": "ui_spacer",
+        "z": "41050a5ac647be74",
+        "name": "spacer",
+        "group": "aa9feae58ac4eadd",
+        "order": 13,
+        "width": 8,
+        "height": 1
+    },
+    {
+        "id": "d2b2aff5063bd003",
+        "type": "ui_spacer",
+        "z": "41050a5ac647be74",
+        "name": "spacer",
+        "group": "aa9feae58ac4eadd",
+        "order": 14,
+        "width": 8,
+        "height": 1
+    },
+    {
+        "id": "025dd9b47882ac62",
+        "type": "ui_spacer",
+        "z": "41050a5ac647be74",
+        "name": "spacer",
+        "group": "aa9feae58ac4eadd",
+        "order": 15,
+        "width": 8,
+        "height": 1
+    },
+    {
+        "id": "4a01be84885539f6",
+        "type": "ui_spacer",
+        "z": "41050a5ac647be74",
+        "name": "spacer",
+        "group": "30840b3c631a61fb",
+        "order": 1,
+        "width": 8,
+        "height": 1
+    },
+    {
+        "id": "3687e1517f177fe4",
+        "type": "ui_spacer",
+        "z": "41050a5ac647be74",
+        "name": "spacer",
+        "group": "30840b3c631a61fb",
+        "order": 2,
+        "width": 8,
+        "height": 1
+    },
+    {
+        "id": "06b67a71d2922ee3",
+        "type": "ui_spacer",
+        "z": "41050a5ac647be74",
+        "name": "spacer",
+        "group": "30840b3c631a61fb",
+        "order": 3,
+        "width": 8,
+        "height": 1
+    },
+    {
+        "id": "17ef1f40228b6452",
+        "type": "ui_spacer",
+        "z": "41050a5ac647be74",
+        "name": "spacer",
+        "group": "30840b3c631a61fb",
+        "order": 4,
+        "width": 8,
+        "height": 1
+    },
+    {
+        "id": "a95987947bd36fd9",
+        "type": "ui_spacer",
+        "z": "41050a5ac647be74",
+        "name": "spacer",
+        "group": "30840b3c631a61fb",
+        "order": 5,
+        "width": 8,
+        "height": 1
+    },
+    {
+        "id": "f126e9d57058174c",
+        "type": "ui_spacer",
+        "z": "41050a5ac647be74",
+        "name": "spacer",
+        "group": "30840b3c631a61fb",
+        "order": 6,
+        "width": 8,
+        "height": 1
+    },
+    {
+        "id": "4653b9a6aad2dd22",
+        "type": "ui_spacer",
+        "z": "41050a5ac647be74",
+        "name": "spacer",
+        "group": "30840b3c631a61fb",
+        "order": 7,
+        "width": 8,
+        "height": 1
+    },
+    {
+        "id": "48e97aafa8ae9419",
+        "type": "ui_spacer",
+        "z": "41050a5ac647be74",
+        "name": "spacer",
+        "group": "30840b3c631a61fb",
+        "order": 8,
+        "width": 8,
+        "height": 1
+    },
+    {
+        "id": "1334017a8198ea4c",
+        "type": "ui_spacer",
+        "z": "41050a5ac647be74",
+        "name": "spacer",
+        "group": "30840b3c631a61fb",
+        "order": 9,
+        "width": 8,
+        "height": 1
+    },
+    {
+        "id": "59b5e883913f6e1c",
+        "type": "ui_spacer",
+        "z": "41050a5ac647be74",
+        "name": "spacer",
+        "group": "30840b3c631a61fb",
+        "order": 10,
+        "width": 8,
+        "height": 1
+    },
+    {
+        "id": "62e5e3ae1747a580",
+        "type": "ui_spacer",
+        "z": "41050a5ac647be74",
+        "name": "spacer",
+        "group": "30840b3c631a61fb",
+        "order": 11,
+        "width": 8,
+        "height": 1
+    },
+    {
+        "id": "276cc02716c791b9",
+        "type": "ui_spacer",
+        "z": "41050a5ac647be74",
+        "name": "spacer",
+        "group": "ccf5f67a2e5a062e",
+        "order": 2,
+        "width": 5,
+        "height": 1
+    },
+    {
+        "id": "e51a97db2d5ef296",
+        "type": "ui_spacer",
+        "z": "41050a5ac647be74",
+        "name": "spacer",
+        "group": "ccf5f67a2e5a062e",
+        "order": 3,
+        "width": 5,
+        "height": 1
+    },
+    {
+        "id": "46b5c8812a21efbf",
+        "type": "ui_spacer",
+        "z": "41050a5ac647be74",
+        "name": "spacer",
+        "group": "ccf5f67a2e5a062e",
+        "order": 4,
+        "width": 7,
+        "height": 1
+    },
+    {
+        "id": "ff9f35909093f900",
+        "type": "ui_group",
+        "name": "Group 3.1",
+        "tab": "2c9faac5d0d18804",
+        "order": 1,
+        "disp": true,
+        "width": "6",
+        "collapse": false
+    },
+    {
+        "id": "590e59f993e7fcf2",
+        "type": "ui_group",
+        "name": "Group 2.1",
+        "tab": "85f06380b4bc6391",
+        "order": 1,
+        "disp": true,
+        "width": "6",
+        "collapse": false
+    },
+    {
+        "id": "fc755ce7c4240337",
+        "type": "ui_link",
+        "name": "Link 4",
+        "link": "http://www.TesCaWeb.nl/Carel",
+        "icon": "open_in_browser",
+        "target": "iframe",
+        "order": 4
+    },
+    {
+        "id": "2a2a279366c4b5b6",
+        "type": "mqtt in",
+        "z": "4e9eeca57a653287",
+        "name": "receiver ",
+        "topic": "#",
+        "qos": "0",
+        "datatype": "utf8",
+        "broker": "c58f8d4b7c13412d",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 110,
+        "y": 160,
+        "wires": [
+            [
+                "02eda2ef93f3bf97",
+                "de37a8b93e2d46ae",
+                "22dfbc3588c68679",
+                "187c40ec5c7fe699"
+            ]
+        ],
+        "outputLabels": [
+            "text"
+        ]
+    },
+    {
+        "id": "02eda2ef93f3bf97",
+        "type": "ui_text",
+        "z": "4e9eeca57a653287",
+        "group": "aa9feae58ac4eadd",
+        "order": 3,
+        "width": 5,
+        "height": 1,
+        "name": "Text02",
+        "label": "",
+        "format": "{{msg.topic}}",
+        "layout": "row-left",
+        "x": 570,
+        "y": 40,
+        "wires": []
+    },
+    {
+        "id": "de37a8b93e2d46ae",
+        "type": "debug",
+        "z": "4e9eeca57a653287",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": true,
+        "tostatus": true,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "payload",
+        "statusType": "auto",
+        "x": 570,
+        "y": 300,
+        "wires": []
+    },
+    {
+        "id": "22dfbc3588c68679",
+        "type": "ui_text",
+        "z": "4e9eeca57a653287",
+        "group": "aa9feae58ac4eadd",
+        "order": 1,
+        "width": 5,
+        "height": 1,
+        "name": "Text01",
+        "label": "",
+        "format": "{{msg.payload}}",
+        "layout": "row-center",
+        "x": 570,
+        "y": 100,
+        "wires": []
+    },
+    {
+        "id": "187c40ec5c7fe699",
+        "type": "ui_text_input",
+        "z": "4e9eeca57a653287",
+        "name": "",
+        "label": "",
+        "tooltip": "",
+        "group": "aa9feae58ac4eadd",
+        "order": 16,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "mode": "text",
+        "delay": 300,
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 580,
+        "y": 180,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "7d47b52a3af6da21",
+        "type": "ui_switch",
+        "z": "4e9eeca57a653287",
+        "name": "test",
+        "label": "switch",
+        "tooltip": "",
+        "group": "ccf5f67a2e5a062e",
+        "order": 5,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "decouple": "false",
+        "topic": "topic",
+        "topicType": "msg",
+        "style": "",
+        "onvalue": "true",
+        "onvalueType": "bool",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "false",
+        "offvalueType": "bool",
+        "officon": "",
+        "offcolor": "",
+        "animate": false,
+        "x": 190,
+        "y": 60,
+        "wires": [
+            [
+                "02eda2ef93f3bf97"
+            ]
+        ]
+    },
+    {
+        "id": "73b6c77949512e6b",
+        "type": "mqtt in",
+        "z": "7d83e28252f57d08",
+        "name": "Receiver",
+        "topic": "#",
+        "qos": "0",
+        "datatype": "utf8",
+        "broker": "c58f8d4b7c13412d",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 110,
+        "y": 160,
+        "wires": [
+            [
+                "be93696d3377c2ca"
+            ]
+        ]
+    },
+    {
+        "id": "be93696d3377c2ca",
+        "type": "ui_text",
+        "z": "7d83e28252f57d08",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "text",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "x": 550,
+        "y": 160,
+        "wires": []
+    },
+    {
+        "id": "232f5c04f0dab385",
+        "type": "mqtt in",
+        "z": "41050a5ac647be74",
+        "name": "Receiver ",
+        "topic": "#",
+        "qos": "0",
+        "datatype": "json",
+        "broker": "c58f8d4b7c13412d",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 100,
+        "y": 120,
+        "wires": [
+            [
+                "1e33f739d0d6e1c5",
+                "6411b86acceb801e",
+                "bf5bc3c822f7d27d",
+                "e21fc35310105f8c",
+                "19dbd9b2f2288aad"
+            ]
+        ],
+        "outputLabels": [
+            "text"
+        ]
+    },
+    {
+        "id": "1e33f739d0d6e1c5",
+        "type": "ui_text",
+        "z": "41050a5ac647be74",
+        "group": "aa9feae58ac4eadd",
+        "order": 3,
+        "width": 5,
+        "height": 1,
+        "name": "Text02",
+        "label": "",
+        "format": "{{msg.topic}}",
+        "layout": "row-left",
+        "x": 530,
+        "y": 40,
+        "wires": []
+    },
+    {
+        "id": "6411b86acceb801e",
+        "type": "debug",
+        "z": "41050a5ac647be74",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": true,
+        "tostatus": true,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "payload",
+        "statusType": "auto",
+        "x": 550,
+        "y": 180,
+        "wires": []
+    },
+    {
+        "id": "bf5bc3c822f7d27d",
+        "type": "ui_text",
+        "z": "41050a5ac647be74",
+        "group": "aa9feae58ac4eadd",
+        "order": 1,
+        "width": 5,
+        "height": 1,
+        "name": "Text01",
+        "label": "",
+        "format": "{{msg.payload}}",
+        "layout": "row-center",
+        "x": 570,
+        "y": 100,
+        "wires": []
+    },
+    {
+        "id": "e21fc35310105f8c",
+        "type": "ui_text_input",
+        "z": "41050a5ac647be74",
+        "name": "",
+        "label": "",
+        "tooltip": "",
+        "group": "aa9feae58ac4eadd",
+        "order": 16,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "mode": "text",
+        "delay": 300,
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 560,
+        "y": 140,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "4c696d684ccaeca2",
+        "type": "mqtt out",
+        "z": "41050a5ac647be74",
+        "name": "stop",
+        "topic": "",
+        "qos": "1",
+        "retain": "true",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "c58f8d4b7c13412d",
+        "x": 810,
+        "y": 280,
+        "wires": [],
+        "inputLabels": [
+            "message"
+        ]
+    },
+    {
+        "id": "c72afaea8dfc476c",
+        "type": "inject",
+        "z": "41050a5ac647be74",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "control/txt9VCt/stop",
+        "payload": "1",
+        "payloadType": "num",
+        "x": 140,
+        "y": 240,
+        "wires": [
+            [
+                "fa7c7e3293409890"
+            ]
+        ]
+    },
+    {
+        "id": "cf3618fa8c2b532f",
+        "type": "debug",
+        "z": "41050a5ac647be74",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": true,
+        "tostatus": true,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "payload",
+        "statusType": "auto",
+        "x": 950,
+        "y": 400,
+        "wires": []
+    },
+    {
+        "id": "ca3df5186fde6513",
+        "type": "inject",
+        "z": "41050a5ac647be74",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "control/all/stop",
+        "payload": "1",
+        "payloadType": "str",
+        "x": 160,
+        "y": 340,
+        "wires": [
+            [
+                "cf3618fa8c2b532f",
+                "4c696d684ccaeca2"
+            ]
+        ]
+    },
+    {
+        "id": "086372f39fdc84fc",
+        "type": "inject",
+        "z": "41050a5ac647be74",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "control/txt9VCt/stop",
+        "payload": "0",
+        "payloadType": "num",
+        "x": 140,
+        "y": 280,
+        "wires": [
+            [
+                "4614969261674747"
+            ]
+        ]
+    },
+    {
+        "id": "e68f122203b5f04a",
+        "type": "inject",
+        "z": "41050a5ac647be74",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "control/all/stop",
+        "payload": "0",
+        "payloadType": "str",
+        "x": 160,
+        "y": 380,
+        "wires": [
+            [
+                "4c696d684ccaeca2",
+                "cf3618fa8c2b532f"
+            ]
+        ]
+    },
+    {
+        "id": "d6ebf7202ece34ac",
+        "type": "ui_led",
+        "z": "41050a5ac647be74",
+        "order": 1,
+        "group": "ccf5f67a2e5a062e",
+        "width": 2,
+        "height": 2,
+        "label": "Connected",
+        "labelPlacement": "left",
+        "labelAlignment": "left",
+        "colorForValue": [
+            {
+                "color": "#ff0000",
+                "value": "0",
+                "valueType": "str"
+            },
+            {
+                "color": "#008000",
+                "value": "1",
+                "valueType": "str"
+            },
+            {
+                "color": "#0000ff",
+                "value": "null",
+                "valueType": "str"
+            },
+            {
+                "color": "#000000",
+                "value": "true",
+                "valueType": "bool"
+            },
+            {
+                "color": "#000000",
+                "value": "false",
+                "valueType": "bool"
+            },
+            {
+                "color": "#ffa500",
+                "value": "0",
+                "valueType": "num"
+            },
+            {
+                "color": "#ffff00",
+                "value": "1",
+                "valueType": "num"
+            }
+        ],
+        "allowColorForValueInMessage": true,
+        "shape": "square",
+        "showGlow": true,
+        "name": "Connect ",
+        "x": 460,
+        "y": 500,
+        "wires": [],
+        "icon": "font-awesome/fa-bolt"
+    },
+    {
+        "id": "96cf6329f21bdcd3",
+        "type": "mqtt in",
+        "z": "41050a5ac647be74",
+        "name": "txt9VCt connect",
+        "topic": "status/txt9VCt/connect",
+        "qos": "1",
+        "datatype": "utf8",
+        "broker": "c58f8d4b7c13412d",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 180,
+        "y": 500,
+        "wires": [
+            [
+                "d6ebf7202ece34ac",
+                "e1528613dc643b97"
+            ]
+        ]
+    },
+    {
+        "id": "e1528613dc643b97",
+        "type": "debug",
+        "z": "41050a5ac647be74",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": true,
+        "tostatus": true,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "payload",
+        "statusType": "auto",
+        "x": 480,
+        "y": 560,
+        "wires": []
+    },
+    {
+        "id": "4614969261674747",
+        "type": "ui_button",
+        "z": "41050a5ac647be74",
+        "name": "Start_btn",
+        "group": "aa9feae58ac4eadd",
+        "order": 5,
+        "width": 3,
+        "height": 1,
+        "passthru": true,
+        "label": "Start TXT40_9VCt",
+        "tooltip": "Start message from TXT40_9VCt",
+        "color": "green",
+        "bgcolor": "gray",
+        "icon": "",
+        "payload": "1",
+        "payloadType": "num",
+        "topic": "control/txt9VCt/stop",
+        "topicType": "str",
+        "x": 340,
+        "y": 280,
+        "wires": [
+            [
+                "cf3618fa8c2b532f",
+                "4c696d684ccaeca2",
+                "19dbd9b2f2288aad"
+            ]
+        ],
+        "inputLabels": [
+            "trigger"
+        ],
+        "outputLabels": [
+            "msg"
+        ]
+    },
+    {
+        "id": "fa7c7e3293409890",
+        "type": "ui_button",
+        "z": "41050a5ac647be74",
+        "name": "Stop_btn",
+        "group": "aa9feae58ac4eadd",
+        "order": 7,
+        "width": 3,
+        "height": 1,
+        "passthru": true,
+        "label": "Stop TXT40_9VCt",
+        "tooltip": "Stop message from  TXT40_9VCt",
+        "color": "",
+        "bgcolor": "",
+        "icon": "",
+        "payload": "0",
+        "payloadType": "num",
+        "topic": "control/txt9VCt/stop",
+        "topicType": "str",
+        "x": 340,
+        "y": 240,
+        "wires": [
+            [
+                "4c696d684ccaeca2",
+                "cf3618fa8c2b532f"
+            ]
+        ],
+        "inputLabels": [
+            "trigger"
+        ],
+        "outputLabels": [
+            "msg"
+        ]
+    },
+    {
+        "id": "9076e430755f7b8d",
+        "type": "template",
+        "z": "41050a5ac647be74",
+        "name": "checkbox",
+        "field": "payload",
+        "fieldType": "flow",
+        "format": "json",
+        "syntax": "plain",
+        "template": "[{\"id\":\"d263c630.adfb28\",\"type\":\"inject\",\"z\":\"f215cc82.b4d88\",\"name\":\"Go\",\"topic\":\"\",\"payload\":\"1\",\"payloadType\":\"str\",\"repeat\":\"\",\"crontab\":\"\",\"once\":true,\"onceDelay\":\"2\",\"x\":228.0173568725586,\"y\":116.00001907348633,\"wires\":[[\"443e4019.c5163\"]]},{\"id\":\"443e4019.c5163\",\"type\":\"function\",\"z\":\"f215cc82.b4d88\",\"name\":\"dummyarray\",\"func\":\"var myArray =[{ \\\"value1\\\": \\\"aaa\\\", \\\"value2\\\": \\\"A\\\", \\\"value3\\\": \\\"bbb\\\",\\n\\\"value6\\\": \\\"B\\\", \\\"value4\\\": \\\"ccc\\\", \\\"value5\\\": \\\"C\\\", \\\"value7\\\": \\\"aaa\\\", \\\"value8\\\": \\\"A\\\",\\n\\\"value9\\\": \\\"bbb\\\",\\\"value10\\\": \\\"B\\\", \\\"value11\\\": \\\"ccc\\\", \\\"value12\\\": \\\"C\\\"},\\n{ \\\"value1\\\": \\\"bbb\\\", \\\"value2\\\": \\\"B\\\", \\\"value3\\\": \\\"bbb\\\",\\n\\\"value6\\\": \\\"B\\\", \\\"value4\\\": \\\"ccc\\\", \\\"value5\\\": \\\"C\\\", \\\"value7\\\": \\\"aaa\\\", \\\"value8\\\": \\\"A\\\",\\n\\\"value9\\\": \\\"bbb\\\",\\\"value10\\\": \\\"B\\\", \\\"value11\\\": \\\"ccc\\\", \\\"value12\\\": \\\"C\\\"},\\n{ \\\"value1\\\": \\\"ccc\\\", \\\"value2\\\": \\\"C\\\", \\\"value3\\\": \\\"bbb\\\",\\n\\\"value6\\\": \\\"B\\\", \\\"value4\\\": \\\"ccc\\\", \\\"value5\\\": \\\"C\\\", \\\"value7\\\": \\\"aaa\\\", \\\"value8\\\": \\\"A\\\",\\n\\\"value9\\\": \\\"bbb\\\",\\\"value10\\\": \\\"B\\\", \\\"value11\\\": \\\"ccc\\\", \\\"value12\\\": \\\"C\\\"},\\n{ \\\"value1\\\": \\\"ddd\\\", \\\"value2\\\": \\\"D\\\", \\\"value3\\\": \\\"bbb\\\",\\n\\\"value6\\\": \\\"B\\\", \\\"value4\\\": \\\"ccc\\\", \\\"value5\\\": \\\"C\\\", \\\"value7\\\": \\\"aaa\\\", \\\"value8\\\": \\\"A\\\",\\n\\\"value9\\\": \\\"bbb\\\",\\\"value10\\\": \\\"B\\\", \\\"value11\\\": \\\"ccc\\\", \\\"value12\\\": \\\"C\\\"},\\n{ \\\"value1\\\": \\\"eee\\\", \\\"value2\\\": \\\"E\\\", \\\"value3\\\": \\\"bbb\\\",\\n\\\"value6\\\": \\\"B\\\", \\\"value4\\\": \\\"ccc\\\", \\\"value5\\\": \\\"C\\\", \\\"value7\\\": \\\"aaa\\\", \\\"value8\\\": \\\"A\\\",\\n\\\"value9\\\": \\\"bbb\\\",\\\"value10\\\": \\\"B\\\", \\\"value11\\\": \\\"ccc\\\", \\\"value12\\\": \\\"C\\\"},\\n{ \\\"value1\\\": \\\"fff\\\", \\\"value2\\\": \\\"F\\\", \\\"value3\\\": \\\"bbb\\\",\\n\\\"value6\\\": \\\"B\\\", \\\"value4\\\": \\\"ccc\\\", \\\"value5\\\": \\\"C\\\", \\\"value7\\\": \\\"aaa\\\", \\\"value8\\\": \\\"A\\\",\\n\\\"value9\\\": \\\"bbb\\\",\\\"value10\\\": \\\"B\\\", \\\"value11\\\": \\\"ccc\\\", \\\"value12\\\": \\\"C\\\"}];\\nmsg.payload = myArray;\\nreturn msg;\",\"outputs\":1,\"noerr\":0,\"x\":456.18408203125,\"y\":112.00007629394531,\"wires\":[[\"44ec155b.1f113c\"]]},{\"id\":\"44ec155b.1f113c\",\"type\":\"ui_template\",\"z\":\"f215cc82.b4d88\",\"group\":\"524b6528.fbf1ec\",\"name\":\"Data-table\",\"order\":1,\"width\":\"24\",\"height\":\"6\",\"format\":\"<style>\\n th {\\n text-decoration: underline;\\n }\\n .numeric {\\n text-align: right;\\n padding-right: 15px;\\n }\\n</style>\\n\\n\\n<table cellpadding=\\\"1\\\" border=\\\"1\\\" id=\\\"table1\\\" class=\\\"table-hover\\\" style=\\\"width: 100%;\\\">\\n <thead>\\n <tr>\\n <th>value1</th> \\n <th>value2</th>\\n <th>value3</th>\\n <th>value4</th>\\n <th>value5</th>\\n <th>value7</th>\\n <th>value8</th>\\n <th>value9</th>\\n <th>value10</th>\\n <th>value11</th>\\n <th>value12</th>\\n <th>value13</th>\\n <th>value14</th>\\n <th>value15</th>\\n <th>value16</th>\\n <th>save</th>\\n </tr>\\n </thead>\\n <tbody>\\n <tr ng-repeat=\\\"row in msg.payload\\\" ondblclick=\\\"myFunction(this)\\\">\\n \\n <td class=\\\"numeric\\\" bgcolor=gray>{{row.value1}}</td>\\n <td id=\\\"value2\\\" contenteditable=\\\"true\\\" onclick = \\\"this.contentEditable = true;\\\">{{row.value2}}</td>\\n <td id=\\\"value3\\\" contenteditable=\\\"true\\\" onclick = \\\"this.contentEditable = true;\\\">{{row.value3}}</td>\\n <td id=\\\"value4\\\" contenteditable=\\\"true\\\" onclick = \\\"this.contentEditable = true;\\\">{{row.value4}}</td>\\n <td id=\\\"value5\\\" contenteditable=\\\"true\\\" onclick = \\\"this.contentEditable = true;\\\">{{row.value5}}</td>\\n <td bgcolor=gray>{{row.value7}}</td>\\n <td id=\\\"value8\\\" contenteditable=\\\"true\\\" onclick = \\\"this.contentEditable = true;\\\">{{row.value8}}</td>\\n <td bgcolor=gray>{{row.value9}}</td>\\n <td bgcolor=gray>{{row.value10}}</td>\\n <td id=\\\"value11\\\" contenteditable=\\\"true\\\" onclick = \\\"this.contentEditable = true;\\\">{{row.value11}}</td>\\n <td bgcolor=gray>{{row.value12}}</td>\\n <td bgcolor=gray>{{row.value13}}</td>\\n <td id=\\\"value14\\\" contenteditable=\\\"true\\\" onclick = \\\"this.contentEditable = true;\\\">{{row.value14}}</td>\\n <td id=\\\"value15\\\" contenteditable=\\\"true\\\" onclick = \\\"this.contentEditable = true;\\\">{{row.value15}}</td>\\n <td>\\n<md-switch aria-label=\\\"knapp\\\" ng-model=\\\"valgt\\\" ng-change=\\\"send({payload : {row:$index, enabled:valgt}})\\\" ng-checked=\\\"row.value16==='true'\\\" >\\n </md-switch>\\n</td> \\n<td>\\n <md-button tr ng-click=\\\"sendRow($index+1)\\\">save</md-button>\\n </tr>\\n </tbody>\\n</table>\\n\\n\\n\\n<script>\\n(function($scope) {\\n$scope.sendRow = function(obj) {\\n$scope.send({ \\\"payload\\\": (document.getElementById(\\\"table1\\\").rows[obj].innerText) });\\n};\\n})(scope);\\n</script>\\n\\n<script>\\nfunction myFunction(x) {\\n alert(document.getElementById(\\\"table1\\\").rows[x.rowIndex].innerText);\\n}\\n</script>\\n\",\"storeOutMessages\":false,\"fwdInMessages\":false,\"templateScope\":\"local\",\"x\":657.0172271728516,\"y\":116.0000991821289,\"wires\":[[\"21aa3aac.1fe4a6\"]]},{\"id\":\"524b6528.fbf1ec\",\"type\":\"ui_group\",\"z\":\"\",\"name\":\"Group 1\",\"tab\":\"dea6695d.1700f8\",\"order\":1,\"disp\":true,\"width\":\"24\",\"collapse\":false},{\"id\":\"dea6695d.1700f8\",\"type\":\"ui_tab\",\"name\":\"Tab 6\",\"icon\":\"dashboard\",\"order\":5}]",
+        "output": "json",
+        "x": 340,
+        "y": 620,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "406633c49016173e",
+        "type": "inject",
+        "z": "41050a5ac647be74",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 120,
+        "y": 620,
+        "wires": [
+            [
+                "9076e430755f7b8d"
+            ]
+        ]
+    },
+    {
+        "id": "79031150249b7346",
+        "type": "ui_switch",
+        "z": "41050a5ac647be74",
+        "name": "test",
+        "label": "switch",
+        "tooltip": "",
+        "group": "ccf5f67a2e5a062e",
+        "order": 5,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "decouple": "false",
+        "topic": "topic",
+        "topicType": "msg",
+        "style": "",
+        "onvalue": "true",
+        "onvalueType": "bool",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "false",
+        "offvalueType": "bool",
+        "officon": "",
+        "offcolor": "",
+        "animate": false,
+        "x": 150,
+        "y": 40,
+        "wires": [
+            [
+                "1e33f739d0d6e1c5"
+            ]
+        ]
+    },
+    {
+        "id": "2e0a75799f111fc3",
+        "type": "ui_template",
+        "z": "41050a5ac647be74",
+        "group": "30840b3c631a61fb",
+        "name": "",
+        "order": 12,
+        "width": 0,
+        "height": 0,
+        "format": "<div ng-bind-html=\"msg.payload\"></div>\n[{\"id\":\"d263c630.adfb28\",\"type\":\"inject\",\"z\":\"f215cc82.b4d88\",\"name\":\"Go\",\"topic\":\"\",\"payload\":\"1\",\"payloadType\":\"str\",\"repeat\":\"\",\"crontab\":\"\",\"once\":true,\"onceDelay\":\"2\",\"x\":228.0173568725586,\"y\":116.00001907348633,\"wires\":[[\"443e4019.c5163\"]]},{\"id\":\"443e4019.c5163\",\"type\":\"function\",\"z\":\"f215cc82.b4d88\",\"name\":\"dummyarray\",\"func\":\"var myArray =[{ \\\"value1\\\": \\\"aaa\\\", \\\"value2\\\": \\\"A\\\", \\\"value3\\\": \\\"bbb\\\",\\n\\\"value6\\\": \\\"B\\\", \\\"value4\\\": \\\"ccc\\\", \\\"value5\\\": \\\"C\\\", \\\"value7\\\": \\\"aaa\\\", \\\"value8\\\": \\\"A\\\",\\n\\\"value9\\\": \\\"bbb\\\",\\\"value10\\\": \\\"B\\\", \\\"value11\\\": \\\"ccc\\\", \\\"value12\\\": \\\"C\\\"},\\n{ \\\"value1\\\": \\\"bbb\\\", \\\"value2\\\": \\\"B\\\", \\\"value3\\\": \\\"bbb\\\",\\n\\\"value6\\\": \\\"B\\\", \\\"value4\\\": \\\"ccc\\\", \\\"value5\\\": \\\"C\\\", \\\"value7\\\": \\\"aaa\\\", \\\"value8\\\": \\\"A\\\",\\n\\\"value9\\\": \\\"bbb\\\",\\\"value10\\\": \\\"B\\\", \\\"value11\\\": \\\"ccc\\\", \\\"value12\\\": \\\"C\\\"},\\n{ \\\"value1\\\": \\\"ccc\\\", \\\"value2\\\": \\\"C\\\", \\\"value3\\\": \\\"bbb\\\",\\n\\\"value6\\\": \\\"B\\\", \\\"value4\\\": \\\"ccc\\\", \\\"value5\\\": \\\"C\\\", \\\"value7\\\": \\\"aaa\\\", \\\"value8\\\": \\\"A\\\",\\n\\\"value9\\\": \\\"bbb\\\",\\\"value10\\\": \\\"B\\\", \\\"value11\\\": \\\"ccc\\\", \\\"value12\\\": \\\"C\\\"},\\n{ \\\"value1\\\": \\\"ddd\\\", \\\"value2\\\": \\\"D\\\", \\\"value3\\\": \\\"bbb\\\",\\n\\\"value6\\\": \\\"B\\\", \\\"value4\\\": \\\"ccc\\\", \\\"value5\\\": \\\"C\\\", \\\"value7\\\": \\\"aaa\\\", \\\"value8\\\": \\\"A\\\",\\n\\\"value9\\\": \\\"bbb\\\",\\\"value10\\\": \\\"B\\\", \\\"value11\\\": \\\"ccc\\\", \\\"value12\\\": \\\"C\\\"},\\n{ \\\"value1\\\": \\\"eee\\\", \\\"value2\\\": \\\"E\\\", \\\"value3\\\": \\\"bbb\\\",\\n\\\"value6\\\": \\\"B\\\", \\\"value4\\\": \\\"ccc\\\", \\\"value5\\\": \\\"C\\\", \\\"value7\\\": \\\"aaa\\\", \\\"value8\\\": \\\"A\\\",\\n\\\"value9\\\": \\\"bbb\\\",\\\"value10\\\": \\\"B\\\", \\\"value11\\\": \\\"ccc\\\", \\\"value12\\\": \\\"C\\\"},\\n{ \\\"value1\\\": \\\"fff\\\", \\\"value2\\\": \\\"F\\\", \\\"value3\\\": \\\"bbb\\\",\\n\\\"value6\\\": \\\"B\\\", \\\"value4\\\": \\\"ccc\\\", \\\"value5\\\": \\\"C\\\", \\\"value7\\\": \\\"aaa\\\", \\\"value8\\\": \\\"A\\\",\\n\\\"value9\\\": \\\"bbb\\\",\\\"value10\\\": \\\"B\\\", \\\"value11\\\": \\\"ccc\\\", \\\"value12\\\": \\\"C\\\"}];\\nmsg.payload = myArray;\\nreturn msg;\",\"outputs\":1,\"noerr\":0,\"x\":456.18408203125,\"y\":112.00007629394531,\"wires\":[[\"44ec155b.1f113c\"]]},{\"id\":\"44ec155b.1f113c\",\"type\":\"ui_template\",\"z\":\"f215cc82.b4d88\",\"group\":\"524b6528.fbf1ec\",\"name\":\"Data-table\",\"order\":1,\"width\":\"24\",\"height\":\"6\",\"format\":\"<style>\\n th {\\n text-decoration: underline;\\n }\\n .numeric {\\n text-align: right;\\n padding-right: 15px;\\n }\\n</style>\\n\\n\\n<table cellpadding=\\\"1\\\" border=\\\"1\\\" id=\\\"table1\\\" class=\\\"table-hover\\\" style=\\\"width: 100%;\\\">\\n <thead>\\n <tr>\\n <th>value1</th> \\n <th>value2</th>\\n <th>value3</th>\\n <th>value4</th>\\n <th>value5</th>\\n <th>value7</th>\\n <th>value8</th>\\n <th>value9</th>\\n <th>value10</th>\\n <th>value11</th>\\n <th>value12</th>\\n <th>value13</th>\\n <th>value14</th>\\n <th>value15</th>\\n <th>value16</th>\\n <th>save</th>\\n </tr>\\n </thead>\\n <tbody>\\n <tr ng-repeat=\\\"row in msg.payload\\\" ondblclick=\\\"myFunction(this)\\\">\\n \\n <td class=\\\"numeric\\\" bgcolor=gray>{{row.value1}}</td>\\n <td id=\\\"value2\\\" contenteditable=\\\"true\\\" onclick = \\\"this.contentEditable = true;\\\">{{row.value2}}</td>\\n <td id=\\\"value3\\\" contenteditable=\\\"true\\\" onclick = \\\"this.contentEditable = true;\\\">{{row.value3}}</td>\\n <td id=\\\"value4\\\" contenteditable=\\\"true\\\" onclick = \\\"this.contentEditable = true;\\\">{{row.value4}}</td>\\n <td id=\\\"value5\\\" contenteditable=\\\"true\\\" onclick = \\\"this.contentEditable = true;\\\">{{row.value5}}</td>\\n <td bgcolor=gray>{{row.value7}}</td>\\n <td id=\\\"value8\\\" contenteditable=\\\"true\\\" onclick = \\\"this.contentEditable = true;\\\">{{row.value8}}</td>\\n <td bgcolor=gray>{{row.value9}}</td>\\n <td bgcolor=gray>{{row.value10}}</td>\\n <td id=\\\"value11\\\" contenteditable=\\\"true\\\" onclick = \\\"this.contentEditable = true;\\\">{{row.value11}}</td>\\n <td bgcolor=gray>{{row.value12}}</td>\\n <td bgcolor=gray>{{row.value13}}</td>\\n <td id=\\\"value14\\\" contenteditable=\\\"true\\\" onclick = \\\"this.contentEditable = true;\\\">{{row.value14}}</td>\\n <td id=\\\"value15\\\" contenteditable=\\\"true\\\" onclick = \\\"this.contentEditable = true;\\\">{{row.value15}}</td>\\n <td>\\n<md-switch aria-label=\\\"knapp\\\" ng-model=\\\"valgt\\\" ng-change=\\\"send({payload : {row:$index, enabled:valgt}})\\\" ng-checked=\\\"row.value16==='true'\\\" >\\n </md-switch>\\n</td> \\n<td>\\n <md-button tr ng-click=\\\"sendRow($index+1)\\\">save</md-button>\\n </tr>\\n </tbody>\\n</table>\\n\\n\\n\\n<script>\\n(function($scope) {\\n$scope.sendRow = function(obj) {\\n$scope.send({ \\\"payload\\\": (document.getElementById(\\\"table1\\\").rows[obj].innerText) });\\n};\\n})(scope);\\n</script>\\n\\n<script>\\nfunction myFunction(x) {\\n alert(document.getElementById(\\\"table1\\\").rows[x.rowIndex].innerText);\\n}\\n</script>\\n\",\"storeOutMessages\":false,\"fwdInMessages\":false,\"templateScope\":\"local\",\"x\":657.0172271728516,\"y\":116.0000991821289,\"wires\":[[\"21aa3aac.1fe4a6\"]]},{\"id\":\"524b6528.fbf1ec\",\"type\":\"ui_group\",\"z\":\"\",\"name\":\"Group 1\",\"tab\":\"dea6695d.1700f8\",\"order\":1,\"disp\":true,\"width\":\"24\",\"collapse\":false},{\"id\":\"dea6695d.1700f8\",\"type\":\"ui_tab\",\"name\":\"Tab 6\",\"icon\":\"dashboard\",\"order\":5}]",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "x": 720,
+        "y": 620,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "dec4a6c056f17f34",
+        "type": "file",
+        "z": "41050a5ac647be74",
+        "name": "",
+        "filename": "I:\\Hobby\\FT-NodeRed\\tmp\\test.txt",
+        "appendNewline": true,
+        "createDir": true,
+        "overwriteFile": "false",
+        "encoding": "setbymsg",
+        "x": 1020,
+        "y": 140,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "19dbd9b2f2288aad",
+        "type": "mergeTopic",
+        "z": "41050a5ac647be74",
+        "name": "",
+        "timeout": "",
+        "msglimit": 0,
+        "x": 730,
+        "y": 220,
+        "wires": [
+            [
+                "dec4a6c056f17f34"
+            ]
+        ]
+    },
+    {
+        "id": "49aa93af5c5ff5cc",
+        "type": "mqtt in",
+        "z": "41050a5ac647be74",
+        "name": "Gripper",
+        "topic": "factory/gripper/",
+        "qos": "0",
+        "datatype": "json",
+        "broker": "c58f8d4b7c13412d",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 990,
+        "y": 240,
+        "wires": [
+            [
+                "10c359ff570965a6"
+            ]
+        ],
+        "outputLabels": [
+            "text"
+        ]
+    },
+    {
+        "id": "10c359ff570965a6",
+        "type": "ui_gauge",
+        "z": "41050a5ac647be74",
+        "name": "",
+        "group": "aa9feae58ac4eadd",
+        "order": 10,
+        "width": 5,
+        "height": 5,
+        "gtype": "gage",
+        "title": "gauge",
+        "label": "units",
+        "format": "{{msg.payload}}",
+        "min": 0,
+        "max": "15",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "x": 1220,
+        "y": 260,
+        "wires": []
+    },
+    {
+        "id": "cc442232511d160f",
+        "type": "pythonshell in",
+        "z": "41050a5ac647be74",
+        "name": "MQTTtest.py",
+        "pyfile": "I:\\Hobby\\TXT_4\\workpspaceVS\\MQTTtestSolut\\MQTTtest\\MQTTtest.py",
+        "virtualenv": "C:\\Users\\Carel\\AppData\\Local\\Programs\\Python\\Python35",
+        "continuous": false,
+        "stdInData": false,
+        "x": 920,
+        "y": 540,
+        "wires": [
+            []
+        ]
+    }
+]
