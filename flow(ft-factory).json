@@ -758,27 +758,6 @@
         ]
     },
     {
-        "id": "4c696d684ccaeca2",
-        "type": "mqtt out",
-        "z": "41050a5ac647be74",
-        "name": "stop",
-        "topic": "",
-        "qos": "1",
-        "retain": "true",
-        "respTopic": "",
-        "contentType": "",
-        "userProps": "",
-        "correl": "",
-        "expiry": "",
-        "broker": "c58f8d4b7c13412d",
-        "x": 810,
-        "y": 280,
-        "wires": [],
-        "inputLabels": [
-            "message"
-        ]
-    },
-    {
         "id": "c72afaea8dfc476c",
         "type": "inject",
         "z": "41050a5ac647be74",
@@ -849,8 +828,7 @@
         "y": 340,
         "wires": [
             [
-                "cf3618fa8c2b532f",
-                "4c696d684ccaeca2"
+                "cf3618fa8c2b532f"
             ]
         ]
     },
@@ -908,67 +886,9 @@
         "y": 380,
         "wires": [
             [
-                "4c696d684ccaeca2",
                 "cf3618fa8c2b532f"
             ]
         ]
-    },
-    {
-        "id": "d6ebf7202ece34ac",
-        "type": "ui_led",
-        "z": "41050a5ac647be74",
-        "order": 1,
-        "group": "ccf5f67a2e5a062e",
-        "width": 2,
-        "height": 2,
-        "label": "Connected",
-        "labelPlacement": "left",
-        "labelAlignment": "left",
-        "colorForValue": [
-            {
-                "color": "#ff0000",
-                "value": "0",
-                "valueType": "str"
-            },
-            {
-                "color": "#008000",
-                "value": "1",
-                "valueType": "str"
-            },
-            {
-                "color": "#0000ff",
-                "value": "null",
-                "valueType": "str"
-            },
-            {
-                "color": "#000000",
-                "value": "true",
-                "valueType": "bool"
-            },
-            {
-                "color": "#000000",
-                "value": "false",
-                "valueType": "bool"
-            },
-            {
-                "color": "#ffa500",
-                "value": "0",
-                "valueType": "num"
-            },
-            {
-                "color": "#ffff00",
-                "value": "1",
-                "valueType": "num"
-            }
-        ],
-        "allowColorForValueInMessage": true,
-        "shape": "square",
-        "showGlow": true,
-        "name": "Connect ",
-        "x": 460,
-        "y": 500,
-        "wires": [],
-        "icon": "font-awesome/fa-bolt"
     },
     {
         "id": "96cf6329f21bdcd3",
@@ -987,7 +907,6 @@
         "y": 500,
         "wires": [
             [
-                "d6ebf7202ece34ac",
                 "e1528613dc643b97"
             ]
         ]
@@ -1033,7 +952,6 @@
         "wires": [
             [
                 "cf3618fa8c2b532f",
-                "4c696d684ccaeca2",
                 "19dbd9b2f2288aad"
             ]
         ],
@@ -1067,7 +985,6 @@
         "y": 240,
         "wires": [
             [
-                "4c696d684ccaeca2",
                 "cf3618fa8c2b532f"
             ]
         ],
@@ -1158,26 +1075,6 @@
         ]
     },
     {
-        "id": "2e0a75799f111fc3",
-        "type": "ui_template",
-        "z": "41050a5ac647be74",
-        "group": "30840b3c631a61fb",
-        "name": "",
-        "order": 12,
-        "width": 0,
-        "height": 0,
-        "format": "<div ng-bind-html=\"msg.payload\"></div>\n[{\"id\":\"d263c630.adfb28\",\"type\":\"inject\",\"z\":\"f215cc82.b4d88\",\"name\":\"Go\",\"topic\":\"\",\"payload\":\"1\",\"payloadType\":\"str\",\"repeat\":\"\",\"crontab\":\"\",\"once\":true,\"onceDelay\":\"2\",\"x\":228.0173568725586,\"y\":116.00001907348633,\"wires\":[[\"443e4019.c5163\"]]},{\"id\":\"443e4019.c5163\",\"type\":\"function\",\"z\":\"f215cc82.b4d88\",\"name\":\"dummyarray\",\"func\":\"var myArray =[{ \\\"value1\\\": \\\"aaa\\\", \\\"value2\\\": \\\"A\\\", \\\"value3\\\": \\\"bbb\\\",\\n\\\"value6\\\": \\\"B\\\", \\\"value4\\\": \\\"ccc\\\", \\\"value5\\\": \\\"C\\\", \\\"value7\\\": \\\"aaa\\\", \\\"value8\\\": \\\"A\\\",\\n\\\"value9\\\": \\\"bbb\\\",\\\"value10\\\": \\\"B\\\", \\\"value11\\\": \\\"ccc\\\", \\\"value12\\\": \\\"C\\\"},\\n{ \\\"value1\\\": \\\"bbb\\\", \\\"value2\\\": \\\"B\\\", \\\"value3\\\": \\\"bbb\\\",\\n\\\"value6\\\": \\\"B\\\", \\\"value4\\\": \\\"ccc\\\", \\\"value5\\\": \\\"C\\\", \\\"value7\\\": \\\"aaa\\\", \\\"value8\\\": \\\"A\\\",\\n\\\"value9\\\": \\\"bbb\\\",\\\"value10\\\": \\\"B\\\", \\\"value11\\\": \\\"ccc\\\", \\\"value12\\\": \\\"C\\\"},\\n{ \\\"value1\\\": \\\"ccc\\\", \\\"value2\\\": \\\"C\\\", \\\"value3\\\": \\\"bbb\\\",\\n\\\"value6\\\": \\\"B\\\", \\\"value4\\\": \\\"ccc\\\", \\\"value5\\\": \\\"C\\\", \\\"value7\\\": \\\"aaa\\\", \\\"value8\\\": \\\"A\\\",\\n\\\"value9\\\": \\\"bbb\\\",\\\"value10\\\": \\\"B\\\", \\\"value11\\\": \\\"ccc\\\", \\\"value12\\\": \\\"C\\\"},\\n{ \\\"value1\\\": \\\"ddd\\\", \\\"value2\\\": \\\"D\\\", \\\"value3\\\": \\\"bbb\\\",\\n\\\"value6\\\": \\\"B\\\", \\\"value4\\\": \\\"ccc\\\", \\\"value5\\\": \\\"C\\\", \\\"value7\\\": \\\"aaa\\\", \\\"value8\\\": \\\"A\\\",\\n\\\"value9\\\": \\\"bbb\\\",\\\"value10\\\": \\\"B\\\", \\\"value11\\\": \\\"ccc\\\", \\\"value12\\\": \\\"C\\\"},\\n{ \\\"value1\\\": \\\"eee\\\", \\\"value2\\\": \\\"E\\\", \\\"value3\\\": \\\"bbb\\\",\\n\\\"value6\\\": \\\"B\\\", \\\"value4\\\": \\\"ccc\\\", \\\"value5\\\": \\\"C\\\", \\\"value7\\\": \\\"aaa\\\", \\\"value8\\\": \\\"A\\\",\\n\\\"value9\\\": \\\"bbb\\\",\\\"value10\\\": \\\"B\\\", \\\"value11\\\": \\\"ccc\\\", \\\"value12\\\": \\\"C\\\"},\\n{ \\\"value1\\\": \\\"fff\\\", \\\"value2\\\": \\\"F\\\", \\\"value3\\\": \\\"bbb\\\",\\n\\\"value6\\\": \\\"B\\\", \\\"value4\\\": \\\"ccc\\\", \\\"value5\\\": \\\"C\\\", \\\"value7\\\": \\\"aaa\\\", \\\"value8\\\": \\\"A\\\",\\n\\\"value9\\\": \\\"bbb\\\",\\\"value10\\\": \\\"B\\\", \\\"value11\\\": \\\"ccc\\\", \\\"value12\\\": \\\"C\\\"}];\\nmsg.payload = myArray;\\nreturn msg;\",\"outputs\":1,\"noerr\":0,\"x\":456.18408203125,\"y\":112.00007629394531,\"wires\":[[\"44ec155b.1f113c\"]]},{\"id\":\"44ec155b.1f113c\",\"type\":\"ui_template\",\"z\":\"f215cc82.b4d88\",\"group\":\"524b6528.fbf1ec\",\"name\":\"Data-table\",\"order\":1,\"width\":\"24\",\"height\":\"6\",\"format\":\"<style>\\n th {\\n text-decoration: underline;\\n }\\n .numeric {\\n text-align: right;\\n padding-right: 15px;\\n }\\n</style>\\n\\n\\n<table cellpadding=\\\"1\\\" border=\\\"1\\\" id=\\\"table1\\\" class=\\\"table-hover\\\" style=\\\"width: 100%;\\\">\\n <thead>\\n <tr>\\n <th>value1</th> \\n <th>value2</th>\\n <th>value3</th>\\n <th>value4</th>\\n <th>value5</th>\\n <th>value7</th>\\n <th>value8</th>\\n <th>value9</th>\\n <th>value10</th>\\n <th>value11</th>\\n <th>value12</th>\\n <th>value13</th>\\n <th>value14</th>\\n <th>value15</th>\\n <th>value16</th>\\n <th>save</th>\\n </tr>\\n </thead>\\n <tbody>\\n <tr ng-repeat=\\\"row in msg.payload\\\" ondblclick=\\\"myFunction(this)\\\">\\n \\n <td class=\\\"numeric\\\" bgcolor=gray>{{row.value1}}</td>\\n <td id=\\\"value2\\\" contenteditable=\\\"true\\\" onclick = \\\"this.contentEditable = true;\\\">{{row.value2}}</td>\\n <td id=\\\"value3\\\" contenteditable=\\\"true\\\" onclick = \\\"this.contentEditable = true;\\\">{{row.value3}}</td>\\n <td id=\\\"value4\\\" contenteditable=\\\"true\\\" onclick = \\\"this.contentEditable = true;\\\">{{row.value4}}</td>\\n <td id=\\\"value5\\\" contenteditable=\\\"true\\\" onclick = \\\"this.contentEditable = true;\\\">{{row.value5}}</td>\\n <td bgcolor=gray>{{row.value7}}</td>\\n <td id=\\\"value8\\\" contenteditable=\\\"true\\\" onclick = \\\"this.contentEditable = true;\\\">{{row.value8}}</td>\\n <td bgcolor=gray>{{row.value9}}</td>\\n <td bgcolor=gray>{{row.value10}}</td>\\n <td id=\\\"value11\\\" contenteditable=\\\"true\\\" onclick = \\\"this.contentEditable = true;\\\">{{row.value11}}</td>\\n <td bgcolor=gray>{{row.value12}}</td>\\n <td bgcolor=gray>{{row.value13}}</td>\\n <td id=\\\"value14\\\" contenteditable=\\\"true\\\" onclick = \\\"this.contentEditable = true;\\\">{{row.value14}}</td>\\n <td id=\\\"value15\\\" contenteditable=\\\"true\\\" onclick = \\\"this.contentEditable = true;\\\">{{row.value15}}</td>\\n <td>\\n<md-switch aria-label=\\\"knapp\\\" ng-model=\\\"valgt\\\" ng-change=\\\"send({payload : {row:$index, enabled:valgt}})\\\" ng-checked=\\\"row.value16==='true'\\\" >\\n </md-switch>\\n</td> \\n<td>\\n <md-button tr ng-click=\\\"sendRow($index+1)\\\">save</md-button>\\n </tr>\\n </tbody>\\n</table>\\n\\n\\n\\n<script>\\n(function($scope) {\\n$scope.sendRow = function(obj) {\\n$scope.send({ \\\"payload\\\": (document.getElementById(\\\"table1\\\").rows[obj].innerText) });\\n};\\n})(scope);\\n</script>\\n\\n<script>\\nfunction myFunction(x) {\\n alert(document.getElementById(\\\"table1\\\").rows[x.rowIndex].innerText);\\n}\\n</script>\\n\",\"storeOutMessages\":false,\"fwdInMessages\":false,\"templateScope\":\"local\",\"x\":657.0172271728516,\"y\":116.0000991821289,\"wires\":[[\"21aa3aac.1fe4a6\"]]},{\"id\":\"524b6528.fbf1ec\",\"type\":\"ui_group\",\"z\":\"\",\"name\":\"Group 1\",\"tab\":\"dea6695d.1700f8\",\"order\":1,\"disp\":true,\"width\":\"24\",\"collapse\":false},{\"id\":\"dea6695d.1700f8\",\"type\":\"ui_tab\",\"name\":\"Tab 6\",\"icon\":\"dashboard\",\"order\":5}]",
-        "storeOutMessages": true,
-        "fwdInMessages": true,
-        "resendOnRefresh": true,
-        "templateScope": "local",
-        "x": 720,
-        "y": 620,
-        "wires": [
-            []
-        ]
-    },
-    {
         "id": "dec4a6c056f17f34",
         "type": "file",
         "z": "41050a5ac647be74",
@@ -1200,77 +1097,12 @@
         "name": "",
         "timeout": "",
         "msglimit": 0,
-        "x": 730,
-        "y": 220,
+        "x": 710,
+        "y": 160,
         "wires": [
             [
                 "dec4a6c056f17f34"
             ]
-        ]
-    },
-    {
-        "id": "49aa93af5c5ff5cc",
-        "type": "mqtt in",
-        "z": "41050a5ac647be74",
-        "name": "Gripper",
-        "topic": "factory/gripper/",
-        "qos": "0",
-        "datatype": "json",
-        "broker": "c58f8d4b7c13412d",
-        "nl": false,
-        "rap": true,
-        "rh": 0,
-        "inputs": 0,
-        "x": 990,
-        "y": 240,
-        "wires": [
-            [
-                "10c359ff570965a6"
-            ]
-        ],
-        "outputLabels": [
-            "text"
-        ]
-    },
-    {
-        "id": "10c359ff570965a6",
-        "type": "ui_gauge",
-        "z": "41050a5ac647be74",
-        "name": "",
-        "group": "aa9feae58ac4eadd",
-        "order": 10,
-        "width": 5,
-        "height": 5,
-        "gtype": "gage",
-        "title": "gauge",
-        "label": "units",
-        "format": "{{msg.payload}}",
-        "min": 0,
-        "max": "15",
-        "colors": [
-            "#00b500",
-            "#e6e600",
-            "#ca3838"
-        ],
-        "seg1": "",
-        "seg2": "",
-        "x": 1220,
-        "y": 260,
-        "wires": []
-    },
-    {
-        "id": "cc442232511d160f",
-        "type": "pythonshell in",
-        "z": "41050a5ac647be74",
-        "name": "MQTTtest.py",
-        "pyfile": "I:\\Hobby\\TXT_4\\workpspaceVS\\MQTTtestSolut\\MQTTtest\\MQTTtest.py",
-        "virtualenv": "C:\\Users\\Carel\\AppData\\Local\\Programs\\Python\\Python35",
-        "continuous": false,
-        "stdInData": false,
-        "x": 920,
-        "y": 540,
-        "wires": [
-            []
         ]
     }
 ]
