@@ -8,14 +8,6 @@
         "env": []
     },
     {
-        "id": "7d83e28252f57d08",
-        "type": "tab",
-        "label": "Flow 1",
-        "disabled": false,
-        "info": "",
-        "env": []
-    },
-    {
         "id": "41050a5ac647be74",
         "type": "tab",
         "label": "MQTT_Test",
@@ -665,42 +657,6 @@
                 "02eda2ef93f3bf97"
             ]
         ]
-    },
-    {
-        "id": "73b6c77949512e6b",
-        "type": "mqtt in",
-        "z": "7d83e28252f57d08",
-        "name": "Receiver",
-        "topic": "#",
-        "qos": "0",
-        "datatype": "utf8",
-        "broker": "c58f8d4b7c13412d",
-        "nl": false,
-        "rap": true,
-        "rh": 0,
-        "inputs": 0,
-        "x": 110,
-        "y": 160,
-        "wires": [
-            [
-                "be93696d3377c2ca"
-            ]
-        ]
-    },
-    {
-        "id": "be93696d3377c2ca",
-        "type": "ui_text",
-        "z": "7d83e28252f57d08",
-        "order": 0,
-        "width": 0,
-        "height": 0,
-        "name": "",
-        "label": "text",
-        "format": "{{msg.payload}}",
-        "layout": "row-spread",
-        "x": 550,
-        "y": 160,
-        "wires": []
     },
     {
         "id": "232f5c04f0dab385",
