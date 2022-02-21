@@ -807,11 +807,11 @@
         "property": "payload",
         "action": "str",
         "pretty": true,
-        "x": 530,
-        "y": 720,
+        "x": 430,
+        "y": 700,
         "wires": [
             [
-                "f3094bbdc00853ec"
+                "94a1bc1eeca2e9ee"
             ]
         ]
     },
@@ -830,5 +830,53 @@
         "x": 800,
         "y": 660,
         "wires": []
+    },
+    {
+        "id": "6e7d7f259ed3048f",
+        "type": "python3-function",
+        "z": "4e9eeca57a653287",
+        "name": "payload",
+        "func": " \n \n \n \n \nreturn msg",
+        "outputs": 5,
+        "x": 850,
+        "y": 180,
+        "wires": [
+            [],
+            [],
+            [],
+            [],
+            []
+        ]
+    },
+    {
+        "id": "b4b5a6ef8fdb595f",
+        "type": "rbe",
+        "z": "4e9eeca57a653287",
+        "name": "",
+        "func": "rbe",
+        "gap": "",
+        "start": "",
+        "inout": "out",
+        "septopics": true,
+        "property": "payload",
+        "topi": "msg",
+        "x": 840,
+        "y": 340,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "94a1bc1eeca2e9ee",
+        "type": "json2md",
+        "z": "4e9eeca57a653287",
+        "name": "Parse json to markdown",
+        "x": 610,
+        "y": 680,
+        "wires": [
+            [
+                "f3094bbdc00853ec"
+            ]
+        ]
     }
 ]
