@@ -627,7 +627,8 @@
         "y": 300,
         "wires": [
             [
-                "ba04ef9fa3ecd6c4"
+                "ba04ef9fa3ecd6c4",
+                "1aaae6690b8211e7"
             ]
         ],
         "outputLabels": [
@@ -793,6 +794,38 @@
         "layout": "col-center",
         "x": 620,
         "y": 280,
+        "wires": []
+    },
+    {
+        "id": "1aaae6690b8211e7",
+        "type": "json",
+        "z": "4e9eeca57a653287",
+        "name": "",
+        "property": "payload",
+        "action": "",
+        "pretty": true,
+        "x": 670,
+        "y": 340,
+        "wires": [
+            [
+                "f3094bbdc00853ec"
+            ]
+        ]
+    },
+    {
+        "id": "f3094bbdc00853ec",
+        "type": "ui_text",
+        "z": "4e9eeca57a653287",
+        "group": "aa9feae58ac4eadd",
+        "order": 1,
+        "width": "0",
+        "height": "0",
+        "name": "txt_status",
+        "label": "txt status",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "x": 820,
+        "y": 340,
         "wires": []
     }
 ]
