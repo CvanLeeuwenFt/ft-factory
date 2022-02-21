@@ -805,10 +805,10 @@
         "z": "4e9eeca57a653287",
         "name": "",
         "property": "payload",
-        "action": "",
+        "action": "str",
         "pretty": true,
-        "x": 670,
-        "y": 340,
+        "x": 530,
+        "y": 720,
         "wires": [
             [
                 "f3094bbdc00853ec"
@@ -824,11 +824,11 @@
         "width": "0",
         "height": "0",
         "name": "txt_status",
-        "label": "txt status",
+        "label": "txt parse",
         "format": "{{msg.payload}}",
         "layout": "row-spread",
-        "x": 820,
-        "y": 340,
+        "x": 800,
+        "y": 660,
         "wires": []
     }
 ]
