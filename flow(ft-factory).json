@@ -607,8 +607,8 @@
         "type": "ui_text_input",
         "z": "4e9eeca57a653287",
         "name": "",
-        "label": "",
-        "tooltip": "",
+        "label": "Configuration",
+        "tooltip": "configaratie van de controller",
         "group": "aa9feae58ac4eadd",
         "order": 16,
         "width": 0,
@@ -618,7 +618,7 @@
         "delay": 300,
         "topic": "topic",
         "topicType": "msg",
-        "x": 540,
+        "x": 550,
         "y": 400,
         "wires": [
             []
