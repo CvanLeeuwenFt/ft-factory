@@ -500,7 +500,7 @@
         "name": "Value",
         "label": "value",
         "format": "{{msg.payload}}",
-        "layout": "row-center",
+        "layout": "row-left",
         "x": 430,
         "y": 500,
         "wires": []
