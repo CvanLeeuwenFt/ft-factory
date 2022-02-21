@@ -712,10 +712,10 @@
         "width": 5,
         "height": 1,
         "name": "txt data",
-        "label": "",
+        "label": "txt data",
         "format": "{{msg.payload}}",
         "layout": "row-center",
-        "x": 440,
+        "x": 420,
         "y": 640,
         "wires": []
     },
