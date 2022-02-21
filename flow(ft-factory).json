@@ -873,11 +873,11 @@
         "z": "4e9eeca57a653287",
         "engine": "JSONSelect",
         "command": "jq",
-        "expr": ":root > .par : last-child",
+        "expr": ":root > .par [1]",
         "complete": "complete",
         "prop": "payload",
         "name": "",
-        "x": 550,
+        "x": 530,
         "y": 760,
         "wires": [
             [
