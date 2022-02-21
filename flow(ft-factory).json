@@ -761,8 +761,8 @@
         "targetType": "jsonata",
         "statusVal": "payload",
         "statusType": "auto",
-        "x": 420,
-        "y": 580,
+        "x": 900,
+        "y": 540,
         "wires": []
     },
     {
