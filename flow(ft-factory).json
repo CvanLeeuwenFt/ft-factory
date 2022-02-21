@@ -715,7 +715,7 @@
         "name": "txt data",
         "label": "txt data",
         "format": "{{msg.payload}}",
-        "layout": "row-right",
+        "layout": "row-spread",
         "x": 420,
         "y": 640,
         "wires": []
