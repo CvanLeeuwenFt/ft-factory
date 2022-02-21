@@ -434,8 +434,8 @@
         "id": "2a2a279366c4b5b6",
         "type": "mqtt in",
         "z": "4e9eeca57a653287",
-        "name": "receiver mqtt statuc",
-        "topic": "txt/mqtt/#",
+        "name": "receiver mqtt status",
+        "topic": "txt/mqtt",
         "qos": "0",
         "datatype": "utf8",
         "broker": "c58f8d4b7c13412d",
@@ -509,7 +509,7 @@
         "id": "187c40ec5c7fe699",
         "type": "ui_text_input",
         "z": "4e9eeca57a653287",
-        "name": "TXT Configuration",
+        "name": "txt Configuration",
         "label": "TXT_conf",
         "tooltip": "configaratie van de controller",
         "group": "aa9feae58ac4eadd",
@@ -521,7 +521,7 @@
         "delay": 300,
         "topic": "topic",
         "topicType": "msg",
-        "x": 530,
+        "x": 460,
         "y": 400,
         "wires": [
             []
