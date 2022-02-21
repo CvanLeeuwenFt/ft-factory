@@ -574,7 +574,7 @@
         "id": "de37a8b93e2d46ae",
         "type": "debug",
         "z": "4e9eeca57a653287",
-        "name": "",
+        "name": "mqtt status",
         "active": true,
         "tosidebar": true,
         "console": true,
@@ -583,8 +583,8 @@
         "targetType": "full",
         "statusVal": "payload",
         "statusType": "auto",
-        "x": 570,
-        "y": 300,
+        "x": 610,
+        "y": 240,
         "wires": []
     },
     {
@@ -659,28 +659,6 @@
         ]
     },
     {
-        "id": "839475ae0feb92f7",
-        "type": "mqtt in",
-        "z": "4e9eeca57a653287",
-        "name": "receiver ",
-        "topic": "txt/#",
-        "qos": "0",
-        "datatype": "json",
-        "broker": "c58f8d4b7c13412d",
-        "nl": false,
-        "rap": true,
-        "rh": 0,
-        "inputs": 0,
-        "x": 285,
-        "y": 209,
-        "wires": [
-            []
-        ],
-        "outputLabels": [
-            "text"
-        ]
-    },
-    {
         "id": "b56c4e3d6894899d",
         "type": "mqtt in",
         "z": "4e9eeca57a653287",
@@ -696,7 +674,9 @@
         "x": 110,
         "y": 420,
         "wires": [
-            []
+            [
+                "44a5c5fccb018e8f"
+            ]
         ],
         "outputLabels": [
             "text"
@@ -718,7 +698,9 @@
         "x": 110,
         "y": 360,
         "wires": [
-            []
+            [
+                "7026c40a7175f78b"
+            ]
         ],
         "outputLabels": [
             "text"
@@ -740,10 +722,63 @@
         "x": 120,
         "y": 300,
         "wires": [
-            []
+            [
+                "ba04ef9fa3ecd6c4"
+            ]
         ],
         "outputLabels": [
             "text"
         ]
+    },
+    {
+        "id": "7026c40a7175f78b",
+        "type": "debug",
+        "z": "4e9eeca57a653287",
+        "name": "conf",
+        "active": true,
+        "tosidebar": true,
+        "console": true,
+        "tostatus": true,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "payload",
+        "statusType": "auto",
+        "x": 430,
+        "y": 360,
+        "wires": []
+    },
+    {
+        "id": "ba04ef9fa3ecd6c4",
+        "type": "debug",
+        "z": "4e9eeca57a653287",
+        "name": "status",
+        "active": true,
+        "tosidebar": true,
+        "console": true,
+        "tostatus": true,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "payload",
+        "statusType": "auto",
+        "x": 400,
+        "y": 300,
+        "wires": []
+    },
+    {
+        "id": "44a5c5fccb018e8f",
+        "type": "debug",
+        "z": "4e9eeca57a653287",
+        "name": "Value",
+        "active": true,
+        "tosidebar": true,
+        "console": true,
+        "tostatus": true,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "payload",
+        "statusType": "auto",
+        "x": 480,
+        "y": 440,
+        "wires": []
     }
 ]
