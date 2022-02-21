@@ -651,7 +651,7 @@
         "offcolor": "",
         "animate": false,
         "x": 90,
-        "y": 60,
+        "y": 40,
         "wires": [
             [
                 "02eda2ef93f3bf97"
