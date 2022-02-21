@@ -873,7 +873,7 @@
         "z": "4e9eeca57a653287",
         "engine": "JSONSelect",
         "command": "jq",
-        "expr": ":root > .p1 : last-child",
+        "expr": ":root > .par : last-child",
         "complete": "complete",
         "prop": "payload",
         "name": "",
