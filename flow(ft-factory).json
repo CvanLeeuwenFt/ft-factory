@@ -531,10 +531,10 @@
         "id": "2a2a279366c4b5b6",
         "type": "mqtt in",
         "z": "4e9eeca57a653287",
-        "name": "receiver ",
-        "topic": "txt/#",
+        "name": "receiver mqtt statuc",
+        "topic": "txt/mqtt/#",
         "qos": "0",
-        "datatype": "json",
+        "datatype": "utf8",
         "broker": "c58f8d4b7c13412d",
         "nl": false,
         "rap": true,
@@ -656,6 +656,94 @@
             [
                 "02eda2ef93f3bf97"
             ]
+        ]
+    },
+    {
+        "id": "839475ae0feb92f7",
+        "type": "mqtt in",
+        "z": "4e9eeca57a653287",
+        "name": "receiver ",
+        "topic": "txt/#",
+        "qos": "0",
+        "datatype": "json",
+        "broker": "c58f8d4b7c13412d",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 285,
+        "y": 209,
+        "wires": [
+            []
+        ],
+        "outputLabels": [
+            "text"
+        ]
+    },
+    {
+        "id": "b56c4e3d6894899d",
+        "type": "mqtt in",
+        "z": "4e9eeca57a653287",
+        "name": "receiver  value",
+        "topic": "txt/s/value/#",
+        "qos": "0",
+        "datatype": "json",
+        "broker": "c58f8d4b7c13412d",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 110,
+        "y": 420,
+        "wires": [
+            []
+        ],
+        "outputLabels": [
+            "text"
+        ]
+    },
+    {
+        "id": "2f9e78e12c9d2adb",
+        "type": "mqtt in",
+        "z": "4e9eeca57a653287",
+        "name": "receiver conf",
+        "topic": "txt/s/conf/#",
+        "qos": "0",
+        "datatype": "json",
+        "broker": "c58f8d4b7c13412d",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 110,
+        "y": 360,
+        "wires": [
+            []
+        ],
+        "outputLabels": [
+            "text"
+        ]
+    },
+    {
+        "id": "6c6b68053b4940e0",
+        "type": "mqtt in",
+        "z": "4e9eeca57a653287",
+        "name": "receiver status",
+        "topic": "txt/s/status/#",
+        "qos": "0",
+        "datatype": "json",
+        "broker": "c58f8d4b7c13412d",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 120,
+        "y": 300,
+        "wires": [
+            []
+        ],
+        "outputLabels": [
+            "text"
         ]
     }
 ]
