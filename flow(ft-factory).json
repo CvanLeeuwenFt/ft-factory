@@ -41,6 +41,7 @@
         "type": "ui_tab",
         "name": "A1",
         "icon": "dashboard",
+        "order": 2,
         "disabled": false,
         "hidden": false
     },
@@ -214,6 +215,7 @@
         "type": "ui_tab",
         "name": "A2",
         "icon": "dashboard",
+        "order": 3,
         "disabled": false,
         "hidden": false
     },
@@ -222,7 +224,7 @@
         "type": "ui_tab",
         "name": "Tab 3",
         "icon": "dashboard",
-        "order": 3
+        "order": 4
     },
     {
         "id": "30840b3c631a61fb",
@@ -271,7 +273,7 @@
         "link": "http://www.TesCaWeb.nl/Carel",
         "icon": "open_in_browser",
         "target": "iframe",
-        "order": 4
+        "order": 1
     },
     {
         "id": "b7b5582d96bb1c75",
