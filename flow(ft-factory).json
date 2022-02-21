@@ -719,7 +719,7 @@
         "format": "{{msg.payload}}",
         "layout": "row-spread",
         "x": 420,
-        "y": 640,
+        "y": 600,
         "wires": []
     },
     {
@@ -827,7 +827,7 @@
         "label": "txt data parse",
         "format": "{{msg.payload}}",
         "layout": "row-spread",
-        "x": 800,
+        "x": 900,
         "y": 660,
         "wires": []
     },
@@ -871,7 +871,7 @@
         "type": "json2md",
         "z": "4e9eeca57a653287",
         "name": "Parse json to markdown",
-        "x": 610,
+        "x": 630,
         "y": 680,
         "wires": [
             [
