@@ -718,7 +718,7 @@
         "label": "txt data",
         "format": "{{msg.payload}}",
         "layout": "row-spread",
-        "x": 420,
+        "x": 800,
         "y": 600,
         "wires": []
     },
@@ -739,9 +739,8 @@
         "y": 580,
         "wires": [
             [
-                "cd50e099734a83d5",
                 "cb249ba6ba04cbbe",
-                "1aaae6690b8211e7"
+                "94a1bc1eeca2e9ee"
             ]
         ],
         "outputLabels": [
@@ -758,7 +757,7 @@
         "console": true,
         "tostatus": true,
         "complete": "payload",
-        "targetType": "jsonata",
+        "targetType": "msg",
         "statusVal": "payload",
         "statusType": "auto",
         "x": 900,
@@ -800,22 +799,6 @@
         "wires": []
     },
     {
-        "id": "1aaae6690b8211e7",
-        "type": "json",
-        "z": "4e9eeca57a653287",
-        "name": "",
-        "property": "payload",
-        "action": "str",
-        "pretty": true,
-        "x": 430,
-        "y": 700,
-        "wires": [
-            [
-                "94a1bc1eeca2e9ee"
-            ]
-        ]
-    },
-    {
         "id": "f3094bbdc00853ec",
         "type": "ui_text",
         "z": "4e9eeca57a653287",
@@ -827,8 +810,8 @@
         "label": "txt data parse",
         "format": "{{msg.payload}}",
         "layout": "row-spread",
-        "x": 900,
-        "y": 660,
+        "x": 860,
+        "y": 680,
         "wires": []
     },
     {
@@ -871,12 +854,19 @@
         "type": "json2md",
         "z": "4e9eeca57a653287",
         "name": "Parse json to markdown",
-        "x": 630,
+        "x": 550,
         "y": 680,
         "wires": [
             [
-                "f3094bbdc00853ec"
+                "f3094bbdc00853ec",
+                "cd50e099734a83d5"
             ]
+        ],
+        "inputLabels": [
+            "dara"
+        ],
+        "outputLabels": [
+            "out"
         ]
     }
 ]
