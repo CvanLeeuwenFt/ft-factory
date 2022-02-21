@@ -532,7 +532,7 @@
         "type": "mqtt in",
         "z": "4e9eeca57a653287",
         "name": "receiver ",
-        "topic": "#",
+        "topic": "txt/#",
         "qos": "0",
         "datatype": "json",
         "broker": "c58f8d4b7c13412d",
