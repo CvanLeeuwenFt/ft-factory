@@ -729,7 +729,7 @@
         "name": "p  value",
         "topic": "txt/p/#",
         "qos": "0",
-        "datatype": "json",
+        "datatype": "utf8",
         "broker": "c58f8d4b7c13412d",
         "nl": false,
         "rap": true,
