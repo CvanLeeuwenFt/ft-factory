@@ -574,7 +574,7 @@
         "rh": 0,
         "inputs": 0,
         "x": 110,
-        "y": 420,
+        "y": 440,
         "wires": [
             [
                 "44a5c5fccb018e8f",
@@ -701,6 +701,64 @@
         "name": "mqtt",
         "x": 570,
         "y": 140,
+        "wires": []
+    },
+    {
+        "id": "cb249ba6ba04cbbe",
+        "type": "ui_text",
+        "z": "4e9eeca57a653287",
+        "group": "aa9feae58ac4eadd",
+        "order": 1,
+        "width": 5,
+        "height": 1,
+        "name": "txt data",
+        "label": "",
+        "format": "{{msg.payload}}",
+        "layout": "row-center",
+        "x": 440,
+        "y": 640,
+        "wires": []
+    },
+    {
+        "id": "1609fcc3d4de6e42",
+        "type": "mqtt in",
+        "z": "4e9eeca57a653287",
+        "name": "p  value",
+        "topic": "txt/p/#",
+        "qos": "0",
+        "datatype": "json",
+        "broker": "c58f8d4b7c13412d",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 90,
+        "y": 580,
+        "wires": [
+            [
+                "cd50e099734a83d5",
+                "cb249ba6ba04cbbe"
+            ]
+        ],
+        "outputLabels": [
+            "text"
+        ]
+    },
+    {
+        "id": "cd50e099734a83d5",
+        "type": "debug",
+        "z": "4e9eeca57a653287",
+        "name": "Value",
+        "active": true,
+        "tosidebar": true,
+        "console": true,
+        "tostatus": true,
+        "complete": "payload",
+        "targetType": "jsonata",
+        "statusVal": "payload",
+        "statusType": "auto",
+        "x": 420,
+        "y": 580,
         "wires": []
     }
 ]
