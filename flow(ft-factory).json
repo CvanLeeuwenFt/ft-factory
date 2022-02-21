@@ -630,8 +630,7 @@
         "y": 300,
         "wires": [
             [
-                "ba04ef9fa3ecd6c4",
-                "1aaae6690b8211e7"
+                "ba04ef9fa3ecd6c4"
             ]
         ],
         "outputLabels": [
@@ -741,7 +740,8 @@
         "wires": [
             [
                 "cd50e099734a83d5",
-                "cb249ba6ba04cbbe"
+                "cb249ba6ba04cbbe",
+                "1aaae6690b8211e7"
             ]
         ],
         "outputLabels": [
