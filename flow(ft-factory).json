@@ -466,10 +466,10 @@
         "height": "0",
         "name": "MQTT status",
         "label": "mqtt_status",
-        "format": "{{msg.topic}}",
+        "format": "{{msg.topic},{msg.payload}}",
         "layout": "row-spread",
         "x": 590,
-        "y": 60,
+        "y": 80,
         "wires": []
     },
     {
@@ -759,6 +759,40 @@
         "statusType": "auto",
         "x": 420,
         "y": 580,
+        "wires": []
+    },
+    {
+        "id": "3ea86854cadcd14a",
+        "type": "mqtt in JSON",
+        "z": "4e9eeca57a653287",
+        "name": "",
+        "topic": "txt/mqtt",
+        "qos": "0",
+        "broker": "c58f8d4b7c13412d",
+        "ignoreempty": true,
+        "removemqttconfig": false,
+        "x": 80,
+        "y": 240,
+        "wires": [
+            [
+                "4c5e224836b78723"
+            ]
+        ]
+    },
+    {
+        "id": "4c5e224836b78723",
+        "type": "ui_text",
+        "z": "4e9eeca57a653287",
+        "group": "aa9feae58ac4eadd",
+        "order": 14,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "text",
+        "format": "{{msg.payload}}",
+        "layout": "col-center",
+        "x": 620,
+        "y": 280,
         "wires": []
     }
 ]
