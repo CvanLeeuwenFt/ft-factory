@@ -576,7 +576,7 @@
         "rap": true,
         "rh": 0,
         "inputs": 0,
-        "x": 110,
+        "x": 90,
         "y": 440,
         "wires": [
             [
@@ -729,7 +729,7 @@
         "name": "p  value",
         "topic": "txt/p/#",
         "qos": "0",
-        "datatype": "utf8",
+        "datatype": "json",
         "broker": "c58f8d4b7c13412d",
         "nl": false,
         "rap": true,
@@ -740,7 +740,8 @@
         "wires": [
             [
                 "cb249ba6ba04cbbe",
-                "94a1bc1eeca2e9ee"
+                "94a1bc1eeca2e9ee",
+                "dd547951abe66cb1"
             ]
         ],
         "outputLabels": [
@@ -867,6 +868,22 @@
         ],
         "outputLabels": [
             "out"
+        ]
+    },
+    {
+        "id": "dd547951abe66cb1",
+        "type": "contrib-json",
+        "z": "4e9eeca57a653287",
+        "engine": "JSONSelect",
+        "command": "jq",
+        "expr": ":root > .p1 : last-child",
+        "complete": "complete",
+        "prop": "payload",
+        "name": "",
+        "x": 550,
+        "y": 760,
+        "wires": [
+            []
         ]
     }
 ]
