@@ -546,7 +546,6 @@
             [
                 "02eda2ef93f3bf97",
                 "de37a8b93e2d46ae",
-                "22dfbc3588c68679",
                 "30e7ab76a96921a9"
             ]
         ],
@@ -599,8 +598,8 @@
         "label": "",
         "format": "{{msg.payload}}",
         "layout": "row-center",
-        "x": 570,
-        "y": 100,
+        "x": 430,
+        "y": 500,
         "wires": []
     },
     {
@@ -619,8 +618,8 @@
         "delay": 300,
         "topic": "topic",
         "topicType": "msg",
-        "x": 560,
-        "y": 180,
+        "x": 540,
+        "y": 400,
         "wires": [
             []
         ]
@@ -675,7 +674,8 @@
         "y": 420,
         "wires": [
             [
-                "44a5c5fccb018e8f"
+                "44a5c5fccb018e8f",
+                "22dfbc3588c68679"
             ]
         ],
         "outputLabels": [
@@ -699,7 +699,8 @@
         "y": 360,
         "wires": [
             [
-                "7026c40a7175f78b"
+                "7026c40a7175f78b",
+                "187c40ec5c7fe699"
             ]
         ],
         "outputLabels": [
@@ -777,8 +778,8 @@
         "targetType": "jsonata",
         "statusVal": "payload",
         "statusType": "auto",
-        "x": 440,
-        "y": 420,
+        "x": 420,
+        "y": 440,
         "wires": []
     },
     {
