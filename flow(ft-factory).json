@@ -129,11 +129,11 @@
                 }
             },
             "angularTheme": {
-                "primary": "blue-grey",
+                "primary": "indigo",
                 "accents": "blue",
                 "warn": "red",
                 "background": "grey",
-                "palette": "dark"
+                "palette": "light"
             }
         },
         "site": {
@@ -141,7 +141,7 @@
             "hideToolbar": "false",
             "allowSwipe": "mouse",
             "lockMenu": "true",
-            "allowTempTheme": "none",
+            "allowTempTheme": "true",
             "dateFormat": "YYYY/MM/DD",
             "sizes": {
                 "sx": 48,
@@ -547,7 +547,7 @@
                 "02eda2ef93f3bf97",
                 "de37a8b93e2d46ae",
                 "22dfbc3588c68679",
-                "187c40ec5c7fe699"
+                "30e7ab76a96921a9"
             ]
         ],
         "outputLabels": [
@@ -583,7 +583,7 @@
         "targetType": "msg",
         "statusVal": "payload",
         "statusType": "auto",
-        "x": 610,
+        "x": 570,
         "y": 240,
         "wires": []
     },
@@ -619,7 +619,7 @@
         "delay": 300,
         "topic": "topic",
         "topicType": "msg",
-        "x": 580,
+        "x": 560,
         "y": 180,
         "wires": [
             []
@@ -779,6 +779,24 @@
         "statusType": "auto",
         "x": 440,
         "y": 420,
+        "wires": []
+    },
+    {
+        "id": "30e7ab76a96921a9",
+        "type": "ui_toast",
+        "z": "4e9eeca57a653287",
+        "position": "top right",
+        "displayTime": "3",
+        "highlight": "",
+        "sendall": true,
+        "outputs": 0,
+        "ok": "OK",
+        "cancel": "",
+        "raw": false,
+        "topic": "#",
+        "name": "mqtt",
+        "x": 570,
+        "y": 140,
         "wires": []
     }
 ]
