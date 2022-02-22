@@ -856,7 +856,7 @@
         "type": "function",
         "z": "4e9eeca57a653287",
         "name": "MyJS",
-        "func": "var topic=msg.topic;\nvar payload=msg.payload;\n\n\nif(msg.topic==\"topic1\")node.log(\"topic1\");\nif(msg.topic==\"topic2\")node.log(\"topic2\");\n\n\n\n\nreturn [ msg,msg,null,null,null ]",
+        "func": "var topic=msg.topic;\nvar payload=msg.payload;\n\n\nif(msg.topic==\"topic1\")node.log(\"topic1\");\nif(msg.topic==\"topic2\")node.log(\"topic2\");\n\n\n\n\nreturn [ msg,null,null,null,null ]",
         "outputs": 5,
         "noerr": 0,
         "initialize": "",
@@ -932,9 +932,7 @@
         "x": 900,
         "y": 280,
         "wires": [
-            [
-                "1c1ba70ece2270da"
-            ]
+            []
         ],
         "outputLabels": [
             "Json"
