@@ -856,7 +856,7 @@
         "type": "function",
         "z": "4e9eeca57a653287",
         "name": "MyJS",
-        "func": "var topic=msg.topic;\nvar payload=msg.payload;\n\nvar obj = JSON.parse('{\"firstName\":\"John\", \"lastName\":\"Doe\"}');\n\nvar msg1=msg\nvar msg2=msg\n\nmsg2.payload= JSON.SON.stringify(  obj);\nmsg2.topic =   \"txt/new\";\n\nreturn [ msg,msg2,null,null,msg1 ];",
+        "func": "var topic=msg.topic;\nvar payload=msg.payload;\n\nvar obj = JSON.parse('{\"firstName\":\"John\", \"lastName\":\"Doe\"}');\n\nvar msg1=msg\nvar msg2=msg\n\nmsg2.payload= JSON.stringify(  obj );\nmsg2.topic =   \"txt/new\";\n\nreturn [ msg,msg2,null,null,msg1 ];",
         "outputs": 5,
         "noerr": 0,
         "initialize": "",
