@@ -902,7 +902,7 @@
         "onceDelay": 0.1,
         "topic": "txt/test1",
         "payload": "{\"id\":\"p1\",\"par\":[34,253,65,512,-23],\"t\":\"2014-06-25T00:00:00.000Z\"}",
-        "payloadType": "json",
+        "payloadType": "str",
         "x": 830,
         "y": 120,
         "wires": [
