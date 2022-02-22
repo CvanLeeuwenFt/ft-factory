@@ -873,7 +873,9 @@
             ],
             [],
             [],
-            []
+            [
+                "74361d051dabcde1"
+            ]
         ]
     },
     {
@@ -942,15 +944,16 @@
         "id": "8a4394a9efdfaf28",
         "type": "debug",
         "z": "4e9eeca57a653287",
-        "name": "",
+        "name": "P1",
         "active": true,
         "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
+        "console": true,
+        "tostatus": true,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "payload",
         "statusType": "auto",
-        "x": 1450,
+        "x": 1430,
         "y": 40,
         "wires": []
     },
@@ -958,16 +961,34 @@
         "id": "bd6fe3064ac45870",
         "type": "debug",
         "z": "4e9eeca57a653287",
-        "name": "",
+        "name": "P2",
         "active": true,
         "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
+        "console": true,
+        "tostatus": true,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "payload",
         "statusType": "auto",
-        "x": 1450,
+        "x": 1430,
         "y": 100,
+        "wires": []
+    },
+    {
+        "id": "74361d051dabcde1",
+        "type": "debug",
+        "z": "4e9eeca57a653287",
+        "name": "P5",
+        "active": true,
+        "tosidebar": true,
+        "console": true,
+        "tostatus": true,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "payload",
+        "statusType": "auto",
+        "x": 1390,
+        "y": 160,
         "wires": []
     }
 ]
