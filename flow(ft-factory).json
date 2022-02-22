@@ -856,7 +856,7 @@
         "type": "function",
         "z": "4e9eeca57a653287",
         "name": "MyJS",
-        "func": "var topic=msg.topic;\nvar payload=msg.payload;\n\nconst obj = JSON.parse(payload);\n\npt1=obj;\npt2=obj;\n\n\nreturn [ msg,msg,null,null,null ];",
+        "func": "var topic=msg.topic;\nvar payload=msg.payload;\n\nobj = JSON.parse(payload);\n\n\n\n\nreturn [ msg,msg,null,null,null ];",
         "outputs": 5,
         "noerr": 0,
         "initialize": "",
