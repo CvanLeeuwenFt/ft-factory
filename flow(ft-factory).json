@@ -856,7 +856,7 @@
         "type": "function",
         "z": "4e9eeca57a653287",
         "name": "MyJS",
-        "func": "var topic=msg.topic;\nvar payload=msg.payload;\n\n\nif(msg.topic==\"topic1\")node.log(\"topic1\");\nif(msg.topic==\"topic2\")node.log(\"topic2\");\n\n\n\n\nreturn msg;",
+        "func": "var topic=msg.topic;\nvar payload=msg.payload;\n\n\nif(msg.topic==\"topic1\")node.log(\"topic1\");\nif(msg.topic==\"topic2\")node.log(\"topic2\");\n\n\n\n\nreturn [ msg,msg,null,null,null ]",
         "outputs": 5,
         "noerr": 0,
         "initialize": "",
@@ -929,8 +929,8 @@
         "topic": "txt/test2",
         "payload": "{\"device\":\"Ussel2017\",\"ex\":{\"counter\":{\"C1\":{\"i_cnt\":0,\"i_counter\":0,\"i_reset\":0,\"i_resetted\":0},\"C2\":{\"i_cnt\":0,\"i_counter\":0,\"i_reset\":0,\"i_resetted\":0},\"C3\":{\"i_cnt\":0,\"i_counter\":1235,\"i_reset\":0,\"i_resetted\":0},\"C4\":{\"i_cnt\":0,\"i_counter\":0,\"i_reset\":0,\"i_resetted\":0}},\"input\":{\"I1\":{\"i_uni\":0},\"I2\":{\"i_uni\":1},\"I3\":{\"i_uni\":0},\"I4\":{\"i_uni\":0},\"I5\":{\"i_uni\":0},\"I6\":{\"i_uni\":0},\"I7\":{\"i_uni\":0},\"I8\":{\"i_uni\":0}},\"motor\":{\"M1\":{\"o_dista\":0,\"o_duty1\":512,\"o_duty2\":0},\"M2\":{\"o_dista\":0,\"o_duty1\":512,\"o_duty2\":0},\"M3\":{\"o_dista\":1234,\"o_duty1\":0,\"o_duty2\":512},\"M4\":{\"o_dista\":0,\"o_duty1\":0,\"o_duty2\":0}}}}",
         "payloadType": "json",
-        "x": 1000,
-        "y": 300,
+        "x": 900,
+        "y": 280,
         "wires": [
             [
                 "1c1ba70ece2270da"
@@ -945,7 +945,7 @@
         "type": "debug",
         "z": "4e9eeca57a653287",
         "name": "",
-        "active": false,
+        "active": true,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
