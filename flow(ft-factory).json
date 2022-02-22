@@ -820,33 +820,15 @@
         "type": "python3-function",
         "z": "4e9eeca57a653287",
         "name": "Example01",
-        "func": " var payload=msg.payload;\n var topic=msg.topic;\n \n \n \n \n \n \n \n \nvar newMsg = { payload: msg.payload,topic:msg.topic };\nreturn newMsg",
+        "func": " payload=msg.payload\n topic=msg.topic\n \n \n \n \n \n \n \n \n# var newMsg = { payload: msg.payload,topic:msg.topic }\nreturn newMsg",
         "outputs": 5,
         "x": 810,
-        "y": 220,
+        "y": 200,
         "wires": [
             [],
             [],
             [],
             [],
-            []
-        ]
-    },
-    {
-        "id": "b4b5a6ef8fdb595f",
-        "type": "rbe",
-        "z": "4e9eeca57a653287",
-        "name": "",
-        "func": "rbe",
-        "gap": "",
-        "start": "",
-        "inout": "out",
-        "septopics": true,
-        "property": "payload",
-        "topi": "msg",
-        "x": 840,
-        "y": 340,
-        "wires": [
             []
         ]
     },
@@ -891,7 +873,7 @@
         "type": "python3-function",
         "z": "4e9eeca57a653287",
         "name": "MyPy",
-        "func": " var payload=msg.payload;\n var topic=msg.topic;\n \n \n# Multi input \n if(msg.topic==\"topic1\")\nnode.log(\"topic1\");\nif(msg.topic==\"topic2\")\nnode.log(\"topic2\");\nreturn msg;\n \n \n \n \nvar newMsg = { payload: msg.payload,topic:msg.topic };\nreturn [msg1,msg2,msg3,msg4,null];",
+        "func": "payload=msg.payload\n topic=msg.topic\n \n \n\n \n \n \n \nnewMsg = { payload: msg.payload,topic:msg.topic }\nreturn [msg1,msg2,msg3,msg4,null]",
         "outputs": 5,
         "x": 1290,
         "y": 80,
@@ -924,8 +906,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1310,
-        "y": 280,
+        "x": 1270,
+        "y": 260,
         "wires": [
             [],
             [],
