@@ -816,23 +816,6 @@
         "wires": []
     },
     {
-        "id": "6e7d7f259ed3048f",
-        "type": "python3-function",
-        "z": "4e9eeca57a653287",
-        "name": "Example01",
-        "func": "payload=msg.payload\ntopic=msg.topic\n \n \n \n \n \n \n \n \n# var newMsg = { payload: msg.payload,topic:msg.topic }\nreturn newMsg",
-        "outputs": 5,
-        "x": 890,
-        "y": 180,
-        "wires": [
-            [],
-            [],
-            [],
-            [],
-            []
-        ]
-    },
-    {
         "id": "94a1bc1eeca2e9ee",
         "type": "json2md",
         "z": "4e9eeca57a653287",
@@ -873,7 +856,7 @@
         "type": "python3-function",
         "z": "4e9eeca57a653287",
         "name": "MyPy",
-        "func": "payload=msg.payload\ntopic=msg.topic\n\nnewMsg = { payload: msg.payload,topic:msg.topic }\nreturn [newMsg,null,null,null]",
+        "func": "import sys\npayload=msg.payload\ntopic=msg.topic\n\nnewMsg = { \"payload\": msg.payload,\"topic\":msg.topic }\nreturn [newMsg,null,null,null]",
         "outputs": 5,
         "x": 1210,
         "y": 80,
@@ -938,7 +921,7 @@
         "crontab": "",
         "once": false,
         "onceDelay": 0.1,
-        "topic": "txt/test",
+        "topic": "txt/test1",
         "payload": "{\"id\":\"p1\",\"par\":[34,253,65,512,-23],\"t\":\"2014-06-25T00:00:00.000Z\"}",
         "payloadType": "json",
         "x": 880,
