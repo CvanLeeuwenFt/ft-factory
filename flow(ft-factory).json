@@ -862,8 +862,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1030,
-        "y": 120,
+        "x": 1070,
+        "y": 140,
         "wires": [
             [
                 "8a4394a9efdfaf28"
@@ -903,11 +903,11 @@
         "topic": "txt/test1",
         "payload": "{\"id\":\"p1\",\"par\":[34,253,65,512,-23],\"t\":\"2014-06-25T00:00:00.000Z\"}",
         "payloadType": "str",
-        "x": 830,
+        "x": 790,
         "y": 120,
         "wires": [
             [
-                "1c1ba70ece2270da"
+                "0e42115eb538c443"
             ]
         ],
         "outputLabels": [
@@ -1028,5 +1028,21 @@
         "x": 1350,
         "y": 320,
         "wires": []
+    },
+    {
+        "id": "0e42115eb538c443",
+        "type": "json",
+        "z": "4e9eeca57a653287",
+        "name": "",
+        "property": "payload",
+        "action": "obj",
+        "pretty": false,
+        "x": 940,
+        "y": 180,
+        "wires": [
+            [
+                "1c1ba70ece2270da"
+            ]
+        ]
     }
 ]
