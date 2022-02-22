@@ -856,7 +856,7 @@
         "type": "function",
         "z": "4e9eeca57a653287",
         "name": "MyJS",
-        "func": "var topic=msg.topic;\nvar payload=msg.payload;\n\nvar obj1 = JSON.parse(msg.payload);\nvar obj2 = JSON.parse('{\"firstName\":\"Jaap\", \"lastName\":\"Doe2\"}');\nvar obj3 = JSON.parse('{\"firstName\":\"Carel\", \"lastName\":\"Doe3\"}');\nvar obj4 = JSON.parse('{\"firstName\":\"Marie\", \"lastName\":\"Doe4\"}');\nvar obj5 = JSON.parse('{\"firstName\":\"Tessa\", \"lastName\":\"Doe5\"}');\n\nvar msg1={}\nvar msg2={}\nvar msg3={}\nvar msg4={}\nvar msg5={}\n\nmsg1.payload= JSON.stringify(  obj1 );\n\n\nmsg2.payload= JSON.stringify(  obj2 );\nmsg2.topic =   \"txt/new\";\n\nmsg3.payload= JSON.stringify(  obj3 );\nmsg3.topic =   \"txt/new\";\n\nmsg5.payload= JSON.stringify(obj5);\nmsg5.topic =   \"txt/new\";\n\nreturn [ msg1,msg2,null,null,msg5 ];",
+        "func": "var topic=msg.topic;\nvar payload=msg.payload;\n\nvar obj1 ; //JSON.parse(msg.payload);\nvar obj2 = JSON.parse('{\"firstName\":\"Jaap\", \"lastName\":\"Doe2\"}');\nvar obj3 = JSON.parse('{\"firstName\":\"Carel\", \"lastName\":\"Doe3\"}');\nvar obj4 = JSON.parse('{\"firstName\":\"Marie\", \"lastName\":\"Doe4\"}');\nvar obj5 = JSON.parse('{\"firstName\":\"Tessa\", \"lastName\":\"Doe5\"}');\n\nvar msg1={};\nvar msg2={};\nvar msg3={};\nvar msg4={};\nvar msg5={};\n\nmsg1.payload= JSON.stringify(  obj1 );\n\n\nmsg2.payload= JSON.stringify(  obj2 );\nmsg2.topic =   \"txt/new\";\n\nmsg3.payload= JSON.stringify(  obj3 );\nmsg3.topic =   \"txt/new\";\n\nmsg5.payload= JSON.stringify(obj5);\nmsg5.topic =   \"txt/new\";\n\nreturn [ msg1,msg2,null,null,msg5 ];",
         "outputs": 5,
         "noerr": 0,
         "initialize": "",
