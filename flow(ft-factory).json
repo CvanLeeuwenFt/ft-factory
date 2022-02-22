@@ -856,7 +856,7 @@
         "type": "function",
         "z": "4e9eeca57a653287",
         "name": "MyJS",
-        "func": "var topic=msg.topic;\nvar payload=msg.payload;\n\nvar obj1=payload;// JSON.parse(payload);\nvar obj2 = JSON.parse('{\"firstName\":\"Jaap\", \"lastName\":\"Doe2\"}');\nvar obj3 = JSON.parse('{\"firstName\":\"Carel\", \"lastName\":\"Doe3\"}');\nvar obj4 = JSON.parse('{\"firstName\":\"Marie\", \"lastName\":\"Doe4\"}');\nvar obj5 = JSON.parse('{\"firstName\":\"Tessa\", \"lastName\":\"Doe5\"}');\n\nvar msg1={};\nvar msg2={};\nvar msg3={};\nvar msg4={};\nvar msg5={};\n\nmsg1.payload= JSON.stringify(  obj1 );\nmsg1.topic=topic;\n\nmsg2.payload= JSON.stringify(  obj2 );\nmsg2.topic =   \"txt/new\";\n\nmsg3.payload= JSON.stringify(  obj3 );\nmsg3.topic =   \"txt/new\";\n\nmsg5.payload= JSON.stringify(obj5);\nmsg5.topic =   \"txt/new\";\n\nreturn [ msg1,msg2,null,null,msg5 ];",
+        "func": "var topic=msg.topic;\nvar payload=msg.payload;\n\nvar obj1=payload;// JSON.parse(payload);\nvar obj2 = JSON.parse('{\"firstName\":\"Jaap\", \"lastName\":\"Doe2\"}');\nvar obj3 = JSON.parse('{\"firstName\":\"Carel\", \"lastName\":\"Doe3\"}');\nvar obj4 = JSON.parse('{\"firstName\":\"Marie\", \"lastName\":\"Doe4\"}');\nvar obj5 = JSON.parse('{\"firstName\":\"Tessa\", \"lastName\":\"Doe5\"}');\n\nvar msg1={};\nvar msg2={};\nvar msg3={};\nvar msg4={};\nvar msg5={};\nobj3=par;\nobj4=par[1];\nmsg1.payload= JSON.stringify(  obj1 );\nmsg1.topic=topic;\n\nmsg2.payload= JSON.stringify(  obj2 );\nmsg2.topic =   \"txt/new\";\n\nmsg3.payload= JSON.stringify(  obj3 );\nmsg3.topic =   \"txt/new\";\nmsg4.payload=   obj4 \nmsg4.topic =   \"txt/new\";\nmsg5.payload= JSON.stringify(obj5);\nmsg5.topic =   \"txt/new\";\n\nreturn [ msg1,msg2,null,null,msg5 ];",
         "outputs": 5,
         "noerr": 0,
         "initialize": "",
@@ -903,8 +903,8 @@
         "topic": "txt/test1",
         "payload": "{\"id\":\"p1\",\"par\":[34,253,65,512,-23],\"t\":\"2014-06-25T00:00:00.000Z\"}",
         "payloadType": "str",
-        "x": 790,
-        "y": 120,
+        "x": 770,
+        "y": 140,
         "wires": [
             [
                 "0e42115eb538c443"
@@ -935,8 +935,8 @@
         "topic": "txt/test2",
         "payload": "{\"device\":\"Ussel2017\",\"ex\":{\"counter\":{\"C1\":{\"i_cnt\":0,\"i_counter\":0,\"i_reset\":0,\"i_resetted\":0},\"C2\":{\"i_cnt\":0,\"i_counter\":0,\"i_reset\":0,\"i_resetted\":0},\"C3\":{\"i_cnt\":0,\"i_counter\":1235,\"i_reset\":0,\"i_resetted\":0},\"C4\":{\"i_cnt\":0,\"i_counter\":0,\"i_reset\":0,\"i_resetted\":0}},\"input\":{\"I1\":{\"i_uni\":0},\"I2\":{\"i_uni\":1},\"I3\":{\"i_uni\":0},\"I4\":{\"i_uni\":0},\"I5\":{\"i_uni\":0},\"I6\":{\"i_uni\":0},\"I7\":{\"i_uni\":0},\"I8\":{\"i_uni\":0}},\"motor\":{\"M1\":{\"o_dista\":0,\"o_duty1\":512,\"o_duty2\":0},\"M2\":{\"o_dista\":0,\"o_duty1\":512,\"o_duty2\":0},\"M3\":{\"o_dista\":1234,\"o_duty1\":0,\"o_duty2\":512},\"M4\":{\"o_dista\":0,\"o_duty1\":0,\"o_duty2\":0}}}}",
         "payloadType": "json",
-        "x": 900,
-        "y": 280,
+        "x": 860,
+        "y": 340,
         "wires": [
             []
         ],
@@ -1037,8 +1037,8 @@
         "property": "payload",
         "action": "obj",
         "pretty": false,
-        "x": 940,
-        "y": 180,
+        "x": 930,
+        "y": 140,
         "wires": [
             [
                 "1c1ba70ece2270da"
