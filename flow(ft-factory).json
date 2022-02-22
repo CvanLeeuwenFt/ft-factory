@@ -875,7 +875,9 @@
                 "ed5d7988321c83d2"
             ],
             [
-                "258bdb81abc46b8c"
+                "258bdb81abc46b8c",
+                "45e99371d7011bb1",
+                "35b6a4eaa4c6fc41"
             ],
             [
                 "74361d051dabcde1"
@@ -957,8 +959,8 @@
         "targetType": "full",
         "statusVal": "payload",
         "statusType": "auto",
-        "x": 1370,
-        "y": 120,
+        "x": 1310,
+        "y": 60,
         "wires": []
     },
     {
@@ -974,8 +976,8 @@
         "targetType": "full",
         "statusVal": "payload",
         "statusType": "auto",
-        "x": 1370,
-        "y": 200,
+        "x": 1310,
+        "y": 140,
         "wires": []
     },
     {
@@ -1008,8 +1010,8 @@
         "targetType": "full",
         "statusVal": "payload",
         "statusType": "auto",
-        "x": 1370,
-        "y": 260,
+        "x": 1330,
+        "y": 220,
         "wires": []
     },
     {
@@ -1025,8 +1027,8 @@
         "targetType": "full",
         "statusVal": "payload",
         "statusType": "auto",
-        "x": 1350,
-        "y": 320,
+        "x": 1330,
+        "y": 300,
         "wires": []
     },
     {
@@ -1044,5 +1046,37 @@
                 "1c1ba70ece2270da"
             ]
         ]
+    },
+    {
+        "id": "45e99371d7011bb1",
+        "type": "ui_text",
+        "z": "4e9eeca57a653287",
+        "group": "aa9feae58ac4eadd",
+        "order": 17,
+        "width": 0,
+        "height": 0,
+        "name": "P3",
+        "label": "txt_p3",
+        "format": "{{msg.payload}}",
+        "layout": "row-right",
+        "x": 1500,
+        "y": 280,
+        "wires": []
+    },
+    {
+        "id": "35b6a4eaa4c6fc41",
+        "type": "ui_text",
+        "z": "4e9eeca57a653287",
+        "group": "aa9feae58ac4eadd",
+        "order": 16,
+        "width": 0,
+        "height": 0,
+        "name": "P4",
+        "label": "txt_p4",
+        "format": "{{msg.payload}}",
+        "layout": "row-right",
+        "x": 1500,
+        "y": 360,
+        "wires": []
     }
 ]
