@@ -856,7 +856,7 @@
         "type": "python3-function",
         "z": "4e9eeca57a653287",
         "name": "MyPy",
-        "func": "import sys\npayload=msg.payload\ntopic=msg.topic\n\nnewMsg = { \"payload\": msg.payload,\"topic\":msg.topic }\nreturn [newMsg,null,null,null]",
+        "func": "import sys\nimport mqtt\npayload=msg.payload\ntopic=msg.topic\n\nnewMsg = { \"payload\": msg.payload,\"topic\":msg.topic }\nreturn [newMsg,null,null,null]",
         "outputs": 5,
         "x": 1210,
         "y": 80,
