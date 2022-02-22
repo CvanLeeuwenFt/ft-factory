@@ -852,14 +852,18 @@
         ]
     },
     {
-        "id": "187693fa57da870d",
-        "type": "python3-function",
+        "id": "1c1ba70ece2270da",
+        "type": "function",
         "z": "4e9eeca57a653287",
-        "name": "MyPy",
-        "func": "import sys\nimport mqtt\npayload=msg.payload\ntopic=msg.topic\n\nnewMsg = { \"payload\": msg.payload,\"topic\":msg.topic }\nreturn [newMsg,null,null,null]",
+        "name": "MyJS",
+        "func": "var topic=msg.topic;\nvar payload=msg.payload;\n\n\nif(msg.topic==\"topic1\")node.log(\"topic1\");\nif(msg.topic==\"topic2\")node.log(\"topic2\");\n\n\n\n\nreturn msg;",
         "outputs": 5,
-        "x": 1210,
-        "y": 80,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1150,
+        "y": 100,
         "wires": [
             [
                 "8a4394a9efdfaf28"
@@ -867,37 +871,6 @@
             [
                 "bd6fe3064ac45870"
             ],
-            [],
-            [],
-            []
-        ],
-        "inputLabels": [
-            "In0"
-        ],
-        "outputLabels": [
-            "O1",
-            "O2",
-            "O3",
-            "O4",
-            "O5"
-        ]
-    },
-    {
-        "id": "1c1ba70ece2270da",
-        "type": "function",
-        "z": "4e9eeca57a653287",
-        "name": "MyJS",
-        "func": "var topic=msg.topic;\nvar payload=msg.payload;\n\n\nif(msg.topic==\"topic1\")   node.log(\"topic1\");\nif(msg.topic==\"topic2\")node.log(\"topic2\");\n\n\n\n\nreturn msg;",
-        "outputs": 5,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 1250,
-        "y": 260,
-        "wires": [
-            [],
-            [],
             [],
             [],
             []
@@ -928,7 +901,6 @@
         "y": 80,
         "wires": [
             [
-                "187693fa57da870d",
                 "1c1ba70ece2270da"
             ]
         ],
@@ -961,7 +933,6 @@
         "y": 300,
         "wires": [
             [
-                "187693fa57da870d",
                 "1c1ba70ece2270da"
             ]
         ],
