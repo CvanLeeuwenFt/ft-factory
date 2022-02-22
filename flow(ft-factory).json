@@ -819,11 +819,11 @@
         "id": "6e7d7f259ed3048f",
         "type": "python3-function",
         "z": "4e9eeca57a653287",
-        "name": "payload",
-        "func": " \n \n \n \n \nreturn msg",
+        "name": "Example01",
+        "func": " var payload=msg.payload;\n var topic=msg.topic;\n \n \n \n \n \n \n \n \nvar newMsg = { payload: msg.payload,topic:msg.topic };\nreturn newMsg",
         "outputs": 5,
-        "x": 850,
-        "y": 180,
+        "x": 810,
+        "y": 220,
         "wires": [
             [],
             [],
@@ -855,8 +855,8 @@
         "type": "json2md",
         "z": "4e9eeca57a653287",
         "name": "Parse json to markdown",
-        "x": 550,
-        "y": 680,
+        "x": 530,
+        "y": 640,
         "wires": [
             []
         ],
@@ -877,13 +877,127 @@
         "complete": "complete",
         "prop": "payload",
         "name": "",
-        "x": 530,
-        "y": 760,
+        "x": 520,
+        "y": 720,
         "wires": [
             [
                 "f3094bbdc00853ec",
                 "cd50e099734a83d5"
             ]
+        ]
+    },
+    {
+        "id": "187693fa57da870d",
+        "type": "python3-function",
+        "z": "4e9eeca57a653287",
+        "name": "MyPy",
+        "func": " var payload=msg.payload;\n var topic=msg.topic;\n \n \n# Multi input \n if(msg.topic==\"topic1\")\nnode.log(\"topic1\");\nif(msg.topic==\"topic2\")\nnode.log(\"topic2\");\nreturn msg;\n \n \n \n \nvar newMsg = { payload: msg.payload,topic:msg.topic };\nreturn [msg1,msg2,msg3,msg4,null];",
+        "outputs": 5,
+        "x": 1290,
+        "y": 80,
+        "wires": [
+            [],
+            [],
+            [],
+            [],
+            []
+        ],
+        "inputLabels": [
+            "In0"
+        ],
+        "outputLabels": [
+            "O1",
+            "O2",
+            "O3",
+            "O4",
+            "O5"
+        ]
+    },
+    {
+        "id": "1c1ba70ece2270da",
+        "type": "function",
+        "z": "4e9eeca57a653287",
+        "name": "MyJS",
+        "func": "var topic=msg.topic;\nvar payload=msg.payload;\n\n\n\n\n\n\nif(msg.topic==\"topic1\")\nnode.log(\"topic1\");\nif(msg.topic==\"topic2\")\nnode.log(\"topic2\");\n\n\n\n\nreturn msg;",
+        "outputs": 5,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1310,
+        "y": 280,
+        "wires": [
+            [],
+            [],
+            [],
+            [],
+            []
+        ]
+    },
+    {
+        "id": "c901d370e731fb8e",
+        "type": "inject",
+        "z": "4e9eeca57a653287",
+        "name": "P-msg",
+        "props": [
+            {
+                "p": "topic",
+                "vt": "str"
+            },
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "txt/test",
+        "payload": "{\"id\":\"p1\",\"par\":[34,253,65,512,-23],\"t\":\"2014-06-25T00:00:00.000Z\"}",
+        "payloadType": "json",
+        "x": 880,
+        "y": 80,
+        "wires": [
+            [
+                "187693fa57da870d",
+                "1c1ba70ece2270da"
+            ]
+        ],
+        "outputLabels": [
+            "Json"
+        ]
+    },
+    {
+        "id": "b602821ef01f4d29",
+        "type": "inject",
+        "z": "4e9eeca57a653287",
+        "name": "Value-msg",
+        "props": [
+            {
+                "p": "topic",
+                "vt": "str"
+            },
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "txt/test2",
+        "payload": "{\"device\":\"Ussel2017\",\"ex\":{\"counter\":{\"C1\":{\"i_cnt\":0,\"i_counter\":0,\"i_reset\":0,\"i_resetted\":0},\"C2\":{\"i_cnt\":0,\"i_counter\":0,\"i_reset\":0,\"i_resetted\":0},\"C3\":{\"i_cnt\":0,\"i_counter\":1235,\"i_reset\":0,\"i_resetted\":0},\"C4\":{\"i_cnt\":0,\"i_counter\":0,\"i_reset\":0,\"i_resetted\":0}},\"input\":{\"I1\":{\"i_uni\":0},\"I2\":{\"i_uni\":1},\"I3\":{\"i_uni\":0},\"I4\":{\"i_uni\":0},\"I5\":{\"i_uni\":0},\"I6\":{\"i_uni\":0},\"I7\":{\"i_uni\":0},\"I8\":{\"i_uni\":0}},\"motor\":{\"M1\":{\"o_dista\":0,\"o_duty1\":512,\"o_duty2\":0},\"M2\":{\"o_dista\":0,\"o_duty1\":512,\"o_duty2\":0},\"M3\":{\"o_dista\":1234,\"o_duty1\":0,\"o_duty2\":512},\"M4\":{\"o_dista\":0,\"o_duty1\":0,\"o_duty2\":0}}}}",
+        "payloadType": "json",
+        "x": 1000,
+        "y": 300,
+        "wires": [
+            [
+                "187693fa57da870d",
+                "1c1ba70ece2270da"
+            ]
+        ],
+        "outputLabels": [
+            "Json"
         ]
     }
 ]
