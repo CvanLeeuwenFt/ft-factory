@@ -822,8 +822,8 @@
         "name": "Example01",
         "func": "payload=msg.payload\ntopic=msg.topic\n \n \n \n \n \n \n \n \n# var newMsg = { payload: msg.payload,topic:msg.topic }\nreturn newMsg",
         "outputs": 5,
-        "x": 810,
-        "y": 200,
+        "x": 890,
+        "y": 180,
         "wires": [
             [],
             [],
@@ -875,11 +875,15 @@
         "name": "MyPy",
         "func": "payload=msg.payload\ntopic=msg.topic\n \n \n\n \n \n \n \nnewMsg = { payload: msg.payload,topic:msg.topic }\nreturn [msg1,msg2,msg3,msg4,null]",
         "outputs": 5,
-        "x": 1290,
+        "x": 1210,
         "y": 80,
         "wires": [
-            [],
-            [],
+            [
+                "8a4394a9efdfaf28"
+            ],
+            [
+                "bd6fe3064ac45870"
+            ],
             [],
             [],
             []
@@ -900,13 +904,13 @@
         "type": "function",
         "z": "4e9eeca57a653287",
         "name": "MyJS",
-        "func": "var topic=msg.topic;\nvar payload=msg.payload;\n\n\n\n\n\n\nif(msg.topic==\"topic1\")\nnode.log(\"topic1\");\nif(msg.topic==\"topic2\")\nnode.log(\"topic2\");\n\n\n\n\nreturn msg;",
+        "func": "var topic=msg.topic;\nvar payload=msg.payload;\n\n\nif(msg.topic==\"topic1\")   node.log(\"topic1\");\nif(msg.topic==\"topic2\")node.log(\"topic2\");\n\n\n\n\nreturn msg;",
         "outputs": 5,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1270,
+        "x": 1250,
         "y": 260,
         "wires": [
             [],
@@ -981,5 +985,37 @@
         "outputLabels": [
             "Json"
         ]
+    },
+    {
+        "id": "8a4394a9efdfaf28",
+        "type": "debug",
+        "z": "4e9eeca57a653287",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1450,
+        "y": 40,
+        "wires": []
+    },
+    {
+        "id": "bd6fe3064ac45870",
+        "type": "debug",
+        "z": "4e9eeca57a653287",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1450,
+        "y": 100,
+        "wires": []
     }
 ]
