@@ -1775,7 +1775,7 @@
         "once": false,
         "onceDelay": 0.1,
         "topic": "txt/act",
-        "payload": "{\"outMid\":1,\"outD\":435,\"outP\":13}",
+        "payload": "{\"outMid\":1,\"outD\":45,\"outP\":123}",
         "payloadType": "json",
         "x": 230,
         "y": 140,
