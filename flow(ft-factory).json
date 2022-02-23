@@ -1526,65 +1526,6 @@
         ]
     },
     {
-        "id": "513f6a55aae07745",
-        "type": "ui_form",
-        "z": "4e9eeca57a653287",
-        "name": "f_ac",
-        "label": "Actuator",
-        "group": "b7b5582d96bb1c75",
-        "order": 1,
-        "width": 0,
-        "height": 0,
-        "options": [
-            {
-                "label": "P3=",
-                "value": "inP3",
-                "type": "number",
-                "required": false,
-                "rows": null
-            },
-            {
-                "label": "P1=",
-                "value": "inP1",
-                "type": "number",
-                "required": true,
-                "rows": null
-            },
-            {
-                "label": "P2=",
-                "value": "inP2",
-                "type": "number",
-                "required": false,
-                "rows": null
-            }
-        ],
-        "formValue": {
-            "inP3": "",
-            "inP1": "",
-            "inP2": ""
-        },
-        "payload": "",
-        "submit": "submit",
-        "cancel": "cancel",
-        "topic": "lt/data",
-        "topicType": "str",
-        "splitLayout": true,
-        "className": "",
-        "x": 810,
-        "y": 560,
-        "wires": [
-            [
-                "0bb3bffe9afbedfe"
-            ]
-        ],
-        "inputLabels": [
-            "data_in"
-        ],
-        "outputLabels": [
-            "data_out"
-        ]
-    },
-    {
         "id": "f223209feacb7f86",
         "type": "function",
         "z": "4e9eeca57a653287",
@@ -1739,9 +1680,68 @@
         "wires": []
     },
     {
-        "id": "0136e7092123354a",
+        "id": "ea5b1d3fd2440b96",
+        "type": "ui_form",
+        "z": "4c7e81e43391897e",
+        "name": "f_ac",
+        "label": "Actuator",
+        "group": "b7b5582d96bb1c75",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "options": [
+            {
+                "label": "P3=",
+                "value": "inP3",
+                "type": "number",
+                "required": false,
+                "rows": null
+            },
+            {
+                "label": "P1=",
+                "value": "inP1",
+                "type": "number",
+                "required": true,
+                "rows": null
+            },
+            {
+                "label": "P2=",
+                "value": "inP2",
+                "type": "number",
+                "required": false,
+                "rows": null
+            }
+        ],
+        "formValue": {
+            "inP3": "",
+            "inP1": "",
+            "inP2": ""
+        },
+        "payload": "",
+        "submit": "submit",
+        "cancel": "cancel",
+        "topic": "lt/data",
+        "topicType": "str",
+        "splitLayout": true,
+        "className": "",
+        "x": 450,
+        "y": 240,
+        "wires": [
+            [
+                "a3f83bb55567d102"
+            ]
+        ],
+        "inputLabels": [
+            "data_in"
+        ],
+        "outputLabels": [
+            "data_out"
+        ]
+    },
+    {
+        "id": "a1af0c2aa40e5882",
         "type": "debug",
-        "z": "4e9eeca57a653287",
+        "z": "4c7e81e43391897e",
         "name": "",
         "active": true,
         "tosidebar": true,
@@ -1751,14 +1751,14 @@
         "targetType": "full",
         "statusVal": "payload",
         "statusType": "auto",
-        "x": 1050,
-        "y": 640,
+        "x": 770,
+        "y": 240,
         "wires": []
     },
     {
-        "id": "324e3837d3e15248",
+        "id": "6eac0b4933e3c8ac",
         "type": "inject",
-        "z": "4e9eeca57a653287",
+        "z": "4c7e81e43391897e",
         "name": "",
         "props": [
             {
@@ -1776,28 +1776,47 @@
         "topic": "lt/data",
         "payload": "{\"inP3\":null,\"inP1\":435,\"inP2\":13}",
         "payloadType": "json",
-        "x": 590,
-        "y": 580,
+        "x": 270,
+        "y": 180,
         "wires": [
             [
-                "513f6a55aae07745"
+                "ea5b1d3fd2440b96"
             ]
         ]
     },
     {
-        "id": "0bb3bffe9afbedfe",
+        "id": "a3f83bb55567d102",
         "type": "json",
-        "z": "4e9eeca57a653287",
+        "z": "4c7e81e43391897e",
         "name": "",
         "property": "payload",
         "action": "str",
         "pretty": true,
-        "x": 990,
-        "y": 520,
+        "x": 590,
+        "y": 180,
         "wires": [
             [
-                "0136e7092123354a"
+                "a1af0c2aa40e5882",
+                "fe35d86ff585ba4b"
             ]
         ]
+    },
+    {
+        "id": "fe35d86ff585ba4b",
+        "type": "mqtt out",
+        "z": "4c7e81e43391897e",
+        "name": "Test",
+        "topic": "txt/out",
+        "qos": "2",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "c58f8d4b7c13412d",
+        "x": 810,
+        "y": 140,
+        "wires": []
     }
 ]
