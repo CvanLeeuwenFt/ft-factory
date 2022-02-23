@@ -158,7 +158,7 @@
                 "primary": "indigo",
                 "accents": "blue",
                 "warn": "red",
-                "background": "blue-grey",
+                "background": "grey",
                 "palette": "dark"
             }
         },
