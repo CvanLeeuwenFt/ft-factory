@@ -855,36 +855,56 @@
         "id": "1c1ba70ece2270da",
         "type": "function",
         "z": "4e9eeca57a653287",
-        "name": "MyJS",
-        "func": "var topic=msg.topic;\nvar payload=msg.payload;\n\nvar obj1 = payload;\nvar obj2 = JSON.parse('{\"firstName\":\"Jaap\", \"lastName\":\"Doe2\"}');\nvar obj3 = JSON.parse('{\"firstName\":\"Carel\", \"lastName\":\"Doe3\"}');\nvar obj4 = JSON.parse('{\"firstName\":\"Marie\", \"lastName\":\"Doe4\"}');\nvar obj5 = JSON.parse('{\"firstName\":\"Tessa\", \"lastName\":\"Doe5\"}');\n\nvar msg1={};\nvar msg2={};\nvar msg3={};\nvar msg4={};\nvar msg5={};\nobj3=payload.par;\nobj4=payload.par[1];\n\nmsg1.payload= JSON.stringify( payload );\nmsg1.topic=topic;\n\nmsg2.payload=  obj3;//JSON.stringify(  obj2 );\nmsg2.topic =   \"txt/new\";\n\nmsg3.payload= JSON.stringify(  obj3 );\nmsg3.topic =   \"txt/new\";\n\nmsg4.payload=   obj4 \nmsg4.topic =   \"txt/new\";\n\nmsg5.payload= JSON.stringify(obj5);\nmsg5.topic =   \"txt/new\";\n\nreturn [ msg1,msg2,msg3,msg4,msg5 ];",
-        "outputs": 5,
+        "name": "PmsgToText",
+        "func": "var topic=msg.topic;\nvar payload=msg.payload;\n\nvar objp1 = payload;\nvar objp2 = JSON.parse('{\"firstName\":\"Jaap\", \"lastName\":\"Doe2\"}');\nvar objp3 = JSON.parse('{\"firstName\":\"Carel\", \"lastName\":\"Doe3\"}');\nvar objp4 = JSON.parse('{\"firstName\":\"Marie\", \"lastName\":\"Doe4\"}');\nvar objp5 = JSON.parse('{\"firstName\":\"Tessa\", \"lastName\":\"Doe5\"}');\n\nvar msgp1={};\nvar msgp2={};\nvar msgp3={};\nvar msgp4={};\nvar msgp5={};\nvar msgId={};\nobj3=payload.par;\nobj4=payload.par[1];\n\nmsgp1.payload= JSON.stringify( payload );\nmsgp1.topic=topic;\n\nmsgp2.payload=  obj3;//JSON.stringify(  obj2 );\nmsgp2.topic =   \"txt/new\";\n\nmsgp3.payload= JSON.stringify(  obj3 );\nmsgp3.topic =   \"txt/new\";\n\nmsgp4.payload=   obj4 \nmsgp4.topic =   \"txt/new\";\n\nmsgp5.payload= JSON.stringify(obj5);\nmsgp5.topic =   \"txt/new\";\n\nreturn [ msgp1,msgp2,msgp3,msgp4,msgp5,msgId ];",
+        "outputs": 7,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1070,
-        "y": 140,
+        "x": 1090,
+        "y": 200,
         "wires": [
             [
-                "8a4394a9efdfaf28",
-                "86665031f9eda74e"
+                "ec7721de0f0b7d9f",
+                "c8c6985e30350b1e"
+            ],
+            [
+                "86665031f9eda74e",
+                "8a4394a9efdfaf28"
             ],
             [
                 "bd6fe3064ac45870",
                 "c3260f8802de14dd"
             ],
             [
+                "45e99371d7011bb1",
                 "ed5d7988321c83d2"
             ],
             [
                 "258bdb81abc46b8c",
-                "45e99371d7011bb1",
                 "35b6a4eaa4c6fc41"
             ],
             [
                 "74361d051dabcde1",
                 "46ef86020f10826a"
+            ],
+            [
+                "43bfbe0e48bb946f",
+                "d53d29e2fc1c5871"
             ]
+        ],
+        "inputLabels": [
+            "Json{}"
+        ],
+        "outputLabels": [
+            "Id",
+            "P1",
+            "P2",
+            "P3",
+            "P4",
+            "P5",
+            "Time"
         ]
     },
     {
@@ -908,7 +928,7 @@
         "topic": "txt/test1",
         "payload": "{\"id\":\"p1\",\"par\":[34,253,65,512,-23],\"t\":\"2014-06-25T00:00:00.000Z\"}",
         "payloadType": "str",
-        "x": 770,
+        "x": 790,
         "y": 140,
         "wires": [
             [
@@ -940,8 +960,8 @@
         "topic": "txt/test2",
         "payload": "{\"device\":\"Ussel2017\",\"ex\":{\"counter\":{\"C1\":{\"i_cnt\":0,\"i_counter\":0,\"i_reset\":0,\"i_resetted\":0},\"C2\":{\"i_cnt\":0,\"i_counter\":0,\"i_reset\":0,\"i_resetted\":0},\"C3\":{\"i_cnt\":0,\"i_counter\":1235,\"i_reset\":0,\"i_resetted\":0},\"C4\":{\"i_cnt\":0,\"i_counter\":0,\"i_reset\":0,\"i_resetted\":0}},\"input\":{\"I1\":{\"i_uni\":0},\"I2\":{\"i_uni\":1},\"I3\":{\"i_uni\":0},\"I4\":{\"i_uni\":0},\"I5\":{\"i_uni\":0},\"I6\":{\"i_uni\":0},\"I7\":{\"i_uni\":0},\"I8\":{\"i_uni\":0}},\"motor\":{\"M1\":{\"o_dista\":0,\"o_duty1\":512,\"o_duty2\":0},\"M2\":{\"o_dista\":0,\"o_duty1\":512,\"o_duty2\":0},\"M3\":{\"o_dista\":1234,\"o_duty1\":0,\"o_duty2\":512},\"M4\":{\"o_dista\":0,\"o_duty1\":0,\"o_duty2\":0}}}}",
         "payloadType": "json",
-        "x": 860,
-        "y": 340,
+        "x": 820,
+        "y": 300,
         "wires": [
             []
         ],
@@ -997,7 +1017,7 @@
         "statusVal": "payload",
         "statusType": "auto",
         "x": 1330,
-        "y": 380,
+        "y": 340,
         "wires": []
     },
     {
@@ -1031,7 +1051,7 @@
         "statusVal": "payload",
         "statusType": "auto",
         "x": 1330,
-        "y": 300,
+        "y": 260,
         "wires": []
     },
     {
@@ -1062,8 +1082,8 @@
         "label": "P3=",
         "format": "{{msg.payload}}",
         "layout": "row-right",
-        "x": 1500,
-        "y": 280,
+        "x": 1470,
+        "y": 240,
         "wires": []
     },
     {
@@ -1078,8 +1098,8 @@
         "label": "P4=",
         "format": "{{msg.payload}}",
         "layout": "row-right",
-        "x": 1490,
-        "y": 340,
+        "x": 1470,
+        "y": 300,
         "wires": []
     },
     {
@@ -1110,8 +1130,8 @@
         "label": "P5=",
         "format": "{{msg.payload}}",
         "layout": "row-right",
-        "x": 1450,
-        "y": 440,
+        "x": 1470,
+        "y": 380,
         "wires": []
     },
     {
@@ -1126,8 +1146,74 @@
         "label": "P1=",
         "format": "{{msg.payload}}",
         "layout": "row-right",
-        "x": 1490,
+        "x": 1470,
         "y": 100,
+        "wires": []
+    },
+    {
+        "id": "ec7721de0f0b7d9f",
+        "type": "debug",
+        "z": "4e9eeca57a653287",
+        "name": "Id",
+        "active": true,
+        "tosidebar": true,
+        "console": true,
+        "tostatus": true,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "payload",
+        "statusType": "auto",
+        "x": 1350,
+        "y": 20,
+        "wires": []
+    },
+    {
+        "id": "c8c6985e30350b1e",
+        "type": "ui_text",
+        "z": "4e9eeca57a653287",
+        "group": "30840b3c631a61fb",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "name": "txt_Id",
+        "label": "Id=",
+        "format": "{{msg.payload}}",
+        "layout": "row-right",
+        "x": 1490,
+        "y": 40,
+        "wires": []
+    },
+    {
+        "id": "43bfbe0e48bb946f",
+        "type": "debug",
+        "z": "4e9eeca57a653287",
+        "name": "Time",
+        "active": true,
+        "tosidebar": true,
+        "console": true,
+        "tostatus": true,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "payload",
+        "statusType": "auto",
+        "x": 1340,
+        "y": 420,
+        "wires": []
+    },
+    {
+        "id": "d53d29e2fc1c5871",
+        "type": "ui_text",
+        "z": "4e9eeca57a653287",
+        "group": "30840b3c631a61fb",
+        "order": 5,
+        "width": 0,
+        "height": 0,
+        "name": "txt_time",
+        "label": "Time=",
+        "format": "{{msg.payload}}",
+        "layout": "row-right",
+        "x": 1400,
+        "y": 480,
         "wires": []
     }
 ]
