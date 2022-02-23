@@ -1537,6 +1537,13 @@
         "height": 0,
         "options": [
             {
+                "label": "P3=",
+                "value": "inP3",
+                "type": "number",
+                "required": true,
+                "rows": null
+            },
+            {
                 "label": "P1=",
                 "value": "inP1",
                 "type": "number",
@@ -1549,19 +1556,12 @@
                 "type": "number",
                 "required": true,
                 "rows": null
-            },
-            {
-                "label": "P3=",
-                "value": "inP3",
-                "type": "number",
-                "required": true,
-                "rows": null
             }
         ],
         "formValue": {
+            "inP3": "",
             "inP1": "",
-            "inP2": "",
-            "inP3": ""
+            "inP2": ""
         },
         "payload": "",
         "submit": "submit",
