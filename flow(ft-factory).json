@@ -1521,5 +1521,149 @@
         "outputLabels": [
             "Json"
         ]
+    },
+    {
+        "id": "ac6626680c328fd6",
+        "type": "ui_text_input",
+        "z": "4e9eeca57a653287",
+        "name": "",
+        "label": "",
+        "tooltip": "",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "mode": "text",
+        "delay": 300,
+        "topic": "topic",
+        "sendOnBlur": true,
+        "className": "",
+        "topicType": "msg",
+        "x": 1420,
+        "y": 760,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "fe40d63bde94cf05",
+        "type": "ui_text_input",
+        "z": "4e9eeca57a653287",
+        "name": "",
+        "label": "",
+        "tooltip": "",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "mode": "text",
+        "delay": 300,
+        "topic": "topic",
+        "sendOnBlur": true,
+        "className": "",
+        "topicType": "msg",
+        "x": 1420,
+        "y": 800,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "f074621419c85ece",
+        "type": "ui_text_input",
+        "z": "4e9eeca57a653287",
+        "name": "",
+        "label": "",
+        "tooltip": "",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "mode": "text",
+        "delay": 300,
+        "topic": "topic",
+        "sendOnBlur": true,
+        "className": "",
+        "topicType": "msg",
+        "x": 1420,
+        "y": 860,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "aeec0403d47b3c6f",
+        "type": "ui_slider",
+        "z": "4e9eeca57a653287",
+        "name": "",
+        "label": "slider",
+        "tooltip": "",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "outs": "all",
+        "topic": "topic",
+        "topicType": "msg",
+        "min": 0,
+        "max": 10,
+        "step": 1,
+        "className": "",
+        "x": 1410,
+        "y": 900,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "513f6a55aae07745",
+        "type": "ui_form",
+        "z": "4e9eeca57a653287",
+        "name": "",
+        "label": "",
+        "group": "30840b3c631a61fb",
+        "order": 21,
+        "width": "7",
+        "height": "4",
+        "options": [
+            {
+                "label": "P1=",
+                "value": "inP1",
+                "type": "number",
+                "required": true,
+                "rows": null
+            },
+            {
+                "label": "P2=",
+                "value": "inP2",
+                "type": "number",
+                "required": true,
+                "rows": null
+            },
+            {
+                "label": "P3=",
+                "value": "inP3",
+                "type": "number",
+                "required": true,
+                "rows": null
+            }
+        ],
+        "formValue": {
+            "inP1": "",
+            "inP2": "",
+            "inP3": ""
+        },
+        "payload": "",
+        "submit": "submit",
+        "cancel": "cancel",
+        "topic": "topic",
+        "topicType": "msg",
+        "splitLayout": "",
+        "className": "",
+        "x": 1130,
+        "y": 820,
+        "wires": [
+            []
+        ]
     }
 ]
