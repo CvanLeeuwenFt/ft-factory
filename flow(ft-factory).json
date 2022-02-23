@@ -1529,8 +1529,8 @@
         "id": "513f6a55aae07745",
         "type": "ui_form",
         "z": "4e9eeca57a653287",
-        "name": "",
-        "label": "",
+        "name": "f_ac",
+        "label": "Actuator",
         "group": "b7b5582d96bb1c75",
         "order": 1,
         "width": 0,
@@ -1566,14 +1566,16 @@
         "payload": "",
         "submit": "submit",
         "cancel": "cancel",
-        "topic": "topic",
+        "topic": "lt/data",
         "topicType": "msg",
         "splitLayout": true,
         "className": "",
-        "x": 1070,
-        "y": 580,
+        "x": 850,
+        "y": 600,
         "wires": [
-            []
+            [
+                "0136e7092123354a"
+            ]
         ]
     },
     {
@@ -1728,6 +1730,22 @@
         "className": "",
         "x": 1480,
         "y": 620,
+        "wires": []
+    },
+    {
+        "id": "0136e7092123354a",
+        "type": "debug",
+        "z": "4e9eeca57a653287",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1250,
+        "y": 660,
         "wires": []
     }
 ]
