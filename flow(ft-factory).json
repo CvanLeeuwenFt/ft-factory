@@ -1786,23 +1786,6 @@
         ]
     },
     {
-        "id": "a3f83bb55567d102",
-        "type": "json",
-        "z": "4c7e81e43391897e",
-        "name": "",
-        "property": "payload",
-        "action": "str",
-        "pretty": true,
-        "x": 810,
-        "y": 380,
-        "wires": [
-            [
-                "a1af0c2aa40e5882",
-                "fe35d86ff585ba4b"
-            ]
-        ]
-    },
-    {
         "id": "fe35d86ff585ba4b",
         "type": "mqtt out",
         "z": "4c7e81e43391897e",
@@ -1825,7 +1808,7 @@
         "type": "function",
         "z": "4c7e81e43391897e",
         "name": "check_M",
-        "func": "var payload=msg.payload;\nvar topic=msg.topic;\nvar error=false;\nvar j=payload ;//JSON.parse(payload);\nvar msg1={};\nif ( (j.outMid<0) && (j.outMid>4)){\n  j.outMid=null; error=true;  \n} \n\nif ( (j.outP<-512) && (j.outP>512)){\n  j.outP=null; error=true;  \n} \n\nif ( (j.outD<0) && (j.outD>32000)){\n  j.outD=null; error=true;  \n} \nmsg1.payload=JSON.stringify(j);\nmsg1.topic=topic;\n\n\nif (error) return [ msg1,  null];\n\nreturn [ msg1,  null];",
+        "func": "var payload=msg.payload;\nvar topic=msg.topic;\nvar error=false;\nvar j=payload ;//JSON.parse(payload);\nvar msg1={};\nif ( (j.outMid<0) && (j.outMid>4)){\n  j.outMid=null; error=true;  \n} \n\nif ( (j.outP<-512) && (j.outP>512)){\n  j.outP=null; error=true;  \n} \n\nif ( (j.outD<0) && (j.outD>32000)){\n  j.outD=null; error=true;  \n} \nmsg1.payload=j;\nmsg1.topic=topic;\n\n\nif (error) return [ msg1,  null];\n\nreturn [ msg1,  null];",
         "outputs": 2,
         "noerr": 0,
         "initialize": "",
@@ -1836,10 +1819,11 @@
         "wires": [
             [
                 "29acb7217437424b",
-                "190aedf7533226c6"
+                "ea5b1d3fd2440b96"
             ],
             [
-                "a3f83bb55567d102"
+                "fe35d86ff585ba4b",
+                "a1af0c2aa40e5882"
             ]
         ],
         "inputLabels": [
@@ -1883,21 +1867,5 @@
         "x": 590,
         "y": 160,
         "wires": []
-    },
-    {
-        "id": "190aedf7533226c6",
-        "type": "json",
-        "z": "4c7e81e43391897e",
-        "name": "",
-        "property": "payload",
-        "action": "",
-        "pretty": false,
-        "x": 250,
-        "y": 280,
-        "wires": [
-            [
-                "ea5b1d3fd2440b96"
-            ]
-        ]
     }
 ]
