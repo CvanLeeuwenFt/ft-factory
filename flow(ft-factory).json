@@ -1452,7 +1452,7 @@
         "rap": true,
         "rh": 0,
         "inputs": 0,
-        "x": 110,
+        "x": 90,
         "y": 320,
         "wires": [
             [
@@ -1478,8 +1478,8 @@
         "targetType": "full",
         "statusVal": "payload",
         "statusType": "auto",
-        "x": 520,
-        "y": 620,
+        "x": 480,
+        "y": 600,
         "wires": []
     },
     {
@@ -1488,7 +1488,7 @@
         "z": "f0a66f6a5cd9f8b9",
         "name": "Parse json to markdown",
         "x": 370,
-        "y": 480,
+        "y": 500,
         "wires": [
             [
                 "e22ed57a3fac57eb"
@@ -1780,8 +1780,8 @@
         "topic": "",
         "payload": "[{\"a\":\"11\",\"b\":\"22\",\"c\":\"33\",\"d\":\"44\"},{\"a\":\"55\",\"b\":\"66\",\"c\":\"77\",\"d\":\"88\"}]",
         "payloadType": "json",
-        "x": 150,
-        "y": 560,
+        "x": 290,
+        "y": 580,
         "wires": [
             [
                 "e5c20a88abbd18b8"
