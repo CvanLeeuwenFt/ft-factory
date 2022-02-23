@@ -1683,7 +1683,7 @@
         "id": "ea5b1d3fd2440b96",
         "type": "ui_form",
         "z": "4c7e81e43391897e",
-        "name": "f_ac",
+        "name": "set_act",
         "label": "Actuator",
         "group": "b7b5582d96bb1c75",
         "order": 1,
@@ -1691,44 +1691,44 @@
         "height": 0,
         "options": [
             {
-                "label": "P3=",
-                "value": "inP3",
-                "type": "number",
-                "required": false,
-                "rows": null
-            },
-            {
-                "label": "P1=",
-                "value": "inP1",
+                "label": "M [1..4]=",
+                "value": "outMid",
                 "type": "number",
                 "required": true,
                 "rows": null
             },
             {
-                "label": "P2=",
-                "value": "inP2",
+                "label": "P [-512-512]=",
+                "value": "outP",
                 "type": "number",
-                "required": false,
+                "required": true,
+                "rows": null
+            },
+            {
+                "label": "D [0..]=",
+                "value": "outD",
+                "type": "number",
+                "required": true,
                 "rows": null
             }
         ],
         "formValue": {
-            "inP3": "",
-            "inP1": "",
-            "inP2": ""
+            "outMid": "",
+            "outP": "",
+            "outD": ""
         },
         "payload": "",
         "submit": "submit",
         "cancel": "cancel",
-        "topic": "lt/data",
+        "topic": "ltxt/act",
         "topicType": "str",
         "splitLayout": true,
         "className": "",
-        "x": 450,
+        "x": 420,
         "y": 240,
         "wires": [
             [
-                "a3f83bb55567d102"
+                "156bf0a285ed6539"
             ]
         ],
         "inputLabels": [
@@ -1751,8 +1751,8 @@
         "targetType": "full",
         "statusVal": "payload",
         "statusType": "auto",
-        "x": 770,
-        "y": 240,
+        "x": 1150,
+        "y": 260,
         "wires": []
     },
     {
@@ -1776,8 +1776,8 @@
         "topic": "lt/data",
         "payload": "{\"inP3\":null,\"inP1\":435,\"inP2\":13}",
         "payloadType": "json",
-        "x": 270,
-        "y": 180,
+        "x": 230,
+        "y": 140,
         "wires": [
             [
                 "ea5b1d3fd2440b96"
@@ -1792,8 +1792,8 @@
         "property": "payload",
         "action": "str",
         "pretty": true,
-        "x": 590,
-        "y": 180,
+        "x": 930,
+        "y": 160,
         "wires": [
             [
                 "a1af0c2aa40e5882",
@@ -1815,8 +1815,37 @@
         "correl": "",
         "expiry": "",
         "broker": "c58f8d4b7c13412d",
-        "x": 810,
+        "x": 1150,
         "y": 140,
         "wires": []
+    },
+    {
+        "id": "156bf0a285ed6539",
+        "type": "function",
+        "z": "4c7e81e43391897e",
+        "name": "check_M",
+        "func": "\nreturn [ msg,  null]",
+        "outputs": 2,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 520,
+        "y": 360,
+        "wires": [
+            [
+                "ea5b1d3fd2440b96"
+            ],
+            [
+                "a3f83bb55567d102"
+            ]
+        ],
+        "inputLabels": [
+            "data"
+        ],
+        "outputLabels": [
+            "err",
+            "out"
+        ]
     }
 ]
