@@ -1774,7 +1774,7 @@
         "once": false,
         "onceDelay": 0.1,
         "topic": "lt/data",
-        "payload": "{\"inP3\":null,\"inP1\":435,\"inP2\":null}",
+        "payload": "{\"inP3\":null,\"inP1\":435,\"inP2\":13}",
         "payloadType": "json",
         "x": 590,
         "y": 580,
