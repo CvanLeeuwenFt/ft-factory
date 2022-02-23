@@ -33,13 +33,7 @@
             }
         ],
         "out": [],
-        "env": [
-            {
-                "name": "InP",
-                "type": "json",
-                "value": ""
-            }
-        ],
+        "env": [],
         "meta": {},
         "color": "#DDAA99"
     },
@@ -694,6 +688,7 @@
         "label": "P1=",
         "format": "{{msg.payload}}",
         "layout": "row-right",
+        "className": "",
         "x": 770,
         "y": 220,
         "wires": []
@@ -1521,7 +1516,7 @@
         "id": "e8d8c25a3123a251",
         "type": "subflow:1ddee8b072c433e9",
         "z": "4e9eeca57a653287",
-        "name": "",
+        "name": "MyPdashboard",
         "x": 1100,
         "y": 480,
         "wires": []
