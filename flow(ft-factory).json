@@ -1522,7 +1522,8 @@
         "props": [
             {
                 "p": "topic",
-                "vt": "str"
+                "v": "{\"topic\":\"txt/test\"}",
+                "vt": "json"
             },
             {
                 "p": "payload"
@@ -1532,8 +1533,8 @@
         "crontab": "",
         "once": false,
         "onceDelay": 0.1,
-        "topic": "txt/test1",
-        "payload": "{\"par\":[34,253,65,512,-23]}",
+        "topic": "",
+        "payload": "{\"a\":[34,253,65,512,-23]}",
         "payloadType": "json",
         "x": 670,
         "y": 560,
