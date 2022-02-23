@@ -1824,7 +1824,7 @@
         "type": "function",
         "z": "4c7e81e43391897e",
         "name": "check_M",
-        "func": "var payload=msg.payload;\nvar topic=msg.topic;\nvar error=false;\nvar j= JSON.parse(payload);\n\nif ( (j.outMid<0) && (j.outMid>4)){\n  j.outMid=null; error=true;  \n} \n\nif ( (j.outP<-512) && (j.outP>512)){\n  j.outP=null; error=true;  \n} \n\nif ( (j.outD<0) && (j.outD>32000)){\n  j.outD=null; error=true;  \n} \nmsg.payload=JSON.stringify(j);\nif (error) return [ msg,  null];\n\nreturn [ msg,  null];",
+        "func": "var payload=msg.payload;\nvar topic=msg.topic;\nvar error=false;\nvar j= JSON.parse(payload);\nvar msg1={};\nif ( (j.outMid<0) && (j.outMid>4)){\n  j.outMid=null; error=true;  \n} \n\nif ( (j.outP<-512) && (j.outP>512)){\n  j.outP=null; error=true;  \n} \n\nif ( (j.outD<0) && (j.outD>32000)){\n  j.outD=null; error=true;  \n} \nmsg1.payload=JSON.stringify(j);\nmsg1.topic=topic;\n\n\nif (error) return [ msg1,  null];\n\nreturn [ msg1,  null];",
         "outputs": 2,
         "noerr": 0,
         "initialize": "",
@@ -1862,8 +1862,8 @@
         "targetType": "full",
         "statusVal": "payload",
         "statusType": "auto",
-        "x": 770,
-        "y": 100,
+        "x": 870,
+        "y": 160,
         "wires": []
     }
 ]
