@@ -1773,9 +1773,9 @@
         "once": false,
         "onceDelay": 0.1,
         "topic": "f_ac",
-        "payload": "{\"ïnP1\":22,\"ïnP3\":33}",
+        "payload": "{\"ïnP1\":22,\"ïnP2\":33,\"ïnP3\":44}",
         "payloadType": "json",
-        "x": 590,
+        "x": 530,
         "y": 580,
         "wires": [
             [
