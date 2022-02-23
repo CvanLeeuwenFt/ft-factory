@@ -1364,8 +1364,7 @@
         "y": 80,
         "wires": [
             [
-                "1c1ba70ece2270da",
-                "94a1bc1eeca2e9ee"
+                "1c1ba70ece2270da"
             ]
         ]
     },
@@ -1514,5 +1513,37 @@
         "x": 1480,
         "y": 680,
         "wires": []
+    },
+    {
+        "id": "a4beca056fb4b777",
+        "type": "inject",
+        "z": "4e9eeca57a653287",
+        "name": "P-msg",
+        "props": [
+            {
+                "p": "topic",
+                "vt": "str"
+            },
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "txt/test1",
+        "payload": "{\"id\":\"p1\",\"par\":[34,253,65,512,-23],\"t\":\"2014-06-25T00:00:00.000Z\"}",
+        "payloadType": "str",
+        "x": 670,
+        "y": 560,
+        "wires": [
+            [
+                "94a1bc1eeca2e9ee"
+            ]
+        ],
+        "outputLabels": [
+            "Json"
+        ]
     }
 ]
