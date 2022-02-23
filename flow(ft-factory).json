@@ -1190,8 +1190,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1150,
-        "y": 260,
+        "x": 1110,
+        "y": 360,
         "wires": [
             [
                 "ec7721de0f0b7d9f",
@@ -1537,7 +1537,7 @@
         "payload": "{\"a\":[34,253,65,512,-23]}",
         "payloadType": "json",
         "x": 670,
-        "y": 560,
+        "y": 540,
         "wires": [
             [
                 "94a1bc1eeca2e9ee"
