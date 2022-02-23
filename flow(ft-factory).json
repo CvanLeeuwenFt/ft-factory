@@ -1061,13 +1061,14 @@
         "rap": true,
         "rh": 0,
         "inputs": 0,
-        "x": 90,
-        "y": 580,
+        "x": 130,
+        "y": 600,
         "wires": [
             [
                 "cb249ba6ba04cbbe",
                 "94a1bc1eeca2e9ee",
-                "dd547951abe66cb1"
+                "dd547951abe66cb1",
+                "1c1ba70ece2270da"
             ]
         ],
         "outputLabels": [
@@ -1087,8 +1088,8 @@
         "targetType": "msg",
         "statusVal": "payload",
         "statusType": "auto",
-        "x": 780,
-        "y": 720,
+        "x": 1100,
+        "y": 600,
         "wires": []
     },
     {
@@ -1146,10 +1147,12 @@
         "type": "json2md",
         "z": "4e9eeca57a653287",
         "name": "Parse json to markdown",
-        "x": 650,
-        "y": 640,
+        "x": 870,
+        "y": 600,
         "wires": [
-            []
+            [
+                "cd50e099734a83d5"
+            ]
         ],
         "inputLabels": [
             "dara"
@@ -1168,12 +1171,11 @@
         "complete": "complete",
         "prop": "payload",
         "name": "",
-        "x": 500,
-        "y": 720,
+        "x": 460,
+        "y": 740,
         "wires": [
             [
-                "f3094bbdc00853ec",
-                "cd50e099734a83d5"
+                "f3094bbdc00853ec"
             ]
         ]
     },
@@ -1254,11 +1256,12 @@
         "topic": "txt/test1",
         "payload": "{\"id\":\"p1\",\"par\":[34,253,65,512,-23],\"t\":\"2014-06-25T00:00:00.000Z\"}",
         "payloadType": "str",
-        "x": 810,
-        "y": 140,
+        "x": 850,
+        "y": 80,
         "wires": [
             [
-                "e8d8c25a3123a251"
+                "0e42115eb538c443",
+                "94a1bc1eeca2e9ee"
             ]
         ],
         "outputLabels": [
@@ -1510,15 +1513,6 @@
         "layout": "row-right",
         "x": 1480,
         "y": 680,
-        "wires": []
-    },
-    {
-        "id": "e8d8c25a3123a251",
-        "type": "subflow:1ddee8b072c433e9",
-        "z": "4e9eeca57a653287",
-        "name": "MyPdashboard",
-        "x": 1100,
-        "y": 480,
         "wires": []
     }
 ]
