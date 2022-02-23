@@ -16,6 +16,14 @@
         "env": []
     },
     {
+        "id": "4c7e81e43391897e",
+        "type": "tab",
+        "label": "Flow 3",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
         "id": "1ddee8b072c433e9",
         "type": "subflow",
         "name": "ShowPmessage",
@@ -151,7 +159,7 @@
                 "accents": "blue",
                 "warn": "red",
                 "background": "grey",
-                "palette": "dark"
+                "palette": "light"
             }
         },
         "site": {
@@ -500,8 +508,8 @@
         "topic": "txt/test1",
         "payload": "{\"id\":\"p1\",\"par\":[34,253,65,512,-23],\"t\":\"2014-06-25T00:00:00.000Z\"}",
         "payloadType": "str",
-        "x": 170,
-        "y": 120,
+        "x": 110,
+        "y": 220,
         "wires": [
             [
                 "e14f6d882278fabf"
@@ -604,8 +612,8 @@
         "property": "payload",
         "action": "obj",
         "pretty": false,
-        "x": 350,
-        "y": 120,
+        "x": 290,
+        "y": 280,
         "wires": [
             [
                 "ead821eead376006"
@@ -1061,13 +1069,12 @@
         "rap": true,
         "rh": 0,
         "inputs": 0,
-        "x": 130,
+        "x": 70,
         "y": 600,
         "wires": [
             [
                 "cb249ba6ba04cbbe",
                 "94a1bc1eeca2e9ee",
-                "dd547951abe66cb1",
                 "1c1ba70ece2270da"
             ]
         ],
@@ -1088,8 +1095,8 @@
         "targetType": "full",
         "statusVal": "payload",
         "statusType": "auto",
-        "x": 1100,
-        "y": 600,
+        "x": 760,
+        "y": 720,
         "wires": []
     },
     {
@@ -1127,28 +1134,12 @@
         "wires": []
     },
     {
-        "id": "f3094bbdc00853ec",
-        "type": "ui_text",
-        "z": "4e9eeca57a653287",
-        "group": "aa9feae58ac4eadd",
-        "order": 4,
-        "width": 0,
-        "height": 0,
-        "name": "txt_data",
-        "label": "txt data parse",
-        "format": "{{msg.payload}}",
-        "layout": "row-spread",
-        "x": 700,
-        "y": 800,
-        "wires": []
-    },
-    {
         "id": "94a1bc1eeca2e9ee",
         "type": "json2md",
         "z": "4e9eeca57a653287",
         "name": "Parse json to markdown",
-        "x": 870,
-        "y": 600,
+        "x": 550,
+        "y": 720,
         "wires": [
             [
                 "cd50e099734a83d5"
@@ -1159,24 +1150,6 @@
         ],
         "outputLabels": [
             "out"
-        ]
-    },
-    {
-        "id": "dd547951abe66cb1",
-        "type": "contrib-json",
-        "z": "4e9eeca57a653287",
-        "engine": "JSONSelect",
-        "command": "jq",
-        "expr": ":root > .par [1]",
-        "complete": "complete",
-        "prop": "payload",
-        "name": "",
-        "x": 460,
-        "y": 740,
-        "wires": [
-            [
-                "f3094bbdc00853ec"
-            ]
         ]
     },
     {
@@ -1256,8 +1229,8 @@
         "topic": "txt/test1",
         "payload": "{\"id\":\"p1\",\"par\":[34,253,65,512,-23],\"t\":\"2014-06-25T00:00:00.000Z\"}",
         "payloadType": "str",
-        "x": 850,
-        "y": 80,
+        "x": 750,
+        "y": 360,
         "wires": [
             [
                 "0e42115eb538c443"
@@ -1360,8 +1333,8 @@
         "property": "payload",
         "action": "obj",
         "pretty": false,
-        "x": 1050,
-        "y": 80,
+        "x": 870,
+        "y": 340,
         "wires": [
             [
                 "1c1ba70ece2270da"
@@ -1538,8 +1511,8 @@
         "topic": "",
         "payload": "[{\"a\":\"11\",\"b\":\"22\",\"c\":\"33\",\"d\":\"44\"},{\"a\":\"55\",\"b\":\"66\",\"c\":\"77\",\"d\":\"88\"}]",
         "payloadType": "json",
-        "x": 670,
-        "y": 540,
+        "x": 370,
+        "y": 720,
         "wires": [
             [
                 "94a1bc1eeca2e9ee"
