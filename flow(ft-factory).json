@@ -1570,11 +1570,11 @@
         "topicType": "str",
         "splitLayout": true,
         "className": "",
-        "x": 850,
-        "y": 580,
+        "x": 810,
+        "y": 560,
         "wires": [
             [
-                "0136e7092123354a"
+                "0bb3bffe9afbedfe"
             ]
         ],
         "inputLabels": [
@@ -1746,12 +1746,13 @@
         "active": true,
         "tosidebar": true,
         "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
+        "tostatus": true,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "payload",
         "statusType": "auto",
-        "x": 1150,
-        "y": 580,
+        "x": 1070,
+        "y": 640,
         "wires": []
     },
     {
@@ -1775,11 +1776,27 @@
         "topic": "f_ac",
         "payload": "{\"ïnP1\":22,\"ïnP2\":33,\"ïnP3\":44}",
         "payloadType": "json",
-        "x": 530,
+        "x": 590,
         "y": 580,
         "wires": [
             [
                 "513f6a55aae07745"
+            ]
+        ]
+    },
+    {
+        "id": "0bb3bffe9afbedfe",
+        "type": "json",
+        "z": "4e9eeca57a653287",
+        "name": "",
+        "property": "payload",
+        "action": "str",
+        "pretty": true,
+        "x": 990,
+        "y": 520,
+        "wires": [
+            [
+                "0136e7092123354a"
             ]
         ]
     }
