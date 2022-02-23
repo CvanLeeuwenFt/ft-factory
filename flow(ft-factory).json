@@ -1661,10 +1661,12 @@
         "sendOnBlur": true,
         "className": "",
         "topicType": "msg",
-        "x": 1410,
-        "y": 760,
+        "x": 1070,
+        "y": 780,
         "wires": [
-            []
+            [
+                "f223209feacb7f86"
+            ]
         ]
     },
     {
@@ -1685,10 +1687,12 @@
         "sendOnBlur": true,
         "className": "",
         "topicType": "msg",
-        "x": 1410,
-        "y": 800,
+        "x": 1070,
+        "y": 820,
         "wires": [
-            []
+            [
+                "f223209feacb7f86"
+            ]
         ]
     },
     {
@@ -1709,10 +1713,12 @@
         "sendOnBlur": true,
         "className": "",
         "topicType": "msg",
-        "x": 1410,
+        "x": 1070,
         "y": 860,
         "wires": [
-            []
+            [
+                "f223209feacb7f86"
+            ]
         ]
     },
     {
@@ -1734,10 +1740,12 @@
         "max": "512",
         "step": 1,
         "className": "",
-        "x": 1410,
-        "y": 900,
+        "x": 1070,
+        "y": 920,
         "wires": [
-            []
+            [
+                "f223209feacb7f86"
+            ]
         ]
     },
     {
@@ -1785,10 +1793,78 @@
         "topicType": "msg",
         "splitLayout": "",
         "className": "",
-        "x": 1030,
-        "y": 900,
+        "x": 1070,
+        "y": 580,
         "wires": [
             []
         ]
+    },
+    {
+        "id": "f223209feacb7f86",
+        "type": "function",
+        "z": "4e9eeca57a653287",
+        "name": "",
+        "func": "\nreturn msg;",
+        "outputs": 3,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1240,
+        "y": 1020,
+        "wires": [
+            [
+                "740974992d34062f"
+            ],
+            [
+                "0677eab1b559fc4c"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "740974992d34062f",
+        "type": "function",
+        "z": "4e9eeca57a653287",
+        "name": "",
+        "func": "\nreturn msg;",
+        "outputs": 4,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 820,
+        "y": 900,
+        "wires": [
+            [
+                "ac6626680c328fd6"
+            ],
+            [
+                "fe40d63bde94cf05"
+            ],
+            [
+                "f074621419c85ece"
+            ],
+            [
+                "aeec0403d47b3c6f"
+            ]
+        ]
+    },
+    {
+        "id": "0677eab1b559fc4c",
+        "type": "mqtt out",
+        "z": "4e9eeca57a653287",
+        "name": "",
+        "topic": "",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "x": 1690,
+        "y": 980,
+        "wires": []
     }
 ]
