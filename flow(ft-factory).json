@@ -1728,7 +1728,8 @@
         "y": 240,
         "wires": [
             [
-                "156bf0a285ed6539"
+                "156bf0a285ed6539",
+                "4b6f7179ec3b16d8"
             ]
         ],
         "inputLabels": [
@@ -1863,6 +1864,23 @@
         "statusVal": "payload",
         "statusType": "auto",
         "x": 870,
+        "y": 160,
+        "wires": []
+    },
+    {
+        "id": "4b6f7179ec3b16d8",
+        "type": "debug",
+        "z": "4c7e81e43391897e",
+        "name": "sttr",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": true,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "payload",
+        "statusType": "auto",
+        "x": 550,
         "y": 160,
         "wires": []
     }
