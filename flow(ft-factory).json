@@ -1773,7 +1773,7 @@
         "once": false,
         "onceDelay": 0.1,
         "topic": "f_ac",
-        "payload": "{\"ïnP2\":2,\"ïnP3\":3,\"inP1\":1}",
+        "payload": "{\"inP1\":1,\"ïnP2\":2,\"ïnP3\":3}",
         "payloadType": "json",
         "x": 610,
         "y": 580,
