@@ -1763,8 +1763,7 @@
         "props": [
             {
                 "p": "topic",
-                "v": "f_ac",
-                "vt": "msg"
+                "vt": "str"
             },
             {
                 "p": "payload"
@@ -1774,9 +1773,9 @@
         "crontab": "",
         "once": false,
         "onceDelay": 0.1,
-        "topic": "",
+        "topic": "lt/data",
         "payload": "{\"inP3\":null,\"inP1\":435,\"inP2\":null}",
-        "payloadType": "str",
+        "payloadType": "json",
         "x": 590,
         "y": 580,
         "wires": [
