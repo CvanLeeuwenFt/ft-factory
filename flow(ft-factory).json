@@ -1752,8 +1752,8 @@
         "targetType": "full",
         "statusVal": "payload",
         "statusType": "auto",
-        "x": 1150,
-        "y": 260,
+        "x": 1110,
+        "y": 360,
         "wires": []
     },
     {
@@ -1808,14 +1808,14 @@
         "type": "function",
         "z": "4c7e81e43391897e",
         "name": "check_M",
-        "func": "var payload=msg.payload;\nvar topic=msg.topic;\nvar error=false;\nvar j=payload ;//JSON.parse(payload);\nvar msg1={};\nif ( (j.outMid<1) || (j.outMid>4)){\n  j.outMid=null; error=true;  \n} \n\nif ( (j.outP<-512) || (j.outP>512)){\n  j.outP=null; error=true;  \n} \n\nif ( (j.outD<0) || (j.outD>32000)){\n  j.outD=null; error=true;  \n} \nmsg1.payload= j;\nmsg1.topic=topic;\n\n\nif (error) return [ msg1,  null];\n\nreturn [ msg1,  null];",
+        "func": "var payload=msg.payload;\nvar topic=msg.topic;\nvar error=false;\nvar j=payload ;//JSON.parse(payload);\nvar msg1={};\nif ( (j.outMid<1) || (j.outMid>4)){\n  j.outMid=null; error=true;  \n} \n\nif ( (j.outP<-512) || (j.outP>512)){\n  j.outP=null; error=true;  \n} \n\nif ( (j.outD<0) || (j.outD>32000)){\n  j.outD=null; error=true;  \n} \nmsg1.payload= j;\nmsg1.topic=topic;\n\n\nif (error) return [ msg1,  null];\n\nreturn [ null,msg1  ];",
         "outputs": 2,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 520,
-        "y": 360,
+        "x": 420,
+        "y": 340,
         "wires": [
             [
                 "29acb7217437424b",
@@ -1839,7 +1839,7 @@
         "type": "debug",
         "z": "4c7e81e43391897e",
         "name": "error",
-        "active": true,
+        "active": false,
         "tosidebar": true,
         "console": false,
         "tostatus": true,
@@ -1847,8 +1847,8 @@
         "targetType": "full",
         "statusVal": "payload",
         "statusType": "auto",
-        "x": 870,
-        "y": 160,
+        "x": 690,
+        "y": 240,
         "wires": []
     },
     {
@@ -1856,7 +1856,7 @@
         "type": "debug",
         "z": "4c7e81e43391897e",
         "name": "sttr",
-        "active": true,
+        "active": false,
         "tosidebar": true,
         "console": false,
         "tostatus": true,
@@ -1864,8 +1864,8 @@
         "targetType": "full",
         "statusVal": "payload",
         "statusType": "auto",
-        "x": 590,
-        "y": 160,
+        "x": 570,
+        "y": 180,
         "wires": []
     }
 ]
