@@ -1084,8 +1084,8 @@
         "tosidebar": true,
         "console": true,
         "tostatus": true,
-        "complete": "payload",
-        "targetType": "msg",
+        "complete": "true",
+        "targetType": "full",
         "statusVal": "payload",
         "statusType": "auto",
         "x": 1100,
@@ -1260,7 +1260,7 @@
         "y": 80,
         "wires": [
             [
-                "94a1bc1eeca2e9ee"
+                "0e42115eb538c443"
             ]
         ],
         "outputLabels": [
@@ -1364,7 +1364,8 @@
         "y": 80,
         "wires": [
             [
-                "1c1ba70ece2270da"
+                "1c1ba70ece2270da",
+                "94a1bc1eeca2e9ee"
             ]
         ]
     },
