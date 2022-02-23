@@ -1567,7 +1567,7 @@
         "submit": "submit",
         "cancel": "cancel",
         "topic": "lt/data",
-        "topicType": "msg",
+        "topicType": "str",
         "splitLayout": true,
         "className": "",
         "x": 850,
@@ -1744,8 +1744,8 @@
         "complete": "false",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1170,
-        "y": 660,
+        "x": 1150,
+        "y": 580,
         "wires": []
     }
 ]
