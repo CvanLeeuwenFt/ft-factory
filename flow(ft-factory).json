@@ -1540,7 +1540,7 @@
                 "label": "P3=",
                 "value": "inP3",
                 "type": "number",
-                "required": true,
+                "required": false,
                 "rows": null
             },
             {
@@ -1554,7 +1554,7 @@
                 "label": "P2=",
                 "value": "inP2",
                 "type": "number",
-                "required": true,
+                "required": false,
                 "rows": null
             }
         ],
