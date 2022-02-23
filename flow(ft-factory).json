@@ -1752,8 +1752,8 @@
         "targetType": "full",
         "statusVal": "payload",
         "statusType": "auto",
-        "x": 1110,
-        "y": 360,
+        "x": 790,
+        "y": 480,
         "wires": []
     },
     {
@@ -1799,8 +1799,8 @@
         "correl": "",
         "expiry": "",
         "broker": "c58f8d4b7c13412d",
-        "x": 1150,
-        "y": 140,
+        "x": 810,
+        "y": 360,
         "wires": []
     },
     {
