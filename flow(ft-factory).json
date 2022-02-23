@@ -1793,7 +1793,7 @@
         "action": "str",
         "pretty": true,
         "x": 810,
-        "y": 360,
+        "y": 380,
         "wires": [
             [
                 "a1af0c2aa40e5882",
@@ -1824,7 +1824,7 @@
         "type": "function",
         "z": "4c7e81e43391897e",
         "name": "check_M",
-        "func": "var payload=msg.payload;\nvar topic=msg.topic;\nvar error=false;\nvar j= JSON.parse(payload);\n\nif ( (j.outMid<0) && (j.outMid>4)){\n  j.outMid=null; error=true;  \n} \n\nif ( (j.outP<-512) && (j.outP>512)){\n  j.outP=null; error=true;  \n} \n\nif ( (j.outD<0) && (j.outD>32000)){\n  j.outD=null; error=true;  \n} \n\nif (error) return [ msg,  null];\n\nreturn [ msg,  null];",
+        "func": "var payload=msg.payload;\nvar topic=msg.topic;\nvar error=false;\nvar j= JSON.parse(payload);\n\nif ( (j.outMid<0) && (j.outMid>4)){\n  j.outMid=null; error=true;  \n} \n\nif ( (j.outP<-512) && (j.outP>512)){\n  j.outP=null; error=true;  \n} \n\nif ( (j.outD<0) && (j.outD>32000)){\n  j.outD=null; error=true;  \n} \nmsg.payload=JSON.stringify(j);\nif (error) return [ msg,  null];\n\nreturn [ msg,  null];",
         "outputs": 2,
         "noerr": 0,
         "initialize": "",
