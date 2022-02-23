@@ -1474,9 +1474,10 @@
         "width": 2,
         "height": 1,
         "name": "txt_Id",
-        "label": "Id=",
+        "label": "{{msg.topic}}",
         "format": "{{msg.payload}}",
         "layout": "row-right",
+        "className": "",
         "x": 1470,
         "y": 80,
         "wires": []
