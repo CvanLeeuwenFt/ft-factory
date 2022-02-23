@@ -1720,7 +1720,7 @@
         "payload": "",
         "submit": "submit",
         "cancel": "cancel",
-        "topic": "ltxt/act",
+        "topic": "txt/act",
         "topicType": "str",
         "splitLayout": true,
         "className": "",
@@ -1774,8 +1774,8 @@
         "crontab": "",
         "once": false,
         "onceDelay": 0.1,
-        "topic": "lt/data",
-        "payload": "{\"outM\":1,\"outD\":435,\"outP\":13}",
+        "topic": "txt/act",
+        "payload": "{\"outMid\":1,\"outD\":435,\"outP\":13}",
         "payloadType": "json",
         "x": 230,
         "y": 140,
@@ -1880,7 +1880,7 @@
         "targetType": "full",
         "statusVal": "payload",
         "statusType": "auto",
-        "x": 550,
+        "x": 590,
         "y": 160,
         "wires": []
     }
