@@ -158,8 +158,8 @@
                 "primary": "indigo",
                 "accents": "blue",
                 "warn": "red",
-                "background": "grey",
-                "palette": "light"
+                "background": "cyan",
+                "palette": "dark"
             }
         },
         "site": {
