@@ -2056,7 +2056,7 @@
         "expiry": "",
         "broker": "c58f8d4b7c13412d",
         "x": 1200,
-        "y": 260,
+        "y": 280,
         "wires": []
     },
     {
@@ -2064,7 +2064,7 @@
         "type": "function",
         "z": "86129776fa6cf627",
         "name": "check_M",
-        "func": "var payload=msg.payload;\nvar plOut={};\nvar topic=msg.topic;\nvar error=false;\nvar j=payload ;//JSON.parse(payload);\nvar msg1={};\nvar msg3={};\nvar msg4={};\nif ( (j.id<1) || (j.id>3)){\n  j.id=null; error=true;  \n} else \nplOut.id=\"P1\";//  \"P\"+ payload.id.toString();\nvar r=[j.par1,j.par2,j.par3,j.par4,j.par5];\n\n//var jj=JSON.stringify(j)\n//msg3.payload=jj;\n//jjj=JSON.parse(jj);\n//msg4.payload=jjj;\n\nplOut.par=[];\nplOut.par[0]=j.par1;\nplOut.par[1]=j.par2;\nplOut.par[2]=j.par3;\nplOut.par[3]=j.par4;\nplOut.par[4]=j.par5;\nplOut.t=\"2014-06-25T00:00:00.000Z\";\n\n[0, 1,2,3,4].forEach(v => {\nplOut.par[v]=r[v];\nif ( (plOut.par[v]<-1) || (plOut.par[v]>5)){\n  plOut.par[v]=null; error=true;  \n} \n});\nmsg3.payload=JSON.stringify(j);\nmsg4.payload=plOut;\nmsg1.payload= plOut;\nmsg1.topic=topic;\n\n\nif (error) return [ msg,  null,msg3,msg4];\n\nreturn [ null,msg1,msg3,msg4];",
+        "func": "var payload=msg.payload;\nvar plOut={};\nvar topic=msg.topic;\nvar error=false;\nvar j=payload ;//JSON.parse(payload);\nvar msg1={};\nvar msg3={};\nvar msg4={};\nif ( (j.id<1) || (j.id>3)){\n  j.id=null; error=true;  \n} else \nplOut.id=\"P1\";//  \"P\"+ payload.id.toString();\nvar r=[j.par1,j.par2,j.par3,j.par4,j.par5];\nplOut.par=[];\n\n\n[0, 1,2,3,4].forEach(v => {\nplOut.par[v]=r[v];\nif ( (plOut.par[v]<-1) || (plOut.par[v]>5)){\n  plOut.par[v]=null; error=true;  \n} \n});\n\nif (error){\nj.par1=plOut.par[0];\nj.par2=plOut.par[1];\nj.par3=plOut.par[2];\nj.par4=plOut.par[3];\nj.par5=plOut.par[4];\nmsg1.payload= j;\n   return [ msg,  null]; \n} \nplOut.t=new Date();\nmsg1.payload= plOut;\nmsg1.topic=topic;\nreturn [ null,msg1];",
         "outputs": 4,
         "noerr": 0,
         "initialize": "",
