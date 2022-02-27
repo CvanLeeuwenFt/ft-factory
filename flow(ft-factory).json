@@ -1981,7 +1981,7 @@
         "splitLayout": true,
         "className": "",
         "x": 300,
-        "y": 220,
+        "y": 200,
         "wires": [
             [
                 "9d1e03aa5a7b52fd",
@@ -2009,7 +2009,7 @@
         "statusVal": "payload",
         "statusType": "auto",
         "x": 530,
-        "y": 540,
+        "y": 440,
         "wires": []
     },
     {
@@ -2095,24 +2095,7 @@
         "type": "debug",
         "z": "86129776fa6cf627",
         "name": "error",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": true,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "payload",
-        "statusType": "auto",
-        "x": 510,
-        "y": 260,
-        "wires": []
-    },
-    {
-        "id": "25c5f56b903361a1",
-        "type": "debug",
-        "z": "86129776fa6cf627",
-        "name": "button_out",
-        "active": false,
+        "active": true,
         "tosidebar": true,
         "console": false,
         "tostatus": true,
@@ -2121,7 +2104,24 @@
         "statusVal": "payload",
         "statusType": "auto",
         "x": 550,
-        "y": 120,
+        "y": 280,
+        "wires": []
+    },
+    {
+        "id": "25c5f56b903361a1",
+        "type": "debug",
+        "z": "86129776fa6cf627",
+        "name": "button_out",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": true,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "payload",
+        "statusType": "auto",
+        "x": 550,
+        "y": 140,
         "wires": []
     },
     {
