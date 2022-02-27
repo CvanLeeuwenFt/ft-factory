@@ -26,7 +26,23 @@
     {
         "id": "f0a66f6a5cd9f8b9",
         "type": "tab",
-        "label": "Receive P data from TXT",
+        "label": "Receive P-data from TXT",
+        "disabled": false,
+        "info": "Subscribe P-data from TXT\n\n\t\"txt/p\",        \n\t\"txt/p/p1\",\n\t\t\"txt/p/p2\",\n\t\t\"txt/p/p3\",\n\t\t\"txt/s\",         \n\t\t\"txt/s/p1\",\n\t\t\"txt/s/p2\",\n\t\t\"txt/s/p3\"",
+        "env": []
+    },
+    {
+        "id": "86129776fa6cf627",
+        "type": "tab",
+        "label": "Publish P-data to TXT",
+        "disabled": false,
+        "info": "Publish P-data to TXT\ntopic= <txt>/out/p1\n5 different sub messages.\n\n\t\t\"txt/p\",        \n\t\t\"txt/p/p1\",\n\t\t\"txt/p/p2\",\n\t\t\"txt/p/p3\",\n\t\t\"txt/s\",         \n\t\t\"txt/s/p1\",\n\t\t\"txt/s/p2\",\n\t\t\"txt/s/p3\"",
+        "env": []
+    },
+    {
+        "id": "91a23abe8e481d5a",
+        "type": "tab",
+        "label": "Emergency stop",
         "disabled": false,
         "info": "",
         "env": []
@@ -1235,6 +1251,25 @@
         "wires": []
     },
     {
+        "id": "15eb2257612e367f",
+        "type": "sort",
+        "z": "4e9eeca57a653287",
+        "name": "",
+        "order": "ascending",
+        "as_num": false,
+        "target": "payload",
+        "targetType": "msg",
+        "msgKey": "payload",
+        "msgKeyType": "elem",
+        "seqKey": "payload",
+        "seqKeyType": "msg",
+        "x": 1190,
+        "y": 160,
+        "wires": [
+            []
+        ]
+    },
+    {
         "id": "ea5b1d3fd2440b96",
         "type": "ui_form",
         "z": "4c7e81e43391897e",
@@ -1345,7 +1380,7 @@
         "type": "mqtt out",
         "z": "4c7e81e43391897e",
         "name": "Test",
-        "topic": "txt/out",
+        "topic": "txt/out/motor",
         "qos": "2",
         "retain": "",
         "respTopic": "",
@@ -1875,5 +1910,129 @@
         "x": 820,
         "y": 700,
         "wires": []
+    },
+    {
+        "id": "80f136618643dae4",
+        "type": "debug",
+        "z": "91a23abe8e481d5a",
+        "name": "send",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": true,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "payload",
+        "statusType": "auto",
+        "x": 850,
+        "y": 480,
+        "wires": []
+    },
+    {
+        "id": "7e9cab15f9dc9e6d",
+        "type": "inject",
+        "z": "91a23abe8e481d5a",
+        "name": "",
+        "props": [
+            {
+                "p": "topic",
+                "vt": "str"
+            },
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "txt/act",
+        "payload": "{\"outMid\":1,\"outD\":45,\"outP\":123}",
+        "payloadType": "json",
+        "x": 210,
+        "y": 140,
+        "wires": [
+            [
+                "f05193b0812e1c3b"
+            ]
+        ]
+    },
+    {
+        "id": "c9807cf65460edf8",
+        "type": "mqtt out",
+        "z": "91a23abe8e481d5a",
+        "name": "Test",
+        "topic": "txt/out/motor",
+        "qos": "2",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "c58f8d4b7c13412d",
+        "x": 870,
+        "y": 360,
+        "wires": []
+    },
+    {
+        "id": "b93360838b8df78e",
+        "type": "debug",
+        "z": "91a23abe8e481d5a",
+        "name": "error",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": true,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "payload",
+        "statusType": "auto",
+        "x": 750,
+        "y": 240,
+        "wires": []
+    },
+    {
+        "id": "c61a9cba6bc29073",
+        "type": "debug",
+        "z": "91a23abe8e481d5a",
+        "name": "sttr",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": true,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "payload",
+        "statusType": "auto",
+        "x": 630,
+        "y": 180,
+        "wires": []
+    },
+    {
+        "id": "f05193b0812e1c3b",
+        "type": "ui_button",
+        "z": "91a23abe8e481d5a",
+        "name": "btn_stop",
+        "group": "aa9feae58ac4eadd",
+        "order": 10,
+        "width": "3",
+        "height": "3",
+        "passthru": true,
+        "label": "STOP",
+        "tooltip": "Emergency stop of the actuators in this section.",
+        "color": "red",
+        "bgcolor": "black",
+        "className": "",
+        "icon": "",
+        "payload": "{\"motors\":{\"m\":0}}",
+        "payloadType": "json",
+        "topic": "txt/c/stop",
+        "topicType": "msg",
+        "x": 380,
+        "y": 300,
+        "wires": [
+            []
+        ]
     }
 ]
