@@ -2064,7 +2064,7 @@
         "type": "function",
         "z": "86129776fa6cf627",
         "name": "check_M",
-        "func": "var payload=msg.payload;\nvar plOut={\n\n};\nvar topic=msg.topic;\nvar error=false;\nvar j=payload ;//JSON.parse(payload);\nvar msg1={};\nvar msg3={};\nvar msg4={};\nif ( (j.id<1) || (j.id>3)){\n  j.id=null; error=true;  \n} else \nplOut.id=\"P1\";//  \"P\"+ payload.id.toString();\n\n//console.log(\"%d + %s = %d\", j.id, plOut.id, payload.id);\nvar jj=JSON.stringify(j)\nmsg3.payload=jj;\njjj=JSON.parse(jj);\nmsg4.payload=jjj;\n\nplOut.par=[];\nplOut.par[0]=j.par[0];\n//plOut.par[1]=j.par[1];\nplOut.par[2]=j.par3;\nplOut.par[3]=j.par4;\nplOut.par[4]=j.par5;\nplOut.t=\"2014-06-25T00:00:00.000Z\";\n/*\n[0, 1,2,3,4].forEach(v => {\n\nif ( (plOut.par[v]<-32767) || (plOut.par[v]>32767)){\n  plOut.par[v]=null; error=true;  \n} \n});\n\n*/\nmsg1.payload= plOut;\nmsg1.topic=topic;\n\n\nif (error) return [ msg,  null,msg3,msg4];\n\nreturn [ null,msg1,msg3,msg4];",
+        "func": "var payload=msg.payload;\nvar plOut={\n\n};\nvar topic=msg.topic;\nvar error=false;\nvar j=payload ;//JSON.parse(payload);\nvar msg1={};\nvar msg3={};\nvar msg4={};\nif ( (j.id<1) || (j.id>3)){\n  j.id=null; error=true;  \n} else \nplOut.id=\"P1\";//  \"P\"+ payload.id.toString();\n\n//console.log(\"%d + %s = %d\", j.id, plOut.id, payload.id);\nvar jj=JSON.stringify(j)\nmsg3.payload=jj;\n//jjj=JSON.parse(jj);\n//msg4.payload=jjj;\n\nplOut.par=[];\n//plOut.par[0]=j.par[0];\n//plOut.par[1]=j.par[1];\nplOut.par[2]=j.par3;\nplOut.par[3]=j.par4;\nplOut.par[4]=j.par5;\nplOut.t=\"2014-06-25T00:00:00.000Z\";\n/*\n[0, 1,2,3,4].forEach(v => {\n\nif ( (plOut.par[v]<-32767) || (plOut.par[v]>32767)){\n  plOut.par[v]=null; error=true;  \n} \n});\n\n*/\nmsg1.payload= plOut;\nmsg1.topic=topic;\n\n\nif (error) return [ msg,  null,msg3,msg4];\n\nreturn [ null,msg1,msg3,msg4];",
         "outputs": 4,
         "noerr": 0,
         "initialize": "",
@@ -2094,8 +2094,8 @@
         "outputLabels": [
             "err",
             "out",
-            null,
-            null
+            "",
+            ""
         ]
     },
     {
