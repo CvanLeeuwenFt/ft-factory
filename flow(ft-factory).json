@@ -2036,47 +2036,71 @@
         "z": "86129776fa6cf627",
         "name": "set_act",
         "label": "Actuator",
-        "group": "b7b5582d96bb1c75",
+        "group": "ccf5f67a2e5a062e",
         "order": 1,
         "width": 0,
         "height": 0,
         "options": [
             {
-                "label": "M [1..4]=",
-                "value": "outMid",
+                "label": "Id [0..3]=",
+                "value": "id",
                 "type": "number",
                 "required": true,
                 "rows": null
             },
             {
-                "label": "P [-512-512]=",
-                "value": "outP",
+                "label": "P1 [see doc] =",
+                "value": "par1",
                 "type": "number",
                 "required": true,
                 "rows": null
             },
             {
-                "label": "D [0..]=",
-                "value": "outD",
+                "label": "P2 [see doc] =",
+                "value": "par2",
+                "type": "number",
+                "required": true,
+                "rows": null
+            },
+            {
+                "label": "P3 [see doc] =",
+                "value": "par3",
+                "type": "number",
+                "required": true,
+                "rows": null
+            },
+            {
+                "label": "P4 [see doc] =",
+                "value": "par4",
+                "type": "number",
+                "required": true,
+                "rows": null
+            },
+            {
+                "label": "P5 [see doc] =",
+                "value": "par5",
                 "type": "number",
                 "required": true,
                 "rows": null
             }
         ],
         "formValue": {
-            "outMid": "",
-            "outP": "",
-            "outD": ""
+            "id": "",
+            "par1": "",
+            "par2": "",
+            "par3": "",
+            "par4": "",
+            "par5": ""
         },
         "payload": "",
         "submit": "submit",
         "cancel": "cancel",
-        "topic": "txt/act",
+        "topic": "txt/c/p1",
         "topicType": "str",
         "splitLayout": true,
         "className": "",
-        "x": 260,
-        "y": 240,
+        "x": 280,
+        "y": 220,
         "wires": [
             [
                 "9d1e03aa5a7b52fd",
@@ -2126,7 +2150,7 @@
         "once": false,
         "onceDelay": 0.1,
         "topic": "txt/act",
-        "payload": "{\"outMid\":1,\"outD\":45,\"outP\":123}",
+        "payload": "{\"id\":\"p1\",\"par\":[34,253,65,512,-23],\"t\":\"2014-06-25T00:00:00.000Z\"}",
         "payloadType": "json",
         "x": 70,
         "y": 140,
@@ -2215,8 +2239,8 @@
         "targetType": "full",
         "statusVal": "payload",
         "statusType": "auto",
-        "x": 450,
-        "y": 160,
+        "x": 470,
+        "y": 120,
         "wires": []
     },
     {
