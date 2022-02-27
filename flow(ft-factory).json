@@ -2000,7 +2000,7 @@
         "type": "debug",
         "z": "86129776fa6cf627",
         "name": "send",
-        "active": true,
+        "active": false,
         "tosidebar": true,
         "console": false,
         "tostatus": true,
@@ -2055,8 +2055,8 @@
         "correl": "",
         "expiry": "",
         "broker": "c58f8d4b7c13412d",
-        "x": 1200,
-        "y": 280,
+        "x": 960,
+        "y": 340,
         "wires": []
     },
     {
@@ -2064,8 +2064,8 @@
         "type": "function",
         "z": "86129776fa6cf627",
         "name": "check_M",
-        "func": "var payload=msg.payload;\nvar plOut={};\nvar topic=msg.topic;\nvar error=false;\nvar j=payload ;//JSON.parse(payload);\nvar msg1={};\nvar msg3={};\nvar msg4={};\nif ( (j.id<1) || (j.id>3)){\n  j.id=null; error=true;  \n} else \nplOut.id=\"P1\";//  \"P\"+ payload.id.toString();\nvar r=[j.par1,j.par2,j.par3,j.par4,j.par5];\nplOut.par=[];\n\n\n[0, 1,2,3,4].forEach(v => {\nplOut.par[v]=r[v];\nif ( (plOut.par[v]<-1) || (plOut.par[v]>5)){\n  plOut.par[v]=null; error=true;  \n} \n});\n\nif (error){\nj.par1=plOut.par[0];\nj.par2=plOut.par[1];\nj.par3=plOut.par[2];\nj.par4=plOut.par[3];\nj.par5=plOut.par[4];\nmsg1.payload= j;\n   return [ msg,  null]; \n} \nplOut.t=new Date();\nmsg1.payload= plOut;\nmsg1.topic=topic;\nreturn [ null,msg1];",
-        "outputs": 4,
+        "func": "var payload=msg.payload;\nvar plOut={};\nvar topic=msg.topic;\nvar error=false;\nvar j=payload ;//JSON.parse(payload);\nvar msg1={};\nvar msg3={};\nvar msg4={};\nif ( (j.id<1) || (j.id>3)){\n  j.id=null; error=true;  \n} else \nplOut.id=\"P1\";//  \"P\"+ payload.id.toString();\nvar r=[j.par1,j.par2,j.par3,j.par4,j.par5];\nplOut.par=[];\n\n\n[0, 1,2,3,4].forEach(v => {\nplOut.par[v]=r[v];\nif ( (plOut.par[v]<-32767) || (plOut.par[v]>32767)){\n  plOut.par[v]=null; error=true;  \n} \n});\n\nif (error){\nj.par1=plOut.par[0];\nj.par2=plOut.par[1];\nj.par3=plOut.par[2];\nj.par4=plOut.par[3];\nj.par5=plOut.par[4];\nj.t=new Date();\nmsg1.payload= j;\n   return [ msg,  null]; \n} \nplOut.t=new Date();\nmsg1.payload= plOut;\nmsg1.topic=topic;\nreturn [ null,msg1];",
+        "outputs": 2,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
@@ -2080,12 +2080,6 @@
             [
                 "d88163db1c48d4f6",
                 "77fbe054e9f51e1d"
-            ],
-            [
-                "b5e9d8cb947de7e0"
-            ],
-            [
-                "0db6113934f503b5"
             ]
         ],
         "inputLabels": [
@@ -2103,7 +2097,7 @@
         "type": "debug",
         "z": "86129776fa6cf627",
         "name": "error",
-        "active": true,
+        "active": false,
         "tosidebar": true,
         "console": false,
         "tostatus": true,
@@ -2120,7 +2114,7 @@
         "type": "debug",
         "z": "86129776fa6cf627",
         "name": "button_out",
-        "active": true,
+        "active": false,
         "tosidebar": true,
         "console": false,
         "tostatus": true,
@@ -2130,40 +2124,6 @@
         "statusType": "auto",
         "x": 550,
         "y": 140,
-        "wires": []
-    },
-    {
-        "id": "b5e9d8cb947de7e0",
-        "type": "debug",
-        "z": "86129776fa6cf627",
-        "name": "XX",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": true,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "payload",
-        "statusType": "auto",
-        "x": 557.8958129882812,
-        "y": 505.8888854980469,
-        "wires": []
-    },
-    {
-        "id": "0db6113934f503b5",
-        "type": "debug",
-        "z": "86129776fa6cf627",
-        "name": "YY",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": true,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "payload",
-        "statusType": "auto",
-        "x": 550,
-        "y": 580,
         "wires": []
     },
     {
