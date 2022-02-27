@@ -2295,7 +2295,7 @@
         "z": "91a23abe8e481d5a",
         "name": "Stop_all",
         "topic": "",
-        "qos": "0",
+        "qos": "2",
         "retain": "",
         "respTopic": "",
         "contentType": "",
