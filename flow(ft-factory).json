@@ -1931,14 +1931,14 @@
             },
             {
                 "label": "P1 [see doc] =",
-                "value": "par[0]",
+                "value": "par1",
                 "type": "number",
                 "required": true,
                 "rows": null
             },
             {
                 "label": "P2 [see doc] =",
-                "value": "par[1]",
+                "value": "par2",
                 "type": "number",
                 "required": true,
                 "rows": null
@@ -1967,8 +1967,8 @@
         ],
         "formValue": {
             "id": "",
-            "par[0]": "",
-            "par[1]": "",
+            "par1": "",
+            "par2": "",
             "par3": "",
             "par4": "",
             "par5": ""
