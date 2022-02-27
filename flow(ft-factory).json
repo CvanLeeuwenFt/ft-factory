@@ -1912,6 +1912,314 @@
         "wires": []
     },
     {
+        "id": "220224ec802f618a",
+        "type": "debug",
+        "z": "86129776fa6cf627",
+        "name": "P1",
+        "active": true,
+        "tosidebar": true,
+        "console": true,
+        "tostatus": true,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "payload",
+        "statusType": "auto",
+        "x": 730,
+        "y": 240,
+        "wires": []
+    },
+    {
+        "id": "245a325f0eff310d",
+        "type": "debug",
+        "z": "86129776fa6cf627",
+        "name": "P2",
+        "active": true,
+        "tosidebar": true,
+        "console": true,
+        "tostatus": true,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "payload",
+        "statusType": "auto",
+        "x": 730,
+        "y": 340,
+        "wires": []
+    },
+    {
+        "id": "cbaf63ab62576636",
+        "type": "debug",
+        "z": "86129776fa6cf627",
+        "name": "P5",
+        "active": true,
+        "tosidebar": true,
+        "console": true,
+        "tostatus": true,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "payload",
+        "statusType": "auto",
+        "x": 730,
+        "y": 640,
+        "wires": []
+    },
+    {
+        "id": "0ba00d046d61e591",
+        "type": "debug",
+        "z": "86129776fa6cf627",
+        "name": "P3",
+        "active": true,
+        "tosidebar": true,
+        "console": true,
+        "tostatus": true,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "payload",
+        "statusType": "auto",
+        "x": 730,
+        "y": 440,
+        "wires": []
+    },
+    {
+        "id": "a65e30b1e3b5b7d7",
+        "type": "debug",
+        "z": "86129776fa6cf627",
+        "name": "P4",
+        "active": true,
+        "tosidebar": true,
+        "console": true,
+        "tostatus": true,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "payload",
+        "statusType": "auto",
+        "x": 730,
+        "y": 520,
+        "wires": []
+    },
+    {
+        "id": "a9a5122310d5a4a8",
+        "type": "debug",
+        "z": "86129776fa6cf627",
+        "name": "Id",
+        "active": true,
+        "tosidebar": true,
+        "console": true,
+        "tostatus": true,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "payload",
+        "statusType": "auto",
+        "x": 730,
+        "y": 140,
+        "wires": []
+    },
+    {
+        "id": "19ad31951c5d279b",
+        "type": "debug",
+        "z": "86129776fa6cf627",
+        "name": "Time",
+        "active": true,
+        "tosidebar": true,
+        "console": true,
+        "tostatus": true,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "payload",
+        "statusType": "auto",
+        "x": 740,
+        "y": 740,
+        "wires": []
+    },
+    {
+        "id": "ece4cb8c82db4177",
+        "type": "ui_form",
+        "z": "86129776fa6cf627",
+        "name": "set_act",
+        "label": "Actuator",
+        "group": "b7b5582d96bb1c75",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "options": [
+            {
+                "label": "M [1..4]=",
+                "value": "outMid",
+                "type": "number",
+                "required": true,
+                "rows": null
+            },
+            {
+                "label": "P [-512-512]=",
+                "value": "outP",
+                "type": "number",
+                "required": true,
+                "rows": null
+            },
+            {
+                "label": "D [0..]=",
+                "value": "outD",
+                "type": "number",
+                "required": true,
+                "rows": null
+            }
+        ],
+        "formValue": {
+            "outMid": "",
+            "outP": "",
+            "outD": ""
+        },
+        "payload": "",
+        "submit": "submit",
+        "cancel": "cancel",
+        "topic": "txt/act",
+        "topicType": "str",
+        "splitLayout": true,
+        "className": "",
+        "x": 260,
+        "y": 240,
+        "wires": [
+            [
+                "9d1e03aa5a7b52fd",
+                "25c5f56b903361a1"
+            ]
+        ],
+        "inputLabels": [
+            "data_in"
+        ],
+        "outputLabels": [
+            "data_out"
+        ]
+    },
+    {
+        "id": "77fbe054e9f51e1d",
+        "type": "debug",
+        "z": "86129776fa6cf627",
+        "name": "send",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": true,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "payload",
+        "statusType": "auto",
+        "x": 510,
+        "y": 540,
+        "wires": []
+    },
+    {
+        "id": "a2096132522109fa",
+        "type": "inject",
+        "z": "86129776fa6cf627",
+        "name": "",
+        "props": [
+            {
+                "p": "topic",
+                "vt": "str"
+            },
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "txt/act",
+        "payload": "{\"outMid\":1,\"outD\":45,\"outP\":123}",
+        "payloadType": "json",
+        "x": 70,
+        "y": 140,
+        "wires": [
+            [
+                "ece4cb8c82db4177"
+            ]
+        ]
+    },
+    {
+        "id": "d88163db1c48d4f6",
+        "type": "mqtt out",
+        "z": "86129776fa6cf627",
+        "name": "pub_p1",
+        "topic": "\"txt/c/p1\"",
+        "qos": "2",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "c58f8d4b7c13412d",
+        "x": 1240,
+        "y": 280,
+        "wires": []
+    },
+    {
+        "id": "9d1e03aa5a7b52fd",
+        "type": "function",
+        "z": "86129776fa6cf627",
+        "name": "check_M",
+        "func": "var payload=msg.payload;\nvar topic=msg.topic;\nvar error=false;\nvar j=payload ;//JSON.parse(payload);\nvar msg1={};\nif ( (j.outMid<1) || (j.outMid>4)){\n  j.outMid=null; error=true;  \n} \n\nif ( (j.outP<-512) || (j.outP>512)){\n  j.outP=null; error=true;  \n} \n\nif ( (j.outD<0) || (j.outD>32000)){\n  j.outD=null; error=true;  \n} \nmsg1.payload= j;\nmsg1.topic=topic;\n\n\nif (error) return [ msg1,  null];\n\nreturn [ null,msg1  ];",
+        "outputs": 2,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 300,
+        "y": 360,
+        "wires": [
+            [
+                "a377809ecff81c51",
+                "ece4cb8c82db4177"
+            ],
+            [
+                "d88163db1c48d4f6",
+                "77fbe054e9f51e1d"
+            ]
+        ],
+        "inputLabels": [
+            "data"
+        ],
+        "outputLabels": [
+            "err",
+            "out"
+        ]
+    },
+    {
+        "id": "a377809ecff81c51",
+        "type": "debug",
+        "z": "86129776fa6cf627",
+        "name": "error",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": true,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "payload",
+        "statusType": "auto",
+        "x": 490,
+        "y": 260,
+        "wires": []
+    },
+    {
+        "id": "25c5f56b903361a1",
+        "type": "debug",
+        "z": "86129776fa6cf627",
+        "name": "sttr",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": true,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "payload",
+        "statusType": "auto",
+        "x": 450,
+        "y": 160,
+        "wires": []
+    },
+    {
         "id": "80f136618643dae4",
         "type": "debug",
         "z": "91a23abe8e481d5a",
@@ -2025,7 +2333,7 @@
         "bgcolor": "black",
         "className": "",
         "icon": "",
-        "payload": "{\"motors\":{\"m\":0}}",
+        "payload": "{\"outMid\":0}",
         "payloadType": "json",
         "topic": "txt/c/stop",
         "topicType": "msg",
