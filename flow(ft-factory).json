@@ -1947,7 +1947,7 @@
         "once": false,
         "onceDelay": 0.1,
         "topic": "txt/c/stop",
-        "payload": "",
+        "payload": "{\"item\":\"\"}",
         "payloadType": "json",
         "x": 200,
         "y": 320,
