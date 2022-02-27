@@ -1932,7 +1932,7 @@
         "id": "7e9cab15f9dc9e6d",
         "type": "inject",
         "z": "91a23abe8e481d5a",
-        "name": "",
+        "name": "Stop_all",
         "props": [
             {
                 "p": "topic",
@@ -1946,11 +1946,11 @@
         "crontab": "",
         "once": false,
         "onceDelay": 0.1,
-        "topic": "txt/act",
-        "payload": "{\"outMid\":1,\"outD\":45,\"outP\":123}",
+        "topic": "txt/c/stop",
+        "payload": "",
         "payloadType": "json",
-        "x": 210,
-        "y": 140,
+        "x": 200,
+        "y": 320,
         "wires": [
             [
                 "f05193b0812e1c3b"
@@ -1961,8 +1961,8 @@
         "id": "c9807cf65460edf8",
         "type": "mqtt out",
         "z": "91a23abe8e481d5a",
-        "name": "Test",
-        "topic": "txt/out/motor",
+        "name": "Stop_all",
+        "topic": "",
         "qos": "2",
         "retain": "",
         "respTopic": "",
@@ -1971,8 +1971,8 @@
         "correl": "",
         "expiry": "",
         "broker": "c58f8d4b7c13412d",
-        "x": 870,
-        "y": 360,
+        "x": 920,
+        "y": 340,
         "wires": []
     },
     {
@@ -1988,8 +1988,8 @@
         "targetType": "full",
         "statusVal": "payload",
         "statusType": "auto",
-        "x": 750,
-        "y": 240,
+        "x": 810,
+        "y": 160,
         "wires": []
     },
     {
@@ -2005,8 +2005,8 @@
         "targetType": "full",
         "statusVal": "payload",
         "statusType": "auto",
-        "x": 630,
-        "y": 180,
+        "x": 710,
+        "y": 100,
         "wires": []
     },
     {
@@ -2029,10 +2029,12 @@
         "payloadType": "json",
         "topic": "txt/c/stop",
         "topicType": "msg",
-        "x": 380,
-        "y": 300,
+        "x": 400,
+        "y": 320,
         "wires": [
-            []
+            [
+                "c9807cf65460edf8"
+            ]
         ]
     }
 ]
