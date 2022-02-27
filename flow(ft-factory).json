@@ -2360,7 +2360,7 @@
         "payload": "{\"outMid\":0}",
         "payloadType": "json",
         "topic": "txt/c/stop",
-        "topicType": "msg",
+        "topicType": "str",
         "x": 400,
         "y": 320,
         "wires": [
