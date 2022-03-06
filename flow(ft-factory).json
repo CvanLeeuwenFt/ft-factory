@@ -2124,7 +2124,7 @@
         "id": "80f136618643dae4",
         "type": "debug",
         "z": "91a23abe8e481d5a",
-        "name": "send",
+        "name": "halt",
         "active": false,
         "tosidebar": true,
         "console": false,
@@ -2141,7 +2141,7 @@
         "id": "7e9cab15f9dc9e6d",
         "type": "inject",
         "z": "91a23abe8e481d5a",
-        "name": "Stop_all",
+        "name": "Halt",
         "props": [
             {
                 "p": "topic",
@@ -2155,10 +2155,10 @@
         "crontab": "",
         "once": false,
         "onceDelay": 0.1,
-        "topic": "txt/c/stop",
+        "topic": "txt/c/halt",
         "payload": "{\"item\":\"\"}",
         "payloadType": "json",
-        "x": 140,
+        "x": 130,
         "y": 140,
         "wires": [
             [
@@ -2170,7 +2170,193 @@
         "id": "c9807cf65460edf8",
         "type": "mqtt out",
         "z": "91a23abe8e481d5a",
-        "name": "Stop_all",
+        "name": "Halt",
+        "topic": "",
+        "qos": "2",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "c58f8d4b7c13412d",
+        "x": 590,
+        "y": 140,
+        "wires": []
+    },
+    {
+        "id": "f05193b0812e1c3b",
+        "type": "ui_button",
+        "z": "91a23abe8e481d5a",
+        "name": "btn_halt",
+        "group": "30840b3c631a61fb",
+        "order": 9,
+        "width": "4",
+        "height": "2",
+        "passthru": true,
+        "label": "Halt",
+        "tooltip": "Emergency stop of the actuators in this section.",
+        "color": "red",
+        "bgcolor": "black",
+        "className": "",
+        "icon": "",
+        "payload": "{\"outMid\":0}",
+        "payloadType": "json",
+        "topic": "txt/c/halt",
+        "topicType": "str",
+        "x": 340,
+        "y": 140,
+        "wires": [
+            [
+                "c9807cf65460edf8",
+                "80f136618643dae4"
+            ]
+        ]
+    },
+    {
+        "id": "0a0b4dd278101868",
+        "type": "debug",
+        "z": "91a23abe8e481d5a",
+        "name": "pause",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": true,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "payload",
+        "statusType": "auto",
+        "x": 590,
+        "y": 320,
+        "wires": []
+    },
+    {
+        "id": "1a16ff1a2011c0eb",
+        "type": "inject",
+        "z": "91a23abe8e481d5a",
+        "name": "Halt",
+        "props": [
+            {
+                "p": "topic",
+                "vt": "str"
+            },
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "txt/c/pause",
+        "payload": "{\"item\":\"\"}",
+        "payloadType": "json",
+        "x": 130,
+        "y": 260,
+        "wires": [
+            [
+                "e6a33923a4197ba8"
+            ]
+        ]
+    },
+    {
+        "id": "135238f4fed07999",
+        "type": "mqtt out",
+        "z": "91a23abe8e481d5a",
+        "name": "Pause",
+        "topic": "",
+        "qos": "2",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "c58f8d4b7c13412d",
+        "x": 590,
+        "y": 260,
+        "wires": []
+    },
+    {
+        "id": "e6a33923a4197ba8",
+        "type": "ui_button",
+        "z": "91a23abe8e481d5a",
+        "name": "btn_pause",
+        "group": "30840b3c631a61fb",
+        "order": 9,
+        "width": "4",
+        "height": "2",
+        "passthru": true,
+        "label": "Pause",
+        "tooltip": "Emergency stop of the actuators in this section.",
+        "color": "red",
+        "bgcolor": "black",
+        "className": "",
+        "icon": "",
+        "payload": "{\"outMid\":0}",
+        "payloadType": "json",
+        "topic": "txt/c/pause",
+        "topicType": "str",
+        "x": 350,
+        "y": 260,
+        "wires": [
+            [
+                "135238f4fed07999",
+                "0a0b4dd278101868"
+            ]
+        ]
+    },
+    {
+        "id": "7b68d6663cd47345",
+        "type": "debug",
+        "z": "91a23abe8e481d5a",
+        "name": "resume",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": true,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "payload",
+        "statusType": "auto",
+        "x": 600,
+        "y": 440,
+        "wires": []
+    },
+    {
+        "id": "584f36681d9fc98e",
+        "type": "inject",
+        "z": "91a23abe8e481d5a",
+        "name": "Resume",
+        "props": [
+            {
+                "p": "topic",
+                "vt": "str"
+            },
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "txt/c/resume",
+        "payload": "{\"item\":\"\"}",
+        "payloadType": "json",
+        "x": 140,
+        "y": 380,
+        "wires": [
+            [
+                "aa80c834baf65210"
+            ]
+        ]
+    },
+    {
+        "id": "76458433e2e6c887",
+        "type": "mqtt out",
+        "z": "91a23abe8e481d5a",
+        "name": "Resume",
         "topic": "",
         "qos": "2",
         "retain": "",
@@ -2181,20 +2367,20 @@
         "expiry": "",
         "broker": "c58f8d4b7c13412d",
         "x": 600,
-        "y": 140,
+        "y": 380,
         "wires": []
     },
     {
-        "id": "f05193b0812e1c3b",
+        "id": "aa80c834baf65210",
         "type": "ui_button",
         "z": "91a23abe8e481d5a",
-        "name": "btn_stop",
+        "name": "btn_resume",
         "group": "30840b3c631a61fb",
         "order": 9,
-        "width": 10,
-        "height": 1,
+        "width": "4",
+        "height": "2",
         "passthru": true,
-        "label": "STOP",
+        "label": "Pause",
         "tooltip": "Emergency stop of the actuators in this section.",
         "color": "red",
         "bgcolor": "black",
@@ -2202,14 +2388,14 @@
         "icon": "",
         "payload": "{\"outMid\":0}",
         "payloadType": "json",
-        "topic": "txt/c/stop",
+        "topic": "txt/c/resume",
         "topicType": "str",
-        "x": 340,
-        "y": 140,
+        "x": 350,
+        "y": 380,
         "wires": [
             [
-                "c9807cf65460edf8",
-                "80f136618643dae4"
+                "76458433e2e6c887",
+                "7b68d6663cd47345"
             ]
         ]
     }
