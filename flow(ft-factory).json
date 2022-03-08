@@ -2154,7 +2154,7 @@
         "id": "80f136618643dae4",
         "type": "debug",
         "z": "91a23abe8e481d5a",
-        "name": "halt",
+        "name": "Command",
         "active": false,
         "tosidebar": true,
         "console": false,
@@ -2163,7 +2163,7 @@
         "targetType": "full",
         "statusVal": "payload",
         "statusType": "auto",
-        "x": 590,
+        "x": 610,
         "y": 200,
         "wires": []
     },
@@ -2171,7 +2171,7 @@
         "id": "7e9cab15f9dc9e6d",
         "type": "inject",
         "z": "91a23abe8e481d5a",
-        "name": "Halt",
+        "name": "Halt MPO",
         "props": [
             {
                 "p": "topic",
@@ -2185,10 +2185,10 @@
         "crontab": "",
         "once": false,
         "onceDelay": 0.1,
-        "topic": "txt/c/halt",
-        "payload": "{\"item\":\"\"}",
+        "topic": "MPO/c/halt",
+        "payload": "{\"outMid\":0}",
         "payloadType": "json",
-        "x": 130,
+        "x": 140,
         "y": 140,
         "wires": [
             [
@@ -2200,17 +2200,17 @@
         "id": "c9807cf65460edf8",
         "type": "mqtt out",
         "z": "91a23abe8e481d5a",
-        "name": "Halt",
+        "name": "Command",
         "topic": "",
         "qos": "2",
-        "retain": "",
+        "retain": "false",
         "respTopic": "",
         "contentType": "",
         "userProps": "",
         "correl": "",
         "expiry": "",
         "broker": "c58f8d4b7c13412d",
-        "x": 590,
+        "x": 610,
         "y": 140,
         "wires": []
     },
@@ -2218,13 +2218,13 @@
         "id": "f05193b0812e1c3b",
         "type": "ui_button",
         "z": "91a23abe8e481d5a",
-        "name": "btn_halt",
+        "name": "Halt MPO",
         "group": "30840b3c631a61fb",
         "order": 11,
         "width": 4,
         "height": 2,
         "passthru": true,
-        "label": "Halt",
+        "label": "btn_halt_mpo",
         "tooltip": "Emergency stop of the actuators in this section.",
         "color": "red",
         "bgcolor": "black",
@@ -2232,7 +2232,7 @@
         "icon": "",
         "payload": "{\"outMid\":0}",
         "payloadType": "json",
-        "topic": "txt/c/halt",
+        "topic": "MPO/c/halt",
         "topicType": "str",
         "x": 340,
         "y": 140,
@@ -2257,7 +2257,7 @@
         "statusVal": "payload",
         "statusType": "auto",
         "x": 590,
-        "y": 320,
+        "y": 520,
         "wires": []
     },
     {
@@ -2282,7 +2282,7 @@
         "payload": "{\"item\":\"\"}",
         "payloadType": "json",
         "x": 130,
-        "y": 260,
+        "y": 460,
         "wires": [
             [
                 "e6a33923a4197ba8"
@@ -2304,7 +2304,7 @@
         "expiry": "",
         "broker": "c58f8d4b7c13412d",
         "x": 590,
-        "y": 260,
+        "y": 460,
         "wires": []
     },
     {
@@ -2328,7 +2328,7 @@
         "topic": "txt/c/pause",
         "topicType": "str",
         "x": 350,
-        "y": 260,
+        "y": 460,
         "wires": [
             [
                 "135238f4fed07999",
@@ -2350,7 +2350,7 @@
         "statusVal": "payload",
         "statusType": "auto",
         "x": 600,
-        "y": 440,
+        "y": 640,
         "wires": []
     },
     {
@@ -2375,7 +2375,7 @@
         "payload": "{\"item\":\"\"}",
         "payloadType": "json",
         "x": 140,
-        "y": 380,
+        "y": 580,
         "wires": [
             [
                 "aa80c834baf65210"
@@ -2397,7 +2397,7 @@
         "expiry": "",
         "broker": "c58f8d4b7c13412d",
         "x": 600,
-        "y": 380,
+        "y": 580,
         "wires": []
     },
     {
@@ -2421,11 +2421,127 @@
         "topic": "txt/c/resume",
         "topicType": "str",
         "x": 350,
-        "y": 380,
+        "y": 580,
         "wires": [
             [
                 "76458433e2e6c887",
                 "7b68d6663cd47345"
+            ]
+        ]
+    },
+    {
+        "id": "3efcf8219619efbb",
+        "type": "inject",
+        "z": "91a23abe8e481d5a",
+        "name": "Halt HBW",
+        "props": [
+            {
+                "p": "topic",
+                "vt": "str"
+            },
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "HBW/c/halt",
+        "payload": "{\"outMid\":0}",
+        "payloadType": "json",
+        "x": 140,
+        "y": 200,
+        "wires": [
+            [
+                "851e6f5532bf9635"
+            ]
+        ]
+    },
+    {
+        "id": "851e6f5532bf9635",
+        "type": "ui_button",
+        "z": "91a23abe8e481d5a",
+        "name": "Halt HBW",
+        "group": "30840b3c631a61fb",
+        "order": 11,
+        "width": 4,
+        "height": 2,
+        "passthru": true,
+        "label": "btn_halt_hbw",
+        "tooltip": "Emergency stop of the actuators in this section.",
+        "color": "red",
+        "bgcolor": "black",
+        "className": "",
+        "icon": "",
+        "payload": "{\"outMid\":0}",
+        "payloadType": "json",
+        "topic": "HBW/c/halt",
+        "topicType": "str",
+        "x": 340,
+        "y": 200,
+        "wires": [
+            [
+                "c9807cf65460edf8",
+                "80f136618643dae4"
+            ]
+        ]
+    },
+    {
+        "id": "6a2bb4f2cc9fe66d",
+        "type": "inject",
+        "z": "91a23abe8e481d5a",
+        "name": "Halt SLD",
+        "props": [
+            {
+                "p": "topic",
+                "vt": "str"
+            },
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "SLD/c/halt",
+        "payload": "{\"outMid\":0}",
+        "payloadType": "json",
+        "x": 140,
+        "y": 240,
+        "wires": [
+            [
+                "1ae2ef1ffadb8893"
+            ]
+        ]
+    },
+    {
+        "id": "1ae2ef1ffadb8893",
+        "type": "ui_button",
+        "z": "91a23abe8e481d5a",
+        "name": "Halt SLD",
+        "group": "30840b3c631a61fb",
+        "order": 11,
+        "width": 4,
+        "height": 2,
+        "passthru": true,
+        "label": "btn_halt_sld",
+        "tooltip": "Emergency stop of the actuators in this section.",
+        "color": "red",
+        "bgcolor": "black",
+        "className": "",
+        "icon": "",
+        "payload": "{\"outMid\":0}",
+        "payloadType": "json",
+        "topic": "SLD/c/halt",
+        "topicType": "str",
+        "x": 340,
+        "y": 240,
+        "wires": [
+            [
+                "c9807cf65460edf8",
+                "80f136618643dae4"
             ]
         ]
     }
