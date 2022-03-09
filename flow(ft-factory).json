@@ -2316,7 +2316,7 @@
         "order": 12,
         "width": 4,
         "height": 2,
-        "passthru": false,
+        "passthru": true,
         "label": "Pause",
         "tooltip": "Emergency stop of the actuators in this section.",
         "color": "blue",
