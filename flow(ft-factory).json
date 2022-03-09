@@ -88,13 +88,13 @@
         "birthMsg": {},
         "closeTopic": "laptop/status",
         "closeQos": "2",
-        "closeRetain": "true",
+        "closeRetain": "false",
         "closePayload": "closing",
         "closeMsg": {},
         "willTopic": "laptop/status",
         "willQos": "2",
-        "willRetain": "true",
-        "willPayload": "Killed",
+        "willRetain": "false",
+        "willPayload": "Node-Red unexpected disconnected",
         "willMsg": {},
         "sessionExpiry": ""
     },
@@ -2154,7 +2154,7 @@
         "id": "80f136618643dae4",
         "type": "debug",
         "z": "91a23abe8e481d5a",
-        "name": "Command",
+        "name": "Cmd Halt",
         "active": false,
         "tosidebar": true,
         "console": false,
@@ -2163,7 +2163,7 @@
         "targetType": "full",
         "statusVal": "payload",
         "statusType": "auto",
-        "x": 610,
+        "x": 600,
         "y": 200,
         "wires": []
     },
@@ -2200,7 +2200,7 @@
         "id": "c9807cf65460edf8",
         "type": "mqtt out",
         "z": "91a23abe8e481d5a",
-        "name": "Command",
+        "name": "Cmd Halt",
         "topic": "",
         "qos": "2",
         "retain": "false",
@@ -2210,7 +2210,7 @@
         "correl": "",
         "expiry": "",
         "broker": "c58f8d4b7c13412d",
-        "x": 610,
+        "x": 600,
         "y": 140,
         "wires": []
     },
@@ -2235,11 +2235,12 @@
         "topic": "MPO/c/halt",
         "topicType": "str",
         "x": 340,
-        "y": 140,
+        "y": 120,
         "wires": [
             [
                 "c9807cf65460edf8",
-                "80f136618643dae4"
+                "80f136618643dae4",
+                "f03035beb54d3983"
             ]
         ]
     },
@@ -2264,7 +2265,7 @@
         "id": "1a16ff1a2011c0eb",
         "type": "inject",
         "z": "91a23abe8e481d5a",
-        "name": "Halt",
+        "name": "Pause",
         "props": [
             {
                 "p": "topic",
@@ -2542,6 +2543,25 @@
             [
                 "c9807cf65460edf8",
                 "80f136618643dae4"
+            ]
+        ]
+    },
+    {
+        "id": "f03035beb54d3983",
+        "type": "function",
+        "z": "91a23abe8e481d5a",
+        "name": "",
+        "func": "msg.enabled = false; \n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 480,
+        "y": 60,
+        "wires": [
+            [
+                "851e6f5532bf9635"
             ]
         ]
     }
