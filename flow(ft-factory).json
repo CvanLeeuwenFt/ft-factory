@@ -48,6 +48,13 @@
         "env": []
     },
     {
+        "id": "5facf45f.05cf5c",
+        "type": "tab",
+        "label": "Diode 2.0",
+        "disabled": false,
+        "info": ""
+    },
+    {
         "id": "1ddee8b072c433e9",
         "type": "subflow",
         "name": "ShowPmessage",
@@ -543,6 +550,24 @@
         "order": 2,
         "width": 2,
         "height": 1
+    },
+    {
+        "id": "3e999925.bf7cb6",
+        "type": "ui_group",
+        "name": "Diodes",
+        "tab": "4435d05.16bbb3",
+        "order": 1,
+        "disp": true,
+        "width": "3",
+        "collapse": true
+    },
+    {
+        "id": "4435d05.16bbb3",
+        "type": "ui_tab",
+        "name": "Beta",
+        "icon": "dashboard",
+        "disabled": false,
+        "hidden": false
     },
     {
         "id": "ead821eead376006",
@@ -1332,6 +1357,26 @@
         "x": 1690,
         "y": 980,
         "wires": []
+    },
+    {
+        "id": "cd5a583e.c8ec88",
+        "type": "gate",
+        "z": "4e9eeca57a653287",
+        "name": "Pause Or Resume",
+        "controlTopic": "control",
+        "defaultState": "open",
+        "openCmd": "Resume",
+        "closeCmd": "Pause",
+        "toggleCmd": "",
+        "defaultCmd": "",
+        "persist": false,
+        "x": 560,
+        "y": 140,
+        "wires": [
+            [
+                "c0bd2bb.0cde158"
+            ]
+        ]
     },
     {
         "id": "ea5b1d3fd2440b96",
@@ -2611,6 +2656,331 @@
         "wires": [
             [
                 "e6a33923a4197ba8"
+            ]
+        ]
+    },
+    {
+        "id": "4c487b26308ce766",
+        "type": "ui_switch",
+        "z": "91a23abe8e481d5a",
+        "name": "pause resume",
+        "label": "pause_resume",
+        "tooltip": "",
+        "group": "30840b3c631a61fb",
+        "order": 24,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "decouple": "false",
+        "topic": "topic",
+        "topicType": "msg",
+        "style": "",
+        "onvalue": "true",
+        "onvalueType": "bool",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "false",
+        "offvalueType": "bool",
+        "officon": "",
+        "offcolor": "",
+        "animate": false,
+        "className": "",
+        "x": 800,
+        "y": 380,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "a02da425.d46d5",
+        "type": "inject",
+        "z": "5facf45f.05cf5c",
+        "name": "Suspend",
+        "props": [
+            {
+                "p": "enabled",
+                "v": "true",
+                "vt": "bool"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "",
+        "x": 100,
+        "y": 300,
+        "wires": [
+            [
+                "3cad32a8.067e76"
+            ]
+        ]
+    },
+    {
+        "id": "7a23eae9.cd1384",
+        "type": "inject",
+        "z": "5facf45f.05cf5c",
+        "name": "Resume",
+        "props": [
+            {
+                "p": "enabled",
+                "v": "false",
+                "vt": "bool"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "",
+        "x": 100,
+        "y": 340,
+        "wires": [
+            [
+                "cc00de15.89d4d8"
+            ]
+        ]
+    },
+    {
+        "id": "3cad32a8.067e76",
+        "type": "ui_button",
+        "z": "5facf45f.05cf5c",
+        "name": "Pause",
+        "group": "ccf5f67a2e5a062e",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "label": "Pause",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "Pause",
+        "payloadType": "str",
+        "topic": "Control",
+        "topicType": "str",
+        "x": 370,
+        "y": 280,
+        "wires": [
+            [
+                "4b6e5e93.4914e8",
+                "cd5a583e.c8ec88",
+                "56e72bad.24ea6c"
+            ]
+        ]
+    },
+    {
+        "id": "cc00de15.89d4d8",
+        "type": "ui_button",
+        "z": "5facf45f.05cf5c",
+        "name": "Resume",
+        "group": "ccf5f67a2e5a062e",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "label": "Resume",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "Resume",
+        "payloadType": "str",
+        "topic": "Control",
+        "topicType": "str",
+        "x": 380,
+        "y": 340,
+        "wires": [
+            [
+                "cd5a583e.c8ec88",
+                "bec9ea3b.bf282",
+                "2daf4ddb.117182"
+            ]
+        ]
+    },
+    {
+        "id": "c0bd2bb.0cde158",
+        "type": "debug",
+        "z": "5facf45f.05cf5c",
+        "name": "Message",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 760,
+        "y": 140,
+        "wires": []
+    },
+    {
+        "id": "45bfabc3.537124",
+        "type": "inject",
+        "z": "5facf45f.05cf5c",
+        "name": "On (Blue)",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "5,8",
+        "payloadType": "str",
+        "x": 100,
+        "y": 120,
+        "wires": [
+            [
+                "cd5a583e.c8ec88"
+            ]
+        ]
+    },
+    {
+        "id": "9f20e8c3.16bf68",
+        "type": "inject",
+        "z": "5facf45f.05cf5c",
+        "name": "Off (Blue)",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "9,6",
+        "payloadType": "str",
+        "x": 100,
+        "y": 160,
+        "wires": [
+            [
+                "cd5a583e.c8ec88"
+            ]
+        ]
+    },
+    {
+        "id": "4b6e5e93.4914e8",
+        "type": "change",
+        "z": "5facf45f.05cf5c",
+        "name": "Disable",
+        "rules": [
+            {
+                "t": "set",
+                "p": "enabled",
+                "pt": "msg",
+                "to": "false",
+                "tot": "bool"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 260,
+        "y": 200,
+        "wires": [
+            [
+                "3cad32a8.067e76"
+            ]
+        ]
+    },
+    {
+        "id": "2daf4ddb.117182",
+        "type": "change",
+        "z": "5facf45f.05cf5c",
+        "name": "Enable",
+        "rules": [
+            {
+                "t": "set",
+                "p": "enabled",
+                "pt": "msg",
+                "to": "true",
+                "tot": "bool"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 660,
+        "y": 360,
+        "wires": [
+            [
+                "3cad32a8.067e76"
+            ]
+        ]
+    },
+    {
+        "id": "bec9ea3b.bf282",
+        "type": "change",
+        "z": "5facf45f.05cf5c",
+        "name": "Disable",
+        "rules": [
+            {
+                "t": "set",
+                "p": "enabled",
+                "pt": "msg",
+                "to": "false",
+                "tot": "bool"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 260,
+        "y": 440,
+        "wires": [
+            [
+                "cc00de15.89d4d8"
+            ]
+        ]
+    },
+    {
+        "id": "56e72bad.24ea6c",
+        "type": "change",
+        "z": "5facf45f.05cf5c",
+        "name": "Enable",
+        "rules": [
+            {
+                "t": "set",
+                "p": "enabled",
+                "pt": "msg",
+                "to": "true",
+                "tot": "bool"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 660,
+        "y": 280,
+        "wires": [
+            [
+                "cc00de15.89d4d8"
             ]
         ]
     }
