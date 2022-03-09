@@ -2155,7 +2155,7 @@
         "type": "debug",
         "z": "91a23abe8e481d5a",
         "name": "Cmd Halt",
-        "active": false,
+        "active": true,
         "tosidebar": true,
         "console": false,
         "tostatus": true,
@@ -2499,6 +2499,11 @@
             },
             {
                 "p": "payload"
+            },
+            {
+                "p": ".enable",
+                "v": "",
+                "vt": "str"
             }
         ],
         "repeat": "",
@@ -2511,9 +2516,7 @@
         "x": 140,
         "y": 240,
         "wires": [
-            [
-                "1ae2ef1ffadb8893"
-            ]
+            []
         ]
     },
     {
@@ -2543,18 +2546,6 @@
                 "c9807cf65460edf8",
                 "80f136618643dae4"
             ]
-        ]
-    },
-    {
-        "id": "ef603734abd741ed",
-        "type": "ui_ui_control",
-        "z": "91a23abe8e481d5a",
-        "name": "TEst",
-        "events": "all",
-        "x": 130,
-        "y": 340,
-        "wires": [
-            []
         ]
     },
     {
