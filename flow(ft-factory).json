@@ -2501,7 +2501,7 @@
                 "p": "payload"
             },
             {
-                "p": ".enable",
+                "p": "payload.enable",
                 "v": "",
                 "vt": "str"
             }
@@ -2516,7 +2516,9 @@
         "x": 140,
         "y": 240,
         "wires": [
-            []
+            [
+                "1ae2ef1ffadb8893"
+            ]
         ]
     },
     {
