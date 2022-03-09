@@ -2517,7 +2517,8 @@
         "y": 240,
         "wires": [
             [
-                "1ae2ef1ffadb8893"
+                "851e6f5532bf9635",
+                "e55f9811f97a98dd"
             ]
         ]
     },
@@ -2559,16 +2560,18 @@
         "order": 19,
         "width": 0,
         "height": 0,
-        "format": "<div ng-bind-html=\"msg.payload\"></div>\n",
+        "format": "<div ng-bind-html=\"msg.payload\"></div>\n<md-button ng-disabled=\"msg.payload.disabled\"> {{msg.payload.disabled ? 'disabled': 'enabled'}} </md-button>",
         "storeOutMessages": true,
         "fwdInMessages": true,
         "resendOnRefresh": true,
         "templateScope": "local",
         "className": "",
-        "x": 830,
-        "y": 300,
+        "x": 210,
+        "y": 360,
         "wires": [
-            []
+            [
+                "aa80c834baf65210"
+            ]
         ]
     }
 ]
