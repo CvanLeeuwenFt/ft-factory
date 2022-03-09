@@ -2560,7 +2560,7 @@
         "order": 19,
         "width": 0,
         "height": 0,
-        "format": "<div ng-bind-html=\"msg.payload\"></div>\n<md-button ng-disabled=\"msg.payload.disabled\"> {{msg.payload.disabled ? 'disabled': 'enabled'}} </md-button>",
+        "format": "<div ng-bind-html=\"msg.payload\"></div>\n<md-button ng-disabled=\"msg.payload.enable\"> {{msg.payload.disabled ? 'disabled': 'enabled'}} </md-button>",
         "storeOutMessages": true,
         "fwdInMessages": true,
         "resendOnRefresh": true,
