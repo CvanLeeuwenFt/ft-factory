@@ -2332,8 +2332,7 @@
         "wires": [
             [
                 "135238f4fed07999",
-                "0a0b4dd278101868",
-                "f03035beb54d3983"
+                "0a0b4dd278101868"
             ]
         ]
     },
@@ -2426,8 +2425,7 @@
         "wires": [
             [
                 "76458433e2e6c887",
-                "7b68d6663cd47345",
-                "c144dcad97aac2d4"
+                "7b68d6663cd47345"
             ]
         ]
     },
@@ -2544,44 +2542,6 @@
             [
                 "c9807cf65460edf8",
                 "80f136618643dae4"
-            ]
-        ]
-    },
-    {
-        "id": "f03035beb54d3983",
-        "type": "function",
-        "z": "91a23abe8e481d5a",
-        "name": "",
-        "func": "msg.enabled = false; \n\nreturn msg;",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 400,
-        "y": 340,
-        "wires": [
-            [
-                "aa80c834baf65210"
-            ]
-        ]
-    },
-    {
-        "id": "c144dcad97aac2d4",
-        "type": "function",
-        "z": "91a23abe8e481d5a",
-        "name": "",
-        "func": "msg.enabled = false; \n\nreturn msg;",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 220,
-        "y": 380,
-        "wires": [
-            [
-                "e6a33923a4197ba8"
             ]
         ]
     }
