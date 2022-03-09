@@ -355,7 +355,7 @@
         "order": 5
     },
     {
-        "id": "858ed2b55eb4b185",
+        "id": "caef413cba008b36",
         "type": "ui_spacer",
         "z": "91a23abe8e481d5a",
         "name": "spacer",
@@ -365,7 +365,7 @@
         "height": 1
     },
     {
-        "id": "05c7bf383a6d671f",
+        "id": "997bbc25588a6bb2",
         "type": "ui_spacer",
         "z": "91a23abe8e481d5a",
         "name": "spacer",
@@ -375,7 +375,7 @@
         "height": 1
     },
     {
-        "id": "1e6d535bd4cff741",
+        "id": "b74ee0d0c08ea554",
         "type": "ui_spacer",
         "z": "91a23abe8e481d5a",
         "name": "spacer",
@@ -385,7 +385,7 @@
         "height": 1
     },
     {
-        "id": "26d69c4a668c64a6",
+        "id": "dccd879136a7b8bd",
         "type": "ui_spacer",
         "z": "91a23abe8e481d5a",
         "name": "spacer",
@@ -395,7 +395,7 @@
         "height": 1
     },
     {
-        "id": "b86a9939f725daed",
+        "id": "db7b4cd059a06869",
         "type": "ui_spacer",
         "z": "91a23abe8e481d5a",
         "name": "spacer",
@@ -405,7 +405,7 @@
         "height": 1
     },
     {
-        "id": "b0de2d90cbbead69",
+        "id": "7048f83d58c27b62",
         "type": "ui_spacer",
         "z": "91a23abe8e481d5a",
         "name": "spacer",
@@ -415,7 +415,7 @@
         "height": 1
     },
     {
-        "id": "768ea551411a708d",
+        "id": "1bcfe447018832c6",
         "type": "ui_spacer",
         "z": "91a23abe8e481d5a",
         "name": "spacer",
@@ -425,7 +425,7 @@
         "height": 1
     },
     {
-        "id": "e72e0ab070e66f2f",
+        "id": "4fc242bd7fbf7f98",
         "type": "ui_spacer",
         "z": "91a23abe8e481d5a",
         "name": "spacer",
@@ -435,7 +435,7 @@
         "height": 1
     },
     {
-        "id": "09b832e83ebcffea",
+        "id": "d3aefedf14aa2ad8",
         "type": "ui_spacer",
         "z": "91a23abe8e481d5a",
         "name": "spacer",
@@ -445,7 +445,7 @@
         "height": 1
     },
     {
-        "id": "8eba4e8f6da43a63",
+        "id": "47c75b0f8c8e594e",
         "type": "ui_spacer",
         "z": "91a23abe8e481d5a",
         "name": "spacer",
@@ -455,7 +455,7 @@
         "height": 1
     },
     {
-        "id": "f0ed230cfb820314",
+        "id": "a874f335d4470b24",
         "type": "ui_spacer",
         "z": "91a23abe8e481d5a",
         "name": "spacer",
@@ -465,27 +465,67 @@
         "height": 1
     },
     {
-        "id": "31ac6a317f2bf4bf",
+        "id": "77c3e984204f46be",
         "type": "ui_spacer",
         "z": "91a23abe8e481d5a",
         "name": "spacer",
         "group": "30840b3c631a61fb",
-        "order": 15,
-        "width": 4,
+        "order": 14,
+        "width": 3,
         "height": 1
     },
     {
-        "id": "d74ef2bdd8d63ad4",
+        "id": "564a64e33feece39",
         "type": "ui_spacer",
         "z": "91a23abe8e481d5a",
         "name": "spacer",
         "group": "30840b3c631a61fb",
         "order": 17,
+        "width": 6,
+        "height": 1
+    },
+    {
+        "id": "dbf59a2d0b54a56f",
+        "type": "ui_spacer",
+        "z": "91a23abe8e481d5a",
+        "name": "spacer",
+        "group": "30840b3c631a61fb",
+        "order": 18,
+        "width": 12,
+        "height": 1
+    },
+    {
+        "id": "c7668f3fabf6daad",
+        "type": "ui_spacer",
+        "z": "91a23abe8e481d5a",
+        "name": "spacer",
+        "group": "30840b3c631a61fb",
+        "order": 19,
+        "width": 12,
+        "height": 1
+    },
+    {
+        "id": "23033faf3eae6644",
+        "type": "ui_spacer",
+        "z": "91a23abe8e481d5a",
+        "name": "spacer",
+        "group": "30840b3c631a61fb",
+        "order": 22,
         "width": 2,
         "height": 1
     },
     {
-        "id": "1ece18b54193f915",
+        "id": "10c9c847eb70ba55",
+        "type": "ui_spacer",
+        "z": "91a23abe8e481d5a",
+        "name": "spacer",
+        "group": "30840b3c631a61fb",
+        "order": 24,
+        "width": 4,
+        "height": 1
+    },
+    {
+        "id": "1f3ea1b7029d6971",
         "type": "ui_spacer",
         "z": "91a23abe8e481d5a",
         "name": "spacer",
@@ -495,7 +535,7 @@
         "height": 1
     },
     {
-        "id": "d29b587b5e94d09f",
+        "id": "10cc47e5be6e1e3e",
         "type": "ui_spacer",
         "z": "91a23abe8e481d5a",
         "name": "spacer",
@@ -1300,7 +1340,7 @@
         "name": "set_actuator_data",
         "label": "Send actuator data",
         "group": "30840b3c631a61fb",
-        "order": 16,
+        "order": 21,
         "width": 10,
         "height": 1,
         "options": [
@@ -1943,7 +1983,7 @@
         "name": "publish_P_data",
         "label": "Send P1-data",
         "group": "30840b3c631a61fb",
-        "order": 14,
+        "order": 23,
         "width": 8,
         "height": 1,
         "options": [
@@ -2221,8 +2261,8 @@
         "name": "Halt MPO",
         "group": "30840b3c631a61fb",
         "order": 11,
-        "width": 4,
-        "height": 2,
+        "width": 3,
+        "height": 1,
         "passthru": true,
         "label": "btn_halt_mpo",
         "tooltip": "Emergency stop of the actuators in this section.",
@@ -2313,9 +2353,9 @@
         "z": "91a23abe8e481d5a",
         "name": "btn_pause",
         "group": "30840b3c631a61fb",
-        "order": 12,
-        "width": 4,
-        "height": 2,
+        "order": 15,
+        "width": 3,
+        "height": 1,
         "passthru": true,
         "label": "Pause",
         "tooltip": "Emergency stop of the actuators in this section.",
@@ -2406,9 +2446,9 @@
         "z": "91a23abe8e481d5a",
         "name": "btn_resume",
         "group": "30840b3c631a61fb",
-        "order": 13,
-        "width": 4,
-        "height": 2,
+        "order": 16,
+        "width": 3,
+        "height": 1,
         "passthru": true,
         "label": "Resume",
         "tooltip": "Emergency stop of the actuators in this section.",
@@ -2464,9 +2504,9 @@
         "z": "91a23abe8e481d5a",
         "name": "Halt HBW",
         "group": "30840b3c631a61fb",
-        "order": 11,
-        "width": 4,
-        "height": 2,
+        "order": 12,
+        "width": 3,
+        "height": 1,
         "passthru": true,
         "label": "btn_halt_hbw",
         "tooltip": "Emergency stop of the actuators in this section.",
@@ -2528,9 +2568,9 @@
         "z": "91a23abe8e481d5a",
         "name": "Halt SLD",
         "group": "30840b3c631a61fb",
-        "order": 11,
-        "width": 4,
-        "height": 2,
+        "order": 13,
+        "width": 3,
+        "height": 1,
         "passthru": true,
         "label": "btn_halt_sld",
         "tooltip": "Emergency stop of the actuators in this section.",
@@ -2557,7 +2597,7 @@
         "z": "91a23abe8e481d5a",
         "group": "30840b3c631a61fb",
         "name": "test",
-        "order": 19,
+        "order": 20,
         "width": 0,
         "height": 0,
         "format": "<div ng-bind-html=\"msg.payload\"></div>\n<md-button ng-disabled=\"msg.payload.enable\"> {{msg.payload.disabled ? 'disabled': 'enabled'}} </md-button>",
