@@ -194,7 +194,7 @@
             }
         },
         "site": {
-            "name": "Factory dashboard 01",
+            "name": "Factory dashboard ",
             "hideToolbar": "false",
             "allowSwipe": "true",
             "lockMenu": "true",
@@ -294,7 +294,7 @@
         "type": "ui_tab",
         "name": "Tab 3",
         "icon": "dashboard",
-        "order": 4
+        "order": 5
     },
     {
         "id": "30840b3c631a61fb",
@@ -344,7 +344,7 @@
         "link": "http://www.TesCaWeb.nl/Carel",
         "icon": "open_in_browser",
         "target": "iframe",
-        "order": 3
+        "order": 4
     },
     {
         "id": "671f5a64ed1322a7",
@@ -360,7 +360,7 @@
         "type": "ui_tab",
         "name": "Tab 5",
         "icon": "dashboard",
-        "order": 5
+        "order": 6
     },
     {
         "id": "3e999925.bf7cb6",
@@ -377,7 +377,7 @@
         "type": "ui_tab",
         "name": "Beta",
         "icon": "dashboard",
-        "order": 6,
+        "order": 3,
         "disabled": false,
         "hidden": false
     },
