@@ -1606,7 +1606,7 @@
         "format": "{{msg.payload}}",
         "layout": "row-spread",
         "className": "",
-        "x": 420,
+        "x": 460,
         "y": 360,
         "wires": []
     },
@@ -1676,7 +1676,7 @@
         "type": "function",
         "z": "f0a66f6a5cd9f8b9",
         "name": "PmsgToText",
-        "func": "var topic=msg.topic;\nvar payload=msg.payload;\n\nvar objId = payload.id;\nvar objp1 = payload.par[0];\nvar objp2 = payload.par[1];\nvar objp3 = payload.par[2];\nvar objp4 = payload.par[3];\nvar objp5 = payload.par[4];\nvar objT = payload.t;\n\n\nvar msgp1={};\nvar msgp2={};\nvar msgp3={};\nvar msgp4={};\nvar msgp5={};\nvar msgId={};\nvar msgT={};\n\nmsgId.payload=  objId ;\nmsgId.topic= \"ID=\";\n\n//msgp1.payload= JSON.stringify(  objp1 );\nmsgp1.topic= \"txt/new\";\nmsgp1.ui_control={color:\"red\", classname:\"id-warn\",layout:\"row-left\" };\nif(objp1==1){\nmsgp1.color = 'green';msgp1.payload = 'white';\n}else if (objp1==2){\nmsgp1.color  = 'white';msgp1.payload = 'red';\n}else if (objp1==3){\nmsgp1.color = 'white';msgp1.payload ='blue';\n}else if (objp1==4){\nmsgp1.color  = 'green' ;msgp1.payload ='not accepted';\n}else msgp1.color = 'yellow' ;msgp1.payload ='error';\n\nmsgp2.payload= JSON.stringify( objp2 );\nmsgp2.topic =   \"txt/new\";\n\nmsgp3.payload= JSON.stringify(  objp3 );\nmsgp3.topic =   \"txt/new\";\n\nmsgp4.payload=  JSON.stringify( objp4 );\nmsgp4.topic =   \"txt/new\";\n\nmsgp5.payload= JSON.stringify(  objp5 );\nmsgp5.topic =   \"txt/new\";\n\nmsgT.payload= objT;// JSON.stringify(  objT );\nmsgT.topic =   \"txt/new\";\n\nreturn [msgId, msgp1,msgp2,msgp3,msgp4,msgp5,msgT ];",
+        "func": "var topic=msg.topic;\nvar payload=msg.payload;\n\nvar objId = payload.id;\nvar objp1 = payload.par[0];\nvar objp2 = payload.par[1];\nvar objp3 = payload.par[2];\nvar objp4 = payload.par[3];\nvar objp5 = payload.par[4];\nvar objT = payload.t;\n\n\nvar msgp1={};\nvar msgp2={};\nvar msgp3={};\nvar msgp4={};\nvar msgp5={};\nvar msgId={};\nvar msgT={};\n\nmsgId.payload=  objId ;\nmsgId.topic= \"ID=\";\n\n//msgp1.payload= JSON.stringify(  objp1 );\nmsgp1.topic= \"txt/new\";\nmsgp1.ui_control={color:\"red\", classname:\"id-warn\",layout:\"row-left\" };\nif(objp1=='1'){\nmsgp1.color = 'green';msgp1.payload = 'white';\n}else if (objp1==2){\nmsgp1.color  = 'white';msgp1.payload = 'red';\n}else if (objp1==3){\nmsgp1.color = 'white';msgp1.payload ='blue';\n}else if (objp1==4){\nmsgp1.color  = 'green' ;msgp1.payload ='not accepted';\n}else msgp1.color = 'yellow' ;msgp1.payload ='error';\n\nmsgp2.payload= JSON.stringify( objp2 );\nmsgp2.topic =   \"txt/new\";\n\nmsgp3.payload= JSON.stringify(  objp3 );\nmsgp3.topic =   \"txt/new\";\n\nmsgp4.payload=  JSON.stringify( objp4 );\nmsgp4.topic =   \"txt/new\";\n\nmsgp5.payload= JSON.stringify(  objp5 );\nmsgp5.topic =   \"txt/new\";\n\nmsgT.payload= objT;// JSON.stringify(  objT );\nmsgT.topic =   \"txt/new\";\n\nreturn [msgId, msgp1,msgp2,msgp3,msgp4,msgp5,msgT ];",
         "outputs": 7,
         "noerr": 0,
         "initialize": "",
