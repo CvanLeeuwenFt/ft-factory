@@ -334,7 +334,8 @@
         "order": 1,
         "disp": true,
         "width": "6",
-        "collapse": false
+        "collapse": false,
+        "className": ""
     },
     {
         "id": "fc755ce7c4240337",
