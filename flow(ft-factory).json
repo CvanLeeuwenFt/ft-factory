@@ -1678,9 +1678,9 @@
         "once": false,
         "onceDelay": 0.1,
         "topic": "",
-        "payload": "",
-        "payloadType": "date",
-        "x": 660,
+        "payload": " {         \"id\" : \"\",         \"par\" :         [                  null,                 null,       null,                 null,                 null         ],         \"t\" : \"2000-01-01T00:00:00Z\" }",
+        "payloadType": "str",
+        "x": 650,
         "y": 380,
         "wires": [
             [
@@ -2032,8 +2032,8 @@
         "topic": "SLD/p/p",
         "payload": " {         \"id\" : \"p2\",         \"par\" :         [                 1,                 1022,                 65,                 0,                 0         ],         \"t\" : \"2000-01-01T01:57:41Z\" }",
         "payloadType": "str",
-        "x": 270,
-        "y": 60,
+        "x": 210,
+        "y": 80,
         "wires": [
             [
                 "6da8ef9d1098089d"
@@ -3107,7 +3107,7 @@
         "links": [
             "4237b5bfd7ce309b"
         ],
-        "x": 35,
+        "x": 45,
         "y": 140,
         "wires": [
             [
@@ -3143,7 +3143,7 @@
                 "t": "set",
                 "p": "payload",
                 "pt": "msg",
-                "to": " {         \"id\" : \"\",         \"par\" :         [                  null,                 null,       null,                 null,                 null         ],         \"t\" : null }",
+                "to": " {         \"id\" : \"\",         \"par\" :         [                  null,                 null,       null,                 null,                 null         ],         \"t\" : \"2000-01-01T00:00:00Z\" }",
                 "tot": "str"
             },
             {
@@ -3160,7 +3160,7 @@
         "to": "",
         "reg": false,
         "x": 160,
-        "y": 140,
+        "y": 180,
         "wires": [
             [
                 "6da8ef9d1098089d"
