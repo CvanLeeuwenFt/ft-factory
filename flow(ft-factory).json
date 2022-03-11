@@ -1648,8 +1648,8 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 490,
-        "y": 80,
+        "x": 570,
+        "y": 560,
         "wires": []
     },
     {
@@ -1660,7 +1660,9 @@
         "x": 370,
         "y": 500,
         "wires": [
-            []
+            [
+                "e22ed57a3fac57eb"
+            ]
         ],
         "inputLabels": [
             "dara"
@@ -1855,8 +1857,7 @@
         "wires": [
             [
                 "8cb7838273183d5d",
-                "3eee930ebefa8ae3",
-                "e22ed57a3fac57eb"
+                "3eee930ebefa8ae3"
             ]
         ]
     },
@@ -2045,6 +2046,50 @@
         "x": 820,
         "y": 700,
         "wires": []
+    },
+    {
+        "id": "1a29f5251e78ea4d",
+        "type": "mqtt in",
+        "z": "f0a66f6a5cd9f8b9",
+        "name": "MPO p  message",
+        "topic": "MPO/p/p",
+        "qos": "0",
+        "datatype": "json",
+        "broker": "c58f8d4b7c13412d",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 120,
+        "y": 640,
+        "wires": [
+            []
+        ],
+        "outputLabels": [
+            "text"
+        ]
+    },
+    {
+        "id": "7fc2a0a5c90caec3",
+        "type": "mqtt in",
+        "z": "f0a66f6a5cd9f8b9",
+        "name": "HDW p  message",
+        "topic": "HDW/p/p",
+        "qos": "0",
+        "datatype": "json",
+        "broker": "c58f8d4b7c13412d",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 120,
+        "y": 720,
+        "wires": [
+            []
+        ],
+        "outputLabels": [
+            "text"
+        ]
     },
     {
         "id": "ece4cb8c82db4177",
