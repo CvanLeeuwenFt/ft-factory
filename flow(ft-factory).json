@@ -1642,14 +1642,14 @@
         "name": "Value",
         "active": true,
         "tosidebar": true,
-        "console": true,
-        "tostatus": true,
+        "console": false,
+        "tostatus": false,
         "complete": "true",
         "targetType": "full",
-        "statusVal": "payload",
+        "statusVal": "",
         "statusType": "auto",
-        "x": 520,
-        "y": 540,
+        "x": 490,
+        "y": 80,
         "wires": []
     },
     {
@@ -1660,9 +1660,7 @@
         "x": 370,
         "y": 500,
         "wires": [
-            [
-                "e22ed57a3fac57eb"
-            ]
+            []
         ],
         "inputLabels": [
             "dara"
@@ -1857,7 +1855,8 @@
         "wires": [
             [
                 "8cb7838273183d5d",
-                "3eee930ebefa8ae3"
+                "3eee930ebefa8ae3",
+                "e22ed57a3fac57eb"
             ]
         ]
     },
