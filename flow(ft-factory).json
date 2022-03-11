@@ -350,8 +350,8 @@
         "id": "671f5a64ed1322a7",
         "type": "ui_group",
         "name": "Group 5",
-        "tab": "70f9a5a2aadcbae3",
-        "order": 5,
+        "tab": "85f06380b4bc6391",
+        "order": 2,
         "disp": true,
         "width": 6
     },
@@ -399,7 +399,8 @@
         "order": 1,
         "disp": true,
         "width": "6",
-        "collapse": false
+        "collapse": false,
+        "className": ""
     },
     {
         "id": "3616a722.b89bc8",
