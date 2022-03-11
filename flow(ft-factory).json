@@ -108,7 +108,7 @@
     {
         "id": "70f9a5a2aadcbae3",
         "type": "ui_tab",
-        "name": "A1",
+        "name": "TBK-Factory01",
         "icon": "dashboard",
         "order": 1,
         "disabled": false,
@@ -194,7 +194,7 @@
             }
         },
         "site": {
-            "name": "MQTT test dashboard",
+            "name": "Factory dashboard 01",
             "hideToolbar": "false",
             "allowSwipe": "true",
             "lockMenu": "true",
@@ -283,7 +283,7 @@
     {
         "id": "85f06380b4bc6391",
         "type": "ui_tab",
-        "name": "A2",
+        "name": "TBK-Factory02",
         "icon": "dashboard",
         "order": 2,
         "disabled": false,
@@ -339,7 +339,7 @@
     {
         "id": "fc755ce7c4240337",
         "type": "ui_link",
-        "name": "Link 4",
+        "name": "Link TesCaWeb",
         "link": "http://www.TesCaWeb.nl/Carel",
         "icon": "open_in_browser",
         "target": "iframe",
