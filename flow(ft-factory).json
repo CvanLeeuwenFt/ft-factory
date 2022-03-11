@@ -1323,13 +1323,13 @@
         "id": "3ea86854cadcd14a",
         "type": "mqtt in JSON",
         "z": "4e9eeca57a653287",
-        "name": "",
-        "topic": "txt/mqtt",
+        "name": "MDO init",
+        "topic": "MDO/mqtt",
         "qos": "0",
         "broker": "c58f8d4b7c13412d",
         "ignoreempty": true,
         "removemqttconfig": false,
-        "x": 80,
+        "x": 90,
         "y": 240,
         "wires": [
             [
@@ -1345,12 +1345,12 @@
         "order": 17,
         "width": 9,
         "height": 2,
-        "name": "outTT",
-        "label": "TT=",
+        "name": "MDO_init",
+        "label": "MDO is init",
         "format": "{{msg.payload}}",
         "layout": "col-center",
         "className": "",
-        "x": 390,
+        "x": 400,
         "y": 240,
         "wires": []
     },
@@ -1545,6 +1545,76 @@
         "wires": [
             []
         ]
+    },
+    {
+        "id": "469f5e0bc84e936b",
+        "type": "mqtt in JSON",
+        "z": "4e9eeca57a653287",
+        "name": "HBW init",
+        "topic": "HBW/mqtt",
+        "qos": "0",
+        "broker": "c58f8d4b7c13412d",
+        "ignoreempty": true,
+        "removemqttconfig": false,
+        "x": 566.8958129882812,
+        "y": 279.8888854980469,
+        "wires": [
+            [
+                "217b57421cf89a96"
+            ]
+        ]
+    },
+    {
+        "id": "217b57421cf89a96",
+        "type": "ui_text",
+        "z": "4e9eeca57a653287",
+        "group": "aa9feae58ac4eadd",
+        "order": 17,
+        "width": 9,
+        "height": 2,
+        "name": "HBW_init",
+        "label": "HBW is init",
+        "format": "{{msg.payload}}",
+        "layout": "col-center",
+        "className": "",
+        "x": 876.8958129882812,
+        "y": 279.8888854980469,
+        "wires": []
+    },
+    {
+        "id": "4b04c229693647e5",
+        "type": "mqtt in JSON",
+        "z": "4e9eeca57a653287",
+        "name": "SLD init",
+        "topic": "SLD/mqtt",
+        "qos": "0",
+        "broker": "c58f8d4b7c13412d",
+        "ignoreempty": true,
+        "removemqttconfig": false,
+        "x": 630,
+        "y": 340,
+        "wires": [
+            [
+                "5cdff2b11bd1fe3e"
+            ]
+        ]
+    },
+    {
+        "id": "5cdff2b11bd1fe3e",
+        "type": "ui_text",
+        "z": "4e9eeca57a653287",
+        "group": "aa9feae58ac4eadd",
+        "order": 17,
+        "width": 9,
+        "height": 2,
+        "name": "SLD_init",
+        "label": "SLD is init",
+        "format": "{{msg.payload}}",
+        "layout": "col-center",
+        "className": "",
+        "x": 950,
+        "y": 340,
+        "wires": []
     },
     {
         "id": "ea5b1d3fd2440b96",
