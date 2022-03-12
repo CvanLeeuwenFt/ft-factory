@@ -1282,8 +1282,8 @@
         "sendOnBlur": true,
         "className": "",
         "topicType": "msg",
-        "x": 1070,
-        "y": 960,
+        "x": 1110,
+        "y": 660,
         "wires": [
             [
                 "f223209feacb7f86"
@@ -1308,8 +1308,8 @@
         "sendOnBlur": true,
         "className": "",
         "topicType": "msg",
-        "x": 1070,
-        "y": 1000,
+        "x": 1110,
+        "y": 700,
         "wires": [
             [
                 "f223209feacb7f86"
@@ -1334,8 +1334,8 @@
         "sendOnBlur": true,
         "className": "",
         "topicType": "msg",
-        "x": 1070,
-        "y": 1040,
+        "x": 1110,
+        "y": 740,
         "wires": [
             [
                 "f223209feacb7f86"
@@ -1361,8 +1361,8 @@
         "max": "512",
         "step": 1,
         "className": "",
-        "x": 1070,
-        "y": 1100,
+        "x": 1110,
+        "y": 800,
         "wires": [
             [
                 "f223209feacb7f86"
@@ -1380,8 +1380,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 960,
-        "y": 1140,
+        "x": 920,
+        "y": 840,
         "wires": [
             [
                 "740974992d34062f"
@@ -1403,8 +1403,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 660,
-        "y": 1000,
+        "x": 700,
+        "y": 700,
         "wires": [
             [
                 "ac6626680c328fd6"
@@ -1434,8 +1434,8 @@
         "correl": "",
         "expiry": "",
         "broker": "c58f8d4b7c13412d",
-        "x": 1690,
-        "y": 980,
+        "x": 1210,
+        "y": 860,
         "wires": []
     },
     {
@@ -3461,7 +3461,7 @@
         "label": "MPO Pause",
         "tooltip": "Emergency stop of the actuators in this section.",
         "color": "blue",
-        "bgcolor": "black",
+        "bgcolor": "grey",
         "className": "",
         "icon": "",
         "payload": "{\"outMid\":0}",
@@ -3768,7 +3768,7 @@
         "label": "SLD Pause",
         "tooltip": "Emergency stop of the actuators in this section.",
         "color": "blue",
-        "bgcolor": "black",
+        "bgcolor": "grey",
         "className": "",
         "icon": "",
         "payload": "{\"outMid\":0}",
@@ -3954,7 +3954,7 @@
         "label": "HBW Pause",
         "tooltip": "Emergency stop of the actuators in this section.",
         "color": "blue",
-        "bgcolor": "black",
+        "bgcolor": "grey",
         "className": "",
         "icon": "",
         "payload": "{\"outMid\":0}",
