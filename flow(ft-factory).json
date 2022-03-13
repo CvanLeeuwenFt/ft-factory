@@ -4612,38 +4612,14 @@
         "order": 15,
         "width": 10,
         "height": 3,
-        "name": "TXT Value",
-        "label": "TXT value",
+        "name": "txt_value_data",
+        "label": "TXT Value data",
         "format": "{{msg.payload}}",
         "layout": "col-center",
         "className": "",
-        "x": 450,
+        "x": 460,
         "y": 380,
         "wires": []
-    },
-    {
-        "id": "04d930f63c11ba97",
-        "type": "ui_text_input",
-        "z": "bd4c07398c4539cf",
-        "name": "txt_configuration",
-        "label": "TXT Configuration data",
-        "tooltip": "configaratie van de controller",
-        "group": "590e59f993e7fcf2",
-        "order": 16,
-        "width": 9,
-        "height": 1,
-        "passthru": true,
-        "mode": "text",
-        "delay": 300,
-        "topic": "topic",
-        "sendOnBlur": true,
-        "className": "",
-        "topicType": "msg",
-        "x": 460,
-        "y": 260,
-        "wires": [
-            []
-        ]
     },
     {
         "id": "04821745beaa9303",
@@ -4687,8 +4663,7 @@
         "y": 220,
         "wires": [
             [
-                "d83bb2f6d83b5c89",
-                "04d930f63c11ba97"
+                "d83bb2f6d83b5c89"
             ]
         ],
         "outputLabels": [
@@ -4712,7 +4687,8 @@
         "y": 160,
         "wires": [
             [
-                "fbda6c9b93db7211"
+                "fbda6c9b93db7211",
+                "5b1f3fde323331eb"
             ]
         ],
         "outputLabels": [
@@ -4749,8 +4725,8 @@
         "targetType": "jsonata",
         "statusVal": "payload",
         "statusType": "auto",
-        "x": 420,
-        "y": 160,
+        "x": 500,
+        "y": 100,
         "wires": []
     },
     {
@@ -4768,6 +4744,40 @@
         "statusType": "auto",
         "x": 440,
         "y": 320,
+        "wires": []
+    },
+    {
+        "id": "7fca0b5ac211e2a1",
+        "type": "ui_text",
+        "z": "bd4c07398c4539cf",
+        "group": "590e59f993e7fcf2",
+        "order": 15,
+        "width": 10,
+        "height": 3,
+        "name": "txt_configuration_data",
+        "label": "TXT Configuration Data",
+        "format": "{{msg.payload}}",
+        "layout": "col-center",
+        "className": "",
+        "x": 480,
+        "y": 260,
+        "wires": []
+    },
+    {
+        "id": "5b1f3fde323331eb",
+        "type": "ui_text",
+        "z": "bd4c07398c4539cf",
+        "group": "590e59f993e7fcf2",
+        "order": 15,
+        "width": 10,
+        "height": 3,
+        "name": "txt_status_data",
+        "label": "TXT Status data",
+        "format": "{{msg.payload}}",
+        "layout": "col-center",
+        "className": "",
+        "x": 520,
+        "y": 160,
         "wires": []
     }
 ]
