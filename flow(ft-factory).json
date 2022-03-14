@@ -4172,8 +4172,8 @@
                 "vt": "str"
             },
             {
-                "t": "eq",
-                "v": "HBW/s/value/#",
+                "t": "cont",
+                "v": "HBW/s/value",
                 "vt": "str"
             }
         ],
