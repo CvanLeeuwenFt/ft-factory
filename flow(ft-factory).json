@@ -665,7 +665,7 @@
         "height": 1
     },
     {
-        "id": "6b939a143c14aba9",
+        "id": "7202261b2507824f",
         "type": "ui_spacer",
         "z": "bd4c07398c4539cf",
         "name": "spacer",
@@ -675,7 +675,7 @@
         "height": 1
     },
     {
-        "id": "e7c539c0e814515e",
+        "id": "f1501bd80fadcd52",
         "type": "ui_spacer",
         "z": "bd4c07398c4539cf",
         "name": "spacer",
@@ -685,7 +685,7 @@
         "height": 1
     },
     {
-        "id": "8c6bac8dd6fd6d55",
+        "id": "d95dd3ee44a3578b",
         "type": "ui_spacer",
         "z": "bd4c07398c4539cf",
         "name": "spacer",
@@ -695,7 +695,7 @@
         "height": 1
     },
     {
-        "id": "65b0eafe140c406e",
+        "id": "29a51347efb8802a",
         "type": "ui_spacer",
         "z": "bd4c07398c4539cf",
         "name": "spacer",
@@ -705,7 +705,7 @@
         "height": 1
     },
     {
-        "id": "c76617d2d65c7bc4",
+        "id": "3181078debfeaf7f",
         "type": "ui_spacer",
         "z": "bd4c07398c4539cf",
         "name": "spacer",
@@ -715,7 +715,7 @@
         "height": 1
     },
     {
-        "id": "5e4acef7c3ea84e3",
+        "id": "0b4c24d3da7c78f3",
         "type": "ui_spacer",
         "z": "bd4c07398c4539cf",
         "name": "spacer",
@@ -725,7 +725,7 @@
         "height": 1
     },
     {
-        "id": "6a67320b7c10ff0b",
+        "id": "6b9b85fda4466830",
         "type": "ui_spacer",
         "z": "bd4c07398c4539cf",
         "name": "spacer",
@@ -735,7 +735,7 @@
         "height": 1
     },
     {
-        "id": "01fc184832a00d69",
+        "id": "33b945c3deb16e91",
         "type": "ui_spacer",
         "z": "bd4c07398c4539cf",
         "name": "spacer",
@@ -745,7 +745,7 @@
         "height": 1
     },
     {
-        "id": "1bef8191a58431b4",
+        "id": "8dd521467ad7e978",
         "type": "ui_spacer",
         "z": "bd4c07398c4539cf",
         "name": "spacer",
@@ -755,7 +755,7 @@
         "height": 1
     },
     {
-        "id": "af10de8e9a6693fc",
+        "id": "b5404f622673a4dc",
         "type": "ui_spacer",
         "z": "bd4c07398c4539cf",
         "name": "spacer",
@@ -765,7 +765,7 @@
         "height": 1
     },
     {
-        "id": "b0999f55a71afd39",
+        "id": "ab41757e6ff0a6f7",
         "type": "ui_spacer",
         "z": "bd4c07398c4539cf",
         "name": "spacer",
@@ -775,7 +775,7 @@
         "height": 1
     },
     {
-        "id": "d6a8836c52162174",
+        "id": "773535cd273440f8",
         "type": "ui_spacer",
         "z": "bd4c07398c4539cf",
         "name": "spacer",
@@ -785,7 +785,7 @@
         "height": 1
     },
     {
-        "id": "95d5ee3e36e755ff",
+        "id": "7a27c15a3d444e0d",
         "type": "ui_spacer",
         "z": "bd4c07398c4539cf",
         "name": "spacer",
@@ -795,7 +795,7 @@
         "height": 1
     },
     {
-        "id": "06984155e16fc2b4",
+        "id": "20952d5a4407f1f2",
         "type": "ui_spacer",
         "z": "bd4c07398c4539cf",
         "name": "spacer",
@@ -805,7 +805,7 @@
         "height": 1
     },
     {
-        "id": "1fe47903f84d87fe",
+        "id": "6278bc597f8658f4",
         "type": "ui_spacer",
         "z": "bd4c07398c4539cf",
         "name": "spacer",
@@ -815,7 +815,7 @@
         "height": 1
     },
     {
-        "id": "62ce3312dd42211f",
+        "id": "a9dd4856029db54a",
         "type": "ui_spacer",
         "z": "bd4c07398c4539cf",
         "name": "spacer",
@@ -825,7 +825,7 @@
         "height": 1
     },
     {
-        "id": "24bb440abdcbd582",
+        "id": "14bc7ae5a2d52787",
         "type": "ui_spacer",
         "z": "bd4c07398c4539cf",
         "name": "spacer",
@@ -835,7 +835,7 @@
         "height": 1
     },
     {
-        "id": "fde4e634918a89f9",
+        "id": "1fb2e6c09bf8a6d1",
         "type": "ui_spacer",
         "z": "bd4c07398c4539cf",
         "name": "spacer",
@@ -845,7 +845,7 @@
         "height": 1
     },
     {
-        "id": "8a142eafa964d582",
+        "id": "6adcb44e380a41c5",
         "type": "ui_spacer",
         "z": "bd4c07398c4539cf",
         "name": "spacer",
@@ -855,7 +855,7 @@
         "height": 1
     },
     {
-        "id": "f2d4605707e4ca74",
+        "id": "81b298eec6dd8885",
         "type": "ui_spacer",
         "z": "bd4c07398c4539cf",
         "name": "spacer",
@@ -865,7 +865,7 @@
         "height": 1
     },
     {
-        "id": "e63b5896a1d432a1",
+        "id": "64c8e840e924dbf9",
         "type": "ui_spacer",
         "z": "bd4c07398c4539cf",
         "name": "spacer",
@@ -875,7 +875,7 @@
         "height": 1
     },
     {
-        "id": "b323122d15273cd1",
+        "id": "aef0a9c83a15d119",
         "type": "ui_spacer",
         "z": "bd4c07398c4539cf",
         "name": "spacer",
@@ -885,7 +885,7 @@
         "height": 1
     },
     {
-        "id": "447ec5163fae58b2",
+        "id": "65ad64ffeff3f480",
         "type": "ui_spacer",
         "z": "bd4c07398c4539cf",
         "name": "spacer",
@@ -895,7 +895,7 @@
         "height": 1
     },
     {
-        "id": "91a8aaf1182751ae",
+        "id": "304df0a06c8cae11",
         "type": "ui_spacer",
         "z": "bd4c07398c4539cf",
         "name": "spacer",
@@ -905,7 +905,7 @@
         "height": 1
     },
     {
-        "id": "21a003dcfcf93770",
+        "id": "151b35050af4a1b1",
         "type": "ui_spacer",
         "z": "bd4c07398c4539cf",
         "name": "spacer",
@@ -915,7 +915,7 @@
         "height": 1
     },
     {
-        "id": "2d0afd470de61d53",
+        "id": "811ff228574853af",
         "type": "ui_spacer",
         "z": "bd4c07398c4539cf",
         "name": "spacer",
@@ -925,7 +925,7 @@
         "height": 1
     },
     {
-        "id": "eb4e92c175829e8f",
+        "id": "d87558969804bf42",
         "type": "ui_spacer",
         "z": "bd4c07398c4539cf",
         "name": "spacer",
@@ -4346,8 +4346,8 @@
         "z": "bd4c07398c4539cf",
         "group": "590e59f993e7fcf2",
         "order": 1,
-        "width": 6,
-        "height": 3,
+        "width": "12",
+        "height": "2",
         "name": "hbw_value_data",
         "label": "HBW Value data",
         "format": "{{msg.payload}}",
