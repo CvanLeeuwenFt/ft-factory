@@ -1513,7 +1513,7 @@
         "type": "function",
         "z": "4e9eeca57a653287",
         "name": "Name of database + timestamp",
-        "func": "//msg.filename = \"/home/pi/.node-red/public/databases/machines/timepi_temp.db\";\n//C:\\Users\\Carel\\.node-red\nmsg.filename = \"C:/Users/Carel/.node-red/public/databases/machines/timepi_temp.db\";\nvar time = Date.now();\nvar x = msg.payload;\nmsg.payload = time + ' - ' + x;\nreturn msg;",
+        "func": "//msg.filename = \"/home/pi/.node-red/public/databases/machines/timepi_temp.db\";\n//C:\\Users\\Carel\\.node-red\n//I:/Hobby/FT-NodeRed/tmp\nmsg.filename = \"I:/Hobby/FT-NodeRed/tmp/test_pi_temp.db\";\nvar time = Date.now();\nvar x = msg.payload;\nmsg.payload = time + ' - ' + x;\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
@@ -1571,6 +1571,9 @@
         "func": "msg.filename = \"../databases/machines/timepi_temp.db\";\nvar time = Date.now();\nvar x = msg.payload;\nmsg.payload = time + ' - ' + x;\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
         "x": 310,
         "y": 570,
         "wires": [
