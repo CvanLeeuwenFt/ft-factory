@@ -3963,7 +3963,7 @@
         "id": "a4044b88e6676dbc",
         "type": "debug",
         "z": "bd4c07398c4539cf",
-        "name": "Value",
+        "name": "ValueI",
         "active": true,
         "tosidebar": true,
         "console": true,
@@ -4253,8 +4253,8 @@
         "checkall": "true",
         "repair": false,
         "outputs": 1,
-        "x": 510,
-        "y": 700,
+        "x": 370,
+        "y": 640,
         "wires": [
             []
         ]
@@ -4273,9 +4273,11 @@
         "rh": 0,
         "inputs": 0,
         "x": 100,
-        "y": 680,
+        "y": 760,
         "wires": [
-            []
+            [
+                "977534c24838c65e"
+            ]
         ],
         "outputLabels": [
             "text"
@@ -4295,12 +4297,65 @@
         "rh": 0,
         "inputs": 0,
         "x": 100,
-        "y": 600,
+        "y": 680,
         "wires": [
-            []
+            [
+                "584d638b5c79090f"
+            ]
         ],
         "outputLabels": [
             "text"
         ]
+    },
+    {
+        "id": "36f88d2dc0043e65",
+        "type": "debug",
+        "z": "bd4c07398c4539cf",
+        "name": "Value",
+        "active": true,
+        "tosidebar": true,
+        "console": true,
+        "tostatus": true,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "payload",
+        "statusType": "auto",
+        "x": 224.8958282470703,
+        "y": 410.77777099609375,
+        "wires": []
+    },
+    {
+        "id": "584d638b5c79090f",
+        "type": "debug",
+        "z": "bd4c07398c4539cf",
+        "name": "ValueM",
+        "active": true,
+        "tosidebar": true,
+        "console": true,
+        "tostatus": true,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "payload",
+        "statusType": "auto",
+        "x": 480,
+        "y": 680,
+        "wires": []
+    },
+    {
+        "id": "977534c24838c65e",
+        "type": "debug",
+        "z": "bd4c07398c4539cf",
+        "name": "ValueC",
+        "active": true,
+        "tosidebar": true,
+        "console": true,
+        "tostatus": true,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "payload",
+        "statusType": "auto",
+        "x": 480,
+        "y": 760,
+        "wires": []
     }
 ]
