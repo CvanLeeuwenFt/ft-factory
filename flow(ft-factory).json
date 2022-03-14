@@ -1509,6 +1509,112 @@
         "wires": []
     },
     {
+        "id": "c3f47623ab17ee2b",
+        "type": "function",
+        "z": "4e9eeca57a653287",
+        "name": "Name of database + timestamp",
+        "func": "//msg.filename = \"/home/pi/.node-red/public/databases/machines/timepi_temp.db\";\n//C:\\Users\\Carel\\.node-red\nmsg.filename = \"C:/Users/Carel/.node-red/public/databases/machines/timepi_temp.db\";\nvar time = Date.now();\nvar x = msg.payload;\nmsg.payload = time + ' - ' + x;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 310,
+        "y": 520,
+        "wires": [
+            [
+                "ce7d4f42f270dbd7"
+            ]
+        ]
+    },
+    {
+        "id": "ce7d4f42f270dbd7",
+        "type": "file",
+        "z": "4e9eeca57a653287",
+        "name": "",
+        "filename": "",
+        "appendNewline": true,
+        "createDir": true,
+        "overwriteFile": "false",
+        "encoding": "none",
+        "x": 510,
+        "y": 520,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "94c0c86a14e650a2",
+        "type": "inject",
+        "z": "4e9eeca57a653287",
+        "name": "",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "clock",
+        "payloadType": "str",
+        "x": 80,
+        "y": 520,
+        "wires": [
+            [
+                "c3f47623ab17ee2b"
+            ]
+        ]
+    },
+    {
+        "id": "98da6308da71ae6e",
+        "type": "function",
+        "z": "4e9eeca57a653287",
+        "name": "Name of database + timestamp",
+        "func": "msg.filename = \"../databases/machines/timepi_temp.db\";\nvar time = Date.now();\nvar x = msg.payload;\nmsg.payload = time + ' - ' + x;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 310,
+        "y": 570,
+        "wires": [
+            [
+                "88e2783a940e52de"
+            ]
+        ]
+    },
+    {
+        "id": "88e2783a940e52de",
+        "type": "file",
+        "z": "4e9eeca57a653287",
+        "name": "",
+        "filename": "",
+        "appendNewline": true,
+        "createDir": true,
+        "overwriteFile": "false",
+        "x": 510,
+        "y": 570,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "5a592b24a0ae6927",
+        "type": "inject",
+        "z": "4e9eeca57a653287",
+        "name": "",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "clock",
+        "payloadType": "str",
+        "x": 80,
+        "y": 570,
+        "wires": [
+            [
+                "98da6308da71ae6e"
+            ]
+        ]
+    },
+    {
         "id": "ea5b1d3fd2440b96",
         "type": "ui_form",
         "z": "4c7e81e43391897e",
@@ -4537,7 +4643,7 @@
         "repair": false,
         "outputs": 3,
         "x": 270,
-        "y": 1020,
+        "y": 1040,
         "wires": [
             [
                 "d31f9f581dec11e2"
