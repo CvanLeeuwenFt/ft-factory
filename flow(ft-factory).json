@@ -4534,8 +4534,8 @@
         "targetType": "full",
         "statusVal": "payload",
         "statusType": "auto",
-        "x": 480,
-        "y": 700,
+        "x": 700,
+        "y": 680,
         "wires": []
     },
     {
@@ -4691,10 +4691,10 @@
         "height": 2,
         "name": "sld_value_dataM",
         "label": "SLD Value dataM",
-        "format": "{{msg.payload.}}",
+        "format": "{msg.payload.}",
         "layout": "col-center",
         "className": "",
-        "x": 610,
+        "x": 650,
         "y": 800,
         "wires": []
     },
