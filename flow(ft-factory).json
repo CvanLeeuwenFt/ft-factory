@@ -1548,6 +1548,15 @@
         "type": "inject",
         "z": "4e9eeca57a653287",
         "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
         "repeat": "",
         "crontab": "",
         "once": false,
@@ -4748,6 +4757,35 @@
             ],
             [
                 "08e69bd9b7aafa9c"
+            ]
+        ]
+    },
+    {
+        "id": "230338bd382fa6ea",
+        "type": "inject",
+        "z": "bd4c07398c4539cf",
+        "name": "SLD motor data",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "SLD/s/status/M",
+        "payload": "{\"device\":\"SLD\",\"ex\":{\"motor\":{\"M1\":{\"o_dista\":512,\"o_duty1\":0,\"o_duty2\":4500},\"M2\":{\"o_dista\":512,\"o_duty1\":0,\"o_duty2\":0},\"M3\":{\"o_dista\":0,\"o_duty1\":512,\"o_duty2\":0},\"M4\":{\"o_dista\":300,\"o_duty1\":300,\"o_duty2\":0},\"T\":\"2000-01-01T03:51:30Z\"}}}",
+        "payloadType": "json",
+        "x": 80,
+        "y": 840,
+        "wires": [
+            [
+                "69bde9a58b75e08a"
             ]
         ]
     }
