@@ -4725,13 +4725,12 @@
         "checkall": "true",
         "repair": false,
         "outputs": 3,
-        "x": 250,
+        "x": 290,
         "y": 780,
         "wires": [
             [
                 "3823cb8d3a287cd1",
-                "584d638b5c79090f",
-                "93cd6c0f0af233d6"
+                "584d638b5c79090f"
             ],
             [
                 "8e5ef160bb99daa4"
@@ -4766,7 +4765,8 @@
         "y": 840,
         "wires": [
             [
-                "69bde9a58b75e08a"
+                "69bde9a58b75e08a",
+                "93cd6c0f0af233d6"
             ]
         ]
     },
