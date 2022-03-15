@@ -4087,8 +4087,7 @@
         "y": 460,
         "wires": [
             [
-                "a4044b88e6676dbc",
-                "b5e06cde3cd69c85"
+                "b1a2c8920e07936b"
             ]
         ],
         "outputLabels": [
@@ -4192,7 +4191,7 @@
         "targetType": "full",
         "statusVal": "payload",
         "statusType": "auto",
-        "x": 460,
+        "x": 700,
         "y": 460,
         "wires": []
     },
@@ -4404,7 +4403,8 @@
         "y": 560,
         "wires": [
             [
-                "f5dce846a60996bb"
+                "f5dce846a60996bb",
+                "a4044b88e6676dbc"
             ],
             [
                 "bcd7512fbbdbcf7b"
@@ -4825,12 +4825,14 @@
         "once": false,
         "onceDelay": 0.1,
         "topic": "SLD/s/value/I",
-        "payload": "{\"device\":\"MPO\",\"ex\":{\"input\":{\"I1\":{\"i_uni\":1},\"I2\":{\"i_uni\":0},\"I3\":{\"i_uni\":0},\"I4\":{\"i_uni\":1},\"I5\":{\"i_uni\":1},\"I6\":{\"i_uni\":0},\"I7\":{\"i_uni\":0},\"I8\":{\"i_uni\":0},\"T\":\"2000-01-01T00:29:17Z\"}}}",
+        "payload": "{\"device\":\"MPO\",\"ex\":{\"input\":{\"I1\":{\"uni\":1},\"I2\":{\"uni\":0},\"I3\":{\"uni\":56},\"I4\":{\"uni\":1},\"I5\":{\"uni\":1},\"I6\":{\"uni\":76867},\"I7\":{\"uni\":13},\"I8\":{\"uni\":1},\"T\":\"2000-01-01T00:29:17Z\"}}}",
         "payloadType": "json",
         "x": 120,
         "y": 600,
         "wires": [
-            []
+            [
+                "b1a2c8920e07936b"
+            ]
         ]
     },
     {
@@ -4898,5 +4900,24 @@
         "x": 470,
         "y": 960,
         "wires": []
+    },
+    {
+        "id": "b1a2c8920e07936b",
+        "type": "function",
+        "z": "bd4c07398c4539cf",
+        "name": "",
+        "func": "var p=msg.payload;\nvar xs=p.ex.motor;\nvar s= 'M1=['+ xs.M1.duty1 +', '+ xs.M1.duty2+', '+ xs.M1.dist+']'+'\\n';\ns=s+'M2=['+ xs.M2.duty1 +', '+ xs.M2.duty2+', '+ xs.M2.dist+']'+'\\n';\ns=s+'M3=['+ xs.M3.duty1 +', '+ xs.M3.duty2+', '+ xs.M3.dist+']'+'\\n';\ns=s+'M4=['+ xs.M4.duty1 +', '+ xs.M4.duty2+', '+ xs.M4.dist+']'+'\\n';\ns+='T='+ xs.T; \n\nmsg.payload=s;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 280,
+        "y": 520,
+        "wires": [
+            [
+                "b5e06cde3cd69c85"
+            ]
+        ]
     }
 ]
