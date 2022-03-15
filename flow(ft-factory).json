@@ -4775,7 +4775,7 @@
         "type": "function",
         "z": "bd4c07398c4539cf",
         "name": "",
-        "func": "var p=msg.payload;\nvar xs=p.ex.motor;\nvar s= 'M1=['+ xs.M1.duty1 +', '+ xs.M1.duty2+', '+ xs.M1.dist+']';\ns=s+'M2=['+ xs.M2.duty1 +', '+ xs.M2.duty2+', '+ xs.M2.dist+']';\ns=s+'M3=['+ xs.M3.duty1 +', '+ xs.M3.duty2+', '+ xs.M3.dist+']';\ns=s+'M4=['+ xs.M4.duty1 +', '+ xs.M4.duty2+', '+ xs.M4.dist+']';\n\nmsg.payload=s+'\\n';\nreturn msg;",
+        "func": "var p=msg.payload;\nvar xs=p.ex.motor;\nvar s= 'M1=['+ xs.M1.duty1 +', '+ xs.M1.duty2+', '+ xs.M1.dist+']'+'\\n';\ns=s+'M2=['+ xs.M2.duty1 +', '+ xs.M2.duty2+', '+ xs.M2.dist+']'+'\\n';\ns=s+'M3=['+ xs.M3.duty1 +', '+ xs.M3.duty2+', '+ xs.M3.dist+']'+'\\n';\ns=s+'M4=['+ xs.M4.duty1 +', '+ xs.M4.duty2+', '+ xs.M4.dist+']';\n\nmsg.payload=s;\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
