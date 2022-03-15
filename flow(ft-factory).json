@@ -4066,8 +4066,8 @@
         "format": "{{msg.payload}}",
         "layout": "col-center",
         "className": "",
-        "x": 490,
-        "y": 560,
+        "x": 730,
+        "y": 580,
         "wires": []
     },
     {
@@ -4311,8 +4311,8 @@
         "format": "{{msg.payload}}",
         "layout": "col-center",
         "className": "",
-        "x": 490,
-        "y": 600,
+        "x": 730,
+        "y": 620,
         "wires": []
     },
     {
@@ -4328,8 +4328,8 @@
         "format": "{{msg.payload}}",
         "layout": "col-center",
         "className": "",
-        "x": 480,
-        "y": 520,
+        "x": 720,
+        "y": 540,
         "wires": []
     },
     {
@@ -4400,8 +4400,8 @@
         "checkall": "true",
         "repair": false,
         "outputs": 3,
-        "x": 270,
-        "y": 540,
+        "x": 510,
+        "y": 560,
         "wires": [
             [
                 "f5dce846a60996bb"
@@ -4774,7 +4774,7 @@
         "type": "function",
         "z": "bd4c07398c4539cf",
         "name": "",
-        "func": "var p=msg.payload;\nvar xs=p.ex.motor;\nvar s= 'M1=['+ xs.M1.duty1 +', '+ xs.M1.duty2+', '+ xs.M1.dist+']'+'\\n';\ns=s+'M2=['+ xs.M2.duty1 +', '+ xs.M2.duty2+', '+ xs.M2.dist+']'+'\\n';\ns=s+'M3=['+ xs.M3.duty1 +', '+ xs.M3.duty2+', '+ xs.M3.dist+']'+'\\n';\ns=s+'M4=['+ xs.M4.duty1 +', '+ xs.M4.duty2+', '+ xs.M4.dist+']';\n\nmsg.payload=s;\nreturn msg;",
+        "func": "var p=msg.payload;\nvar xs=p.ex.motor;\nvar s= 'M1=['+ xs.M1.duty1 +', '+ xs.M1.duty2+', '+ xs.M1.dist+']'+'\\n';\ns=s+'M2=['+ xs.M2.duty1 +', '+ xs.M2.duty2+', '+ xs.M2.dist+']'+'\\n';\ns=s+'M3=['+ xs.M3.duty1 +', '+ xs.M3.duty2+', '+ xs.M3.dist+']'+'\\n';\ns=s+'M4=['+ xs.M4.duty1 +', '+ xs.M4.duty2+', '+ xs.M4.dist+']'+'\\n';\ns+='T='+ xs.T; \n\nmsg.payload=s;\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
