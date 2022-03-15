@@ -111,7 +111,7 @@
         "type": "ui_tab",
         "name": "TBK-Factory01",
         "icon": "dashboard",
-        "order": 1,
+        "order": 2,
         "disabled": false,
         "hidden": false
     },
@@ -286,7 +286,7 @@
         "type": "ui_tab",
         "name": "TBK-Factory02",
         "icon": "dashboard",
-        "order": 2,
+        "order": 1,
         "disabled": false,
         "hidden": false
     },
@@ -4691,7 +4691,7 @@
         "height": 2,
         "name": "sld_value_dataM",
         "label": "SLD Value dataM",
-        "format": "{{msg.payload ex}}",
+        "format": "{{msg.payload.ex}}",
         "layout": "col-center",
         "className": "",
         "x": 470,
