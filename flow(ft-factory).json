@@ -4469,7 +4469,7 @@
         "rh": 0,
         "inputs": 0,
         "x": 100,
-        "y": 920,
+        "y": 940,
         "wires": [
             [
                 "977534c24838c65e",
@@ -4494,7 +4494,7 @@
         "rh": 0,
         "inputs": 0,
         "x": 100,
-        "y": 680,
+        "y": 740,
         "wires": [
             [
                 "93cd6c0f0af233d6"
@@ -4526,7 +4526,7 @@
         "type": "debug",
         "z": "bd4c07398c4539cf",
         "name": "ValueM",
-        "active": true,
+        "active": false,
         "tosidebar": true,
         "console": true,
         "tostatus": true,
@@ -4535,7 +4535,7 @@
         "statusVal": "payload",
         "statusType": "auto",
         "x": 700,
-        "y": 680,
+        "y": 740,
         "wires": []
     },
     {
@@ -4568,7 +4568,7 @@
         "format": "{{msg.payload}}",
         "layout": "col-center",
         "className": "",
-        "x": 490,
+        "x": 710,
         "y": 1040,
         "wires": []
     },
@@ -4585,7 +4585,7 @@
         "format": "{{msg.payload}}",
         "layout": "col-center",
         "className": "",
-        "x": 490,
+        "x": 710,
         "y": 1080,
         "wires": []
     },
@@ -4602,7 +4602,7 @@
         "format": "{{msg.payload}}",
         "layout": "col-center",
         "className": "",
-        "x": 490,
+        "x": 710,
         "y": 1000,
         "wires": []
     },
@@ -4633,7 +4633,7 @@
         "checkall": "true",
         "repair": false,
         "outputs": 3,
-        "x": 270,
+        "x": 490,
         "y": 1040,
         "wires": [
             [
@@ -4660,7 +4660,7 @@
         "format": "{{msg.payload}}",
         "layout": "col-center",
         "className": "",
-        "x": 610,
+        "x": 710,
         "y": 840,
         "wires": []
     },
@@ -4677,7 +4677,7 @@
         "format": "{{msg.payload}}",
         "layout": "col-center",
         "className": "",
-        "x": 610,
+        "x": 710,
         "y": 880,
         "wires": []
     },
@@ -4694,7 +4694,7 @@
         "format": "{{msg.payload}}",
         "layout": "col-center",
         "className": "",
-        "x": 650,
+        "x": 710,
         "y": 800,
         "wires": []
     },
@@ -4725,8 +4725,8 @@
         "checkall": "true",
         "repair": false,
         "outputs": 3,
-        "x": 430,
-        "y": 820,
+        "x": 490,
+        "y": 840,
         "wires": [
             [
                 "3823cb8d3a287cd1",
@@ -4762,7 +4762,7 @@
         "payload": "{\"device\":\"SLD\",\"ex\":{\"motor\":{\"M1\":{\"dist\":4500,\"duty1\":0,\"duty2\":512},\"M2\":{\"dist\":0,\"duty1\":512,\"duty2\":0},\"M3\":{\"dist\":0,\"duty1\":512,\"duty2\":0},\"M4\":{\"dist\":3300,\"duty1\":300,\"duty2\":0},\"T\":\"2000-01-01T03:51:30Z\"}}}",
         "payloadType": "json",
         "x": 120,
-        "y": 840,
+        "y": 820,
         "wires": [
             [
                 "93cd6c0f0af233d6"
@@ -4780,8 +4780,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 280,
-        "y": 760,
+        "x": 300,
+        "y": 780,
         "wires": [
             [
                 "9e93884b4a67ed58",
@@ -4794,7 +4794,7 @@
         "type": "debug",
         "z": "bd4c07398c4539cf",
         "name": "",
-        "active": true,
+        "active": false,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
@@ -4802,7 +4802,7 @@
         "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 910,
+        "x": 490,
         "y": 740,
         "wires": []
     }
