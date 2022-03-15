@@ -4867,7 +4867,7 @@
         "type": "function",
         "z": "bd4c07398c4539cf",
         "name": "",
-        "func": "var p=msg.payload;\nvar xs=p.ex.counter;\nvar s= 'C1=['+ xs.C1.counter +', '+ xs.C1.reset+', '+ xs.C1.resetted+']'+'\\n';\ns=s+'C2=['+  xs.C2.counter +', '+ xs.C2.reset+', '+ xs.C2.resetted+']'+'\\n';\ns=s+'C3=['+  xs.C3.counter +', '+ xs.C3.reset+', '+ xs.C3.resetted+']'+'\\n';\ns=s+'C4=['+  xs.C4.counter +', '+ xs.C4.reset+', '+ xs.C4.resetted+']';\n\nmsg.payload=s;\nreturn msg;",
+        "func": "var p=msg.payload;\nvar xs=p.ex.counter;\nvar s= 'C1=['+ xs.C1.counter +', '+ xs.C1.reset+', '+ xs.C1.resetted+']'+'\\n';\ns=s+' C2=['+  xs.C2.counter +', '+ xs.C2.reset+', '+ xs.C2.resetted+']'+'\\n';\ns=s+' C3=['+  xs.C3.counter +', '+ xs.C3.reset+', '+ xs.C3.resetted+']'+'\\n';\ns=s+' C4=['+  xs.C4.counter +', '+ xs.C4.reset+', '+ xs.C4.resetted+']'+'\\n';\ns+='T='+ xs.T; \nmsg.payload=s;\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
