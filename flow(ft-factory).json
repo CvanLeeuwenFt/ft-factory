@@ -4472,8 +4472,7 @@
         "y": 940,
         "wires": [
             [
-                "977534c24838c65e",
-                "5ff8f71bbb089f86"
+                "40b6e2c037c3a51a"
             ]
         ],
         "outputLabels": [
@@ -4551,8 +4550,8 @@
         "targetType": "full",
         "statusVal": "payload",
         "statusType": "auto",
-        "x": 480,
-        "y": 940,
+        "x": 680,
+        "y": 960,
         "wires": []
     },
     {
@@ -4637,7 +4636,8 @@
         "y": 1040,
         "wires": [
             [
-                "d31f9f581dec11e2"
+                "d31f9f581dec11e2",
+                "977534c24838c65e"
             ],
             [
                 "617c92f2be816a8f"
@@ -4804,6 +4804,99 @@
         "statusType": "auto",
         "x": 490,
         "y": 740,
+        "wires": []
+    },
+    {
+        "id": "ee4539cdc67bc222",
+        "type": "inject",
+        "z": "bd4c07398c4539cf",
+        "name": "SLD input data",
+        "props": [
+            {
+                "p": "topic",
+                "vt": "str"
+            },
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "SLD/s/value/I",
+        "payload": "{\"device\":\"MPO\",\"ex\":{\"input\":{\"I1\":{\"i_uni\":1},\"I2\":{\"i_uni\":0},\"I3\":{\"i_uni\":0},\"I4\":{\"i_uni\":1},\"I5\":{\"i_uni\":1},\"I6\":{\"i_uni\":0},\"I7\":{\"i_uni\":0},\"I8\":{\"i_uni\":0},\"T\":\"2000-01-01T00:29:17Z\"}}}",
+        "payloadType": "json",
+        "x": 120,
+        "y": 600,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "03c8931f765d7962",
+        "type": "inject",
+        "z": "bd4c07398c4539cf",
+        "name": "SLD counter data",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "SLD/s/value/C",
+        "payload": "{\"device\":\"SLD\",\"ex\":{\"counter\":{\"C1\":{\"counter\":94,\"reset\":0,\"resetted\":0},\"C2\":{\"counter\":0,\"reset\":0,\"resetted\":0},\"C3\":{\"counter\":0,\"reset\":0,\"resetted\":0},\"C4\":{\"counter\":0,\"reset\":0,\"resetted\":0},\"T\":\"2000-01-01T03:51:30Z\"}}}",
+        "payloadType": "json",
+        "x": 120,
+        "y": 1040,
+        "wires": [
+            [
+                "40b6e2c037c3a51a"
+            ]
+        ]
+    },
+    {
+        "id": "40b6e2c037c3a51a",
+        "type": "function",
+        "z": "bd4c07398c4539cf",
+        "name": "",
+        "func": "var p=msg.payload;\nvar xs=p.ex.counter;\nvar s= 'C1=['+ xs.C1.counter +', '+ xs.C1.reset+', '+ xs.C1.resetted+']'+'\\n';\ns=s+'C2=['+  xs.C2.counter +', '+ xs.C2.reset+', '+ xs.C2.resetted+']'+'\\n';\ns=s+'C3=['+  xs.C3.counter +', '+ xs.C3.reset+', '+ xs.C3.resetted+']'+'\\n';\ns=s+'C4=['+  xs.C4.counter +', '+ xs.C4.reset+', '+ xs.C4.resetted+']';\n\nmsg.payload=s;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 280,
+        "y": 1000,
+        "wires": [
+            [
+                "5ff8f71bbb089f86",
+                "f570fbf041b84dc3"
+            ]
+        ]
+    },
+    {
+        "id": "f570fbf041b84dc3",
+        "type": "debug",
+        "z": "bd4c07398c4539cf",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 470,
+        "y": 960,
         "wires": []
     }
 ]
