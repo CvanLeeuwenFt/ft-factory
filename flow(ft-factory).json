@@ -4775,7 +4775,7 @@
         "type": "function",
         "z": "bd4c07398c4539cf",
         "name": "",
-        "func": "var p=msg.payload;\nvar text= 'Power {p.ex.motor.M1.o_duty1 },{p.ex.motor.M1.o_duty2 }'\n\n\n\n\nmsg.payload=s;\nreturn msg;",
+        "func": "var p=msg.payload;\nvar s= 'Power {p.ex.motor.M1.o_duty1 },{p.ex.motor.M1.o_duty2 }'\n\n\n\n\nmsg.payload=s;\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
