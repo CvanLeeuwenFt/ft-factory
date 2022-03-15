@@ -4497,7 +4497,7 @@
         "y": 680,
         "wires": [
             [
-                "69bde9a58b75e08a"
+                "93cd6c0f0af233d6"
             ]
         ],
         "outputLabels": [
@@ -4660,8 +4660,8 @@
         "format": "{{msg.payload}}",
         "layout": "col-center",
         "className": "",
-        "x": 470,
-        "y": 800,
+        "x": 610,
+        "y": 840,
         "wires": []
     },
     {
@@ -4677,8 +4677,8 @@
         "format": "{{msg.payload}}",
         "layout": "col-center",
         "className": "",
-        "x": 470,
-        "y": 840,
+        "x": 610,
+        "y": 880,
         "wires": []
     },
     {
@@ -4694,8 +4694,8 @@
         "format": "{{msg.payload.ex.motor.M1}}",
         "layout": "col-center",
         "className": "",
-        "x": 470,
-        "y": 760,
+        "x": 610,
+        "y": 800,
         "wires": []
     },
     {
@@ -4725,8 +4725,8 @@
         "checkall": "true",
         "repair": false,
         "outputs": 3,
-        "x": 290,
-        "y": 780,
+        "x": 430,
+        "y": 820,
         "wires": [
             [
                 "3823cb8d3a287cd1",
@@ -4765,7 +4765,6 @@
         "y": 840,
         "wires": [
             [
-                "69bde9a58b75e08a",
                 "93cd6c0f0af233d6"
             ]
         ]
@@ -4781,11 +4780,12 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 720,
-        "y": 720,
+        "x": 280,
+        "y": 760,
         "wires": [
             [
-                "9e93884b4a67ed58"
+                "9e93884b4a67ed58",
+                "69bde9a58b75e08a"
             ]
         ]
     },
