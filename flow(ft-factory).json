@@ -4497,7 +4497,8 @@
         "y": 680,
         "wires": [
             [
-                "69bde9a58b75e08a"
+                "69bde9a58b75e08a",
+                "93cd6c0f0af233d6"
             ]
         ],
         "outputLabels": [
@@ -4768,5 +4769,41 @@
                 "69bde9a58b75e08a"
             ]
         ]
+    },
+    {
+        "id": "93cd6c0f0af233d6",
+        "type": "function",
+        "z": "bd4c07398c4539cf",
+        "name": "",
+        "func": "var p=msg.payload;\nvar text= 'Power {p.ex.motor.M1.o_duty1 },{p.ex.motor.M1.o_duty2 }'\n\n\n\n\nmsg.payload=s;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 720,
+        "y": 740,
+        "wires": [
+            [
+                "9e93884b4a67ed58"
+            ]
+        ]
+    },
+    {
+        "id": "9e93884b4a67ed58",
+        "type": "debug",
+        "z": "bd4c07398c4539cf",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 910,
+        "y": 740,
+        "wires": []
     }
 ]
