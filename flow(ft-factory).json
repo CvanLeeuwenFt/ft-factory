@@ -4183,7 +4183,7 @@
         "type": "debug",
         "z": "bd4c07398c4539cf",
         "name": "ValueI",
-        "active": false,
+        "active": true,
         "tosidebar": true,
         "console": true,
         "tostatus": true,
@@ -4906,9 +4906,9 @@
         "type": "function",
         "z": "bd4c07398c4539cf",
         "name": "",
-        "func": "var p=msg.payload;\nvar xs=p.ex.motor;\nvar s= 'M1=['+ xs.M1.duty1 +', '+ xs.M1.duty2+', '+ xs.M1.dist+']'+'\\n';\ns=s+'M2=['+ xs.M2.duty1 +', '+ xs.M2.duty2+', '+ xs.M2.dist+']'+'\\n';\ns=s+'M3=['+ xs.M3.duty1 +', '+ xs.M3.duty2+', '+ xs.M3.dist+']'+'\\n';\ns=s+'M4=['+ xs.M4.duty1 +', '+ xs.M4.duty2+', '+ xs.M4.dist+']'+'\\n';\ns+='T='+ xs.T; \n\nmsg.payload=s;\nreturn msg;",
+        "func": "var p=msg.payload;\nvar xs=p.ex.input;\nvar s= 'I=['+ xs.I1.uni +', '+ xs.I2.uni+', '+ xs.I3.uni +', '+ xs.I4.uni+;\ns+=', '+ xs.I5.uni +', '+ xs.I5.uni+', '+ xs.I7.uni +', '+ xs.I8.uni+']'+'\\n';\ns+='T='+ xs.T; \n\nmsg.payload=s;\nreturn msg;",
         "outputs": 1,
-        "noerr": 0,
+        "noerr": 1,
         "initialize": "",
         "finalize": "",
         "libs": [],
@@ -4916,8 +4916,26 @@
         "y": 520,
         "wires": [
             [
-                "b5e06cde3cd69c85"
+                "b5e06cde3cd69c85",
+                "cc9446962620583f"
             ]
         ]
+    },
+    {
+        "id": "cc9446962620583f",
+        "type": "debug",
+        "z": "bd4c07398c4539cf",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 490,
+        "y": 460,
+        "wires": []
     }
 ]
