@@ -4691,7 +4691,7 @@
         "height": 2,
         "name": "sld_value_dataM",
         "label": "SLD Value dataM",
-        "format": "{{msg.payload.ex}}",
+        "format": "{{msg.payload.ex.motor}}",
         "layout": "col-center",
         "className": "",
         "x": 470,
