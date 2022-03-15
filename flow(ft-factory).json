@@ -4778,7 +4778,7 @@
         "crontab": "",
         "once": false,
         "onceDelay": 0.1,
-        "topic": "SLD/s/status/M",
+        "topic": "SLD/s/value/M",
         "payload": "{\"device\":\"SLD\",\"ex\":{\"motor\":{\"M1\":{\"o_dista\":512,\"o_duty1\":0,\"o_duty2\":4500},\"M2\":{\"o_dista\":512,\"o_duty1\":0,\"o_duty2\":0},\"M3\":{\"o_dista\":0,\"o_duty1\":512,\"o_duty2\":0},\"M4\":{\"o_dista\":300,\"o_duty1\":300,\"o_duty2\":0},\"T\":\"2000-01-01T03:51:30Z\"}}}",
         "payloadType": "json",
         "x": 120,
