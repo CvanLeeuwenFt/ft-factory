@@ -2872,7 +2872,7 @@
         "type": "function",
         "z": "3a2b4845297472e9",
         "name": "",
-        "func": "var topic=msg.topic;\nvar payload=msg.payload;\n\nvar objId = payload.id;\nvar objp1 = payload.par[0];\nvar objp2 = payload.par[1];\nvar objp3 = payload.par[2];\nvar objp4 = payload.par[3];\nvar objp5 = payload.par[4];\nvar objT = payload.t;\n\n\nvar msgp1={};\nvar msgp2={};\nvar msgp3={};\nvar msgp4={};\nvar msgp5={};\nvar msgId={};\nvar msgT={};\n\nmsgId.payload=  objId ;\nmsgId.topic= \"ID=\";\n\nmsgp1.payload= JSON.stringify(  objp1 );\nmsgp1.topic= \"txt/new\";\n\nmsgp2.payload= JSON.stringify( objp2 );\nmsgp2.topic =   \"txt/new\";\n\nmsgp3.payload= JSON.stringify(  objp3 );\nmsgp3.topic =   \"txt/new\";\n\nmsgp4.payload=  JSON.stringify( objp4 );\nmsgp4.topic =   \"txt/new\";\n\nmsgp5.payload= JSON.stringify(  objp5 );\nmsgp5.topic =   \"txt/new\";\n\nmsgT.payload= objT;// JSON.stringify(  objT );\nmsgT.topic =   \"txt/new\";\n\nreturn [msg,msgId1, msgId2,msgId3,msgId4,msgId5 ];",
+        "func": "var topic=msg.topic;\nvar payload=msg.payload;\n\nvar objId = payload.id;\nvar objp1 = payload.par[0];\nvar objp2 = payload.par[1];\nvar objp3 = payload.par[2];\nvar objp4 = payload.par[3];\nvar objp5 = payload.par[4];\nvar objT = payload.t;\n\n\nvar msgId1={};\nvar msgId2={};\nvar msgId3={};\nvar msgId4={};\nvar msgId5={};\n\n\n// msgId.payload=  objId ;\n//msgId.topic= \"ID=\";\n\n\n\nreturn [msg,msgId1, msgId2,msgId3,msgId4,msgId5 ];",
         "outputs": 6,
         "noerr": 0,
         "initialize": "",
@@ -2882,7 +2882,8 @@
         "y": 380,
         "wires": [
             [
-                "408f320252684c7c"
+                "408f320252684c7c",
+                "fddfce4536d97210"
             ],
             [],
             [],
@@ -2890,6 +2891,23 @@
             [],
             []
         ]
+    },
+    {
+        "id": "fddfce4536d97210",
+        "type": "debug",
+        "z": "3a2b4845297472e9",
+        "name": "Select01",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": true,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "payload",
+        "statusType": "auto",
+        "x": 480,
+        "y": 180,
+        "wires": []
     },
     {
         "id": "813a9a312fe3c109",
