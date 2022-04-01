@@ -3490,7 +3490,7 @@
         "finalize": "",
         "libs": [],
         "x": 830,
-        "y": 920,
+        "y": 980,
         "wires": [
             [
                 "69f3329d62e26908",
@@ -3548,7 +3548,7 @@
         "statusVal": "payload",
         "statusType": "auto",
         "x": 1050,
-        "y": 820,
+        "y": 880,
         "wires": []
     },
     {
@@ -3565,7 +3565,7 @@
         "statusVal": "payload",
         "statusType": "auto",
         "x": 1050,
-        "y": 920,
+        "y": 980,
         "wires": []
     },
     {
@@ -3582,7 +3582,7 @@
         "statusVal": "payload",
         "statusType": "auto",
         "x": 1050,
-        "y": 1220,
+        "y": 1280,
         "wires": []
     },
     {
@@ -3599,7 +3599,7 @@
         "statusVal": "payload",
         "statusType": "auto",
         "x": 1050,
-        "y": 1020,
+        "y": 1080,
         "wires": []
     },
     {
@@ -3616,7 +3616,7 @@
         "statusVal": "payload",
         "statusType": "auto",
         "x": 1050,
-        "y": 1120,
+        "y": 1180,
         "wires": []
     },
     {
@@ -3633,7 +3633,7 @@
         "layout": "row-right",
         "className": "",
         "x": 1090,
-        "y": 980,
+        "y": 1040,
         "wires": []
     },
     {
@@ -3650,7 +3650,7 @@
         "statusVal": "payload",
         "statusType": "auto",
         "x": 1050,
-        "y": 720,
+        "y": 780,
         "wires": []
     },
     {
@@ -3667,7 +3667,7 @@
         "layout": "col-center",
         "className": "",
         "x": 1090,
-        "y": 680,
+        "y": 740,
         "wires": []
     },
     {
@@ -3684,7 +3684,7 @@
         "statusVal": "payload",
         "statusType": "auto",
         "x": 1080,
-        "y": 1320,
+        "y": 1380,
         "wires": []
     },
     {
@@ -3701,7 +3701,7 @@
         "layout": "row-right",
         "className": "",
         "x": 1090,
-        "y": 1180,
+        "y": 1240,
         "wires": []
     },
     {
@@ -3718,7 +3718,7 @@
         "layout": "row-right",
         "className": "",
         "x": 1090,
-        "y": 1080,
+        "y": 1140,
         "wires": []
     },
     {
@@ -3735,7 +3735,7 @@
         "layout": "row-right",
         "className": "",
         "x": 1090,
-        "y": 880,
+        "y": 940,
         "wires": []
     },
     {
@@ -3752,7 +3752,7 @@
         "layout": "row-right",
         "className": "",
         "x": 1090,
-        "y": 780,
+        "y": 840,
         "wires": []
     },
     {
@@ -3769,7 +3769,301 @@
         "layout": "col-center",
         "className": "",
         "x": 1090,
+        "y": 1340,
+        "wires": []
+    },
+    {
+        "id": "138aa4e7810c95f6",
+        "type": "function",
+        "z": "3a2b4845297472e9",
+        "name": "HBW Pid1ToText",
+        "func": "var topic=msg.topic;\nvar payload=msg.payload;\n\nvar objId = payload.id;\nvar objp1 = payload.par[0];\nvar objp2 = payload.par[1];\nvar objp3 = payload.par[2];\nvar objp4 = payload.par[3];\nvar objp5 = payload.par[4];\nvar objT = payload.t;\n\n\nvar msgp1={};\nvar msgp2={};\nvar msgp3={};\nvar msgp4={};\nvar msgp5={};\nvar msgId={};\nvar msgT={};\n\nmsgId.payload=  objId ;\nmsgId.topic= \"ID=\";\n\nmsgp1.payload= JSON.stringify(  objp1 );\nmsgp1.topic= \"txt/new\";\n\nmsgp2.payload= JSON.stringify( objp2 );\nmsgp2.topic =   \"txt/new\";\n\nmsgp3.payload= JSON.stringify(  objp3 );\nmsgp3.topic =   \"txt/new\";\n\nmsgp4.payload=  JSON.stringify( objp4 );\nmsgp4.topic =   \"txt/new\";\n\nmsgp5.payload= JSON.stringify(  objp5 );\nmsgp5.topic =   \"txt/new\";\n\nmsgT.payload= objT;// JSON.stringify(  objT );\nmsgT.topic =   \"txt/new\";\n\nreturn [msgId, msgp1,msgp2,msgp3,msgp4,msgp5,msgT ];",
+        "outputs": 7,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 310,
+        "y": 1220,
+        "wires": [
+            [
+                "0f934a528720a5dc",
+                "73ed4f929bd547d6"
+            ],
+            [
+                "7a91dfac8478c219",
+                "841025a258b5cfce"
+            ],
+            [
+                "d59db736608abf13",
+                "5af9183d1cc8c22e"
+            ],
+            [
+                "2fda3f977f4f0e7b",
+                "fd19f511a43e851b"
+            ],
+            [
+                "305a93258ffbeec6",
+                "f5d8cee3701f75c5"
+            ],
+            [
+                "c8e4e52a621a4c7a",
+                "04c3465044c25a6d"
+            ],
+            [
+                "afaa4bf92e98e84b",
+                "a7f8801bda2cbf36"
+            ]
+        ],
+        "inputLabels": [
+            "Json{}"
+        ],
+        "outputLabels": [
+            "Id",
+            "P1",
+            "P2",
+            "P3",
+            "P4",
+            "P5",
+            "Time"
+        ]
+    },
+    {
+        "id": "7a91dfac8478c219",
+        "type": "debug",
+        "z": "3a2b4845297472e9",
+        "name": "P1",
+        "active": false,
+        "tosidebar": true,
+        "console": true,
+        "tostatus": true,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "payload",
+        "statusType": "auto",
+        "x": 530,
+        "y": 1120,
+        "wires": []
+    },
+    {
+        "id": "d59db736608abf13",
+        "type": "debug",
+        "z": "3a2b4845297472e9",
+        "name": "P2",
+        "active": false,
+        "tosidebar": true,
+        "console": true,
+        "tostatus": true,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "payload",
+        "statusType": "auto",
+        "x": 530,
+        "y": 1220,
+        "wires": []
+    },
+    {
+        "id": "c8e4e52a621a4c7a",
+        "type": "debug",
+        "z": "3a2b4845297472e9",
+        "name": "P5",
+        "active": false,
+        "tosidebar": true,
+        "console": true,
+        "tostatus": true,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "payload",
+        "statusType": "auto",
+        "x": 530,
+        "y": 1520,
+        "wires": []
+    },
+    {
+        "id": "fd19f511a43e851b",
+        "type": "debug",
+        "z": "3a2b4845297472e9",
+        "name": "P3",
+        "active": false,
+        "tosidebar": true,
+        "console": true,
+        "tostatus": true,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "payload",
+        "statusType": "auto",
+        "x": 530,
+        "y": 1320,
+        "wires": []
+    },
+    {
+        "id": "305a93258ffbeec6",
+        "type": "debug",
+        "z": "3a2b4845297472e9",
+        "name": "P4",
+        "active": false,
+        "tosidebar": true,
+        "console": true,
+        "tostatus": true,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "payload",
+        "statusType": "auto",
+        "x": 530,
+        "y": 1420,
+        "wires": []
+    },
+    {
+        "id": "2fda3f977f4f0e7b",
+        "type": "ui_text",
+        "z": "3a2b4845297472e9",
+        "group": "30840b3c631a61fb",
+        "order": 48,
+        "width": 2,
+        "height": 1,
+        "name": "hbw_p3_3",
+        "label": "P3=",
+        "format": "{{msg.payload}}",
+        "layout": "row-right",
+        "className": "",
+        "x": 570,
         "y": 1280,
+        "wires": []
+    },
+    {
+        "id": "0f934a528720a5dc",
+        "type": "debug",
+        "z": "3a2b4845297472e9",
+        "name": "Id",
+        "active": false,
+        "tosidebar": true,
+        "console": true,
+        "tostatus": true,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "payload",
+        "statusType": "auto",
+        "x": 530,
+        "y": 1020,
+        "wires": []
+    },
+    {
+        "id": "73ed4f929bd547d6",
+        "type": "ui_text",
+        "z": "3a2b4845297472e9",
+        "group": "30840b3c631a61fb",
+        "order": 42,
+        "width": 2,
+        "height": 1,
+        "name": "hbw_p3_Id",
+        "label": "HBW Id=",
+        "format": "{{msg.payload}}",
+        "layout": "col-center",
+        "className": "",
+        "x": 570,
+        "y": 980,
+        "wires": []
+    },
+    {
+        "id": "afaa4bf92e98e84b",
+        "type": "debug",
+        "z": "3a2b4845297472e9",
+        "name": "Time",
+        "active": false,
+        "tosidebar": true,
+        "console": true,
+        "tostatus": true,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "payload",
+        "statusType": "auto",
+        "x": 560,
+        "y": 1620,
+        "wires": []
+    },
+    {
+        "id": "04c3465044c25a6d",
+        "type": "ui_text",
+        "z": "3a2b4845297472e9",
+        "group": "30840b3c631a61fb",
+        "order": 50,
+        "width": 2,
+        "height": 1,
+        "name": "hbw_p3_5",
+        "label": "P5=",
+        "format": "{{msg.payload}}",
+        "layout": "row-right",
+        "className": "",
+        "x": 570,
+        "y": 1480,
+        "wires": []
+    },
+    {
+        "id": "f5d8cee3701f75c5",
+        "type": "ui_text",
+        "z": "3a2b4845297472e9",
+        "group": "30840b3c631a61fb",
+        "order": 49,
+        "width": 2,
+        "height": 1,
+        "name": "hbw_p3_4",
+        "label": "P4=",
+        "format": "{{msg.payload}}",
+        "layout": "row-right",
+        "className": "",
+        "x": 570,
+        "y": 1380,
+        "wires": []
+    },
+    {
+        "id": "5af9183d1cc8c22e",
+        "type": "ui_text",
+        "z": "3a2b4845297472e9",
+        "group": "30840b3c631a61fb",
+        "order": 47,
+        "width": 2,
+        "height": 1,
+        "name": "hbw_p3_2",
+        "label": "P2=",
+        "format": "{{msg.payload}}",
+        "layout": "row-right",
+        "className": "",
+        "x": 570,
+        "y": 1180,
+        "wires": []
+    },
+    {
+        "id": "841025a258b5cfce",
+        "type": "ui_text",
+        "z": "3a2b4845297472e9",
+        "group": "30840b3c631a61fb",
+        "order": 46,
+        "width": 2,
+        "height": 1,
+        "name": "hbw_p3_1",
+        "label": "P1=",
+        "format": "{{msg.payload}}",
+        "layout": "row-right",
+        "className": "",
+        "x": 570,
+        "y": 1080,
+        "wires": []
+    },
+    {
+        "id": "a7f8801bda2cbf36",
+        "type": "ui_text",
+        "z": "3a2b4845297472e9",
+        "group": "30840b3c631a61fb",
+        "order": 44,
+        "width": 5,
+        "height": 1,
+        "name": "hbw_p3_T",
+        "label": "HBW T=",
+        "format": "{{msg.payload}}",
+        "layout": "col-center",
+        "className": "",
+        "x": 570,
+        "y": 1580,
         "wires": []
     },
     {
