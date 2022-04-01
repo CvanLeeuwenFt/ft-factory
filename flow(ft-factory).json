@@ -2584,7 +2584,7 @@
         "id": "11b308cc8927083f",
         "type": "inject",
         "z": "3a2b4845297472e9",
-        "name": "P-msg",
+        "name": "P1-msg",
         "props": [
             {
                 "p": "topic",
@@ -2599,7 +2599,7 @@
         "once": false,
         "onceDelay": 0.1,
         "topic": "HBW/p/p",
-        "payload": " {         \"id\" : \"p4\",         \"par\" :         [                 0,                 0,                -13,                 4,                 4         ],         \"t\" : \"2022-01-01T01:57:41Z\" }",
+        "payload": " {         \"id\" : \"p1\",         \"par\" :         [                 0,                 0,                -13,                 4,                 4         ],         \"t\" : \"2022-01-01T01:57:41Z\" }",
         "payloadType": "str",
         "x": 90,
         "y": 60,
@@ -2963,7 +2963,7 @@
         "statusVal": "payload",
         "statusType": "auto",
         "x": 560,
-        "y": 620,
+        "y": 600,
         "wires": []
     },
     {
