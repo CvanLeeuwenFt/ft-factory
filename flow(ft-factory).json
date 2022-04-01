@@ -2496,11 +2496,11 @@
         "rap": true,
         "rh": 0,
         "inputs": 0,
-        "x": 240,
-        "y": 220,
+        "x": 140,
+        "y": 300,
         "wires": [
             [
-                "408f320252684c7c"
+                "85cdce41b1172c54"
             ]
         ],
         "outputLabels": [
@@ -2520,8 +2520,8 @@
         "format": "{{msg.payload}}",
         "layout": "col-center",
         "className": "",
-        "x": 550,
-        "y": 80,
+        "x": 370,
+        "y": 60,
         "wires": []
     },
     {
@@ -2535,8 +2535,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 549.765625,
-        "y": 168.25,
+        "x": 550,
+        "y": 320,
         "wires": [
             [
                 "9f0d8ebdbef7de27",
@@ -2601,8 +2601,8 @@
         "topic": "SLD/p/p",
         "payload": " {         \"id\" : \"p2\",         \"par\" :         [                 0,                 0,                -13,                 4,                 4         ],         \"t\" : \"2000-01-01T01:57:41Z\" }",
         "payloadType": "str",
-        "x": 230,
-        "y": 120,
+        "x": 110,
+        "y": 40,
         "wires": [
             [
                 "ba6d5e091f648c02"
@@ -2625,8 +2625,8 @@
         "targetType": "full",
         "statusVal": "payload",
         "statusType": "auto",
-        "x": 789.765625,
-        "y": 188.25,
+        "x": 770,
+        "y": 200,
         "wires": []
     },
     {
@@ -2642,8 +2642,8 @@
         "targetType": "full",
         "statusVal": "payload",
         "statusType": "auto",
-        "x": 789.765625,
-        "y": 288.25,
+        "x": 770,
+        "y": 300,
         "wires": []
     },
     {
@@ -2659,8 +2659,8 @@
         "targetType": "full",
         "statusVal": "payload",
         "statusType": "auto",
-        "x": 789.765625,
-        "y": 588.25,
+        "x": 770,
+        "y": 600,
         "wires": []
     },
     {
@@ -2676,8 +2676,8 @@
         "targetType": "full",
         "statusVal": "payload",
         "statusType": "auto",
-        "x": 789.765625,
-        "y": 388.25,
+        "x": 770,
+        "y": 400,
         "wires": []
     },
     {
@@ -2693,8 +2693,8 @@
         "targetType": "full",
         "statusVal": "payload",
         "statusType": "auto",
-        "x": 789.765625,
-        "y": 488.25,
+        "x": 770,
+        "y": 500,
         "wires": []
     },
     {
@@ -2705,12 +2705,12 @@
         "property": "payload",
         "action": "obj",
         "pretty": false,
-        "x": 370,
-        "y": 120,
+        "x": 110,
+        "y": 240,
         "wires": [
             [
-                "408f320252684c7c",
-                "c69c481092575e32"
+                "c69c481092575e32",
+                "85cdce41b1172c54"
             ]
         ]
     },
@@ -2727,8 +2727,8 @@
         "format": "{{msg.payload}}",
         "layout": "row-right",
         "className": "",
-        "x": 829.765625,
-        "y": 348.25,
+        "x": 810,
+        "y": 360,
         "wires": []
     },
     {
@@ -2744,8 +2744,8 @@
         "targetType": "full",
         "statusVal": "payload",
         "statusType": "auto",
-        "x": 789.765625,
-        "y": 88.25,
+        "x": 770,
+        "y": 100,
         "wires": []
     },
     {
@@ -2761,8 +2761,8 @@
         "format": "{{msg.payload}}",
         "layout": "col-center",
         "className": "",
-        "x": 829.765625,
-        "y": 48.25,
+        "x": 810,
+        "y": 60,
         "wires": []
     },
     {
@@ -2778,8 +2778,8 @@
         "targetType": "full",
         "statusVal": "payload",
         "statusType": "auto",
-        "x": 809.765625,
-        "y": 688.25,
+        "x": 790,
+        "y": 700,
         "wires": []
     },
     {
@@ -2795,8 +2795,8 @@
         "format": "{{msg.payload}}",
         "layout": "row-right",
         "className": "",
-        "x": 829.765625,
-        "y": 548.25,
+        "x": 810,
+        "y": 560,
         "wires": []
     },
     {
@@ -2812,8 +2812,8 @@
         "format": "{{msg.payload}}",
         "layout": "row-right",
         "className": "",
-        "x": 829.765625,
-        "y": 448.25,
+        "x": 810,
+        "y": 460,
         "wires": []
     },
     {
@@ -2829,8 +2829,8 @@
         "format": "{{msg.payload}}",
         "layout": "row-right",
         "className": "",
-        "x": 829.765625,
-        "y": 248.25,
+        "x": 810,
+        "y": 260,
         "wires": []
     },
     {
@@ -2846,8 +2846,8 @@
         "format": "{{msg.payload}}",
         "layout": "row-right",
         "className": "",
-        "x": 829.765625,
-        "y": 148.25,
+        "x": 810,
+        "y": 160,
         "wires": []
     },
     {
@@ -2863,9 +2863,33 @@
         "format": "{{msg.payload}}",
         "layout": "col-center",
         "className": "",
-        "x": 829.765625,
-        "y": 648.25,
+        "x": 810,
+        "y": 660,
         "wires": []
+    },
+    {
+        "id": "85cdce41b1172c54",
+        "type": "function",
+        "z": "3a2b4845297472e9",
+        "name": "",
+        "func": "var topic=msg.topic;\nvar payload=msg.payload;\n\nvar objId = payload.id;\nvar objp1 = payload.par[0];\nvar objp2 = payload.par[1];\nvar objp3 = payload.par[2];\nvar objp4 = payload.par[3];\nvar objp5 = payload.par[4];\nvar objT = payload.t;\n\n\nvar msgp1={};\nvar msgp2={};\nvar msgp3={};\nvar msgp4={};\nvar msgp5={};\nvar msgId={};\nvar msgT={};\n\nmsgId.payload=  objId ;\nmsgId.topic= \"ID=\";\n\nmsgp1.payload= JSON.stringify(  objp1 );\nmsgp1.topic= \"txt/new\";\n\nmsgp2.payload= JSON.stringify( objp2 );\nmsgp2.topic =   \"txt/new\";\n\nmsgp3.payload= JSON.stringify(  objp3 );\nmsgp3.topic =   \"txt/new\";\n\nmsgp4.payload=  JSON.stringify( objp4 );\nmsgp4.topic =   \"txt/new\";\n\nmsgp5.payload= JSON.stringify(  objp5 );\nmsgp5.topic =   \"txt/new\";\n\nmsgT.payload= objT;// JSON.stringify(  objT );\nmsgT.topic =   \"txt/new\";\n\nreturn [msg,msgId1, msgId2,msgId3,msgId4,msgId5 ];",
+        "outputs": 6,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 360,
+        "y": 380,
+        "wires": [
+            [
+                "408f320252684c7c"
+            ],
+            [],
+            [],
+            [],
+            [],
+            []
+        ]
     },
     {
         "id": "813a9a312fe3c109",
