@@ -1726,7 +1726,7 @@
         "z": "4c7e81e43391897e",
         "name": "set_actuator_data",
         "label": "Send actuator data",
-        "group": "30840b3c631a61fb",
+        "group": "a9c07e1f45a7f1ee",
         "order": 31,
         "width": 10,
         "height": 1,
@@ -1765,7 +1765,7 @@
         "topicType": "str",
         "splitLayout": true,
         "className": "",
-        "x": 410,
+        "x": 390,
         "y": 140,
         "wires": [
             [
@@ -3187,7 +3187,7 @@
         "z": "86129776fa6cf627",
         "name": "publish_P_data",
         "label": "Send P1-data",
-        "group": "30840b3c631a61fb",
+        "group": "a9c07e1f45a7f1ee",
         "order": 44,
         "width": 10,
         "height": 1,
