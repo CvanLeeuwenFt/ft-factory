@@ -750,8 +750,8 @@
         "name": "spacer",
         "group": "",
         "order": 1,
-        "width": 1,
-        "height": 1
+        "width": "",
+        "height": ""
     },
     {
         "id": "914cfe45.654c5",
@@ -759,8 +759,8 @@
         "name": "spacer",
         "group": "",
         "order": 1,
-        "width": 1,
-        "height": 1
+        "width": "",
+        "height": ""
     },
     {
         "id": "c2045506.d32c58",
@@ -779,8 +779,8 @@
         "name": "spacer",
         "group": "c2045506.d32c58",
         "order": 1,
-        "width": 1,
-        "height": 1
+        "width": "",
+        "height": ""
     },
     {
         "id": "6e42fd2c.304104",
@@ -855,8 +855,8 @@
         "name": "spacer",
         "group": "631573fe.c997ec",
         "order": 4,
-        "width": 1,
-        "height": 1
+        "width": "",
+        "height": ""
     },
     {
         "id": "312d3a0e7b86713a",
