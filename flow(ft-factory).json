@@ -357,30 +357,21 @@
         "width": 6
     },
     {
-        "id": "3e999925.bf7cb6",
-        "type": "ui_group",
-        "name": "Diodes",
-        "tab": "",
-        "order": 1,
-        "disp": true,
-        "width": "3",
-        "collapse": true
-    },
-    {
         "id": "5cfe21d2.307938",
         "type": "ui_group",
         "name": "Gate #2",
-        "tab": "",
+        "tab": "312d3a0e7b86713a",
         "order": 2,
         "disp": true,
         "width": "6",
-        "collapse": false
+        "collapse": false,
+        "className": ""
     },
     {
         "id": "fdb6c31c.4f2818",
         "type": "ui_group",
         "name": "Gate #1",
-        "tab": "",
+        "tab": "312d3a0e7b86713a",
         "order": 1,
         "disp": true,
         "width": "6",
@@ -754,36 +745,6 @@
         "willMsg": {}
     },
     {
-        "id": "25e0d20d.12eefe",
-        "type": "ui_group",
-        "name": "Monitoring - Temperatur",
-        "tab": "",
-        "order": 2,
-        "disp": true,
-        "width": 14,
-        "collapse": true
-    },
-    {
-        "id": "9403be56.33507",
-        "type": "ui_group",
-        "name": "Order",
-        "tab": "",
-        "order": 4,
-        "disp": true,
-        "width": 8,
-        "collapse": true
-    },
-    {
-        "id": "ce21f64.e83b008",
-        "type": "ui_group",
-        "name": "Sensorwerte",
-        "tab": "",
-        "order": 1,
-        "disp": true,
-        "width": "8",
-        "collapse": true
-    },
-    {
         "id": "d71b3abf.e87f18",
         "type": "ui_spacer",
         "name": "spacer",
@@ -796,59 +757,21 @@
         "id": "914cfe45.654c5",
         "type": "ui_spacer",
         "name": "spacer",
-        "group": "ce21f64.e83b008",
+        "group": "",
         "order": 1,
         "width": 1,
         "height": 1
     },
     {
-        "id": "269d9bd9.87bff4",
-        "type": "ui_group",
-        "name": "Camera",
-        "tab": "",
-        "order": 1,
-        "disp": true,
-        "width": "8",
-        "collapse": true
-    },
-    {
-        "id": "c0ed767.7374988",
-        "type": "ui_group",
-        "name": "Monitoring - Luftfeuchtigkeit",
-        "tab": "",
-        "order": 3,
-        "disp": true,
-        "width": 14,
-        "collapse": true
-    },
-    {
-        "id": "e928c4b3.04eb18",
-        "type": "ui_group",
-        "name": "Monitoring - Luftdruck",
-        "tab": "",
-        "order": 4,
-        "disp": true,
-        "width": 14,
-        "collapse": true
-    },
-    {
-        "id": "e67f6a50.c23a18",
-        "type": "ui_group",
-        "name": "Monitoring - Luftqualität",
-        "tab": "",
-        "order": 5,
-        "disp": true,
-        "width": 14,
-        "collapse": true
-    },
-    {
         "id": "c2045506.d32c58",
         "type": "ui_group",
         "name": "Group 1",
-        "tab": "",
+        "tab": "312d3a0e7b86713a",
         "order": 1,
         "disp": true,
-        "width": 6
+        "width": "6",
+        "collapse": false,
+        "className": ""
     },
     {
         "id": "bfb0ae98.80af7",
@@ -869,44 +792,26 @@
         "order": 6
     },
     {
-        "id": "b214200a.fb54c",
-        "type": "ui_group",
-        "name": "Monitoring - Helligkeit",
-        "tab": "",
-        "order": 1,
-        "disp": true,
-        "width": 14,
-        "collapse": true
-    },
-    {
-        "id": "a3a2c861.f57918",
-        "type": "ui_group",
-        "name": "Monitoring - Sensors",
-        "tab": "",
-        "order": 3,
-        "disp": true,
-        "width": 8,
-        "collapse": true
-    },
-    {
         "id": "8069dfe.b488f2",
         "type": "ui_group",
         "name": "Camera Control",
-        "tab": "",
+        "tab": "312d3a0e7b86713a",
         "order": 2,
         "disp": true,
-        "width": 8,
-        "collapse": false
+        "width": "8",
+        "collapse": false,
+        "className": ""
     },
     {
         "id": "631573fe.c997ec",
         "type": "ui_group",
         "name": "Factory Control",
-        "tab": "",
+        "tab": "312d3a0e7b86713a",
         "order": 5,
         "disp": true,
-        "width": 8,
-        "collapse": false
+        "width": "8",
+        "collapse": false,
+        "className": ""
     },
     {
         "id": "c1e37c6d.f404b",
@@ -921,7 +826,7 @@
         "id": "5e3ad3d7.7c6a3c",
         "type": "ui_spacer",
         "name": "spacer",
-        "group": "9403be56.33507",
+        "group": "",
         "order": 2,
         "width": 1,
         "height": 1
@@ -930,7 +835,7 @@
         "id": "c88e8cae.e64b4",
         "type": "ui_spacer",
         "name": "spacer",
-        "group": "9403be56.33507",
+        "group": "",
         "order": 4,
         "width": 1,
         "height": 1
@@ -952,6 +857,14 @@
         "order": 4,
         "width": 1,
         "height": 1
+    },
+    {
+        "id": "312d3a0e7b86713a",
+        "type": "ui_tab",
+        "name": "dummy",
+        "icon": "dashboard",
+        "disabled": false,
+        "hidden": false
     },
     {
         "id": "ead821eead376006",
