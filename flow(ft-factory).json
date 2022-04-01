@@ -26,7 +26,7 @@
     {
         "id": "f0a66f6a5cd9f8b9",
         "type": "tab",
-        "label": "Receive P-data from TXT",
+        "label": "Receive P-data SLD",
         "disabled": false,
         "info": "Subscribe P-data from TXT\n\n\t\"txt/p\",        \n\t\"txt/p/p1\",\n\t\t\"txt/p/p2\",\n\t\t\"txt/p/p3\",\n\t\t\"txt/s\",         \n\t\t\"txt/s/p1\",\n\t\t\"txt/s/p2\",\n\t\t\"txt/s/p3\"",
         "env": []
@@ -56,25 +56,20 @@
         "env": []
     },
     {
-        "id": "d99ca802.0da3f8",
+        "id": "3a2b4845297472e9",
         "type": "tab",
-        "label": "Lernfabrik4.0 - pub",
+        "label": "Receive P-data HBW",
         "disabled": false,
-        "info": ""
+        "info": "Subscribe P-data from TXT\n\n\t\"txt/p\",        \n\t\"txt/p/p1\",\n\t\t\"txt/p/p2\",\n\t\t\"txt/p/p3\",\n\t\t\"txt/s\",         \n\t\t\"txt/s/p1\",\n\t\t\"txt/s/p2\",\n\t\t\"txt/s/p3\"",
+        "env": []
     },
     {
-        "id": "8ef1fe78.3886c",
+        "id": "bf8a6a980178c631",
         "type": "tab",
-        "label": "Lernfabrik4.0 - sub",
+        "label": "Receive P-data MPO",
         "disabled": false,
-        "info": ""
-    },
-    {
-        "id": "a242b4e6.dbec38",
-        "type": "tab",
-        "label": "Lernfabrik4.0 - conf",
-        "disabled": false,
-        "info": ""
+        "info": "",
+        "env": []
     },
     {
         "id": "1ddee8b072c433e9",
@@ -2484,774 +2479,6 @@
         "wires": []
     },
     {
-        "id": "1a29f5251e78ea4d",
-        "type": "mqtt in",
-        "z": "f0a66f6a5cd9f8b9",
-        "name": "MPO p  message",
-        "topic": "MPO/p/p",
-        "qos": "0",
-        "datatype": "json",
-        "broker": "c58f8d4b7c13412d",
-        "nl": false,
-        "rap": true,
-        "rh": 0,
-        "inputs": 0,
-        "x": 1040,
-        "y": 340,
-        "wires": [
-            [
-                "cd935a42bd030fea"
-            ]
-        ],
-        "outputLabels": [
-            "text"
-        ]
-    },
-    {
-        "id": "7fc2a0a5c90caec3",
-        "type": "mqtt in",
-        "z": "f0a66f6a5cd9f8b9",
-        "name": "HBW p  message",
-        "topic": "HBW/p/p",
-        "qos": "0",
-        "datatype": "json",
-        "broker": "c58f8d4b7c13412d",
-        "nl": false,
-        "rap": true,
-        "rh": 0,
-        "inputs": 0,
-        "x": 440,
-        "y": 980,
-        "wires": [
-            [
-                "ca35adf3bd215ff6"
-            ]
-        ],
-        "outputLabels": [
-            "text"
-        ]
-    },
-    {
-        "id": "cf9621ed66eaf421",
-        "type": "ui_text",
-        "z": "f0a66f6a5cd9f8b9",
-        "group": "aa9feae58ac4eadd",
-        "order": 4,
-        "width": 9,
-        "height": 2,
-        "name": "mpo txt data",
-        "label": "mpo txt data",
-        "format": "{{msg.payload}}",
-        "layout": "col-center",
-        "className": "",
-        "x": 1310,
-        "y": 140,
-        "wires": []
-    },
-    {
-        "id": "cd935a42bd030fea",
-        "type": "function",
-        "z": "f0a66f6a5cd9f8b9",
-        "name": "MPO PmsgToText",
-        "func": "var topic=msg.topic;\nvar payload=msg.payload;\n\nvar objId = payload.id;\nvar objp1 = payload.par[0];\nvar objp2 = payload.par[1];\nvar objp3 = payload.par[2];\nvar objp4 = payload.par[3];\nvar objp5 = payload.par[4];\nvar objT = payload.t;\n\n\nvar msgp1={};\nvar msgp2={};\nvar msgp3={};\nvar msgp4={};\nvar msgp5={};\nvar msgId={};\nvar msgT={};\n\nmsgId.payload=  objId ;\nmsgId.topic= \"ID=\";\n\nmsgp1.payload= JSON.stringify(  objp1 );\nmsgp1.topic= \"txt/new\";\n\nmsgp2.payload= JSON.stringify( objp2 );\nmsgp2.topic =   \"txt/new\";\n\nmsgp3.payload= JSON.stringify(  objp3 );\nmsgp3.topic =   \"txt/new\";\n\nmsgp4.payload=  JSON.stringify( objp4 );\nmsgp4.topic =   \"txt/new\";\n\nmsgp5.payload= JSON.stringify(  objp5 );\nmsgp5.topic =   \"txt/new\";\n\nmsgT.payload= objT;// JSON.stringify(  objT );\nmsgT.topic =   \"txt/new\";\n\nreturn [msgId, msgp1,msgp2,msgp3,msgp4,msgp5,msgT ];",
-        "outputs": 7,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 1330,
-        "y": 220,
-        "wires": [
-            [
-                "80524aceb2920b69",
-                "390868443d3a9477"
-            ],
-            [
-                "a0b0b7dc2379ad9a",
-                "0e516b83a1d18a47"
-            ],
-            [
-                "0559b5b43c18bfea",
-                "346dfdab397ae786"
-            ],
-            [
-                "7aad353107bfcb6b",
-                "7b6a94c1f4facbcc"
-            ],
-            [
-                "be01446d5e6e5fde",
-                "bbc7fa3ba46c1f12"
-            ],
-            [
-                "069b82e3e331d8ed",
-                "5f9d183cad2973e5"
-            ],
-            [
-                "371bfe8f726e59df",
-                "3a95b2a74d6c4309"
-            ]
-        ],
-        "inputLabels": [
-            "Json{}"
-        ],
-        "outputLabels": [
-            "Id",
-            "P1",
-            "P2",
-            "P3",
-            "P4",
-            "P5",
-            "Time"
-        ]
-    },
-    {
-        "id": "01961adf460d8aca",
-        "type": "inject",
-        "z": "f0a66f6a5cd9f8b9",
-        "name": "P-msg",
-        "props": [
-            {
-                "p": "topic",
-                "vt": "str"
-            },
-            {
-                "p": "payload"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "SLD/p/p",
-        "payload": " {         \"id\" : \"p2\",         \"par\" :         [                 10,                11                 ,                 0,                 0         ],         \"t\" : \"2000-01-01T01:57:41Z\" }",
-        "payloadType": "str",
-        "x": 1110,
-        "y": 160,
-        "wires": [
-            [
-                "b40734fb88c0b317"
-            ]
-        ],
-        "outputLabels": [
-            "Json"
-        ]
-    },
-    {
-        "id": "a0b0b7dc2379ad9a",
-        "type": "debug",
-        "z": "f0a66f6a5cd9f8b9",
-        "name": "P1",
-        "active": false,
-        "tosidebar": true,
-        "console": true,
-        "tostatus": true,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "payload",
-        "statusType": "auto",
-        "x": 1610,
-        "y": 240,
-        "wires": []
-    },
-    {
-        "id": "0559b5b43c18bfea",
-        "type": "debug",
-        "z": "f0a66f6a5cd9f8b9",
-        "name": "P2",
-        "active": false,
-        "tosidebar": true,
-        "console": true,
-        "tostatus": true,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "payload",
-        "statusType": "auto",
-        "x": 1610,
-        "y": 340,
-        "wires": []
-    },
-    {
-        "id": "069b82e3e331d8ed",
-        "type": "debug",
-        "z": "f0a66f6a5cd9f8b9",
-        "name": "P5",
-        "active": false,
-        "tosidebar": true,
-        "console": true,
-        "tostatus": true,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "payload",
-        "statusType": "auto",
-        "x": 1610,
-        "y": 640,
-        "wires": []
-    },
-    {
-        "id": "7b6a94c1f4facbcc",
-        "type": "debug",
-        "z": "f0a66f6a5cd9f8b9",
-        "name": "P3",
-        "active": false,
-        "tosidebar": true,
-        "console": true,
-        "tostatus": true,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "payload",
-        "statusType": "auto",
-        "x": 1610,
-        "y": 440,
-        "wires": []
-    },
-    {
-        "id": "be01446d5e6e5fde",
-        "type": "debug",
-        "z": "f0a66f6a5cd9f8b9",
-        "name": "P4",
-        "active": false,
-        "tosidebar": true,
-        "console": true,
-        "tostatus": true,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "payload",
-        "statusType": "auto",
-        "x": 1610,
-        "y": 540,
-        "wires": []
-    },
-    {
-        "id": "b40734fb88c0b317",
-        "type": "json",
-        "z": "f0a66f6a5cd9f8b9",
-        "name": "",
-        "property": "payload",
-        "action": "obj",
-        "pretty": false,
-        "x": 1230,
-        "y": 80,
-        "wires": [
-            [
-                "cd935a42bd030fea",
-                "cf9621ed66eaf421"
-            ]
-        ]
-    },
-    {
-        "id": "7aad353107bfcb6b",
-        "type": "ui_text",
-        "z": "f0a66f6a5cd9f8b9",
-        "group": "30840b3c631a61fb",
-        "order": 8,
-        "width": 2,
-        "height": 1,
-        "name": "mpo_p1_3",
-        "label": "P3=",
-        "format": "{{msg.payload}}",
-        "layout": "row-right",
-        "className": "",
-        "x": 1630,
-        "y": 400,
-        "wires": []
-    },
-    {
-        "id": "80524aceb2920b69",
-        "type": "debug",
-        "z": "f0a66f6a5cd9f8b9",
-        "name": "Id",
-        "active": false,
-        "tosidebar": true,
-        "console": true,
-        "tostatus": true,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "payload",
-        "statusType": "auto",
-        "x": 1610,
-        "y": 140,
-        "wires": []
-    },
-    {
-        "id": "390868443d3a9477",
-        "type": "ui_text",
-        "z": "f0a66f6a5cd9f8b9",
-        "group": "30840b3c631a61fb",
-        "order": 2,
-        "width": 2,
-        "height": 1,
-        "name": "mpo_p1_Id",
-        "label": "{{msg.topic}}",
-        "format": "{{msg.payload}}",
-        "layout": "col-center",
-        "className": "",
-        "x": 1630,
-        "y": 100,
-        "wires": []
-    },
-    {
-        "id": "371bfe8f726e59df",
-        "type": "debug",
-        "z": "f0a66f6a5cd9f8b9",
-        "name": "Time",
-        "active": false,
-        "tosidebar": true,
-        "console": true,
-        "tostatus": true,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "payload",
-        "statusType": "auto",
-        "x": 1620,
-        "y": 740,
-        "wires": []
-    },
-    {
-        "id": "5f9d183cad2973e5",
-        "type": "ui_text",
-        "z": "f0a66f6a5cd9f8b9",
-        "group": "30840b3c631a61fb",
-        "order": 10,
-        "width": 2,
-        "height": 1,
-        "name": "mpo_p1_5",
-        "label": "P5=",
-        "format": "{{msg.payload}}",
-        "layout": "row-right",
-        "className": "",
-        "x": 1630,
-        "y": 600,
-        "wires": []
-    },
-    {
-        "id": "bbc7fa3ba46c1f12",
-        "type": "ui_text",
-        "z": "f0a66f6a5cd9f8b9",
-        "group": "30840b3c631a61fb",
-        "order": 9,
-        "width": 2,
-        "height": 1,
-        "name": "mpo_p1_4",
-        "label": "P4=",
-        "format": "{{msg.payload}}",
-        "layout": "row-right",
-        "className": "",
-        "x": 1630,
-        "y": 500,
-        "wires": []
-    },
-    {
-        "id": "346dfdab397ae786",
-        "type": "ui_text",
-        "z": "f0a66f6a5cd9f8b9",
-        "group": "30840b3c631a61fb",
-        "order": 7,
-        "width": 2,
-        "height": 1,
-        "name": "mpo_p1_2",
-        "label": "P2=",
-        "format": "{{msg.payload}}",
-        "layout": "row-right",
-        "className": "",
-        "x": 1630,
-        "y": 300,
-        "wires": []
-    },
-    {
-        "id": "0e516b83a1d18a47",
-        "type": "ui_text",
-        "z": "f0a66f6a5cd9f8b9",
-        "group": "30840b3c631a61fb",
-        "order": 6,
-        "width": 2,
-        "height": 1,
-        "name": "mpo_p1_1",
-        "label": "P1=",
-        "format": "{{msg.payload}}",
-        "layout": "row-right",
-        "className": "",
-        "x": 1630,
-        "y": 200,
-        "wires": []
-    },
-    {
-        "id": "3a95b2a74d6c4309",
-        "type": "ui_text",
-        "z": "f0a66f6a5cd9f8b9",
-        "group": "30840b3c631a61fb",
-        "order": 4,
-        "width": 5,
-        "height": 1,
-        "name": "mpo_p1_T",
-        "label": "T=",
-        "format": "{{msg.payload}}",
-        "layout": "col-center",
-        "className": "",
-        "x": 1630,
-        "y": 700,
-        "wires": []
-    },
-    {
-        "id": "f148c4340805c752",
-        "type": "ui_text",
-        "z": "f0a66f6a5cd9f8b9",
-        "group": "aa9feae58ac4eadd",
-        "order": 10,
-        "width": 9,
-        "height": 2,
-        "name": "hbw txt data",
-        "label": "hbw txt data",
-        "format": "{{msg.payload}}",
-        "layout": "col-center",
-        "className": "",
-        "x": 750,
-        "y": 840,
-        "wires": []
-    },
-    {
-        "id": "ca35adf3bd215ff6",
-        "type": "function",
-        "z": "f0a66f6a5cd9f8b9",
-        "name": "HBW PmsgToText",
-        "func": "var topic=msg.topic;\nvar payload=msg.payload;\n\nvar objId = payload.id;\nvar objp1 = payload.par[0];\nvar objp2 = payload.par[1];\nvar objp3 = payload.par[2];\nvar objp4 = payload.par[3];\nvar objp5 = payload.par[4];\nvar objT = payload.t;\n\n\nvar msgp1={};\nvar msgp2={};\nvar msgp3={};\nvar msgp4={};\nvar msgp5={};\nvar msgId={};\nvar msgT={};\n\nmsgId.payload=  objId ;\nmsgId.topic= \"ID=\";\n\nmsgp1.payload= JSON.stringify(  objp1 );\nmsgp1.topic= \"txt/new\";\n\nmsgp2.payload= JSON.stringify( objp2 );\nmsgp2.topic =   \"txt/new\";\n\nmsgp3.payload= JSON.stringify(  objp3 );\nmsgp3.topic =   \"txt/new\";\n\nmsgp4.payload=  JSON.stringify( objp4 );\nmsgp4.topic =   \"txt/new\";\n\nmsgp5.payload= JSON.stringify(  objp5 );\nmsgp5.topic =   \"txt/new\";\n\nmsgT.payload= objT;// JSON.stringify(  objT );\nmsgT.topic =   \"txt/new\";\n\nreturn [msgId, msgp1,msgp2,msgp3,msgp4,msgp5,msgT ];",
-        "outputs": 7,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 749.765625,
-        "y": 928.25,
-        "wires": [
-            [
-                "50193d4f26814db6",
-                "d2eb1106502cdefb"
-            ],
-            [
-                "f2e5d6727bba5e10",
-                "12ebffadbf841610"
-            ],
-            [
-                "f7977ff668a73113",
-                "d1ffc48be901e49f"
-            ],
-            [
-                "44e88743cc7aed3d",
-                "c801eb648574b93a"
-            ],
-            [
-                "5ffc1d5247e2981c",
-                "d73ddeba68ac3d43"
-            ],
-            [
-                "d9924cc0e24f3959",
-                "4a989f0d1776998a"
-            ],
-            [
-                "ae87eb797c1dc66b",
-                "8c03f50d3993503e"
-            ]
-        ],
-        "inputLabels": [
-            "Json{}"
-        ],
-        "outputLabels": [
-            "Id",
-            "P1",
-            "P2",
-            "P3",
-            "P4",
-            "P5",
-            "Time"
-        ]
-    },
-    {
-        "id": "e5c7f7a48995a5e5",
-        "type": "inject",
-        "z": "f0a66f6a5cd9f8b9",
-        "name": "P-msg",
-        "props": [
-            {
-                "p": "topic",
-                "vt": "str"
-            },
-            {
-                "p": "payload"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "SLD/p/p",
-        "payload": " {         \"id\" : \"p2\",         \"par\" :         [                 0,                 0,                -13,                 4,                 4         ],         \"t\" : \"2000-01-01T01:57:41Z\" }",
-        "payloadType": "str",
-        "x": 430,
-        "y": 880,
-        "wires": [
-            [
-                "ff6ffb5fb236e06d"
-            ]
-        ],
-        "outputLabels": [
-            "Json"
-        ]
-    },
-    {
-        "id": "f2e5d6727bba5e10",
-        "type": "debug",
-        "z": "f0a66f6a5cd9f8b9",
-        "name": "P1",
-        "active": false,
-        "tosidebar": true,
-        "console": true,
-        "tostatus": true,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "payload",
-        "statusType": "auto",
-        "x": 989.765625,
-        "y": 948.25,
-        "wires": []
-    },
-    {
-        "id": "f7977ff668a73113",
-        "type": "debug",
-        "z": "f0a66f6a5cd9f8b9",
-        "name": "P2",
-        "active": false,
-        "tosidebar": true,
-        "console": true,
-        "tostatus": true,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "payload",
-        "statusType": "auto",
-        "x": 989.765625,
-        "y": 1048.25,
-        "wires": []
-    },
-    {
-        "id": "d9924cc0e24f3959",
-        "type": "debug",
-        "z": "f0a66f6a5cd9f8b9",
-        "name": "P5",
-        "active": false,
-        "tosidebar": true,
-        "console": true,
-        "tostatus": true,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "payload",
-        "statusType": "auto",
-        "x": 989.765625,
-        "y": 1348.25,
-        "wires": []
-    },
-    {
-        "id": "c801eb648574b93a",
-        "type": "debug",
-        "z": "f0a66f6a5cd9f8b9",
-        "name": "P3",
-        "active": false,
-        "tosidebar": true,
-        "console": true,
-        "tostatus": true,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "payload",
-        "statusType": "auto",
-        "x": 989.765625,
-        "y": 1148.25,
-        "wires": []
-    },
-    {
-        "id": "5ffc1d5247e2981c",
-        "type": "debug",
-        "z": "f0a66f6a5cd9f8b9",
-        "name": "P4",
-        "active": false,
-        "tosidebar": true,
-        "console": true,
-        "tostatus": true,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "payload",
-        "statusType": "auto",
-        "x": 989.765625,
-        "y": 1248.25,
-        "wires": []
-    },
-    {
-        "id": "ff6ffb5fb236e06d",
-        "type": "json",
-        "z": "f0a66f6a5cd9f8b9",
-        "name": "",
-        "property": "payload",
-        "action": "obj",
-        "pretty": false,
-        "x": 570,
-        "y": 880,
-        "wires": [
-            [
-                "ca35adf3bd215ff6",
-                "f148c4340805c752"
-            ]
-        ]
-    },
-    {
-        "id": "44e88743cc7aed3d",
-        "type": "ui_text",
-        "z": "f0a66f6a5cd9f8b9",
-        "group": "30840b3c631a61fb",
-        "order": 28,
-        "width": 2,
-        "height": 1,
-        "name": "hbw_p1_3",
-        "label": "P3=",
-        "format": "{{msg.payload}}",
-        "layout": "row-right",
-        "className": "",
-        "x": 1029.765625,
-        "y": 1108.25,
-        "wires": []
-    },
-    {
-        "id": "50193d4f26814db6",
-        "type": "debug",
-        "z": "f0a66f6a5cd9f8b9",
-        "name": "Id",
-        "active": false,
-        "tosidebar": true,
-        "console": true,
-        "tostatus": true,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "payload",
-        "statusType": "auto",
-        "x": 989.765625,
-        "y": 848.25,
-        "wires": []
-    },
-    {
-        "id": "d2eb1106502cdefb",
-        "type": "ui_text",
-        "z": "f0a66f6a5cd9f8b9",
-        "group": "30840b3c631a61fb",
-        "order": 22,
-        "width": 2,
-        "height": 1,
-        "name": "hbw_p1_Id",
-        "label": "{{msg.topic}}",
-        "format": "{{msg.payload}}",
-        "layout": "col-center",
-        "className": "",
-        "x": 1029.765625,
-        "y": 808.25,
-        "wires": []
-    },
-    {
-        "id": "ae87eb797c1dc66b",
-        "type": "debug",
-        "z": "f0a66f6a5cd9f8b9",
-        "name": "Time",
-        "active": false,
-        "tosidebar": true,
-        "console": true,
-        "tostatus": true,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "payload",
-        "statusType": "auto",
-        "x": 1009.765625,
-        "y": 1448.25,
-        "wires": []
-    },
-    {
-        "id": "4a989f0d1776998a",
-        "type": "ui_text",
-        "z": "f0a66f6a5cd9f8b9",
-        "group": "30840b3c631a61fb",
-        "order": 30,
-        "width": 2,
-        "height": 1,
-        "name": "hbw_p1_5",
-        "label": "P5=",
-        "format": "{{msg.payload}}",
-        "layout": "row-right",
-        "className": "",
-        "x": 1029.765625,
-        "y": 1308.25,
-        "wires": []
-    },
-    {
-        "id": "d73ddeba68ac3d43",
-        "type": "ui_text",
-        "z": "f0a66f6a5cd9f8b9",
-        "group": "30840b3c631a61fb",
-        "order": 29,
-        "width": 2,
-        "height": 1,
-        "name": "hbw_p1_4",
-        "label": "P4=",
-        "format": "{{msg.payload}}",
-        "layout": "row-right",
-        "className": "",
-        "x": 1029.765625,
-        "y": 1208.25,
-        "wires": []
-    },
-    {
-        "id": "d1ffc48be901e49f",
-        "type": "ui_text",
-        "z": "f0a66f6a5cd9f8b9",
-        "group": "30840b3c631a61fb",
-        "order": 27,
-        "width": 2,
-        "height": 1,
-        "name": "hbw_p1_2",
-        "label": "P2=",
-        "format": "{{msg.payload}}",
-        "layout": "row-right",
-        "className": "",
-        "x": 1029.765625,
-        "y": 1008.25,
-        "wires": []
-    },
-    {
-        "id": "12ebffadbf841610",
-        "type": "ui_text",
-        "z": "f0a66f6a5cd9f8b9",
-        "group": "30840b3c631a61fb",
-        "order": 26,
-        "width": 2,
-        "height": 1,
-        "name": "hbw_p1_1",
-        "label": "P1=",
-        "format": "{{msg.payload}}",
-        "layout": "row-right",
-        "className": "",
-        "x": 1029.765625,
-        "y": 908.25,
-        "wires": []
-    },
-    {
-        "id": "8c03f50d3993503e",
-        "type": "ui_text",
-        "z": "f0a66f6a5cd9f8b9",
-        "group": "30840b3c631a61fb",
-        "order": 24,
-        "width": 5,
-        "height": 1,
-        "name": "hbw_p1_T",
-        "label": "T=",
-        "format": "{{msg.payload}}",
-        "layout": "col-center",
-        "className": "",
-        "x": 1029.765625,
-        "y": 1408.25,
-        "wires": []
-    },
-    {
         "id": "aac3bfe0c4ca492c",
         "type": "link in",
         "z": "f0a66f6a5cd9f8b9",
@@ -5225,3062 +4452,771 @@
         ]
     },
     {
-        "id": "5cd64e31.be149",
+        "id": "f3369630dd1bd52f",
         "type": "mqtt in",
-        "z": "d99ca802.0da3f8",
-        "name": "",
-        "topic": "i/bme680",
+        "z": "3a2b4845297472e9",
+        "name": "HBW p  message",
+        "topic": "HBW/p/p",
         "qos": "0",
         "datatype": "json",
-        "broker": "fa600c20.8a9c9",
+        "broker": "c58f8d4b7c13412d",
         "nl": false,
-        "rap": false,
+        "rap": true,
+        "rh": 0,
         "inputs": 0,
-        "x": 80,
-        "y": 180,
-        "wires": [
-            [
-                "90adb501.37fd88",
-                "a7a3d38d.0d805",
-                "64bf8c65.2ca234",
-                "4f1bfd54.a41194",
-                "da0b8106.7b055",
-                "3af3a33c.c0c18c",
-                "9e139b3e.82edf8"
-            ]
-        ]
-    },
-    {
-        "id": "4c1fa6e3.985a68",
-        "type": "ui_chart",
-        "z": "d99ca802.0da3f8",
-        "name": "",
-        "group": "25e0d20d.12eefe",
-        "order": 1,
-        "width": 0,
-        "height": 0,
-        "label": "Temperatur Graph",
-        "chartType": "line",
-        "legend": "false",
-        "xformat": "auto",
-        "interpolate": "linear",
-        "nodata": "",
-        "dot": false,
-        "ymin": "-10",
-        "ymax": "30",
-        "removeOlder": 1,
-        "removeOlderPoints": "",
-        "removeOlderUnit": "3600",
-        "cutout": 0,
-        "useOneColor": false,
-        "colors": [
-            "#1f77b4",
-            "#aec7e8",
-            "#ff7f0e",
-            "#2ca02c",
-            "#98df8a",
-            "#d62728",
-            "#ff9896",
-            "#9467bd",
-            "#c5b0d5"
-        ],
-        "outputs": 1,
-        "x": 530,
-        "y": 300,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "90adb501.37fd88",
-        "type": "function",
-        "z": "d99ca802.0da3f8",
-        "name": "temp",
-        "func": "msg.payload = msg.payload.t;\nreturn msg;",
-        "outputs": 1,
-        "noerr": 0,
-        "x": 290,
-        "y": 260,
-        "wires": [
-            [
-                "4c1fa6e3.985a68",
-                "f154c45b.dc1eb8",
-                "7289e747.9b4108"
-            ]
-        ]
-    },
-    {
-        "id": "f154c45b.dc1eb8",
-        "type": "debug",
-        "z": "d99ca802.0da3f8",
-        "name": "t",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "payload",
-        "targetType": "msg",
-        "x": 490,
+        "x": 240,
         "y": 220,
-        "wires": []
-    },
-    {
-        "id": "a7a3d38d.0d805",
-        "type": "debug",
-        "z": "d99ca802.0da3f8",
-        "name": "raw",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "payload",
-        "targetType": "msg",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 290,
-        "y": 140,
-        "wires": []
-    },
-    {
-        "id": "64bf8c65.2ca234",
-        "type": "function",
-        "z": "d99ca802.0da3f8",
-        "name": "humidity",
-        "func": "msg.payload = msg.payload.h;\nreturn msg;",
-        "outputs": 1,
-        "noerr": 0,
-        "x": 300,
-        "y": 380,
         "wires": [
             [
-                "a32132c0.d6f84",
-                "cf59797.c9a0088",
-                "5a51db3.2f24024"
+                "408f320252684c7c"
             ]
-        ]
-    },
-    {
-        "id": "a32132c0.d6f84",
-        "type": "ui_chart",
-        "z": "d99ca802.0da3f8",
-        "name": "",
-        "group": "c0ed767.7374988",
-        "order": 1,
-        "width": 0,
-        "height": 0,
-        "label": "Luftfeuchtigkeit Graph",
-        "chartType": "line",
-        "legend": "false",
-        "xformat": "auto",
-        "interpolate": "linear",
-        "nodata": "",
-        "dot": false,
-        "ymin": "0",
-        "ymax": "100",
-        "removeOlder": 1,
-        "removeOlderPoints": "",
-        "removeOlderUnit": "3600",
-        "cutout": 0,
-        "useOneColor": false,
-        "colors": [
-            "#1f77b4",
-            "#aec7e8",
-            "#ff7f0e",
-            "#2ca02c",
-            "#98df8a",
-            "#d62728",
-            "#ff9896",
-            "#9467bd",
-            "#c5b0d5"
         ],
-        "outputs": 1,
-        "x": 540,
-        "y": 420,
-        "wires": [
-            []
+        "outputLabels": [
+            "text"
         ]
     },
     {
-        "id": "cf59797.c9a0088",
-        "type": "debug",
-        "z": "d99ca802.0da3f8",
-        "name": "h",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "payload",
-        "targetType": "msg",
-        "x": 490,
-        "y": 340,
-        "wires": []
-    },
-    {
-        "id": "4f1bfd54.a41194",
-        "type": "function",
-        "z": "d99ca802.0da3f8",
-        "name": "pressure",
-        "func": "msg.payload = msg.payload.p;\nreturn msg;",
-        "outputs": 1,
-        "noerr": 0,
-        "x": 300,
-        "y": 500,
-        "wires": [
-            [
-                "2d7e7920.819fb6",
-                "880a095d.70a0b8",
-                "ff8e8f8e.e72"
-            ]
-        ]
-    },
-    {
-        "id": "da0b8106.7b055",
-        "type": "function",
-        "z": "d99ca802.0da3f8",
-        "name": "air quality index",
-        "func": "msg.payload = msg.payload.iaq;\nreturn msg;",
-        "outputs": 1,
-        "noerr": 0,
-        "x": 320,
-        "y": 620,
-        "wires": [
-            [
-                "5a3ca68e.6cf908",
-                "31a14b2a.793264",
-                "ae43a7e7.0bfd58"
-            ]
-        ]
-    },
-    {
-        "id": "fb71edad.77334",
-        "type": "comment",
-        "z": "d99ca802.0da3f8",
-        "name": "https://github.com/fischertechnik/txt_training_factory/blob/master/TxtSmartFactoryLib/doc/MqttInterface.md",
-        "info": "",
-        "x": 380,
-        "y": 40,
-        "wires": []
-    },
-    {
-        "id": "9e139b3e.82edf8",
-        "type": "function",
-        "z": "d99ca802.0da3f8",
-        "name": "timestamp",
-        "func": "var date = new Date(msg.payload.ts);\nmsg.payload = date.toLocaleString('de-DE');\nreturn msg;",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 310,
-        "y": 180,
-        "wires": [
-            [
-                "c4562845.01d648",
-                "33703eac.9fc6a2"
-            ]
-        ]
-    },
-    {
-        "id": "3af3a33c.c0c18c",
-        "type": "function",
-        "z": "d99ca802.0da3f8",
-        "name": "air quality score",
-        "func": "msg.payload = msg.payload.aq;\nreturn msg;",
-        "outputs": 1,
-        "noerr": 0,
-        "x": 320,
-        "y": 740,
-        "wires": [
-            [
-                "9c0a308.1e32fd",
-                "f9d262ae.a967c"
-            ]
-        ]
-    },
-    {
-        "id": "880a095d.70a0b8",
-        "type": "ui_chart",
-        "z": "d99ca802.0da3f8",
-        "name": "",
-        "group": "e928c4b3.04eb18",
-        "order": 1,
-        "width": 0,
-        "height": 0,
-        "label": "Luftdruck Graph",
-        "chartType": "line",
-        "legend": "false",
-        "xformat": "auto",
-        "interpolate": "linear",
-        "nodata": "",
-        "dot": false,
-        "ymin": "900",
-        "ymax": "1100",
-        "removeOlder": 1,
-        "removeOlderPoints": "",
-        "removeOlderUnit": "3600",
-        "cutout": 0,
-        "useOneColor": false,
-        "colors": [
-            "#1f77b4",
-            "#aec7e8",
-            "#ff7f0e",
-            "#2ca02c",
-            "#98df8a",
-            "#d62728",
-            "#ff9896",
-            "#9467bd",
-            "#c5b0d5"
-        ],
-        "outputs": 1,
-        "x": 520,
-        "y": 540,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "2d7e7920.819fb6",
-        "type": "debug",
-        "z": "d99ca802.0da3f8",
-        "name": "p",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "payload",
-        "targetType": "msg",
-        "x": 490,
-        "y": 460,
-        "wires": []
-    },
-    {
-        "id": "31a14b2a.793264",
-        "type": "ui_chart",
-        "z": "d99ca802.0da3f8",
-        "name": "",
-        "group": "e67f6a50.c23a18",
-        "order": 1,
-        "width": 0,
-        "height": 0,
-        "label": "Luftqualität Graph",
-        "chartType": "line",
-        "legend": "false",
-        "xformat": "auto",
-        "interpolate": "linear",
-        "nodata": "",
-        "dot": false,
-        "ymin": "0",
-        "ymax": "200",
-        "removeOlder": 1,
-        "removeOlderPoints": "",
-        "removeOlderUnit": "3600",
-        "cutout": 0,
-        "useOneColor": false,
-        "colors": [
-            "#808080",
-            "#aec7e8",
-            "#ff7f0e",
-            "#2ca02c",
-            "#98df8a",
-            "#d62728",
-            "#ff9896",
-            "#9467bd",
-            "#c5b0d5"
-        ],
-        "outputs": 1,
-        "x": 530,
-        "y": 660,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "5a3ca68e.6cf908",
-        "type": "debug",
-        "z": "d99ca802.0da3f8",
-        "name": "iaq",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "payload",
-        "targetType": "msg",
-        "x": 490,
-        "y": 580,
-        "wires": []
-    },
-    {
-        "id": "9c0a308.1e32fd",
-        "type": "debug",
-        "z": "d99ca802.0da3f8",
-        "name": "aq",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "payload",
-        "targetType": "msg",
-        "x": 490,
-        "y": 700,
-        "wires": []
-    },
-    {
-        "id": "c4562845.01d648",
-        "type": "debug",
-        "z": "d99ca802.0da3f8",
-        "name": "ts",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "payload",
-        "targetType": "msg",
-        "x": 490,
-        "y": 140,
-        "wires": []
-    },
-    {
-        "id": "33703eac.9fc6a2",
+        "id": "c69c481092575e32",
         "type": "ui_text",
-        "z": "d99ca802.0da3f8",
-        "group": "a3a2c861.f57918",
-        "order": 1,
-        "width": 0,
-        "height": 0,
-        "name": "",
-        "label": "timestamp BME680",
+        "z": "3a2b4845297472e9",
+        "group": "aa9feae58ac4eadd",
+        "order": 10,
+        "width": 9,
+        "height": 2,
+        "name": "hbw txt data",
+        "label": "hbw txt data",
         "format": "{{msg.payload}}",
-        "layout": "row-spread",
+        "layout": "col-center",
         "className": "",
-        "x": 530,
-        "y": 180,
-        "wires": []
-    },
-    {
-        "id": "b355756.8a49388",
-        "type": "ui_template",
-        "z": "d99ca802.0da3f8",
-        "group": "269d9bd9.87bff4",
-        "name": "Camera view",
-        "order": 2,
-        "width": 8,
-        "height": 6,
-        "format": "<img src=\"{{msg.payload}}\" />\n",
-        "storeOutMessages": true,
-        "fwdInMessages": true,
-        "templateScope": "local",
-        "x": 510,
-        "y": 1100,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "fa038b47.d0ae88",
-        "type": "mqtt in",
-        "z": "d99ca802.0da3f8",
-        "name": "",
-        "topic": "i/cam",
-        "qos": "0",
-        "datatype": "json",
-        "broker": "fa600c20.8a9c9",
-        "inputs": 0,
-        "x": 70,
-        "y": 1060,
-        "wires": [
-            [
-                "415afe1d.9c93",
-                "d03fb41.9611448",
-                "ceec5f61.0f45d"
-            ]
-        ]
-    },
-    {
-        "id": "415afe1d.9c93",
-        "type": "debug",
-        "z": "d99ca802.0da3f8",
-        "name": "raw",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "payload",
-        "targetType": "msg",
-        "x": 290,
-        "y": 1020,
-        "wires": []
-    },
-    {
-        "id": "d03fb41.9611448",
-        "type": "function",
-        "z": "d99ca802.0da3f8",
-        "name": "data",
-        "func": "msg.payload = msg.payload.data;\nreturn msg;",
-        "outputs": 1,
-        "noerr": 0,
-        "x": 290,
-        "y": 1100,
-        "wires": [
-            [
-                "b355756.8a49388"
-            ]
-        ]
-    },
-    {
-        "id": "7289e747.9b4108",
-        "type": "ui_text",
-        "z": "d99ca802.0da3f8",
-        "group": "a3a2c861.f57918",
-        "order": 2,
-        "width": 0,
-        "height": 0,
-        "name": "",
-        "label": "Temperatur",
-        "format": "{{msg.payload}} °C",
-        "layout": "row-spread",
-        "x": 510,
-        "y": 260,
-        "wires": []
-    },
-    {
-        "id": "5a51db3.2f24024",
-        "type": "ui_text",
-        "z": "d99ca802.0da3f8",
-        "group": "a3a2c861.f57918",
-        "order": 3,
-        "width": 0,
-        "height": 0,
-        "name": "",
-        "label": "Luftfeuchtigkeit",
-        "format": "{{msg.payload}} % r.H.",
-        "layout": "row-spread",
-        "x": 520,
-        "y": 380,
-        "wires": []
-    },
-    {
-        "id": "ff8e8f8e.e72",
-        "type": "ui_text",
-        "z": "d99ca802.0da3f8",
-        "group": "a3a2c861.f57918",
-        "order": 4,
-        "width": 0,
-        "height": 0,
-        "name": "",
-        "label": "Luftdruck",
-        "format": "{{msg.payload}} hPa",
-        "layout": "row-spread",
-        "x": 500,
-        "y": 500,
-        "wires": []
-    },
-    {
-        "id": "ae43a7e7.0bfd58",
-        "type": "ui_text",
-        "z": "d99ca802.0da3f8",
-        "group": "a3a2c861.f57918",
-        "order": 5,
-        "width": 0,
-        "height": 0,
-        "name": "",
-        "label": "Luftqualität",
-        "format": "{{msg.payload}}",
-        "layout": "row-spread",
-        "x": 510,
-        "y": 620,
-        "wires": []
-    },
-    {
-        "id": "f9d262ae.a967c",
-        "type": "ui_text",
-        "z": "d99ca802.0da3f8",
-        "group": "a3a2c861.f57918",
-        "order": 6,
-        "width": 0,
-        "height": 0,
-        "name": "",
-        "label": "Luftqualität Genauigkeit",
-        "format": "{{msg.payload}}",
-        "layout": "row-spread",
         "x": 550,
-        "y": 740,
+        "y": 80,
         "wires": []
     },
     {
-        "id": "a901efed.4b3a1",
-        "type": "mqtt in",
-        "z": "d99ca802.0da3f8",
-        "name": "",
-        "topic": "i/ldr",
-        "qos": "0",
-        "datatype": "json",
-        "broker": "fa600c20.8a9c9",
-        "inputs": 0,
-        "x": 70,
-        "y": 840,
-        "wires": [
-            [
-                "fd038e6d.6c91",
-                "e1c4665b.abb0e8",
-                "64561fb3.9c99f"
-            ]
-        ]
-    },
-    {
-        "id": "fd038e6d.6c91",
-        "type": "debug",
-        "z": "d99ca802.0da3f8",
-        "name": "raw",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "payload",
-        "targetType": "msg",
-        "x": 290,
-        "y": 800,
-        "wires": []
-    },
-    {
-        "id": "ceec5f61.0f45d",
+        "id": "408f320252684c7c",
         "type": "function",
-        "z": "d99ca802.0da3f8",
-        "name": "timestamp",
-        "func": "var date = new Date(msg.payload.ts);\nmsg.payload = date.toLocaleString('de-DE');\nreturn msg;",
-        "outputs": 1,
+        "z": "3a2b4845297472e9",
+        "name": "HBW PmsgToText",
+        "func": "var topic=msg.topic;\nvar payload=msg.payload;\n\nvar objId = payload.id;\nvar objp1 = payload.par[0];\nvar objp2 = payload.par[1];\nvar objp3 = payload.par[2];\nvar objp4 = payload.par[3];\nvar objp5 = payload.par[4];\nvar objT = payload.t;\n\n\nvar msgp1={};\nvar msgp2={};\nvar msgp3={};\nvar msgp4={};\nvar msgp5={};\nvar msgId={};\nvar msgT={};\n\nmsgId.payload=  objId ;\nmsgId.topic= \"ID=\";\n\nmsgp1.payload= JSON.stringify(  objp1 );\nmsgp1.topic= \"txt/new\";\n\nmsgp2.payload= JSON.stringify( objp2 );\nmsgp2.topic =   \"txt/new\";\n\nmsgp3.payload= JSON.stringify(  objp3 );\nmsgp3.topic =   \"txt/new\";\n\nmsgp4.payload=  JSON.stringify( objp4 );\nmsgp4.topic =   \"txt/new\";\n\nmsgp5.payload= JSON.stringify(  objp5 );\nmsgp5.topic =   \"txt/new\";\n\nmsgT.payload= objT;// JSON.stringify(  objT );\nmsgT.topic =   \"txt/new\";\n\nreturn [msgId, msgp1,msgp2,msgp3,msgp4,msgp5,msgT ];",
+        "outputs": 7,
         "noerr": 0,
-        "x": 310,
-        "y": 1060,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 549.765625,
+        "y": 168.25,
         "wires": [
             [
-                "d2ff29b0.8bae88",
-                "a1b6297b.a8ecf8"
-            ]
-        ]
-    },
-    {
-        "id": "d2ff29b0.8bae88",
-        "type": "debug",
-        "z": "d99ca802.0da3f8",
-        "name": "ts",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "payload",
-        "targetType": "msg",
-        "x": 490,
-        "y": 1020,
-        "wires": []
-    },
-    {
-        "id": "a1b6297b.a8ecf8",
-        "type": "ui_text",
-        "z": "d99ca802.0da3f8",
-        "group": "269d9bd9.87bff4",
-        "order": 1,
-        "width": 0,
-        "height": 0,
-        "name": "",
-        "label": "timestamp Cam",
-        "format": "{{msg.payload}}",
-        "layout": "row-spread",
-        "x": 520,
-        "y": 1060,
-        "wires": []
-    },
-    {
-        "id": "e1c4665b.abb0e8",
-        "type": "function",
-        "z": "d99ca802.0da3f8",
-        "name": "timestamp",
-        "func": "var date = new Date(msg.payload.ts);\nmsg.payload = date.toLocaleString('de-DE');\nreturn msg;",
-        "outputs": 1,
-        "noerr": 0,
-        "x": 310,
-        "y": 840,
-        "wires": [
+                "9f0d8ebdbef7de27",
+                "d066786ea5eccce9"
+            ],
             [
-                "cb1537cd.723128",
-                "6584889f.461418"
+                "bd5fafde87266690",
+                "45cb5e9048f6123c"
+            ],
+            [
+                "5736c7c55a6c46fd",
+                "baab096306d243a6"
+            ],
+            [
+                "1d81a83df5399172",
+                "31086893f2335365"
+            ],
+            [
+                "408390a93365040b",
+                "f161de1817e30532"
+            ],
+            [
+                "2707baf7a2dc22c4",
+                "e518ac3e70cf86bd"
+            ],
+            [
+                "4b49c1bb7ee2a9a4",
+                "2d8f2879f79c3e93"
             ]
-        ]
-    },
-    {
-        "id": "cb1537cd.723128",
-        "type": "debug",
-        "z": "d99ca802.0da3f8",
-        "name": "ts",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "payload",
-        "targetType": "msg",
-        "x": 490,
-        "y": 800,
-        "wires": []
-    },
-    {
-        "id": "6584889f.461418",
-        "type": "ui_text",
-        "z": "d99ca802.0da3f8",
-        "group": "a3a2c861.f57918",
-        "order": 7,
-        "width": 0,
-        "height": 0,
-        "name": "",
-        "label": "timestamp LDR",
-        "format": "{{msg.payload}}",
-        "layout": "row-spread",
-        "x": 520,
-        "y": 840,
-        "wires": []
-    },
-    {
-        "id": "f7a91221.a68c2",
-        "type": "ui_chart",
-        "z": "d99ca802.0da3f8",
-        "name": "",
-        "group": "b214200a.fb54c",
-        "order": 1,
-        "width": 0,
-        "height": 0,
-        "label": "Helligkeit Graph",
-        "chartType": "line",
-        "legend": "false",
-        "xformat": "auto",
-        "interpolate": "linear",
-        "nodata": "",
-        "dot": false,
-        "ymin": "0",
-        "ymax": "100",
-        "removeOlder": 1,
-        "removeOlderPoints": "",
-        "removeOlderUnit": "3600",
-        "cutout": 0,
-        "useOneColor": false,
-        "colors": [
-            "#1f77b4",
-            "#aec7e8",
-            "#ff7f0e",
-            "#2ca02c",
-            "#98df8a",
-            "#d62728",
-            "#ff9896",
-            "#9467bd",
-            "#c5b0d5"
         ],
-        "outputs": 1,
-        "x": 520,
-        "y": 960,
-        "wires": [
-            []
+        "inputLabels": [
+            "Json{}"
+        ],
+        "outputLabels": [
+            "Id",
+            "P1",
+            "P2",
+            "P3",
+            "P4",
+            "P5",
+            "Time"
         ]
     },
     {
-        "id": "64561fb3.9c99f",
-        "type": "function",
-        "z": "d99ca802.0da3f8",
-        "name": "brightness",
-        "func": "msg.payload = msg.payload.br;\nreturn msg;",
-        "outputs": 1,
-        "noerr": 0,
-        "x": 310,
-        "y": 920,
-        "wires": [
-            [
-                "f7a91221.a68c2",
-                "9e5c781b.a81c58",
-                "549e335d.d3b56c"
-            ]
-        ]
-    },
-    {
-        "id": "9e5c781b.a81c58",
-        "type": "debug",
-        "z": "d99ca802.0da3f8",
-        "name": "br",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "payload",
-        "targetType": "msg",
-        "x": 490,
-        "y": 880,
-        "wires": []
-    },
-    {
-        "id": "549e335d.d3b56c",
-        "type": "ui_text",
-        "z": "d99ca802.0da3f8",
-        "group": "a3a2c861.f57918",
-        "order": 8,
-        "width": 0,
-        "height": 0,
-        "name": "",
-        "label": "Helligkeit",
-        "format": "{{msg.payload}} %",
-        "layout": "row-spread",
-        "x": 500,
-        "y": 920,
-        "wires": []
-    },
-    {
-        "id": "454da047.c4d7e",
-        "type": "mqtt in",
-        "z": "d99ca802.0da3f8",
-        "name": "",
-        "topic": "i/ptu/pos",
-        "qos": "0",
-        "datatype": "json",
-        "broker": "fa600c20.8a9c9",
-        "inputs": 0,
-        "x": 80,
-        "y": 1200,
-        "wires": [
-            [
-                "b494c0b.cbbd44",
-                "5125c6cc.877cf8"
-            ]
-        ]
-    },
-    {
-        "id": "ede2b0e8.656d9",
-        "type": "mqtt in",
-        "z": "d99ca802.0da3f8",
-        "name": "",
-        "topic": "i/alert",
-        "qos": "0",
-        "datatype": "json",
-        "broker": "fa600c20.8a9c9",
-        "inputs": 0,
-        "x": 70,
-        "y": 1300,
-        "wires": [
-            [
-                "e1856f6c.35f25",
-                "c3f762f8.59a1a"
-            ]
-        ]
-    },
-    {
-        "id": "b494c0b.cbbd44",
-        "type": "debug",
-        "z": "d99ca802.0da3f8",
-        "name": "raw",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "payload",
-        "targetType": "msg",
-        "x": 290,
-        "y": 1160,
-        "wires": []
-    },
-    {
-        "id": "e1856f6c.35f25",
-        "type": "debug",
-        "z": "d99ca802.0da3f8",
-        "name": "raw",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "payload",
-        "targetType": "msg",
-        "x": 290,
-        "y": 1260,
-        "wires": []
-    },
-    {
-        "id": "5125c6cc.877cf8",
-        "type": "function",
-        "z": "d99ca802.0da3f8",
-        "name": "timestamp",
-        "func": "var date = new Date(msg.payload.ts);\nmsg.payload = date.toLocaleString('de-DE');\nreturn msg;",
-        "outputs": 1,
-        "noerr": 0,
-        "x": 310,
-        "y": 1200,
-        "wires": [
-            [
-                "eedc3770.3aac18"
-            ]
-        ]
-    },
-    {
-        "id": "eedc3770.3aac18",
-        "type": "debug",
-        "z": "d99ca802.0da3f8",
-        "name": "ts",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "payload",
-        "targetType": "msg",
-        "x": 490,
-        "y": 1160,
-        "wires": []
-    },
-    {
-        "id": "c3f762f8.59a1a",
-        "type": "function",
-        "z": "d99ca802.0da3f8",
-        "name": "timestamp",
-        "func": "var date = new Date(msg.payload.ts);\nmsg.payload = date.toLocaleString('de-DE');\nreturn msg;",
-        "outputs": 1,
-        "noerr": 0,
-        "x": 310,
-        "y": 1300,
-        "wires": [
-            [
-                "6d28ec80.9a3664"
-            ]
-        ]
-    },
-    {
-        "id": "6d28ec80.9a3664",
-        "type": "debug",
-        "z": "d99ca802.0da3f8",
-        "name": "ts",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "payload",
-        "targetType": "msg",
-        "x": 490,
-        "y": 1260,
-        "wires": []
-    },
-    {
-        "id": "9d86de9f.e8252",
-        "type": "mqtt in",
-        "z": "d99ca802.0da3f8",
-        "name": "",
-        "topic": "i/broadcast",
-        "qos": "0",
-        "datatype": "json",
-        "broker": "fa600c20.8a9c9",
-        "inputs": 0,
-        "x": 80,
-        "y": 1400,
-        "wires": [
-            [
-                "b7c29314.acb8e",
-                "238055.cf8e1fac"
-            ]
-        ]
-    },
-    {
-        "id": "b7c29314.acb8e",
-        "type": "debug",
-        "z": "d99ca802.0da3f8",
-        "name": "raw",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "payload",
-        "targetType": "msg",
-        "x": 290,
-        "y": 1360,
-        "wires": []
-    },
-    {
-        "id": "238055.cf8e1fac",
-        "type": "function",
-        "z": "d99ca802.0da3f8",
-        "name": "timestamp",
-        "func": "var date = new Date(msg.payload.ts);\nmsg.payload = date.toLocaleString('de-DE');\nreturn msg;",
-        "outputs": 1,
-        "noerr": 0,
-        "x": 310,
-        "y": 1400,
-        "wires": [
-            [
-                "5f7b71d1.d4f75"
-            ]
-        ]
-    },
-    {
-        "id": "5f7b71d1.d4f75",
-        "type": "debug",
-        "z": "d99ca802.0da3f8",
-        "name": "ts",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "payload",
-        "targetType": "msg",
-        "x": 490,
-        "y": 1360,
-        "wires": []
-    },
-    {
-        "id": "cf09ad40.6ca76",
-        "type": "mqtt in",
-        "z": "d99ca802.0da3f8",
-        "name": "",
-        "topic": "f/i/state/hbw",
-        "qos": "0",
-        "datatype": "json",
-        "broker": "fa600c20.8a9c9",
-        "inputs": 0,
-        "x": 90,
-        "y": 1500,
-        "wires": [
-            [
-                "868b7c8b.4a9e4",
-                "651fdc59.d53304"
-            ]
-        ]
-    },
-    {
-        "id": "868b7c8b.4a9e4",
-        "type": "debug",
-        "z": "d99ca802.0da3f8",
-        "name": "raw",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "payload",
-        "targetType": "msg",
-        "x": 290,
-        "y": 1460,
-        "wires": []
-    },
-    {
-        "id": "651fdc59.d53304",
-        "type": "function",
-        "z": "d99ca802.0da3f8",
-        "name": "timestamp",
-        "func": "var date = new Date(msg.payload.ts);\nmsg.payload = date.toLocaleString('de-DE');\nreturn msg;",
-        "outputs": 1,
-        "noerr": 0,
-        "x": 310,
-        "y": 1500,
-        "wires": [
-            [
-                "7796d728.8c7578"
-            ]
-        ]
-    },
-    {
-        "id": "7796d728.8c7578",
-        "type": "debug",
-        "z": "d99ca802.0da3f8",
-        "name": "ts",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "payload",
-        "targetType": "msg",
-        "x": 490,
-        "y": 1460,
-        "wires": []
-    },
-    {
-        "id": "5ff7971e.dd8d88",
-        "type": "mqtt in",
-        "z": "d99ca802.0da3f8",
-        "name": "",
-        "topic": "f/i/state/vgr",
-        "qos": "0",
-        "datatype": "json",
-        "broker": "fa600c20.8a9c9",
-        "inputs": 0,
-        "x": 80,
-        "y": 1600,
-        "wires": [
-            [
-                "32c0578b.0a5068",
-                "43bb6d3.1445e94"
-            ]
-        ]
-    },
-    {
-        "id": "32c0578b.0a5068",
-        "type": "debug",
-        "z": "d99ca802.0da3f8",
-        "name": "raw",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "payload",
-        "targetType": "msg",
-        "x": 290,
-        "y": 1560,
-        "wires": []
-    },
-    {
-        "id": "43bb6d3.1445e94",
-        "type": "function",
-        "z": "d99ca802.0da3f8",
-        "name": "timestamp",
-        "func": "var date = new Date(msg.payload.ts);\nmsg.payload = date.toLocaleString('de-DE');\nreturn msg;",
-        "outputs": 1,
-        "noerr": 0,
-        "x": 310,
-        "y": 1600,
-        "wires": [
-            [
-                "8bac4d7b.23c26"
-            ]
-        ]
-    },
-    {
-        "id": "8bac4d7b.23c26",
-        "type": "debug",
-        "z": "d99ca802.0da3f8",
-        "name": "ts",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "payload",
-        "targetType": "msg",
-        "x": 490,
-        "y": 1560,
-        "wires": []
-    },
-    {
-        "id": "84747c9e.dd3a1",
-        "type": "mqtt in",
-        "z": "d99ca802.0da3f8",
-        "name": "",
-        "topic": "f/i/state/mpo",
-        "qos": "0",
-        "datatype": "json",
-        "broker": "fa600c20.8a9c9",
-        "inputs": 0,
-        "x": 90,
-        "y": 1700,
-        "wires": [
-            [
-                "9b7844ca.cabb68",
-                "78338ccf.0742e4"
-            ]
-        ]
-    },
-    {
-        "id": "9b7844ca.cabb68",
-        "type": "debug",
-        "z": "d99ca802.0da3f8",
-        "name": "raw",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "payload",
-        "targetType": "msg",
-        "x": 290,
-        "y": 1660,
-        "wires": []
-    },
-    {
-        "id": "78338ccf.0742e4",
-        "type": "function",
-        "z": "d99ca802.0da3f8",
-        "name": "timestamp",
-        "func": "var date = new Date(msg.payload.ts);\nmsg.payload = date.toLocaleString('de-DE');\nreturn msg;",
-        "outputs": 1,
-        "noerr": 0,
-        "x": 310,
-        "y": 1700,
-        "wires": [
-            [
-                "78de4537.b31acc"
-            ]
-        ]
-    },
-    {
-        "id": "78de4537.b31acc",
-        "type": "debug",
-        "z": "d99ca802.0da3f8",
-        "name": "ts",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "payload",
-        "targetType": "msg",
-        "x": 490,
-        "y": 1660,
-        "wires": []
-    },
-    {
-        "id": "c22aaa5d.326338",
-        "type": "mqtt in",
-        "z": "d99ca802.0da3f8",
-        "name": "",
-        "topic": "f/i/state/sld",
-        "qos": "0",
-        "datatype": "json",
-        "broker": "fa600c20.8a9c9",
-        "inputs": 0,
-        "x": 80,
-        "y": 1800,
-        "wires": [
-            [
-                "295f95ce.715a8a",
-                "67132b19.65af44"
-            ]
-        ]
-    },
-    {
-        "id": "295f95ce.715a8a",
-        "type": "debug",
-        "z": "d99ca802.0da3f8",
-        "name": "raw",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "payload",
-        "targetType": "msg",
-        "x": 290,
-        "y": 1760,
-        "wires": []
-    },
-    {
-        "id": "67132b19.65af44",
-        "type": "function",
-        "z": "d99ca802.0da3f8",
-        "name": "timestamp",
-        "func": "var date = new Date(msg.payload.ts);\nmsg.payload = date.toLocaleString('de-DE');\nreturn msg;",
-        "outputs": 1,
-        "noerr": 0,
-        "x": 310,
-        "y": 1800,
-        "wires": [
-            [
-                "44ad7a16.7f1a74"
-            ]
-        ]
-    },
-    {
-        "id": "44ad7a16.7f1a74",
-        "type": "debug",
-        "z": "d99ca802.0da3f8",
-        "name": "ts",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "payload",
-        "targetType": "msg",
-        "x": 490,
-        "y": 1760,
-        "wires": []
-    },
-    {
-        "id": "ff7b51be.0b81",
-        "type": "mqtt in",
-        "z": "d99ca802.0da3f8",
-        "name": "",
-        "topic": "f/i/state/dsi",
-        "qos": "0",
-        "datatype": "json",
-        "broker": "fa600c20.8a9c9",
-        "inputs": 0,
-        "x": 80,
-        "y": 1900,
-        "wires": [
-            [
-                "72520717.5b33d8",
-                "99416429.37a6a8"
-            ]
-        ]
-    },
-    {
-        "id": "72520717.5b33d8",
-        "type": "debug",
-        "z": "d99ca802.0da3f8",
-        "name": "raw",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "payload",
-        "targetType": "msg",
-        "x": 290,
-        "y": 1860,
-        "wires": []
-    },
-    {
-        "id": "99416429.37a6a8",
-        "type": "function",
-        "z": "d99ca802.0da3f8",
-        "name": "timestamp",
-        "func": "var date = new Date(msg.payload.ts);\nmsg.payload = date.toLocaleString('de-DE');\nreturn msg;",
-        "outputs": 1,
-        "noerr": 0,
-        "x": 310,
-        "y": 1900,
-        "wires": [
-            [
-                "a69d289b.75dee8"
-            ]
-        ]
-    },
-    {
-        "id": "a69d289b.75dee8",
-        "type": "debug",
-        "z": "d99ca802.0da3f8",
-        "name": "ts",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "payload",
-        "targetType": "msg",
-        "x": 490,
-        "y": 1860,
-        "wires": []
-    },
-    {
-        "id": "7c642d8e.27cd14",
-        "type": "mqtt in",
-        "z": "d99ca802.0da3f8",
-        "name": "",
-        "topic": "f/i/state/dso",
-        "qos": "0",
-        "datatype": "json",
-        "broker": "fa600c20.8a9c9",
-        "inputs": 0,
-        "x": 90,
-        "y": 2000,
-        "wires": [
-            [
-                "bb2a86d1.8da5a8",
-                "353e9de5.ab6bc2"
-            ]
-        ]
-    },
-    {
-        "id": "bb2a86d1.8da5a8",
-        "type": "debug",
-        "z": "d99ca802.0da3f8",
-        "name": "raw",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "payload",
-        "targetType": "msg",
-        "x": 290,
-        "y": 1960,
-        "wires": []
-    },
-    {
-        "id": "353e9de5.ab6bc2",
-        "type": "function",
-        "z": "d99ca802.0da3f8",
-        "name": "timestamp",
-        "func": "var date = new Date(msg.payload.ts);\nmsg.payload = date.toLocaleString('de-DE');\nreturn msg;",
-        "outputs": 1,
-        "noerr": 0,
-        "x": 310,
-        "y": 2000,
-        "wires": [
-            [
-                "87f03e14.40d4"
-            ]
-        ]
-    },
-    {
-        "id": "87f03e14.40d4",
-        "type": "debug",
-        "z": "d99ca802.0da3f8",
-        "name": "ts",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "payload",
-        "targetType": "msg",
-        "x": 490,
-        "y": 1960,
-        "wires": []
-    },
-    {
-        "id": "c1196ef.87bc99",
-        "type": "mqtt in",
-        "z": "d99ca802.0da3f8",
-        "name": "",
-        "topic": "f/i/stock",
-        "qos": "0",
-        "datatype": "json",
-        "broker": "fa600c20.8a9c9",
-        "inputs": 0,
-        "x": 70,
-        "y": 2100,
-        "wires": [
-            [
-                "d97ba290.8b9e5",
-                "c1c0fe29.9380a"
-            ]
-        ]
-    },
-    {
-        "id": "d97ba290.8b9e5",
-        "type": "debug",
-        "z": "d99ca802.0da3f8",
-        "name": "raw",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "payload",
-        "targetType": "msg",
-        "x": 290,
-        "y": 2060,
-        "wires": []
-    },
-    {
-        "id": "c1c0fe29.9380a",
-        "type": "function",
-        "z": "d99ca802.0da3f8",
-        "name": "timestamp",
-        "func": "var date = new Date(msg.payload.ts);\nmsg.payload = date.toLocaleString('de-DE');\nreturn msg;",
-        "outputs": 1,
-        "noerr": 0,
-        "x": 310,
-        "y": 2100,
-        "wires": [
-            [
-                "18a59601.24e80a"
-            ]
-        ]
-    },
-    {
-        "id": "18a59601.24e80a",
-        "type": "debug",
-        "z": "d99ca802.0da3f8",
-        "name": "ts",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "payload",
-        "targetType": "msg",
-        "x": 490,
-        "y": 2060,
-        "wires": []
-    },
-    {
-        "id": "d8139d1e.c41b7",
-        "type": "mqtt in",
-        "z": "d99ca802.0da3f8",
-        "name": "",
-        "topic": "f/i/order",
-        "qos": "0",
-        "datatype": "json",
-        "broker": "fa600c20.8a9c9",
-        "inputs": 0,
-        "x": 70,
-        "y": 2200,
-        "wires": [
-            [
-                "ab4d4a79.a209c8",
-                "e8840337.cd57a"
-            ]
-        ]
-    },
-    {
-        "id": "ab4d4a79.a209c8",
-        "type": "debug",
-        "z": "d99ca802.0da3f8",
-        "name": "raw",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "payload",
-        "targetType": "msg",
-        "x": 290,
-        "y": 2160,
-        "wires": []
-    },
-    {
-        "id": "e8840337.cd57a",
-        "type": "function",
-        "z": "d99ca802.0da3f8",
-        "name": "timestamp",
-        "func": "var date = new Date(msg.payload.ts);\nmsg.payload = date.toLocaleString('de-DE');\nreturn msg;",
-        "outputs": 1,
-        "noerr": 0,
-        "x": 310,
-        "y": 2200,
-        "wires": [
-            [
-                "1b538ab2.1a70b5"
-            ]
-        ]
-    },
-    {
-        "id": "1b538ab2.1a70b5",
-        "type": "debug",
-        "z": "d99ca802.0da3f8",
-        "name": "ts",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "payload",
-        "targetType": "msg",
-        "x": 490,
-        "y": 2160,
-        "wires": []
-    },
-    {
-        "id": "e2c79422.3e00f8",
-        "type": "mqtt in",
-        "z": "d99ca802.0da3f8",
-        "name": "",
-        "topic": "f/i/nfc/ds",
-        "qos": "0",
-        "datatype": "json",
-        "broker": "fa600c20.8a9c9",
-        "inputs": 0,
-        "x": 80,
-        "y": 2300,
-        "wires": [
-            [
-                "8dad8ee8.e62b8",
-                "ca14c34b.33c76"
-            ]
-        ]
-    },
-    {
-        "id": "8dad8ee8.e62b8",
-        "type": "debug",
-        "z": "d99ca802.0da3f8",
-        "name": "raw",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "payload",
-        "targetType": "msg",
-        "x": 290,
-        "y": 2260,
-        "wires": []
-    },
-    {
-        "id": "ca14c34b.33c76",
-        "type": "function",
-        "z": "d99ca802.0da3f8",
-        "name": "timestamp",
-        "func": "var date = new Date(msg.payload.ts);\nmsg.payload = date.toLocaleString('de-DE');\nreturn msg;",
-        "outputs": 1,
-        "noerr": 0,
-        "x": 310,
-        "y": 2300,
-        "wires": [
-            [
-                "8d506796.44c348"
-            ]
-        ]
-    },
-    {
-        "id": "8d506796.44c348",
-        "type": "debug",
-        "z": "d99ca802.0da3f8",
-        "name": "ts",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "payload",
-        "targetType": "msg",
-        "x": 490,
-        "y": 2260,
-        "wires": []
-    },
-    {
-        "id": "e94f62a.db538a",
-        "type": "mqtt in",
-        "z": "d99ca802.0da3f8",
-        "name": "",
-        "topic": "fl/ssc/joy",
-        "qos": "0",
-        "datatype": "json",
-        "broker": "fa600c20.8a9c9",
-        "inputs": 0,
-        "x": 760,
-        "y": 180,
-        "wires": [
-            [
-                "d35a0b3f.5cbb28",
-                "48d8dd2a.e3c4f4"
-            ]
-        ]
-    },
-    {
-        "id": "d35a0b3f.5cbb28",
-        "type": "debug",
-        "z": "d99ca802.0da3f8",
-        "name": "raw",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "payload",
-        "targetType": "msg",
-        "x": 970,
-        "y": 140,
-        "wires": []
-    },
-    {
-        "id": "48d8dd2a.e3c4f4",
-        "type": "function",
-        "z": "d99ca802.0da3f8",
-        "name": "timestamp",
-        "func": "var date = new Date(msg.payload.ts);\nmsg.payload = date.toLocaleString('de-DE');\nreturn msg;",
-        "outputs": 1,
-        "noerr": 0,
-        "x": 990,
-        "y": 180,
-        "wires": [
-            [
-                "5fb43589.0da85c"
-            ]
-        ]
-    },
-    {
-        "id": "5fb43589.0da85c",
-        "type": "debug",
-        "z": "d99ca802.0da3f8",
-        "name": "ts",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "payload",
-        "targetType": "msg",
-        "x": 1170,
-        "y": 140,
-        "wires": []
-    },
-    {
-        "id": "39a710ad.a54c7",
-        "type": "mqtt in",
-        "z": "d99ca802.0da3f8",
-        "name": "",
-        "topic": "fl/vgr/do",
-        "qos": "0",
-        "datatype": "json",
-        "broker": "fa600c20.8a9c9",
-        "inputs": 0,
-        "x": 750,
-        "y": 280,
-        "wires": [
-            [
-                "df1400e5.9c90c",
-                "51600170.55649"
-            ]
-        ]
-    },
-    {
-        "id": "df1400e5.9c90c",
-        "type": "debug",
-        "z": "d99ca802.0da3f8",
-        "name": "raw",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "payload",
-        "targetType": "msg",
-        "x": 970,
-        "y": 240,
-        "wires": []
-    },
-    {
-        "id": "51600170.55649",
-        "type": "function",
-        "z": "d99ca802.0da3f8",
-        "name": "timestamp",
-        "func": "var date = new Date(msg.payload.ts);\nmsg.payload = date.toLocaleString('de-DE');\nreturn msg;",
-        "outputs": 1,
-        "noerr": 0,
-        "x": 990,
-        "y": 280,
-        "wires": [
-            [
-                "49991f90.91193"
-            ]
-        ]
-    },
-    {
-        "id": "49991f90.91193",
-        "type": "debug",
-        "z": "d99ca802.0da3f8",
-        "name": "ts",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "payload",
-        "targetType": "msg",
-        "x": 1170,
-        "y": 240,
-        "wires": []
-    },
-    {
-        "id": "c4a629b8.f9d038",
-        "type": "mqtt in",
-        "z": "d99ca802.0da3f8",
-        "name": "",
-        "topic": "fl/hbw/ack",
-        "qos": "0",
-        "datatype": "json",
-        "broker": "fa600c20.8a9c9",
-        "inputs": 0,
-        "x": 760,
-        "y": 380,
-        "wires": [
-            [
-                "6a46b1cf.893bf",
-                "9bbd246b.2019b8"
-            ]
-        ]
-    },
-    {
-        "id": "6a46b1cf.893bf",
-        "type": "debug",
-        "z": "d99ca802.0da3f8",
-        "name": "raw",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "payload",
-        "targetType": "msg",
-        "x": 970,
-        "y": 340,
-        "wires": []
-    },
-    {
-        "id": "9bbd246b.2019b8",
-        "type": "function",
-        "z": "d99ca802.0da3f8",
-        "name": "timestamp",
-        "func": "var date = new Date(msg.payload.ts);\nmsg.payload = date.toLocaleString('de-DE');\nreturn msg;",
-        "outputs": 1,
-        "noerr": 0,
-        "x": 990,
-        "y": 380,
-        "wires": [
-            [
-                "f24fbc07.76533"
-            ]
-        ]
-    },
-    {
-        "id": "f24fbc07.76533",
-        "type": "debug",
-        "z": "d99ca802.0da3f8",
-        "name": "ts",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "payload",
-        "targetType": "msg",
-        "x": 1170,
-        "y": 340,
-        "wires": []
-    },
-    {
-        "id": "d7b883bb.a2aac",
-        "type": "mqtt in",
-        "z": "d99ca802.0da3f8",
-        "name": "",
-        "topic": "fl/mpo/ack",
-        "qos": "0",
-        "datatype": "json",
-        "broker": "fa600c20.8a9c9",
-        "inputs": 0,
-        "x": 760,
-        "y": 480,
-        "wires": [
-            [
-                "3f234c22.648394",
-                "b42806b9.b352b8"
-            ]
-        ]
-    },
-    {
-        "id": "3f234c22.648394",
-        "type": "debug",
-        "z": "d99ca802.0da3f8",
-        "name": "raw",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "payload",
-        "targetType": "msg",
-        "x": 970,
-        "y": 440,
-        "wires": []
-    },
-    {
-        "id": "b42806b9.b352b8",
-        "type": "function",
-        "z": "d99ca802.0da3f8",
-        "name": "timestamp",
-        "func": "var date = new Date(msg.payload.ts);\nmsg.payload = date.toLocaleString('de-DE');\nreturn msg;",
-        "outputs": 1,
-        "noerr": 0,
-        "x": 990,
-        "y": 480,
-        "wires": [
-            [
-                "7bc02de2.1a8574"
-            ]
-        ]
-    },
-    {
-        "id": "7bc02de2.1a8574",
-        "type": "debug",
-        "z": "d99ca802.0da3f8",
-        "name": "ts",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "payload",
-        "targetType": "msg",
-        "x": 1170,
-        "y": 440,
-        "wires": []
-    },
-    {
-        "id": "d4357a37.e63788",
-        "type": "mqtt in",
-        "z": "d99ca802.0da3f8",
-        "name": "",
-        "topic": "fl/sld/ack",
-        "qos": "0",
-        "datatype": "json",
-        "broker": "fa600c20.8a9c9",
-        "inputs": 0,
-        "x": 760,
-        "y": 580,
-        "wires": [
-            [
-                "1e507d64.2caa73",
-                "e9b77e47.ba80c"
-            ]
-        ]
-    },
-    {
-        "id": "1e507d64.2caa73",
-        "type": "debug",
-        "z": "d99ca802.0da3f8",
-        "name": "raw",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "payload",
-        "targetType": "msg",
-        "x": 970,
-        "y": 540,
-        "wires": []
-    },
-    {
-        "id": "e9b77e47.ba80c",
-        "type": "function",
-        "z": "d99ca802.0da3f8",
-        "name": "timestamp",
-        "func": "var date = new Date(msg.payload.ts);\nmsg.payload = date.toLocaleString('de-DE');\nreturn msg;",
-        "outputs": 1,
-        "noerr": 0,
-        "x": 990,
-        "y": 580,
-        "wires": [
-            [
-                "6ca2cd37.1ec8e4"
-            ]
-        ]
-    },
-    {
-        "id": "6ca2cd37.1ec8e4",
-        "type": "debug",
-        "z": "d99ca802.0da3f8",
-        "name": "ts",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "payload",
-        "targetType": "msg",
-        "x": 1170,
-        "y": 540,
-        "wires": []
-    },
-    {
-        "id": "60ee05ed.ec1e6c",
-        "type": "ui_button",
-        "z": "8ef1fe78.3886c",
-        "name": "",
-        "group": "9403be56.33507",
-        "order": 1,
-        "width": 2,
-        "height": 1,
-        "passthru": true,
-        "label": "WHITE",
-        "tooltip": "",
-        "color": "",
-        "bgcolor": "",
-        "icon": "",
-        "payload": "{\"type\":\"WHITE\"}",
-        "payloadType": "json",
-        "topic": "f/o/order",
-        "x": 260,
-        "y": 660,
-        "wires": [
-            [
-                "608bbd52.bfc014"
-            ]
-        ]
-    },
-    {
-        "id": "ee927345.8afef",
-        "type": "ui_button",
-        "z": "8ef1fe78.3886c",
-        "name": "",
-        "group": "9403be56.33507",
-        "order": 3,
-        "width": 2,
-        "height": 1,
-        "passthru": true,
-        "label": "RED",
-        "tooltip": "",
-        "color": "",
-        "bgcolor": "",
-        "icon": "",
-        "payload": "{\"type\":\"RED\"}",
-        "payloadType": "json",
-        "topic": "f/o/order",
-        "x": 250,
-        "y": 700,
-        "wires": [
-            [
-                "608bbd52.bfc014"
-            ]
-        ]
-    },
-    {
-        "id": "9bed5a2b.86e9a8",
-        "type": "ui_button",
-        "z": "8ef1fe78.3886c",
-        "name": "",
-        "group": "9403be56.33507",
-        "order": 5,
-        "width": 2,
-        "height": 1,
-        "passthru": true,
-        "label": "BLUE",
-        "tooltip": "",
-        "color": "",
-        "bgcolor": "",
-        "icon": "",
-        "payload": "{\"type\":\"BLUE\"}",
-        "payloadType": "json",
-        "topic": "f/o/order",
-        "x": 250,
-        "y": 740,
-        "wires": [
-            [
-                "608bbd52.bfc014"
-            ]
-        ]
-    },
-    {
-        "id": "5276a64e.c0f4c8",
-        "type": "debug",
-        "z": "8ef1fe78.3886c",
-        "name": "",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 690,
-        "y": 620,
-        "wires": []
-    },
-    {
-        "id": "608bbd52.bfc014",
-        "type": "function",
-        "z": "8ef1fe78.3886c",
-        "name": "+ts UTC ISO8301",
-        "func": "var ts = new Date().toISOString();\nmsg.payload[\"ts\"] = ts;\nmsg.payload = JSON.stringify(msg.payload);\nreturn msg;",
-        "outputs": 1,
-        "noerr": 0,
-        "x": 490,
-        "y": 660,
-        "wires": [
-            [
-                "5276a64e.c0f4c8",
-                "a3347b23.efbe38"
-            ]
-        ]
-    },
-    {
-        "id": "a3347b23.efbe38",
-        "type": "mqtt out",
-        "z": "8ef1fe78.3886c",
-        "name": "",
-        "topic": "f/o/order",
-        "qos": "0",
-        "retain": "",
-        "broker": "fa600c20.8a9c9",
-        "x": 700,
-        "y": 660,
-        "wires": []
-    },
-    {
-        "id": "3cfd15ff.4867da",
+        "id": "11b308cc8927083f",
         "type": "inject",
-        "z": "8ef1fe78.3886c",
-        "name": "",
+        "z": "3a2b4845297472e9",
+        "name": "P-msg",
+        "props": [
+            {
+                "p": "topic",
+                "vt": "str"
+            },
+            {
+                "p": "payload"
+            }
+        ],
         "repeat": "",
         "crontab": "",
         "once": false,
         "onceDelay": 0.1,
-        "topic": "",
-        "payload": "",
-        "payloadType": "date",
-        "x": 100,
-        "y": 660,
-        "wires": [
-            [
-                "60ee05ed.ec1e6c"
-            ]
-        ]
-    },
-    {
-        "id": "1ce1c507.34e69b",
-        "type": "inject",
-        "z": "8ef1fe78.3886c",
-        "name": "",
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "",
-        "payloadType": "date",
-        "x": 100,
-        "y": 700,
-        "wires": [
-            [
-                "ee927345.8afef"
-            ]
-        ]
-    },
-    {
-        "id": "1d4b527b.91d9be",
-        "type": "inject",
-        "z": "8ef1fe78.3886c",
-        "name": "",
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "",
-        "payloadType": "date",
-        "x": 100,
-        "y": 740,
-        "wires": [
-            [
-                "9bed5a2b.86e9a8"
-            ]
-        ]
-    },
-    {
-        "id": "52eab68.4b7cf48",
-        "type": "comment",
-        "z": "8ef1fe78.3886c",
-        "name": "https://github.com/fischertechnik/txt_training_factory/blob/master/TxtSmartFactoryLib/doc/MqttInterface.md",
-        "info": "",
-        "x": 380,
-        "y": 40,
-        "wires": []
-    },
-    {
-        "id": "f0e640f.1d143c",
-        "type": "mqtt out",
-        "z": "8ef1fe78.3886c",
-        "name": "",
-        "topic": "o/ptu",
-        "qos": "0",
-        "retain": "",
-        "broker": "fa600c20.8a9c9",
-        "x": 690,
-        "y": 140,
-        "wires": []
-    },
-    {
-        "id": "112ef0ab.bb920f",
-        "type": "inject",
-        "z": "8ef1fe78.3886c",
-        "name": "",
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "",
-        "payloadType": "date",
-        "x": 100,
-        "y": 300,
-        "wires": [
-            [
-                "74d3de94.0142"
-            ]
-        ]
-    },
-    {
-        "id": "3b60584b.462798",
-        "type": "debug",
-        "z": "8ef1fe78.3886c",
-        "name": "",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "payload",
-        "targetType": "msg",
-        "x": 710,
-        "y": 100,
-        "wires": []
-    },
-    {
-        "id": "cd7aa7ce.9ab958",
-        "type": "function",
-        "z": "8ef1fe78.3886c",
-        "name": "+ts UTC ISO8301",
-        "func": "var ts = new Date().toISOString();\nmsg.payload[\"ts\"] = ts;\nmsg.payload = JSON.stringify(msg.payload);\nreturn msg;",
-        "outputs": 1,
-        "noerr": 0,
-        "x": 490,
-        "y": 140,
-        "wires": [
-            [
-                "f0e640f.1d143c",
-                "3b60584b.462798"
-            ]
-        ]
-    },
-    {
-        "id": "bb4a4204.3df4d",
-        "type": "mqtt out",
-        "z": "8ef1fe78.3886c",
-        "name": "",
-        "topic": "f/o/state/ack",
-        "qos": "0",
-        "retain": "",
-        "broker": "fa600c20.8a9c9",
-        "x": 710,
-        "y": 560,
-        "wires": []
-    },
-    {
-        "id": "f26d2c7d.e3f0f",
-        "type": "inject",
-        "z": "8ef1fe78.3886c",
-        "name": "",
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "{\"period\":3}",
-        "payloadType": "json",
-        "x": 100,
-        "y": 560,
-        "wires": [
-            [
-                "973cb9dc.280098"
-            ]
-        ]
-    },
-    {
-        "id": "8822ab82.839ff8",
-        "type": "debug",
-        "z": "8ef1fe78.3886c",
-        "name": "",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "payload",
-        "targetType": "msg",
-        "x": 710,
-        "y": 520,
-        "wires": []
-    },
-    {
-        "id": "dfc79f4b.3083c",
-        "type": "function",
-        "z": "8ef1fe78.3886c",
-        "name": "+ts UTC ISO8301",
-        "func": "var ts = new Date().toISOString();\nmsg.payload[\"ts\"] = ts;\nmsg.payload = JSON.stringify(msg.payload);\nreturn msg;",
-        "outputs": 1,
-        "noerr": 0,
-        "x": 490,
-        "y": 560,
-        "wires": [
-            [
-                "bb4a4204.3df4d",
-                "8822ab82.839ff8"
-            ]
-        ]
-    },
-    {
-        "id": "d8daab1e.a68d78",
-        "type": "mqtt out",
-        "z": "8ef1fe78.3886c",
-        "name": "",
-        "topic": "f/o/nfc/ds",
-        "qos": "0",
-        "retain": "",
-        "respTopic": "",
-        "contentType": "",
-        "userProps": "",
-        "correl": "",
-        "expiry": "",
-        "broker": "fa600c20.8a9c9",
-        "x": 700,
-        "y": 800,
-        "wires": []
-    },
-    {
-        "id": "29d5485e.672a18",
-        "type": "inject",
-        "z": "8ef1fe78.3886c",
-        "name": "",
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "",
-        "payloadType": "date",
-        "x": 100,
-        "y": 800,
-        "wires": [
-            [
-                "16d79297.5b6d5d"
-            ]
-        ]
-    },
-    {
-        "id": "883d4af2.dd6528",
-        "type": "debug",
-        "z": "8ef1fe78.3886c",
-        "name": "",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 690,
-        "y": 760,
-        "wires": []
-    },
-    {
-        "id": "305fd31f.da3fdc",
-        "type": "function",
-        "z": "8ef1fe78.3886c",
-        "name": "+ts UTC ISO8301",
-        "func": "var ts = new Date().toISOString();\nmsg.payload[\"ts\"] = ts;\nmsg.payload = JSON.stringify(msg.payload);\nreturn msg;",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 490,
-        "y": 800,
-        "wires": [
-            [
-                "d8daab1e.a68d78",
-                "883d4af2.dd6528"
-            ]
-        ]
-    },
-    {
-        "id": "74d3de94.0142",
-        "type": "ui_button",
-        "z": "8ef1fe78.3886c",
-        "name": "",
-        "group": "8069dfe.b488f2",
-        "order": 11,
-        "width": 2,
-        "height": 1,
-        "passthru": true,
-        "label": "STOP",
-        "tooltip": "",
-        "color": "",
-        "bgcolor": "",
-        "icon": "",
-        "payload": "{\"cmd\":\"stop\"}",
-        "payloadType": "json",
-        "topic": "",
-        "x": 250,
-        "y": 300,
-        "wires": [
-            [
-                "cd7aa7ce.9ab958"
-            ]
-        ]
-    },
-    {
-        "id": "a3cdf05b.49e0e",
-        "type": "inject",
-        "z": "8ef1fe78.3886c",
-        "name": "",
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "",
-        "payloadType": "date",
-        "x": 100,
-        "y": 340,
-        "wires": [
-            [
-                "149550d9.227e4f"
-            ]
-        ]
-    },
-    {
-        "id": "149550d9.227e4f",
-        "type": "ui_button",
-        "z": "8ef1fe78.3886c",
-        "name": "",
-        "group": "8069dfe.b488f2",
-        "order": 9,
-        "width": 2,
-        "height": 1,
-        "passthru": true,
-        "label": "HOME",
-        "tooltip": "",
-        "color": "",
-        "bgcolor": "",
-        "icon": "",
-        "payload": "{\"cmd\":\"home\"}",
-        "payloadType": "json",
-        "topic": "",
-        "x": 250,
-        "y": 340,
-        "wires": [
-            [
-                "cd7aa7ce.9ab958"
-            ]
-        ]
-    },
-    {
-        "id": "4b856f.26b0fa9",
-        "type": "inject",
-        "z": "8ef1fe78.3886c",
-        "name": "",
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "",
-        "payloadType": "date",
-        "x": 100,
-        "y": 380,
-        "wires": [
-            [
-                "4b50aebf.d1921"
-            ]
-        ]
-    },
-    {
-        "id": "4b50aebf.d1921",
-        "type": "ui_button",
-        "z": "8ef1fe78.3886c",
-        "name": "",
-        "group": "8069dfe.b488f2",
-        "order": 5,
-        "width": 2,
-        "height": 1,
-        "passthru": true,
-        "label": "<<",
-        "tooltip": "",
-        "color": "",
-        "bgcolor": "",
-        "icon": "",
-        "payload": "{\"cmd\":\"start_pan\"}",
-        "payloadType": "json",
-        "topic": "",
-        "x": 250,
-        "y": 380,
-        "wires": [
-            [
-                "cd7aa7ce.9ab958"
-            ]
-        ]
-    },
-    {
-        "id": "db164720.3f7c88",
-        "type": "inject",
-        "z": "8ef1fe78.3886c",
-        "name": "",
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "",
-        "payloadType": "date",
-        "x": 100,
-        "y": 420,
-        "wires": [
-            [
-                "716bf3c2.e9389c"
-            ]
-        ]
-    },
-    {
-        "id": "716bf3c2.e9389c",
-        "type": "ui_button",
-        "z": "8ef1fe78.3886c",
-        "name": "",
-        "group": "8069dfe.b488f2",
-        "order": 6,
-        "width": 2,
-        "height": 1,
-        "passthru": true,
-        "label": ">>",
-        "tooltip": "",
-        "color": "",
-        "bgcolor": "",
-        "icon": "",
-        "payload": "{\"cmd\":\"end_pan\"}",
-        "payloadType": "json",
-        "topic": "",
-        "x": 250,
-        "y": 420,
-        "wires": [
-            [
-                "cd7aa7ce.9ab958"
-            ]
-        ]
-    },
-    {
-        "id": "13f2e4c.cb70b1b",
-        "type": "inject",
-        "z": "8ef1fe78.3886c",
-        "name": "",
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "",
-        "payloadType": "date",
-        "x": 100,
-        "y": 460,
-        "wires": [
-            [
-                "7257227b.e5107c"
-            ]
-        ]
-    },
-    {
-        "id": "7257227b.e5107c",
-        "type": "ui_button",
-        "z": "8ef1fe78.3886c",
-        "name": "",
-        "group": "8069dfe.b488f2",
-        "order": 7,
-        "width": 2,
-        "height": 1,
-        "passthru": true,
-        "label": "vv",
-        "tooltip": "",
-        "color": "",
-        "bgcolor": "",
-        "icon": "",
-        "payload": "{\"cmd\":\"start_tilt\"}",
-        "payloadType": "json",
-        "topic": "",
-        "x": 250,
-        "y": 460,
-        "wires": [
-            [
-                "cd7aa7ce.9ab958"
-            ]
-        ]
-    },
-    {
-        "id": "215c1eeb.1a94f2",
-        "type": "inject",
-        "z": "8ef1fe78.3886c",
-        "name": "",
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "",
-        "payloadType": "date",
-        "x": 100,
-        "y": 500,
-        "wires": [
-            [
-                "ff79f4fd.7fca28"
-            ]
-        ]
-    },
-    {
-        "id": "ff79f4fd.7fca28",
-        "type": "ui_button",
-        "z": "8ef1fe78.3886c",
-        "name": "",
-        "group": "8069dfe.b488f2",
-        "order": 8,
-        "width": 2,
-        "height": 1,
-        "passthru": true,
-        "label": "^^",
-        "tooltip": "",
-        "color": "",
-        "bgcolor": "",
-        "icon": "",
-        "payload": "{\"cmd\":\"end_tilt\"}",
-        "payloadType": "json",
-        "topic": "",
-        "x": 250,
-        "y": 500,
-        "wires": [
-            [
-                "cd7aa7ce.9ab958"
-            ]
-        ]
-    },
-    {
-        "id": "1184ac9a.444a83",
-        "type": "inject",
-        "z": "8ef1fe78.3886c",
-        "name": "",
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "",
-        "payloadType": "date",
-        "x": 100,
-        "y": 140,
-        "wires": [
-            [
-                "eb3877c.03d2b88"
-            ]
-        ]
-    },
-    {
-        "id": "eb3877c.03d2b88",
-        "type": "ui_button",
-        "z": "8ef1fe78.3886c",
-        "name": "",
-        "group": "8069dfe.b488f2",
-        "order": 1,
-        "width": 2,
-        "height": 1,
-        "passthru": true,
-        "label": "<",
-        "tooltip": "",
-        "color": "",
-        "bgcolor": "",
-        "icon": "",
-        "payload": "{\"cmd\":\"relmove_left\",\"degree\":10}",
-        "payloadType": "json",
-        "topic": "",
-        "x": 250,
-        "y": 140,
-        "wires": [
-            [
-                "cd7aa7ce.9ab958"
-            ]
-        ]
-    },
-    {
-        "id": "47f2eeb2.43a2a",
-        "type": "inject",
-        "z": "8ef1fe78.3886c",
-        "name": "",
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "",
-        "payloadType": "date",
-        "x": 100,
-        "y": 180,
-        "wires": [
-            [
-                "903c87b3.6b5908"
-            ]
-        ]
-    },
-    {
-        "id": "903c87b3.6b5908",
-        "type": "ui_button",
-        "z": "8ef1fe78.3886c",
-        "name": "",
-        "group": "8069dfe.b488f2",
-        "order": 2,
-        "width": 2,
-        "height": 1,
-        "passthru": true,
-        "label": ">",
-        "tooltip": "",
-        "color": "",
-        "bgcolor": "",
-        "icon": "",
-        "payload": "{\"cmd\":\"relmove_right\",\"degree\":10}",
-        "payloadType": "json",
-        "topic": "",
-        "x": 250,
-        "y": 180,
-        "wires": [
-            [
-                "cd7aa7ce.9ab958"
-            ]
-        ]
-    },
-    {
-        "id": "c273e22b.b94df",
-        "type": "inject",
-        "z": "8ef1fe78.3886c",
-        "name": "",
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "",
-        "payloadType": "date",
-        "x": 100,
-        "y": 220,
-        "wires": [
-            [
-                "f1e67947.608518"
-            ]
-        ]
-    },
-    {
-        "id": "f1e67947.608518",
-        "type": "ui_button",
-        "z": "8ef1fe78.3886c",
-        "name": "",
-        "group": "8069dfe.b488f2",
-        "order": 3,
-        "width": 2,
-        "height": 1,
-        "passthru": true,
-        "label": "v",
-        "tooltip": "",
-        "color": "",
-        "bgcolor": "",
-        "icon": "",
-        "payload": "{\"cmd\":\"relmove_down\",\"degree\":10}",
-        "payloadType": "json",
-        "topic": "",
-        "x": 250,
-        "y": 220,
-        "wires": [
-            [
-                "cd7aa7ce.9ab958"
-            ]
-        ]
-    },
-    {
-        "id": "29f1be35.9e8792",
-        "type": "inject",
-        "z": "8ef1fe78.3886c",
-        "name": "",
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "",
-        "payloadType": "date",
-        "x": 100,
-        "y": 260,
-        "wires": [
-            [
-                "77e28960.7261c8"
-            ]
-        ]
-    },
-    {
-        "id": "77e28960.7261c8",
-        "type": "ui_button",
-        "z": "8ef1fe78.3886c",
-        "name": "",
-        "group": "8069dfe.b488f2",
-        "order": 4,
-        "width": 2,
-        "height": 1,
-        "passthru": true,
-        "label": "^",
-        "tooltip": "",
-        "color": "",
-        "bgcolor": "",
-        "icon": "",
-        "payload": "{\"cmd\":\"relmove_up\",\"degree\":10}",
-        "payloadType": "json",
-        "topic": "",
-        "x": 250,
-        "y": 260,
-        "wires": [
-            [
-                "cd7aa7ce.9ab958"
-            ]
-        ]
-    },
-    {
-        "id": "973cb9dc.280098",
-        "type": "ui_button",
-        "z": "8ef1fe78.3886c",
-        "name": "",
-        "group": "631573fe.c997ec",
-        "order": 1,
-        "width": 2,
-        "height": 1,
-        "passthru": true,
-        "label": "ACK",
-        "tooltip": "",
-        "color": "",
-        "bgcolor": "",
-        "icon": "",
-        "payload": "{}",
-        "payloadType": "json",
-        "topic": "f/o/state/ack",
-        "x": 250,
-        "y": 560,
-        "wires": [
-            [
-                "dfc79f4b.3083c"
-            ]
-        ]
-    },
-    {
-        "id": "16d79297.5b6d5d",
-        "type": "ui_button",
-        "z": "8ef1fe78.3886c",
-        "name": "",
-        "group": "631573fe.c997ec",
-        "order": 5,
-        "width": 2,
-        "height": 1,
-        "passthru": true,
-        "label": "NFC DELETE",
-        "tooltip": "",
-        "color": "",
-        "bgcolor": "",
-        "className": "",
-        "icon": "",
-        "payload": "{\"cmd\":\"delete\"}",
-        "payloadType": "json",
-        "topic": "f/o/nfc/ds",
-        "topicType": "str",
-        "x": 280,
-        "y": 800,
-        "wires": [
-            [
-                "305fd31f.da3fdc"
-            ]
-        ]
-    },
-    {
-        "id": "9bd53de1.5268c",
-        "type": "inject",
-        "z": "8ef1fe78.3886c",
-        "name": "",
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "",
-        "payloadType": "date",
-        "x": 100,
-        "y": 840,
-        "wires": [
-            [
-                "a92c291.5988ed8"
-            ]
-        ]
-    },
-    {
-        "id": "a92c291.5988ed8",
-        "type": "ui_button",
-        "z": "8ef1fe78.3886c",
-        "name": "",
-        "group": "631573fe.c997ec",
-        "order": 3,
-        "width": 2,
-        "height": 1,
-        "passthru": true,
-        "label": "NFC READ",
-        "tooltip": "",
-        "color": "",
-        "bgcolor": "",
-        "icon": "",
-        "payload": "{\"cmd\":\"read\"}",
-        "payloadType": "json",
-        "topic": "f/o/nfc/ds",
-        "x": 270,
-        "y": 840,
-        "wires": [
-            [
-                "305fd31f.da3fdc"
-            ]
-        ]
-    },
-    {
-        "id": "3f998c7a.4adc74",
-        "type": "mqtt out",
-        "z": "a242b4e6.dbec38",
-        "name": "",
-        "topic": "c/ldr",
-        "qos": "0",
-        "retain": "",
-        "broker": "fa600c20.8a9c9",
-        "x": 690,
-        "y": 260,
-        "wires": []
-    },
-    {
-        "id": "f5e22979.6275a8",
-        "type": "inject",
-        "z": "a242b4e6.dbec38",
-        "name": "",
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "{\"period\":3}",
-        "payloadType": "json",
-        "x": 100,
-        "y": 260,
-        "wires": [
-            [
-                "12f2398c.32eac6"
-            ]
-        ]
-    },
-    {
-        "id": "22b295d2.6ff90a",
-        "type": "debug",
-        "z": "a242b4e6.dbec38",
-        "name": "",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "payload",
-        "targetType": "msg",
-        "x": 710,
-        "y": 220,
-        "wires": []
-    },
-    {
-        "id": "12f2398c.32eac6",
-        "type": "function",
-        "z": "a242b4e6.dbec38",
-        "name": "+ts UTC ISO8301",
-        "func": "var ts = new Date().toISOString();\nmsg.payload[\"ts\"] = ts;\nmsg.payload = JSON.stringify(msg.payload);\nreturn msg;",
-        "outputs": 1,
-        "noerr": 0,
-        "x": 490,
-        "y": 260,
-        "wires": [
-            [
-                "3f998c7a.4adc74",
-                "22b295d2.6ff90a"
-            ]
-        ]
-    },
-    {
-        "id": "f89cd791.c02af8",
-        "type": "comment",
-        "z": "a242b4e6.dbec38",
-        "name": "https://github.com/fischertechnik/txt_training_factory/blob/master/TxtSmartFactoryLib/doc/MqttInterface.md",
-        "info": "",
-        "x": 380,
-        "y": 40,
-        "wires": []
-    },
-    {
-        "id": "230610ce.7a1c7",
-        "type": "mqtt out",
-        "z": "a242b4e6.dbec38",
-        "name": "",
-        "topic": "c/bme680",
-        "qos": "0",
-        "retain": "",
-        "broker": "fa600c20.8a9c9",
-        "x": 700,
-        "y": 160,
-        "wires": []
-    },
-    {
-        "id": "eff19b54.e92248",
-        "type": "inject",
-        "z": "a242b4e6.dbec38",
-        "name": "",
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "{\"period\":3}",
-        "payloadType": "json",
-        "x": 100,
-        "y": 160,
-        "wires": [
-            [
-                "e12a63d7.f1f0b"
-            ]
-        ]
-    },
-    {
-        "id": "e5327053.a608a",
-        "type": "debug",
-        "z": "a242b4e6.dbec38",
-        "name": "",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 690,
+        "topic": "SLD/p/p",
+        "payload": " {         \"id\" : \"p2\",         \"par\" :         [                 0,                 0,                -13,                 4,                 4         ],         \"t\" : \"2000-01-01T01:57:41Z\" }",
+        "payloadType": "str",
+        "x": 230,
         "y": 120,
+        "wires": [
+            [
+                "ba6d5e091f648c02"
+            ]
+        ],
+        "outputLabels": [
+            "Json"
+        ]
+    },
+    {
+        "id": "bd5fafde87266690",
+        "type": "debug",
+        "z": "3a2b4845297472e9",
+        "name": "P1",
+        "active": false,
+        "tosidebar": true,
+        "console": true,
+        "tostatus": true,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "payload",
+        "statusType": "auto",
+        "x": 789.765625,
+        "y": 188.25,
         "wires": []
     },
     {
-        "id": "e12a63d7.f1f0b",
+        "id": "5736c7c55a6c46fd",
+        "type": "debug",
+        "z": "3a2b4845297472e9",
+        "name": "P2",
+        "active": false,
+        "tosidebar": true,
+        "console": true,
+        "tostatus": true,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "payload",
+        "statusType": "auto",
+        "x": 789.765625,
+        "y": 288.25,
+        "wires": []
+    },
+    {
+        "id": "2707baf7a2dc22c4",
+        "type": "debug",
+        "z": "3a2b4845297472e9",
+        "name": "P5",
+        "active": false,
+        "tosidebar": true,
+        "console": true,
+        "tostatus": true,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "payload",
+        "statusType": "auto",
+        "x": 789.765625,
+        "y": 588.25,
+        "wires": []
+    },
+    {
+        "id": "31086893f2335365",
+        "type": "debug",
+        "z": "3a2b4845297472e9",
+        "name": "P3",
+        "active": false,
+        "tosidebar": true,
+        "console": true,
+        "tostatus": true,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "payload",
+        "statusType": "auto",
+        "x": 789.765625,
+        "y": 388.25,
+        "wires": []
+    },
+    {
+        "id": "408390a93365040b",
+        "type": "debug",
+        "z": "3a2b4845297472e9",
+        "name": "P4",
+        "active": false,
+        "tosidebar": true,
+        "console": true,
+        "tostatus": true,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "payload",
+        "statusType": "auto",
+        "x": 789.765625,
+        "y": 488.25,
+        "wires": []
+    },
+    {
+        "id": "ba6d5e091f648c02",
+        "type": "json",
+        "z": "3a2b4845297472e9",
+        "name": "",
+        "property": "payload",
+        "action": "obj",
+        "pretty": false,
+        "x": 370,
+        "y": 120,
+        "wires": [
+            [
+                "408f320252684c7c",
+                "c69c481092575e32"
+            ]
+        ]
+    },
+    {
+        "id": "1d81a83df5399172",
+        "type": "ui_text",
+        "z": "3a2b4845297472e9",
+        "group": "30840b3c631a61fb",
+        "order": 28,
+        "width": 2,
+        "height": 1,
+        "name": "hbw_p1_3",
+        "label": "P3=",
+        "format": "{{msg.payload}}",
+        "layout": "row-right",
+        "className": "",
+        "x": 829.765625,
+        "y": 348.25,
+        "wires": []
+    },
+    {
+        "id": "9f0d8ebdbef7de27",
+        "type": "debug",
+        "z": "3a2b4845297472e9",
+        "name": "Id",
+        "active": false,
+        "tosidebar": true,
+        "console": true,
+        "tostatus": true,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "payload",
+        "statusType": "auto",
+        "x": 789.765625,
+        "y": 88.25,
+        "wires": []
+    },
+    {
+        "id": "d066786ea5eccce9",
+        "type": "ui_text",
+        "z": "3a2b4845297472e9",
+        "group": "30840b3c631a61fb",
+        "order": 22,
+        "width": 2,
+        "height": 1,
+        "name": "hbw_p1_Id",
+        "label": "{{msg.topic}}",
+        "format": "{{msg.payload}}",
+        "layout": "col-center",
+        "className": "",
+        "x": 829.765625,
+        "y": 48.25,
+        "wires": []
+    },
+    {
+        "id": "4b49c1bb7ee2a9a4",
+        "type": "debug",
+        "z": "3a2b4845297472e9",
+        "name": "Time",
+        "active": false,
+        "tosidebar": true,
+        "console": true,
+        "tostatus": true,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "payload",
+        "statusType": "auto",
+        "x": 809.765625,
+        "y": 688.25,
+        "wires": []
+    },
+    {
+        "id": "e518ac3e70cf86bd",
+        "type": "ui_text",
+        "z": "3a2b4845297472e9",
+        "group": "30840b3c631a61fb",
+        "order": 30,
+        "width": 2,
+        "height": 1,
+        "name": "hbw_p1_5",
+        "label": "P5=",
+        "format": "{{msg.payload}}",
+        "layout": "row-right",
+        "className": "",
+        "x": 829.765625,
+        "y": 548.25,
+        "wires": []
+    },
+    {
+        "id": "f161de1817e30532",
+        "type": "ui_text",
+        "z": "3a2b4845297472e9",
+        "group": "30840b3c631a61fb",
+        "order": 29,
+        "width": 2,
+        "height": 1,
+        "name": "hbw_p1_4",
+        "label": "P4=",
+        "format": "{{msg.payload}}",
+        "layout": "row-right",
+        "className": "",
+        "x": 829.765625,
+        "y": 448.25,
+        "wires": []
+    },
+    {
+        "id": "baab096306d243a6",
+        "type": "ui_text",
+        "z": "3a2b4845297472e9",
+        "group": "30840b3c631a61fb",
+        "order": 27,
+        "width": 2,
+        "height": 1,
+        "name": "hbw_p1_2",
+        "label": "P2=",
+        "format": "{{msg.payload}}",
+        "layout": "row-right",
+        "className": "",
+        "x": 829.765625,
+        "y": 248.25,
+        "wires": []
+    },
+    {
+        "id": "45cb5e9048f6123c",
+        "type": "ui_text",
+        "z": "3a2b4845297472e9",
+        "group": "30840b3c631a61fb",
+        "order": 26,
+        "width": 2,
+        "height": 1,
+        "name": "hbw_p1_1",
+        "label": "P1=",
+        "format": "{{msg.payload}}",
+        "layout": "row-right",
+        "className": "",
+        "x": 829.765625,
+        "y": 148.25,
+        "wires": []
+    },
+    {
+        "id": "2d8f2879f79c3e93",
+        "type": "ui_text",
+        "z": "3a2b4845297472e9",
+        "group": "30840b3c631a61fb",
+        "order": 24,
+        "width": 5,
+        "height": 1,
+        "name": "hbw_p1_T",
+        "label": "T=",
+        "format": "{{msg.payload}}",
+        "layout": "col-center",
+        "className": "",
+        "x": 829.765625,
+        "y": 648.25,
+        "wires": []
+    },
+    {
+        "id": "813a9a312fe3c109",
+        "type": "mqtt in",
+        "z": "bf8a6a980178c631",
+        "name": "MPO p  message",
+        "topic": "MPO/p/p",
+        "qos": "0",
+        "datatype": "json",
+        "broker": "c58f8d4b7c13412d",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 260,
+        "y": 420,
+        "wires": [
+            [
+                "c878b05e4663417a"
+            ]
+        ],
+        "outputLabels": [
+            "text"
+        ]
+    },
+    {
+        "id": "a83e63e126f12738",
+        "type": "ui_text",
+        "z": "bf8a6a980178c631",
+        "group": "aa9feae58ac4eadd",
+        "order": 4,
+        "width": 9,
+        "height": 2,
+        "name": "mpo txt data",
+        "label": "mpo txt data",
+        "format": "{{msg.payload}}",
+        "layout": "col-center",
+        "className": "",
+        "x": 530,
+        "y": 220,
+        "wires": []
+    },
+    {
+        "id": "c878b05e4663417a",
         "type": "function",
-        "z": "a242b4e6.dbec38",
-        "name": "+ts UTC ISO8301",
-        "func": "var ts = new Date().toISOString();\nmsg.payload[\"ts\"] = ts;\nmsg.payload = JSON.stringify(msg.payload);\nreturn msg;",
-        "outputs": 1,
+        "z": "bf8a6a980178c631",
+        "name": "MPO PmsgToText",
+        "func": "var topic=msg.topic;\nvar payload=msg.payload;\n\nvar objId = payload.id;\nvar objp1 = payload.par[0];\nvar objp2 = payload.par[1];\nvar objp3 = payload.par[2];\nvar objp4 = payload.par[3];\nvar objp5 = payload.par[4];\nvar objT = payload.t;\n\n\nvar msgp1={};\nvar msgp2={};\nvar msgp3={};\nvar msgp4={};\nvar msgp5={};\nvar msgId={};\nvar msgT={};\n\nmsgId.payload=  objId ;\nmsgId.topic= \"ID=\";\n\nmsgp1.payload= JSON.stringify(  objp1 );\nmsgp1.topic= \"txt/new\";\n\nmsgp2.payload= JSON.stringify( objp2 );\nmsgp2.topic =   \"txt/new\";\n\nmsgp3.payload= JSON.stringify(  objp3 );\nmsgp3.topic =   \"txt/new\";\n\nmsgp4.payload=  JSON.stringify( objp4 );\nmsgp4.topic =   \"txt/new\";\n\nmsgp5.payload= JSON.stringify(  objp5 );\nmsgp5.topic =   \"txt/new\";\n\nmsgT.payload= objT;// JSON.stringify(  objT );\nmsgT.topic =   \"txt/new\";\n\nreturn [msgId, msgp1,msgp2,msgp3,msgp4,msgp5,msgT ];",
+        "outputs": 7,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 490,
-        "y": 160,
+        "x": 550,
+        "y": 300,
         "wires": [
             [
-                "230610ce.7a1c7",
-                "e5327053.a608a"
+                "7875ca2c8c7daa7a",
+                "59583ad2cf7a0e47"
+            ],
+            [
+                "b6ce981d10c271a6",
+                "e28ba3c49730b1b2"
+            ],
+            [
+                "ad636bd3e8caa484",
+                "b1a34638f6466db9"
+            ],
+            [
+                "c68f717405860f0b",
+                "b441844b6777022b"
+            ],
+            [
+                "d5c05592d50d0a4f",
+                "d8d914451916f658"
+            ],
+            [
+                "dc7d9a37a4c35194",
+                "c182801cc0f98f87"
+            ],
+            [
+                "a8eaefefc724c9e7",
+                "f89a67f7af3a88ea"
             ]
+        ],
+        "inputLabels": [
+            "Json{}"
+        ],
+        "outputLabels": [
+            "Id",
+            "P1",
+            "P2",
+            "P3",
+            "P4",
+            "P5",
+            "Time"
         ]
     },
     {
-        "id": "516084f4.cd307c",
-        "type": "mqtt out",
-        "z": "a242b4e6.dbec38",
-        "name": "",
-        "topic": "c/cam",
-        "qos": "0",
-        "retain": "",
-        "broker": "fa600c20.8a9c9",
-        "x": 690,
-        "y": 360,
-        "wires": []
-    },
-    {
-        "id": "24c9dcb4.81e294",
+        "id": "daac206c691f269f",
         "type": "inject",
-        "z": "a242b4e6.dbec38",
-        "name": "",
+        "z": "bf8a6a980178c631",
+        "name": "P-msg",
+        "props": [
+            {
+                "p": "topic",
+                "vt": "str"
+            },
+            {
+                "p": "payload"
+            }
+        ],
         "repeat": "",
         "crontab": "",
         "once": false,
         "onceDelay": 0.1,
-        "topic": "",
-        "payload": "{\"on\":true,\"fps\":2}",
-        "payloadType": "json",
-        "x": 120,
-        "y": 360,
+        "topic": "SLD/p/p",
+        "payload": " {         \"id\" : \"p2\",         \"par\" :         [                 10,                11                 ,                 0,                 0         ],         \"t\" : \"2000-01-01T01:57:41Z\" }",
+        "payloadType": "str",
+        "x": 330,
+        "y": 240,
         "wires": [
             [
-                "edbc2440.62c248"
+                "02d5a15cbe6615d2"
             ]
+        ],
+        "outputLabels": [
+            "Json"
         ]
     },
     {
-        "id": "e95da13a.0029a",
+        "id": "b6ce981d10c271a6",
         "type": "debug",
-        "z": "a242b4e6.dbec38",
-        "name": "",
-        "active": true,
+        "z": "bf8a6a980178c631",
+        "name": "P1",
+        "active": false,
         "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "payload",
-        "targetType": "msg",
-        "x": 710,
+        "console": true,
+        "tostatus": true,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "payload",
+        "statusType": "auto",
+        "x": 830,
         "y": 320,
         "wires": []
     },
     {
-        "id": "edbc2440.62c248",
-        "type": "function",
-        "z": "a242b4e6.dbec38",
-        "name": "+ts UTC ISO8301",
-        "func": "var ts = new Date().toISOString();\nmsg.payload[\"ts\"] = ts;\nmsg.payload = JSON.stringify(msg.payload);\nreturn msg;",
-        "outputs": 1,
-        "noerr": 0,
-        "x": 490,
-        "y": 360,
+        "id": "ad636bd3e8caa484",
+        "type": "debug",
+        "z": "bf8a6a980178c631",
+        "name": "P2",
+        "active": false,
+        "tosidebar": true,
+        "console": true,
+        "tostatus": true,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "payload",
+        "statusType": "auto",
+        "x": 830,
+        "y": 420,
+        "wires": []
+    },
+    {
+        "id": "dc7d9a37a4c35194",
+        "type": "debug",
+        "z": "bf8a6a980178c631",
+        "name": "P5",
+        "active": false,
+        "tosidebar": true,
+        "console": true,
+        "tostatus": true,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "payload",
+        "statusType": "auto",
+        "x": 830,
+        "y": 720,
+        "wires": []
+    },
+    {
+        "id": "b441844b6777022b",
+        "type": "debug",
+        "z": "bf8a6a980178c631",
+        "name": "P3",
+        "active": false,
+        "tosidebar": true,
+        "console": true,
+        "tostatus": true,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "payload",
+        "statusType": "auto",
+        "x": 830,
+        "y": 520,
+        "wires": []
+    },
+    {
+        "id": "d5c05592d50d0a4f",
+        "type": "debug",
+        "z": "bf8a6a980178c631",
+        "name": "P4",
+        "active": false,
+        "tosidebar": true,
+        "console": true,
+        "tostatus": true,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "payload",
+        "statusType": "auto",
+        "x": 830,
+        "y": 620,
+        "wires": []
+    },
+    {
+        "id": "02d5a15cbe6615d2",
+        "type": "json",
+        "z": "bf8a6a980178c631",
+        "name": "",
+        "property": "payload",
+        "action": "obj",
+        "pretty": false,
+        "x": 450,
+        "y": 160,
         "wires": [
             [
-                "516084f4.cd307c",
-                "e95da13a.0029a"
+                "c878b05e4663417a",
+                "a83e63e126f12738"
             ]
         ]
+    },
+    {
+        "id": "c68f717405860f0b",
+        "type": "ui_text",
+        "z": "bf8a6a980178c631",
+        "group": "30840b3c631a61fb",
+        "order": 8,
+        "width": 2,
+        "height": 1,
+        "name": "mpo_p1_3",
+        "label": "P3=",
+        "format": "{{msg.payload}}",
+        "layout": "row-right",
+        "className": "",
+        "x": 850,
+        "y": 480,
+        "wires": []
+    },
+    {
+        "id": "7875ca2c8c7daa7a",
+        "type": "debug",
+        "z": "bf8a6a980178c631",
+        "name": "Id",
+        "active": false,
+        "tosidebar": true,
+        "console": true,
+        "tostatus": true,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "payload",
+        "statusType": "auto",
+        "x": 830,
+        "y": 220,
+        "wires": []
+    },
+    {
+        "id": "59583ad2cf7a0e47",
+        "type": "ui_text",
+        "z": "bf8a6a980178c631",
+        "group": "30840b3c631a61fb",
+        "order": 2,
+        "width": 2,
+        "height": 1,
+        "name": "mpo_p1_Id",
+        "label": "{{msg.topic}}",
+        "format": "{{msg.payload}}",
+        "layout": "col-center",
+        "className": "",
+        "x": 850,
+        "y": 180,
+        "wires": []
+    },
+    {
+        "id": "a8eaefefc724c9e7",
+        "type": "debug",
+        "z": "bf8a6a980178c631",
+        "name": "Time",
+        "active": false,
+        "tosidebar": true,
+        "console": true,
+        "tostatus": true,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "payload",
+        "statusType": "auto",
+        "x": 840,
+        "y": 820,
+        "wires": []
+    },
+    {
+        "id": "c182801cc0f98f87",
+        "type": "ui_text",
+        "z": "bf8a6a980178c631",
+        "group": "30840b3c631a61fb",
+        "order": 10,
+        "width": 2,
+        "height": 1,
+        "name": "mpo_p1_5",
+        "label": "P5=",
+        "format": "{{msg.payload}}",
+        "layout": "row-right",
+        "className": "",
+        "x": 850,
+        "y": 680,
+        "wires": []
+    },
+    {
+        "id": "d8d914451916f658",
+        "type": "ui_text",
+        "z": "bf8a6a980178c631",
+        "group": "30840b3c631a61fb",
+        "order": 9,
+        "width": 2,
+        "height": 1,
+        "name": "mpo_p1_4",
+        "label": "P4=",
+        "format": "{{msg.payload}}",
+        "layout": "row-right",
+        "className": "",
+        "x": 850,
+        "y": 580,
+        "wires": []
+    },
+    {
+        "id": "b1a34638f6466db9",
+        "type": "ui_text",
+        "z": "bf8a6a980178c631",
+        "group": "30840b3c631a61fb",
+        "order": 7,
+        "width": 2,
+        "height": 1,
+        "name": "mpo_p1_2",
+        "label": "P2=",
+        "format": "{{msg.payload}}",
+        "layout": "row-right",
+        "className": "",
+        "x": 850,
+        "y": 380,
+        "wires": []
+    },
+    {
+        "id": "e28ba3c49730b1b2",
+        "type": "ui_text",
+        "z": "bf8a6a980178c631",
+        "group": "30840b3c631a61fb",
+        "order": 6,
+        "width": 2,
+        "height": 1,
+        "name": "mpo_p1_1",
+        "label": "P1=",
+        "format": "{{msg.payload}}",
+        "layout": "row-right",
+        "className": "",
+        "x": 850,
+        "y": 280,
+        "wires": []
+    },
+    {
+        "id": "f89a67f7af3a88ea",
+        "type": "ui_text",
+        "z": "bf8a6a980178c631",
+        "group": "30840b3c631a61fb",
+        "order": 4,
+        "width": 5,
+        "height": 1,
+        "name": "mpo_p1_T",
+        "label": "T=",
+        "format": "{{msg.payload}}",
+        "layout": "col-center",
+        "className": "",
+        "x": 850,
+        "y": 780,
+        "wires": []
     }
 ]
