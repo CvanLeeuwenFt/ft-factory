@@ -2536,7 +2536,7 @@
         "finalize": "",
         "libs": [],
         "x": 550,
-        "y": 320,
+        "y": 300,
         "wires": [
             [
                 "9f0d8ebdbef7de27",
@@ -2601,8 +2601,8 @@
         "topic": "HBW/p/p",
         "payload": " {         \"id\" : \"p4\",         \"par\" :         [                 0,                 0,                -13,                 4,                 4         ],         \"t\" : \"2022-01-01T01:57:41Z\" }",
         "payloadType": "str",
-        "x": 110,
-        "y": 40,
+        "x": 90,
+        "y": 60,
         "wires": [
             [
                 "ba6d5e091f648c02"
@@ -2705,8 +2705,8 @@
         "property": "payload",
         "action": "obj",
         "pretty": false,
-        "x": 110,
-        "y": 240,
+        "x": 250,
+        "y": 260,
         "wires": [
             [
                 "c69c481092575e32",
@@ -2872,22 +2872,28 @@
         "type": "function",
         "z": "3a2b4845297472e9",
         "name": "",
-        "func": "var topic=msg.topic;\nvar payload=msg.payload;\n\nvar objId = payload.id;\nvar objp1 = payload.par[0];\nvar objp2 = payload.par[1];\nvar objp3 = payload.par[2];\nvar objp4 = payload.par[3];\nvar objp5 = payload.par[4];\nvar objT = payload.t;\n\n\nvar msgId1={};\nvar msgId2={};\nvar msgId3={};\nvar msgId4={};\nvar msgId5={};\n\n\n// msgId.payload=  objId ;\n//msgId.topic= \"ID=\";\n\n\n\nreturn [msg,msgId1, msgId2,msgId3,msgId4,msgId5 ];",
+        "func": "var topic=msg.topic;\nvar payload=msg.payload;\n\nvar objId = payload.id;\nvar objp1 = payload.par[0];\nvar objp2 = payload.par[1];\nvar objp3 = payload.par[2];\nvar objp4 = payload.par[3];\nvar objp5 = payload.par[4];\nvar objT = payload.t;\n\n\nvar msgId1={};\nvar msgId2={};\nvar msgId3={};\nvar msgId4={};\nvar msgId5={};\n\n\n// msgId.payload=  objId ;\n//msgId.topic= \"ID=\";\nif(objId=='p1')\n{   \n    return [msg,msgId1, null,null,null,null ];\n} else if(objId=='p2')\n{     \n    return [msg,null,msgId2, null,null,null ]; \n}else if (objId=='p3')\n{\n       return [msg, null,null,msgId3,null,null ];\n}else if (objId=='p4')\n{\n       return [msg,null, null,null,msgId4,null ];\n}else if (objId=='p5')\n{       \n    return [msg,null, null,null,null,msgId5 ];\n} else\n{\n    return [msg,null, null,null,null,null ];\n}\n\n\n\n",
         "outputs": 6,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 360,
-        "y": 380,
+        "x": 320,
+        "y": 440,
         "wires": [
             [
                 "408f320252684c7c",
                 "fddfce4536d97210"
             ],
-            [],
-            [],
-            [],
+            [
+                "432e5a7551b6b177"
+            ],
+            [
+                "1d5132f75f8df498"
+            ],
+            [
+                "e95a23dd1b5ee638"
+            ],
             [],
             []
         ]
@@ -2908,6 +2914,153 @@
         "x": 480,
         "y": 180,
         "wires": []
+    },
+    {
+        "id": "432e5a7551b6b177",
+        "type": "debug",
+        "z": "3a2b4845297472e9",
+        "name": "Select01",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": true,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "payload",
+        "statusType": "auto",
+        "x": 560,
+        "y": 440,
+        "wires": []
+    },
+    {
+        "id": "1d5132f75f8df498",
+        "type": "debug",
+        "z": "3a2b4845297472e9",
+        "name": "Select01",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": true,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "payload",
+        "statusType": "auto",
+        "x": 560,
+        "y": 520,
+        "wires": []
+    },
+    {
+        "id": "e95a23dd1b5ee638",
+        "type": "debug",
+        "z": "3a2b4845297472e9",
+        "name": "Select01",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": true,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "payload",
+        "statusType": "auto",
+        "x": 560,
+        "y": 620,
+        "wires": []
+    },
+    {
+        "id": "e32d7df299d1da34",
+        "type": "inject",
+        "z": "3a2b4845297472e9",
+        "name": "P4-msg",
+        "props": [
+            {
+                "p": "topic",
+                "vt": "str"
+            },
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "HBW/p/p",
+        "payload": " {         \"id\" : \"p4\",         \"par\" :         [                 0,                 0,                -13,                 4,                 4         ],         \"t\" : \"2022-01-01T01:57:41Z\" }",
+        "payloadType": "str",
+        "x": 90,
+        "y": 260,
+        "wires": [
+            [
+                "ba6d5e091f648c02"
+            ]
+        ],
+        "outputLabels": [
+            "Json"
+        ]
+    },
+    {
+        "id": "cdf474ce79434610",
+        "type": "inject",
+        "z": "3a2b4845297472e9",
+        "name": "P3-msg",
+        "props": [
+            {
+                "p": "topic",
+                "vt": "str"
+            },
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "HBW/p/p",
+        "payload": " {         \"id\" : \"p3\",         \"par\" :         [                 0,                 0,                -13,                 4,                 4         ],         \"t\" : \"2022-01-01T01:57:41Z\" }",
+        "payloadType": "str",
+        "x": 90,
+        "y": 200,
+        "wires": [
+            [
+                "ba6d5e091f648c02"
+            ]
+        ],
+        "outputLabels": [
+            "Json"
+        ]
+    },
+    {
+        "id": "af541c372a4e3ccb",
+        "type": "inject",
+        "z": "3a2b4845297472e9",
+        "name": "P2-msg",
+        "props": [
+            {
+                "p": "topic",
+                "vt": "str"
+            },
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "HBW/p/p",
+        "payload": " {         \"id\" : \"p2\",         \"par\" :         [                 0,                 0,                -13,                 4,                 4         ],         \"t\" : \"2022-01-01T01:57:41Z\" }",
+        "payloadType": "str",
+        "x": 90,
+        "y": 120,
+        "wires": [
+            [
+                "ba6d5e091f648c02"
+            ]
+        ],
+        "outputLabels": [
+            "Json"
+        ]
     },
     {
         "id": "813a9a312fe3c109",
