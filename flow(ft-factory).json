@@ -117,7 +117,7 @@
     {
         "id": "70f9a5a2aadcbae3",
         "type": "ui_tab",
-        "name": "TBK-Factory01",
+        "name": "TBK-Factory 01",
         "icon": "dashboard",
         "order": 1,
         "disabled": false,
@@ -292,7 +292,7 @@
     {
         "id": "85f06380b4bc6391",
         "type": "ui_tab",
-        "name": "TBK-Factory02",
+        "name": "TBK-Factory 02",
         "icon": "dashboard",
         "order": 2,
         "disabled": false,
@@ -301,9 +301,9 @@
     {
         "id": "2c9faac5d0d18804",
         "type": "ui_tab",
-        "name": "TBK-Factory 3",
+        "name": "TBK-Factory 03",
         "icon": "dashboard",
-        "order": 5,
+        "order": 3,
         "disabled": false,
         "hidden": false
     },
@@ -345,7 +345,7 @@
         "link": "http://www.TesCaWeb.nl/Carel",
         "icon": "open_in_browser",
         "target": "iframe",
-        "order": 8
+        "order": 5
     },
     {
         "id": "671f5a64ed1322a7",
@@ -863,6 +863,7 @@
         "type": "ui_tab",
         "name": "dummy",
         "icon": "dashboard",
+        "order": 4,
         "disabled": false,
         "hidden": false
     },
