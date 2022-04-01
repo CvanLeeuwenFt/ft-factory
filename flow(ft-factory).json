@@ -2872,7 +2872,7 @@
         "type": "function",
         "z": "3a2b4845297472e9",
         "name": "",
-        "func": "var topic=msg.topic;\nvar payload=msg.payload;\n\nvar objId = payload.id;\nvar objp1 = payload.par[0];\nvar objp2 = payload.par[1];\nvar objp3 = payload.par[2];\nvar objp4 = payload.par[3];\nvar objp5 = payload.par[4];\nvar objT = payload.t;\n\n\nvar msgId1={};\nvar msgId2={};\nvar msgId3={};\nvar msgId4={};\nvar msgId5={};\n\n\n// msgId.payload=  objId ;\n//msgId.topic= \"ID=\";\nif(objId=='p1')\n{   \n    msgId1=msg;\n        return [msg,msgId1, null,null,null,null ];\n} else if(objId=='p2')\n{     \n    msgId2=msg;\n    return [msg,null,msgId2, null,null,null ]; \n}else if (objId=='p3')\n{\n    msgId3=msg;\n       return [msg, null,null,msgId3,null,null ];\n}else if (objId=='p4')\n{\n    msgId41=msg;\n       return [msg,null, null,null,msgId4,null ];\n}else if (objId=='p5')\n{       \n    msgId5=msg;\n    return [msg,null, null,null,null,msgId5 ];\n} else\n{\n    return [msg,null, null,null,null,null ];\n}\n\n\n\n",
+        "func": "var topic=msg.topic;\nvar payload=msg.payload;\n\nvar objId = payload.id;\nvar objp1 = payload.par[0];\nvar objp2 = payload.par[1];\nvar objp3 = payload.par[2];\nvar objp4 = payload.par[3];\nvar objp5 = payload.par[4];\nvar objT = payload.t;\n\n\nvar msgId1={};\nvar msgId2={};\nvar msgId3={};\nvar msgId4={};\nvar msgId5={};\n\n\n// msgId.payload=  objId ;\n//msgId.topic= \"ID=\";\nif(objId=='p1')\n{   \n    msgId1=msg;\n        return [msg,msgId1, null,null,null,null ];\n} else if(objId=='p2')\n{     \n    msgId2=msg;\n    return [msg,null,msgId2, null,null,null ]; \n}else if (objId=='p3')\n{\n    msgId3=msg;\n       return [msg, null,null,msgId3,null,null ];\n}else if (objId=='p4')\n{\n    msgId4=msg;\n       return [msg,null, null,null,msgId4,null ];\n}else if (objId=='p5')\n{       \n    msgId5=msg;\n    return [msg,null, null,null,null,msgId5 ];\n} else\n{\n    return [msg,null, null,null,null,null ];\n}\n\n\n\n",
         "outputs": 6,
         "noerr": 0,
         "initialize": "",
@@ -2966,8 +2966,8 @@
         "targetType": "full",
         "statusVal": "payload",
         "statusType": "auto",
-        "x": 560,
-        "y": 600,
+        "x": 520,
+        "y": 560,
         "wires": []
     },
     {
@@ -3079,8 +3079,8 @@
         "targetType": "full",
         "statusVal": "payload",
         "statusType": "auto",
-        "x": 511.01422119140625,
-        "y": 671.0056762695312,
+        "x": 520,
+        "y": 640,
         "wires": []
     },
     {
@@ -3096,9 +3096,41 @@
         "targetType": "full",
         "statusVal": "payload",
         "statusType": "auto",
-        "x": 500,
-        "y": 720,
+        "x": 520,
+        "y": 700,
         "wires": []
+    },
+    {
+        "id": "ff407911055891e4",
+        "type": "inject",
+        "z": "3a2b4845297472e9",
+        "name": "P4-msg",
+        "props": [
+            {
+                "p": "topic",
+                "vt": "str"
+            },
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "HBW/p/p",
+        "payload": " {         \"id\" : \"p5\",         \"par\" :         [                 0,                 0,                -13,                 4,                 4         ],         \"t\" : \"2022-01-01T01:57:41Z\" }",
+        "payloadType": "str",
+        "x": 110,
+        "y": 300,
+        "wires": [
+            [
+                "ba6d5e091f648c02"
+            ]
+        ],
+        "outputLabels": [
+            "Json"
+        ]
     },
     {
         "id": "813a9a312fe3c109",
