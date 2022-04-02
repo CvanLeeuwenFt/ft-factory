@@ -4330,7 +4330,7 @@
         "width": 4,
         "height": 1,
         "name": "hbw_p1d_Id",
-        "label": "HBW Id des=",
+        "label": "HBW Id dest=",
         "format": "",
         "layout": "col-center",
         "className": "",
