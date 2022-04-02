@@ -4331,7 +4331,7 @@
         "height": 1,
         "name": "hbw_p1d_Id",
         "label": "HBW Id dest=",
-        "format": "",
+        "format": "{{msg.payload}}",
         "layout": "col-center",
         "className": "",
         "x": 1930,
