@@ -3489,7 +3489,7 @@
         "width": 2,
         "height": 1,
         "name": "hbw_p1_4",
-        "label": "P4_row=",
+        "label": "P4_src_row=",
         "format": "{{msg.payload}}",
         "layout": "row-right",
         "className": "",
