@@ -93,7 +93,8 @@
         "style": {
             "stroke": "#d1d1d1",
             "fill": "#d1d1d1",
-            "label": true
+            "label": true,
+            "color": "#000000"
         },
         "nodes": [
             "e2a18fef4b0d144b",
@@ -121,14 +122,12 @@
         "id": "e2d447b8604dc0fd",
         "type": "group",
         "z": "3a2b4845297472e9",
+        "name": "Dashboard coordinates",
         "style": {
-            "stroke": "#999999",
-            "stroke-opacity": "1",
-            "fill": "none",
-            "fill-opacity": "1",
+            "stroke": "#ff3f3f",
+            "fill": "#d1d1d1",
             "label": true,
-            "label-position": "nw",
-            "color": "#a4a4a4"
+            "color": "#000000"
         },
         "nodes": [
             "134a443a593a54a1",
@@ -147,9 +146,9 @@
             "0780caf002378558",
             "ba5c5403c8e91abe"
         ],
-        "x": 1254,
+        "x": 1294,
         "y": 199,
-        "w": 472,
+        "w": 452,
         "h": 722
     },
     {
@@ -4230,7 +4229,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1370,
+        "x": 1410,
         "y": 360,
         "wires": [
             [
@@ -4289,7 +4288,7 @@
         "targetType": "full",
         "statusVal": "payload",
         "statusType": "auto",
-        "x": 1590,
+        "x": 1610,
         "y": 380,
         "wires": []
     },
@@ -4307,7 +4306,7 @@
         "targetType": "full",
         "statusVal": "payload",
         "statusType": "auto",
-        "x": 1590,
+        "x": 1610,
         "y": 480,
         "wires": []
     },
@@ -4325,7 +4324,7 @@
         "targetType": "full",
         "statusVal": "payload",
         "statusType": "auto",
-        "x": 1590,
+        "x": 1610,
         "y": 780,
         "wires": []
     },
@@ -4343,7 +4342,7 @@
         "targetType": "full",
         "statusVal": "payload",
         "statusType": "auto",
-        "x": 1590,
+        "x": 1610,
         "y": 580,
         "wires": []
     },
@@ -4361,7 +4360,7 @@
         "targetType": "full",
         "statusVal": "payload",
         "statusType": "auto",
-        "x": 1590,
+        "x": 1610,
         "y": 680,
         "wires": []
     },
@@ -4379,7 +4378,7 @@
         "format": "{{msg.payload}}",
         "layout": "row-right",
         "className": "",
-        "x": 1630,
+        "x": 1650,
         "y": 540,
         "wires": []
     },
@@ -4397,7 +4396,7 @@
         "targetType": "full",
         "statusVal": "payload",
         "statusType": "auto",
-        "x": 1590,
+        "x": 1610,
         "y": 280,
         "wires": []
     },
@@ -4415,7 +4414,7 @@
         "format": "{{msg.payload}}",
         "layout": "col-center",
         "className": "",
-        "x": 1630,
+        "x": 1650,
         "y": 240,
         "wires": []
     },
@@ -4433,7 +4432,7 @@
         "targetType": "full",
         "statusVal": "payload",
         "statusType": "auto",
-        "x": 1620,
+        "x": 1640,
         "y": 880,
         "wires": []
     },
@@ -4451,7 +4450,7 @@
         "format": "{{msg.payload}}",
         "layout": "row-right",
         "className": "",
-        "x": 1630,
+        "x": 1650,
         "y": 740,
         "wires": []
     },
@@ -4469,7 +4468,7 @@
         "format": "{{msg.payload}}",
         "layout": "row-right",
         "className": "",
-        "x": 1630,
+        "x": 1650,
         "y": 640,
         "wires": []
     },
@@ -4487,7 +4486,7 @@
         "format": "{{msg.payload}}",
         "layout": "row-right",
         "className": "",
-        "x": 1630,
+        "x": 1650,
         "y": 440,
         "wires": []
     },
@@ -4505,7 +4504,7 @@
         "format": "{{msg.payload}}",
         "layout": "row-right",
         "className": "",
-        "x": 1630,
+        "x": 1650,
         "y": 340,
         "wires": []
     },
@@ -4523,7 +4522,7 @@
         "format": "{{msg.payload}}",
         "layout": "col-center",
         "className": "",
-        "x": 1630,
+        "x": 1650,
         "y": 840,
         "wires": []
     },
