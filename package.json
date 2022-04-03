@@ -1,7 +1,7 @@
 {
     "name": "ft-factory",
-    "description": "Project for Saxion fiachertechnik factory",
-    "version": "0.0.1",
+    "description": "Project for Saxion fischertechnik factory",
+    "version": "0.1.1",
     "dependencies": {},
     "node-red": {
         "settings": {
