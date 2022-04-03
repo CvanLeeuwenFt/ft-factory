@@ -5,8 +5,8 @@
     "dependencies": {},
     "node-red": {
         "settings": {
-            "flowFile": "flow(ft-factory).json",
-            "credentialsFile": "flow(ft-factory)_cred.json"
+            "flowFile": "flows(ft-factory).json",
+            "credentialsFile": "flows(ft-factory)_cred.json"
         }
     }
 }
