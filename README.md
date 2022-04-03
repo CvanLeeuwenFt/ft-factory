@@ -1,7 +1,7 @@
 ft-factory
 ==========
 
-Project for Saxion fiachertechnik factory
+Project for Saxion fischertechnik factory
 
 ### About
 
