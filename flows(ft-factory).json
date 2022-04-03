@@ -4578,8 +4578,8 @@
         "showImage": "2",
         "mirror": true,
         "format": "png",
-        "x": 1140,
-        "y": 80,
+        "x": 1180,
+        "y": 220,
         "wires": [
             []
         ]
