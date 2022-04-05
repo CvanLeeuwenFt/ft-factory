@@ -5164,7 +5164,7 @@
         "type": "function",
         "z": "3a2b4845297472e9",
         "name": "Name of database + timestamp",
-        "func": "//msg.filename = \"/home/pi/.node-red/public/databases/machines/timepi_temp.db\";\n//C:\\Users\\Carel\\.node-red\n//I:/Hobby/FT-NodeRed/tmp\n//H:/Log/NodeRed/factory(Pmesg).log\n//\"I:/Hobby/FT-NodeRed/tmp/test_pi_temp.db\"\nmsg.filename = \"H:/Log/NodeRed/factory(Pmesg).log\";\nvar x = msg.topic;\nvar y = msg.payload;\nmsg.payload = x +' \\n' + y;\nreturn msg;",
+        "func": "//msg.filename = \"/home/pi/.node-red/public/databases/machines/timepi_temp.db\";\n//C:\\Users\\Carel\\.node-red\n//I:/Hobby/FT-NodeRed/tmp\n//H:/Log/NodeRed/factory(Pmesg).log\n//\"I:/Hobby/FT-NodeRed/tmp/test_pi_temp.db\"\nmsg.filename = \"H:/Log/NodeRed/factory(Pmesg).log\";\nvar x = msg.topic;\nvar y = msg.payload;\nmsg.payload = x +'::' + y;\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
@@ -5212,10 +5212,10 @@
         "crontab": "",
         "once": false,
         "onceDelay": 0.1,
-        "topic": "test/p_meassage",
+        "topic": "test/Pmsg",
         "payload": "{\"test\":\"p_messages\"}",
         "payloadType": "json",
-        "x": 180,
+        "x": 210,
         "y": 80,
         "wires": [
             [
