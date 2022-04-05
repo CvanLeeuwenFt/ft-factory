@@ -2592,7 +2592,7 @@
         "wires": [
             [
                 "85cdce41b1172c54",
-                "fd8eb917fe35aaf5"
+                "d4d7c5055048de94"
             ]
         ],
         "outputLabels": [
@@ -5164,14 +5164,14 @@
         "type": "function",
         "z": "3a2b4845297472e9",
         "name": "Name of database + timestamp",
-        "func": "//msg.filename = \"/home/pi/.node-red/public/databases/machines/timepi_temp.db\";\n//C:\\Users\\Carel\\.node-red\n//I:/Hobby/FT-NodeRed/tmp\nmsg.filename = \"I:/Hobby/FT-NodeRed/tmp/test_pi_temp.db\";\n\nvar x = msg.topic;\nvar y = msg.payload;\nmsg.payload = x +' \\n' + y;\nreturn msg;",
+        "func": "//msg.filename = \"/home/pi/.node-red/public/databases/machines/timepi_temp.db\";\n//C:\\Users\\Carel\\.node-red\n//I:/Hobby/FT-NodeRed/tmp\n//H:/Log/NodeRed/factory(Pmesg).log\n//\"I:/Hobby/FT-NodeRed/tmp/test_pi_temp.db\"\nmsg.filename = \"H:/Log/NodeRed/factory(Pmesg).log\";\nvar x = msg.topic;\nvar y = msg.payload;\nmsg.payload = x +' \\n' + y;\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
         "x": 370,
-        "y": 120,
+        "y": 140,
         "wires": [
             [
                 "7bcd7b54a45979f9"
@@ -5188,8 +5188,8 @@
         "createDir": true,
         "overwriteFile": "false",
         "encoding": "none",
-        "x": 620,
-        "y": 120,
+        "x": 630,
+        "y": 160,
         "wires": [
             []
         ]
@@ -5217,6 +5217,22 @@
         "payloadType": "json",
         "x": 180,
         "y": 80,
+        "wires": [
+            [
+                "d4d7c5055048de94"
+            ]
+        ]
+    },
+    {
+        "id": "d4d7c5055048de94",
+        "type": "json",
+        "z": "3a2b4845297472e9",
+        "name": "",
+        "property": "payload",
+        "action": "",
+        "pretty": false,
+        "x": 150,
+        "y": 220,
         "wires": [
             [
                 "fd8eb917fe35aaf5"
