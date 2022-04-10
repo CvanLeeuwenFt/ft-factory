@@ -441,7 +441,7 @@
         "order": 2,
         "disp": true,
         "width": "10",
-        "collapse": false,
+        "collapse": true,
         "className": ""
     },
     {
