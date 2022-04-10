@@ -438,7 +438,7 @@
         "type": "ui_group",
         "name": "General Info",
         "tab": "70f9a5a2aadcbae3",
-        "order": 1,
+        "order": 2,
         "disp": true,
         "width": "10",
         "collapse": false,
@@ -800,7 +800,9 @@
         "tab": "2c9faac5d0d18804",
         "order": 3,
         "disp": true,
-        "width": 8
+        "width": "8",
+        "collapse": true,
+        "className": ""
     },
     {
         "id": "c5d96d3a0cdd0928",
@@ -932,16 +934,16 @@
         "type": "ui_group",
         "name": "Incomming MQTT message",
         "tab": "70f9a5a2aadcbae3",
-        "order": 2,
+        "order": 1,
         "disp": true,
         "width": "10",
         "collapse": true,
         "className": ""
     },
     {
-        "id": "d663e26cf668c1d2",
+        "id": "53f6d32eade10ef9",
         "type": "ui_spacer",
-        "z": "4c7e81e43391897e",
+        "z": "4e9eeca57a653287",
         "name": "spacer",
         "group": "ccf5f67a2e5a062e",
         "order": 4,
