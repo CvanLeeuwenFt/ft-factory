@@ -438,10 +438,10 @@
         "type": "ui_group",
         "name": "General Info",
         "tab": "70f9a5a2aadcbae3",
-        "order": 1,
+        "order": 2,
         "disp": true,
         "width": "10",
-        "collapse": false,
+        "collapse": true,
         "className": ""
     },
     {
@@ -528,7 +528,7 @@
         "order": 3,
         "disp": true,
         "width": "10",
-        "collapse": false,
+        "collapse": true,
         "className": ""
     },
     {
@@ -538,8 +538,9 @@
         "tab": "70f9a5a2aadcbae3",
         "order": 9,
         "disp": true,
-        "width": 6,
-        "collapse": false
+        "width": "6",
+        "collapse": true,
+        "className": ""
     },
     {
         "id": "590e59f993e7fcf2",
@@ -548,8 +549,8 @@
         "tab": "85f06380b4bc6391",
         "order": 1,
         "disp": true,
-        "width": 12,
-        "collapse": false,
+        "width": "12",
+        "collapse": true,
         "className": ""
     },
     {
@@ -568,8 +569,8 @@
         "tab": "2c9faac5d0d18804",
         "order": 2,
         "disp": true,
-        "width": 6,
-        "collapse": false,
+        "width": "6",
+        "collapse": true,
         "className": ""
     },
     {
@@ -601,8 +602,8 @@
         "tab": "85f06380b4bc6391",
         "order": 2,
         "disp": true,
-        "width": 12,
-        "collapse": false,
+        "width": "12",
+        "collapse": true,
         "className": ""
     },
     {
@@ -731,24 +732,6 @@
         "willMsg": {}
     },
     {
-        "id": "d71b3abf.e87f18",
-        "type": "ui_spacer",
-        "name": "spacer",
-        "group": "",
-        "order": 1,
-        "width": "",
-        "height": ""
-    },
-    {
-        "id": "914cfe45.654c5",
-        "type": "ui_spacer",
-        "name": "spacer",
-        "group": "",
-        "order": 1,
-        "width": "",
-        "height": ""
-    },
-    {
         "id": "c2045506.d32c58",
         "type": "ui_group",
         "name": "Group 1",
@@ -758,15 +741,6 @@
         "width": "6",
         "collapse": false,
         "className": ""
-    },
-    {
-        "id": "bfb0ae98.80af7",
-        "type": "ui_spacer",
-        "name": "spacer",
-        "group": "c2045506.d32c58",
-        "order": 1,
-        "width": "",
-        "height": ""
     },
     {
         "id": "6e42fd2c.304104",
@@ -800,51 +774,6 @@
         "className": ""
     },
     {
-        "id": "c1e37c6d.f404b",
-        "type": "ui_spacer",
-        "name": "spacer",
-        "group": "8069dfe.b488f2",
-        "order": 10,
-        "width": 4,
-        "height": 1
-    },
-    {
-        "id": "5e3ad3d7.7c6a3c",
-        "type": "ui_spacer",
-        "name": "spacer",
-        "group": "",
-        "order": 2,
-        "width": 1,
-        "height": 1
-    },
-    {
-        "id": "c88e8cae.e64b4",
-        "type": "ui_spacer",
-        "name": "spacer",
-        "group": "",
-        "order": 4,
-        "width": 1,
-        "height": 1
-    },
-    {
-        "id": "6cc53ff5.75928",
-        "type": "ui_spacer",
-        "name": "spacer",
-        "group": "631573fe.c997ec",
-        "order": 2,
-        "width": 1,
-        "height": 1
-    },
-    {
-        "id": "fded58b3.4f8648",
-        "type": "ui_spacer",
-        "name": "spacer",
-        "group": "631573fe.c997ec",
-        "order": 4,
-        "width": "",
-        "height": ""
-    },
-    {
         "id": "312d3a0e7b86713a",
         "type": "ui_tab",
         "name": "dummy",
@@ -860,7 +789,9 @@
         "tab": "2c9faac5d0d18804",
         "order": 2,
         "disp": true,
-        "width": 12
+        "width": "12",
+        "collapse": true,
+        "className": ""
     },
     {
         "id": "89ab7d33b5f732a7",
@@ -869,7 +800,9 @@
         "tab": "2c9faac5d0d18804",
         "order": 3,
         "disp": true,
-        "width": 8
+        "width": "8",
+        "collapse": true,
+        "className": ""
     },
     {
         "id": "c5d96d3a0cdd0928",
@@ -942,14 +875,6 @@
         "height": 1
     },
     {
-        "id": "bbf4a1c6fa0ad905",
-        "type": "ui_link",
-        "name": "Link 9",
-        "icon": "open_in_browser",
-        "target": "newtab",
-        "order": 9
-    },
-    {
         "id": "4ee3b11b1bd1ef05",
         "type": "ui_group",
         "name": "HDW_P1-1A-1B",
@@ -957,7 +882,7 @@
         "order": 5,
         "disp": true,
         "width": "10",
-        "collapse": false,
+        "collapse": true,
         "className": ""
     },
     {
@@ -968,7 +893,7 @@
         "order": 6,
         "disp": true,
         "width": "10",
-        "collapse": false,
+        "collapse": true,
         "className": ""
     },
     {
@@ -979,7 +904,7 @@
         "order": 7,
         "disp": true,
         "width": "10",
-        "collapse": false,
+        "collapse": true,
         "className": ""
     },
     {
@@ -990,7 +915,7 @@
         "order": 4,
         "disp": true,
         "width": "10",
-        "collapse": false,
+        "collapse": true,
         "className": ""
     },
     {
@@ -1001,7 +926,7 @@
         "order": 8,
         "disp": true,
         "width": "10",
-        "collapse": false,
+        "collapse": true,
         "className": ""
     },
     {
@@ -1009,21 +934,40 @@
         "type": "ui_group",
         "name": "Incomming MQTT message",
         "tab": "70f9a5a2aadcbae3",
-        "order": 2,
+        "order": 1,
         "disp": true,
-        "width": 10,
-        "collapse": false,
+        "width": "10",
+        "collapse": true,
         "className": ""
     },
     {
-        "id": "d663e26cf668c1d2",
+        "id": "53f6d32eade10ef9",
         "type": "ui_spacer",
-        "z": "4c7e81e43391897e",
+        "z": "4e9eeca57a653287",
         "name": "spacer",
         "group": "ccf5f67a2e5a062e",
         "order": 4,
         "width": 2,
         "height": 1
+    },
+    {
+        "id": "2a745e6b.07df92",
+        "type": "ui_group",
+        "name": "Default",
+        "tab": "e63bce2d.68925",
+        "order": 5,
+        "disp": true,
+        "width": "6",
+        "collapse": true
+    },
+    {
+        "id": "e63bce2d.68925",
+        "type": "ui_tab",
+        "name": "Denon",
+        "icon": "dashboard",
+        "order": 2,
+        "disabled": false,
+        "hidden": false
     },
     {
         "id": "ead821eead376006",
@@ -1857,6 +1801,27 @@
                 "98da6308da71ae6e"
             ]
         ]
+    },
+    {
+        "id": "85965edc.72971",
+        "type": "ui_template",
+        "z": "4e9eeca57a653287",
+        "group": "2a745e6b.07df92",
+        "name": "Dashboard Theme : Modern Dark",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "format": "<div>\n    <link href=\"https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;700&display=swap\" rel=\"stylesheet\">\n    <style>\n        body {\n            --background: #212529;\n            --on-background: white;\n            --surface: #2d3136;\n            --on-surface: white;\n            --primary: var(--nr-dashboard-widgetColor);\n            --on-primary: white;\n            --secondary: var(--nr-dashboard-groupTextColor);\n            --accent: red;\n            --radius-s: 8px;\n            --font-weight-m: 300;\n            --font-weight-m: 500;\n            --font-weight-l: 700;\n            --space-s: 8px;\n            --space-m: 16px;\n            --space-l: 32px;\n        }\n\n        body.nr-dashboard-theme {\n            background-color: var(--background);\n            font-family: 'Montserrat', sans-serif;\n        }\n        .nr-dashboard-theme ui-card-panel {\n            background-color: var(--background);\n            border: 0;\n        }\n        .nr-dashboard-theme .nr-dashboard-button .md-button {\n            background-color: var(--primary);\n            border-radius: var(--radius-s);\n            padding: 8px !important;\n            line-height: inherit;\n            font-weight: var(--font-weight-l);\n            color: var(--on-primary);\n        }\n        .nr-dashboard-theme [ui-card-size=\"2x2\"].nr-dashboard-button .md-button {\n            display: flex;\n            flex-direction: column;\n            justify-content: center;\n            align-items: center;\n            white-space: pre-line;\n        }\n        \n        .nr-dashboard-theme .nr-dashboard-button .md-button ui-icon {\n                margin-bottom: 8px;\n        }\n        .nr-dashboard-theme .nr-dashboard-button .md-button:hover {\n            background-color: var(--secondary);\n        }\n        body.nr-dashboard-theme md-content md-card {\n            background-color: var(--surface);\n        }\n        md-card.md-default-theme, md-card {\n            border-radius: var(--radius-s);\n        }\n        .nr-dashboard-theme .nr-dashboard-gauge-titlel {\n            font-weight: var(--font-weight-l) !important;      \n        }\n        .nr-dashboard-theme ui-card-panel p.nr-dashboard-cardtitle {\n            font-weight: var(--font-weight-l);  \n            text-transform: capitalize;\n            color: var(--on-background);\n        }\n        .nr-dashboard-cardpanel > p {\n            margin-left: 0;\n            padding-left: 16px;\n        }\n        body.nr-dashboard-theme md-toolbar {\n            background-color: var(--surface);\n        }\n        .md-default-theme .md-datepicker-calendar, .md-datepicker-calendar,\n        .md-default-theme .md-calendar, .md-calendar{\n            background-color: var(--surface);\n            color: var(--on-surface);\n        }\n        .md-default-theme .md-datepicker-calendar-pane, .md-datepicker-calendar-pane{\n            border: 0;\n        }\n        .md-default-theme .md-calendar-month-label md-icon, .md-calendar-month-label md-icon, .md-default-theme .md-datepicker-input, .md-datepicker-input {\n            color: var(--on-surface);\n        }\n        body.nr-dashboard-theme md-content md-card {\n            color: var(--on-surface);\n        }\n        .nr-dashboard-theme .nr-dashboard-numeric .value {\n            background-color: var(--surface);\n            color: var(--on-surface);\n        }\n        .nr-dashboard-theme .nr-dashboard-dropdown md-select .md-select-value, .nr-dashboard-theme .nr-dashboard-dropdown md-select .md-select-value.md-select-placeholder {\n            color: var(--on-surface);\n            border-color: var(--on-surface);\n        }\n        .nr-dashboard-theme .nr-dashboard-dropdown .md-select-icon {\n            color: var(--on-surface);\n        }\n        .nr-dashboard-theme .nr-dashboard-date-picker md-input-container .md-input {\n            color: var(--on-surface);\n            border-color: var(--on-surface);\n        }\n        .nr-dashboard-theme .nr-dashboard-date-picker .md-datepicker-triangle-button .md-datepicker-expand-triangle {\n            border-top-color: var(--on-surface);\n        }\n        body.nr-dashboard-theme md-sidenav {\n            background-color: var(--surface);\n        }\n        md-list-item._md-button-wrap > div.md-button:first-child, md-list-item .md-list-item-inner {\n            background-color: var(--surface);\n        }\n    </style>\n</div>",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "templateScope": "global",
+        "x": 400,
+        "y": 40,
+        "wires": [
+            []
+        ],
+        "icon": "node-red-dashboard/ui_colour_picker.png",
+        "info": "# Modern Dark Theme for node-red-dashboard\n\nInspired by Victor Lucachi with his [Node Red Dashboard Concept](https://dribbble.com/shots/10356530-Node-Red-Dashboard-Concept) on Dribbble. Thank you for your work.\n\n## Customize\n\n1. Go on dashboard customisation tab (At the right of Debug Console).\n2. Select the style `Dark`.\n3. Pick the color you want. Example `#66B5F8`\n\n## Buttons\n\nUse `2x2` size for buttons with icon and text on the screenshot"
     },
     {
         "id": "ea5b1d3fd2440b96",
